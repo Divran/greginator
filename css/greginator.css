@@ -12,3 +12,7 @@ body {
 	right:0;
 	padding:8px;
 }
+
+.btn-light {
+	background-color: #e7e8e8 !important;
+}
