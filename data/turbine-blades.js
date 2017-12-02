@@ -1230,6 +1230,7 @@ data.add("turbine blades",[
 		"flow":16000
 	},
 	"material":"Fluxed Electrum",
+	"fun_fact":"Surprisingly high flow rate",
 	"large":{
 		"durability":153600,
 		"efficiency":130,
@@ -1506,6 +1507,7 @@ data.add("turbine blades",[
 		"flow":8000
 	},
 	"material":"Tungstensteel",
+	"fun_fact":"Recommended, all around good material",
 	"large":{
 		"durability":768000,
 		"efficiency":140,
@@ -1943,6 +1945,7 @@ data.add("turbine blades",[
 		"flow":10000
 	},
 	"material":"Adamantium",
+	"fun_fact":"Much easier to make than other materials with comparable stats",
 	"large":{
 		"durability":1536000,
 		"efficiency":150,
