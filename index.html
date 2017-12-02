@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Greginator</title>
+		<meta charset="UTF-8">
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/levenshtein.min.js"></script>
+		<script src="js/greginator/helpers.js"></script>
+		<script src="js/selectpicker/bootstrap-select.min.js"></script>
+		<script src="js/selectpicker/defaults-en_US.min.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/greginator.css" rel="stylesheet">
+		<link href="css/bootstrap-select.min.css" rel="stylesheet">
+
+		<!-- load all data -->
+		<script src="data/manager.js"></script>
+		<script src="data/turbine-blades.js"></script>
+		<script src="data/turbine-fuels.js"></script>
+		<script src="data/pipes.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Turbine calculator -->
+			<div class="card" id="turbine-calculator-card">
+				<div class="card-header">
+					<h4 class="card-title">Turbine calculator</h4>
+				</div>
+				<div class="collapse show">
+					<div class="card-body">
+						<!--
+							we're not using these tabs (yet)
+						<div class="nav nav-tabs nav-fill">
+							<li class="nav-item">
+								<div class="nav-link">Statistics from material &amp; fuel</div>
+							</li>
+						</div>
+						-->
+						<div class="form-group">
+							<select class="material-search form-control"></select>
+						</div>
+						<div class="form-group">
+							<select class="fuel-search form-control"></select>
+						</div>
+						<div class="results">
+							<div class="material-stats"></div>
+							<div class="card fuel-stats"></div>
+							<!--<div class="card material-fuel-stats"></div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="js/greginator/turbine-calculator.js"></script>
+
+			<!-- other stuff... ? -->
+		</div>
+
+		<div class="credits">
+			<small>Made by Divran, December 2017</small>
+		</div>
+		
+	</body>
+</html>

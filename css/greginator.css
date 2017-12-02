@@ -1,0 +1,14 @@
+.link-pointer {
+	cursor:pointer;
+}
+
+body {
+	padding-top:32px;
+}
+
+.credits {
+	position:fixed;
+	bottom:0;
+	right:0;
+	padding:8px;
+}
