@@ -262,7 +262,6 @@
 			name = name.substr(0,1).toUpperCase() + name.substr(1);
 			size_selector.append("<option value='"+sizes[i]+"' "+selected+">"+name+"</option>");
 		}
-		size_selector.selectpicker({maxOptions:1});
 		size_selector.on("changed.bs.select",function() {
 			selected_size = size_selector.val();
 			update();
@@ -287,6 +286,8 @@
 			//"<hr>",
 			//other
 		]);
+		
+		size_selector.selectpicker({maxOptions:1});
 
 		update();
 	}
