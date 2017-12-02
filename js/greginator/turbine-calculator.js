@@ -71,27 +71,34 @@
 		}
 		material_stats.show();
 
-		var tbl = $( "<table class='table table-bordered table-hover'>" );
+		var tbl = $( "<table class='table table-bordered table-hover material-stats'>" );
+		var thead = $( "<thead>" ).appendTo(tbl);
+		var tbody = $( "<tbody>" ).appendTo(tbl);
 		$("<tr>").append([
 			"<th></th>",
 			"<th>Durability</th>",
 			"<th>Efficiency</th>",
 			"<th>Flow</th>"
-		]).appendTo(tbl);
+		]).appendTo(thead);
 
-		function displayStats(what,obj) {
-			$("<tr>").append([
-				"<th>"+what+"</th>",
+		function displayStats(size,obj) {
+			var sizetext = size.substr(0,1).toUpperCase()+size.substr(1);
+			var tr = $("<tr>").append([
+				"<th>"+sizetext+"</th>",
 				"<td>"+obj.durability+"</td>",
 				"<td>"+obj.efficiency+"%</td>",
 				"<td>"+obj.flow+"</td>"
-			]).appendTo(tbl);
+			]).appendTo(tbody).addClass( "link-pointer" ).attr( "data-size", size );
+
+			if (selected_size == size) {
+				tr.addClass( "table-active" );
+			}
 		}
 
-		displayStats("Huge",selected_material.huge);
-		displayStats("Large",selected_material.large);
-		displayStats("Medium",selected_material.medium);
-		displayStats("Small",selected_material.small);
+		displayStats("huge",selected_material.huge);
+		displayStats("large",selected_material.large);
+		displayStats("medium",selected_material.medium);
+		displayStats("small",selected_material.small);
 
 		material_stats.append(tbl);
 	}
@@ -116,7 +123,15 @@
 	}
 
 	function checkIC2Regulator(stats) {
-		return "<td>"+(stats.optimal_flow <= 1000 ? "Is compatible." : "Not compatible.")+"</td><td></td>";
+		var is = stats.optimal_flow <= 1000;
+
+		var res_str = "Is compatible.";
+		if (!is) {
+			var amount_needed = Math.ceil(stats.optimal_flow/1000);
+			res_str = "Not compatible (You'd need " + amount_needed + " of them).";
+		}
+
+		return "<td>"+res_str+"</td><td>"+(is ? 0 : (stats.optimal_flow-1000))+ " mb/t remaining</td>";
 	}
 	function checkEnderIOPipes(stats) {
 		var remaining = stats.optimal_flow;
@@ -145,7 +160,7 @@
 		var transfer_without = translocators[0].max_extract;
 
 		if (stats.optimal_flow < transfer_without) {
-			return "<td>Not compatible.</td><td></td>";
+			return "<td>Not compatible.</td><td>"+stats.optimal_flow + " mb/t remaining</td>";
 		}
 
 		var amount_with = Math.floor(stats.optimal_flow / transfer_with);
@@ -153,7 +168,7 @@
 		return "<td>" + amount_with + " with glowstone + " + amount_without + " without.</td><td>"+(stats.optimal_flow % transfer_without) + " mb/t remaining.</td>";
 	}
 	function checkGregtechPipes(stats) {
-		var names = ["Tiny","Small","","Large","Huge"]
+		var names = ["Tiny ","Small ","","Large ","Huge "]
 		var multipliers = [1,2,6,12,24];
 
 		for(var i=0;i<gregtech_pipes.length;i++) {
@@ -161,7 +176,7 @@
 			for(var j=0;j<5;j++) {
 				var capacity = pipe.capacity * multipliers[j];
 				if (capacity >= stats.optimal_flow) {
-					return "<td>Needs minimum '" + names[j] + " " + escapehtml(pipe.material) + " Fluid Pipe' (" + capacity + " mb/t capacity)</td><td></td>";
+					return "<td>Needs minimum '" + names[j] + escapehtml(pipe.material) + " Fluid Pipe'</td><td>" + capacity + " mb/t capacity</td>";
 				}
 			}
 		}
@@ -215,15 +230,15 @@
 			transfer_table.empty();
 
 			// Check if IC2 regulator works
-			transfer_table.append( "<tr><td>IC2 Fluid Regulator</td>" + checkIC2Regulator(stats));
+			transfer_table.append( "<tr><th>IC2 Fluid Regulator</th>" + checkIC2Regulator(stats));
 			// Check Ender IO pipes
-			transfer_table.append( "<tr><td>Ender IO conduits</td>" + checkEnderIOPipes(stats) );
+			transfer_table.append( "<tr><th>Ender IO conduits</th>" + checkEnderIOPipes(stats) );
 			// Check transfer nodes
-			transfer_table.append( "<tr><td>Translocators</td>" + checkTranslocators(stats) );
+			transfer_table.append( "<tr><th>Translocators</th>" + checkTranslocators(stats) );
 			// Check gregtech pumps
-			transfer_table.append( "<tr><td>Gregtech Pumps</td>" + checkGregtechPumps(stats) );
+			transfer_table.append( "<tr><th>Gregtech Pumps</th>" + checkGregtechPumps(stats) );
 			// Check gregtech pipes
-			transfer_table.append( "<tr><td>Gregtech Pipes</td>" + checkGregtechPipes(stats) );
+			transfer_table.append( "<tr><th>Gregtech Pipes</th>" + checkGregtechPipes(stats) );
 
 			// Bedrockium drum stats
 			var stored = 65536000;
@@ -253,20 +268,6 @@
 			]);
 		}
 
-		var size_selector = $( "<select class='form-control'></select>" );
-		var sizes = ["small","medium","large","huge"];
-		for(i=0;i<sizes.length;i++) {
-			var selected = "";
-			if (selected_size == sizes[i]) {selected = "selected";}
-			var name = sizes[i];
-			name = name.substr(0,1).toUpperCase() + name.substr(1);
-			size_selector.append("<option value='"+sizes[i]+"' "+selected+">"+name+"</option>");
-		}
-		size_selector.on("changed.bs.select",function() {
-			selected_size = size_selector.val();
-			update();
-		});
-
 		var transfer_container = $( "<div class='card-body'>" );
 		var transfer_table = $( "<table class='table table-bordered transfer-table'>" );
 		transfer_container.append([
@@ -277,7 +278,6 @@
 		var bedrockium_drum_container = $( "<div class='card-body'>" );
 
 		fuel_stats.append([
-			size_selector,
 			stats_container,
 			"<hr>",
 			transfer_container,
@@ -286,8 +286,14 @@
 			//"<hr>",
 			//other
 		]);
-		
-		size_selector.selectpicker({maxOptions:1});
+
+		// Select size
+		$( ".material-stats tbody tr", card ).off( "click.fuelstats" ).on( "click.fuelstats",function() {
+			selected_size = $(this).attr( "data-size" );
+			$( "tr",$(this).parent() ).removeClass( "table-active" );
+			$(this).addClass( "table-active" );
+			update();
+		});
 
 		update();
 	}
@@ -295,11 +301,24 @@
 	function initialize() {
 		var material_search = $( ".material-search", card );
 
+		function buildTbl(name,v1,v2,v3) {
+			return "<table><tr>"+
+						"<td style=\"width:200px\">"+name+"</td>"+
+						"<td style=\"width:70px\"><small class=\"text-muted\">"+v1+"</small></td>"+
+						"<td style=\"width:50px\"><small class=\"text-muted\">"+v2+"</small></td>"+
+						"<td style=\"width:50px\"><small class=\"text-muted\">"+v3+"</small></td>"+
+					"</tr></table>";
+		}
+
 		var opts = [];
 		opts.push("<option value='-' disabled selected>Select material...</option>");
+		opts.push("<option value='-' disabled data-content='"+buildTbl("Name","Dur","Eff","Flow (of large blade)")+"'></option>");
 		for(var i=0;i<turbine_blades.length;i++) {
 			var name = escapehtml(turbine_blades[i].material);
-			opts.push("<option value='"+name+"'>"+name+"</option>" );
+			var dur = turbine_blades[i].large.durability;
+			var eff = turbine_blades[i].large.efficiency;
+			var flow = turbine_blades[i].large.flow;
+			opts.push("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow)+"'>"+name+"</option>" );
 		}
 		material_search.append(opts);
 		material_search.selectpicker({liveSearch:true,maxOptions:1});
@@ -315,13 +334,14 @@
 			for(var j=0;j<category.fuels.length;j++) {
 				var fuel = category.fuels[j];
 				var name = escapehtml(fuel.name);
+				var f = fuel.fuel_value
 
-				$("<option value='"+name+"'>"+name+"</option>").appendTo(cat);
+				$("<option value='"+name+"' data-subtext='"+f+"'>"+name+"</option>").appendTo(cat);
 			}
 			opts.push(cat);
 		}
 		fuel_search.append(opts);
-		fuel_search.selectpicker({liveSearch:true,maxOptions:1});
+		fuel_search.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true});
 
 		material_search.on( "changed.bs.select", function() {
 			selected_material = getMaterialByName(material_search.val());
