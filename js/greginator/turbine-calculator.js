@@ -85,9 +85,9 @@
 			var sizetext = size.substr(0,1).toUpperCase()+size.substr(1);
 			var tr = $("<tr>").append([
 				"<th>"+sizetext+"</th>",
-				"<td>"+obj.durability+"</td>",
+				"<td>"+obj.durability.toLocaleString()+"</td>",
 				"<td>"+obj.efficiency+"%</td>",
-				"<td>"+obj.flow+"</td>"
+				"<td>"+obj.flow.toLocaleString()+"</td>"
 			]).appendTo(tbody).addClass( "link-pointer" ).attr( "data-size", size );
 
 			if (selected_size == size) {
@@ -219,7 +219,6 @@
 
 		function update() {
 			var stats = calculateStats(selected_fuel,selected_material[selected_size]);
-			//console.log(stats);
 
 			stats_container.empty();
 			stats_container.append([
@@ -304,21 +303,28 @@
 		function buildTbl(name,v1,v2,v3) {
 			return "<table><tr>"+
 						"<td style=\"width:200px\">"+name+"</td>"+
-						"<td style=\"width:70px\"><small class=\"text-muted\">"+v1+"</small></td>"+
-						"<td style=\"width:50px\"><small class=\"text-muted\">"+v2+"</small></td>"+
+						"<td style=\"width:80px\"><small class=\"text-muted\">"+v1+"</small></td>"+
+						"<td style=\"width:70px\"><small class=\"text-muted\">"+v2+"</small></td>"+
 						"<td style=\"width:50px\"><small class=\"text-muted\">"+v3+"</small></td>"+
 					"</tr></table>";
 		}
 
 		var opts = [];
 		opts.push("<option value='-' disabled selected>Select material...</option>");
-		opts.push("<option value='-' disabled data-content='"+buildTbl("Name","Dur","Eff","Flow (of large blade)")+"'></option>");
+		opts.push("<option value='-' disabled data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'></option>");
 		for(var i=0;i<turbine_blades.length;i++) {
-			var name = escapehtml(turbine_blades[i].material);
-			var dur = turbine_blades[i].large.durability;
-			var eff = turbine_blades[i].large.efficiency;
-			var flow = turbine_blades[i].large.flow;
-			opts.push("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow)+"'>"+name+"</option>" );
+			var blade = turbine_blades[i];
+			var name = escapehtml(blade.material);
+			var dur = blade.large.durability.toLocaleString();
+			var eff = blade.large.efficiency + "%";
+			var flow = blade.large.flow.toLocaleString();
+
+			var fun_fact = "";
+			if (typeof blade.fun_fact != "undefined") {
+				fun_fact = " (fun fact: " + blade.fun_fact + ")";
+			}
+
+			opts.push("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow + fun_fact)+"'>"+name+"</option>" );
 		}
 		material_search.append(opts);
 		material_search.selectpicker({liveSearch:true,maxOptions:1});
