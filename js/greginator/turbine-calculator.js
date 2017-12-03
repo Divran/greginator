@@ -280,7 +280,7 @@
 			var LCD = lowestCommonDenominator(boiler.output,stats.optimal_flow);
 			var LCD_boiler_count = boiler.output / LCD;
 			var LCD_turbine_count = stats.optimal_flow / LCD;
-			if (LCD != -1 && LCD_boiler_count < optimal_LCD_boiler_count && LCD_turbine_count < optimal_LCD_turbine_count) {
+			if (LCD != -1 && (LCD_boiler_count+LCD_turbine_count < optimal_LCD_boiler_count+optimal_LCD_turbine_count)) {
 				optimal_LCD_turbine_count = LCD_boiler_count;
 				optimal_LCD_boiler_count = LCD_turbine_count;
 				optimal_LCD_boiler = boiler;
@@ -362,7 +362,7 @@
 			var steam_stats = "";
 			if (selected_fuel.name == "Steam" || selected_fuel.name == "Superheated Steam") {
 				steam_stats = 
-					"<hr><h5>Boiler stats</h5>"+
+					"<h5>Boiler stats</h5>"+
 					"<p>"+checkBoilers(stats,selected_fuel)+"</p>"+
 					"<h5>Heat exchanger stats</h5>"+
 					"<p>"+checkHeatExchanger(stats,selected_fuel)+"</p>"
