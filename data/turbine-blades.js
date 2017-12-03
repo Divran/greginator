@@ -1554,6 +1554,7 @@ data.add("turbine blades",[
 		"flow":8000
 	},
 	"material":"Knightmetal",
+	"fun_fact":"Recommended as your very first turbine blade.",
 	"large":{
 		"durability":307200,
 		"efficiency":130,

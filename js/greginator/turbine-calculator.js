@@ -474,7 +474,7 @@
 
 			var fun_fact = "";
 			if (typeof blade.fun_fact != "undefined") {
-				fun_fact = " (fun fact: " + blade.fun_fact + ")";
+				fun_fact = " (" + blade.fun_fact + ")";
 			}
 
 			opts.push("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow + fun_fact)+"'>"+name+"</option>" );
