@@ -371,7 +371,7 @@
 			stats_container.empty();
 			stats_container.append([
 				"<h5>Stats</h5>",
-				"<p>Optimal flow: " + stats.optimal_flow + " mb/t<br>Power output: " + stats.energy_output + " eu/t</p>",
+				"<p>Optimal flow: <strong>" + stats.optimal_flow + "</strong> mb/t<br>Power output: <strong>" + stats.energy_output + "</strong> eu/t</p>",
 				steam_stats
 			]);
 
