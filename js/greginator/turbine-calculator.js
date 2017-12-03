@@ -290,7 +290,7 @@
 		var ret = "";
 
 		if (typeof optimal_boiler != "undefined") {
-			ret = "You'll need at least " + escapehtml(boiler.name) + " (" + boiler.output + " mb/t) to keep up with this turbine blade.";
+			ret = "You'll need at least one " + escapehtml(optimal_boiler.name) + " (" + optimal_boiler.output + " mb/t) to keep up with this turbine blade.";
 		} else {
 			var max_boiler = boilers[boilers.length-1];
 			var amount = Math.ceil(stats.optimal_flow / max_boiler.output);
@@ -298,7 +298,7 @@
 		}
 
 		if (typeof optimal_LCD_boiler != "undefined") {
-			ret += "<br>You'll need " + optimal_LCD_boiler_count + " " + optimal_LCD_boiler.name + "s and " + optimal_LCD_turbine_count + " turbines to exactly match production with consumption.";
+			ret += "<br>You'll need " + optimal_LCD_boiler_count + " " + optimal_LCD_boiler.name + "(s) and " + optimal_LCD_turbine_count + " turbine(s) to exactly match production with consumption.";
 		}
 
 		return ret;
@@ -337,9 +337,9 @@
 		var amount_lava = Math.ceil(max_produced_lava / stats.optimal_flow);
 		var amount_coolant = Math.ceil(max_produced_coolant / stats.optimal_flow);
 
-		return "<p>If you use lava, you'll need "+amount_lava+" turbines to keep up with a single heat exchanger running at max speed"+
+		return "<p>If you use lava, you'll need "+amount_lava+" turbines (and "+amount_lava+" normal steam turbines) to keep up with a single heat exchanger running at max speed"+
 						" (uses "+max_consumed_lava+" mb/t of lava to produce "+max_produced_lava+" mb/t of "+escapehtml(fuel.name)+").<br>"+
-				"If you use IC2 coolant, you'll need "+amount_coolant+" turbines to keep up with a single heat exchanger running at max speed"+
+				"If you use IC2 coolant, you'll need "+amount_coolant+" turbines (and "+amount_coolant+" normal steam turbines) to keep up with a single heat exchanger running at max speed"+
 						" (uses "+max_consumed_coolant+" mb/t of coolant to produce "+max_produced_coolant+" mb/t of "+escapehtml(fuel.name)+").</p>";
 	}
 
