@@ -294,11 +294,11 @@
 		} else {
 			var max_boiler = boilers[boilers.length-1];
 			var amount = Math.ceil(stats.optimal_flow / max_boiler.output);
-			ret = "You'd need " + amount + " " + escapehtml(max_boiler.name) + "s to keep up with this turbine blade.";
+			ret = "You'd need <strong>" + amount + "</strong> " + escapehtml(max_boiler.name) + "s to keep up with this turbine blade.";
 		}
 
 		if (typeof optimal_LCD_boiler != "undefined") {
-			ret += "<br>You'll need " + optimal_LCD_boiler_count + " " + optimal_LCD_boiler.name + "(s) and " + optimal_LCD_turbine_count + " turbine(s) to exactly match production with consumption.";
+			ret += "<br>You'll need <strong>" + optimal_LCD_boiler_count + "</strong> " + optimal_LCD_boiler.name + "(s) and <strong>" + optimal_LCD_turbine_count + "</strong> turbine(s) to exactly match production with consumption.";
 		}
 
 		return ret;
@@ -337,9 +337,9 @@
 		var amount_lava = Math.ceil(max_produced_lava / stats.optimal_flow);
 		var amount_coolant = Math.ceil(max_produced_coolant / stats.optimal_flow);
 
-		return "<p>If you use lava, you'll need "+amount_lava+" turbines (and "+amount_lava+" normal steam turbines) to keep up with a single heat exchanger running at max speed"+
+		return "<p>If you use lava, you'll need <strong>"+amount_lava+"</strong> turbines to keep up with a single heat exchanger running at max speed"+
 						" (uses "+max_consumed_lava+" mb/t of lava to produce "+max_produced_lava+" mb/t of "+escapehtml(fuel.name)+").<br>"+
-				"If you use IC2 coolant, you'll need "+amount_coolant+" turbines (and "+amount_coolant+" normal steam turbines) to keep up with a single heat exchanger running at max speed"+
+				"If you use IC2 coolant, you'll need <strong>"+amount_coolant+"</strong> turbines to keep up with a single heat exchanger running at max speed"+
 						" (uses "+max_consumed_coolant+" mb/t of coolant to produce "+max_produced_coolant+" mb/t of "+escapehtml(fuel.name)+").</p>";
 	}
 
@@ -503,7 +503,7 @@
 
 			displayMaterialStats();
 			displayFuelStats();
-			$(window).off('resize.getSize scroll.getSize').on('resize.getSize scroll.getSize', getSize);
+			$(window).off('resize.getSize scroll.getSize');
 		});
 
 		fuel_search.on( "changed.bs.select", function() {
