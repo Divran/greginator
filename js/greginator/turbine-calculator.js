@@ -503,6 +503,7 @@
 
 			displayMaterialStats();
 			displayFuelStats();
+			$(window).off('resize.getSize scroll.getSize').on('resize.getSize scroll.getSize', getSize);
 		});
 
 		fuel_search.on( "changed.bs.select", function() {
