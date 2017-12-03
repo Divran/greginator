@@ -9,7 +9,7 @@ data.add("turbine fuels",[
 				fuel_value: 1
 			},
 			{
-				name: "HP Steam",
+				name: "Superheated Steam",
 				fuel_value: 1
 			},
 		]

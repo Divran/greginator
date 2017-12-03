@@ -12,6 +12,7 @@
 	var translocators;
 	var gregtech_pipes;
 	var gregtech_pumps;
+	var boilers;
 
 	function init(b) {
 		if (!b) {collapse.collapse("toggle");}
@@ -24,6 +25,7 @@
 			translocators = data.get("fluid translocators");
 			gregtech_pipes = data.get("gregtech pipes");
 			gregtech_pumps = data.get("gregtech pumps");
+			boilers = data.get("boilers");
 			initialize();
 		}
 	}
@@ -171,17 +173,53 @@
 		var names = ["Tiny ","Small ","","Large ","Huge "]
 		var multipliers = [1,2,6,12,24];
 
+		var closest_pipe_remainder = 999999;
+		var closest_pipe;
+		var closest_capacity;
+		var cheapest_pipe;
+		var cheapest_capacity;
+
 		for(var i=0;i<gregtech_pipes.length;i++) {
 			var pipe = gregtech_pipes[i];
 			for(var j=0;j<5;j++) {
 				var capacity = pipe.capacity * multipliers[j];
+				if (typeof cheapest_pipe == "undefined" && capacity >= stats.optimal_flow) {
+					cheapest_pipe = pipe;
+					cheapest_capacity = j;
+				}
+
 				if (capacity >= stats.optimal_flow) {
-					return "<td>Needs minimum '" + names[j] + escapehtml(pipe.material) + " Fluid Pipe'</td><td>" + capacity + " mb/t capacity</td>";
+					var amount = Math.floor(capacity / stats.optimal_flow);
+					if (amount == 1) {
+						var remainder = capacity % stats.optimal_flow;
+						if (remainder < closest_pipe_remainder) {
+							closest_pipe_remainder = remainder;
+							closest_pipe = pipe;
+							closest_capacity = j;
+						}
+					}
 				}
 			}
 		}
 
-		return "<td>Not compatible.</td><td></td>";
+		var ret1 = [];
+		var ret2 = [];
+		if (typeof cheapest_pipe != "undefined") {
+			ret1.push("Cheapest: "+names[cheapest_capacity]+escapehtml(cheapest_pipe.material)+" ("+(cheapest_pipe.capacity * multipliers[cheapest_capacity])+" mb/t)");
+			ret2.push(((cheapest_pipe.capacity * multipliers[cheapest_capacity]) % stats.optimal_flow) + " mb/t remaining");
+		}
+
+		if (typeof closest_pipe != "undefined") {
+			ret1.push("Closest: " + names[closest_capacity] + escapehtml(closest_pipe.material)+" ("+(closest_pipe.capacity * multipliers[closest_capacity])+" mb/t)");
+			ret2.push(((closest_pipe.capacity * multipliers[closest_capacity]) % stats.optimal_flow) + " mb/t remaining");
+		}
+
+		if (ret1.length == 0) {
+			return "<td>Not compatible.</td><td></td>";
+		} else {
+			return "<td>"+ret1.join("<br>")+"</td><td>"+ret2.join("<br>")+"</td>";
+		}
+
 	}
 	function checkGregtechPumps(stats) {
 		var remaining = stats.optimal_flow;
@@ -203,6 +241,107 @@
 
 		return "<td>"+result+"</td><td>"+remaining + " mb/t remaining</td>";
 	}
+	function lowestCommonDenominator(larger,smaller) {
+		if (larger < smaller) {
+			let temp = larger;
+			larger = smaller;
+			smaller = temp;
+		}
+		larger = Math.floor(larger);
+		smaller = Math.floor(smaller);
+
+		var iters = 1000;
+		while(iters>0) {
+			if (larger == smaller) {return larger;}
+			var remainder = larger % smaller;
+			if (remainder == 0) {return smaller;}
+
+			larger = smaller;
+			smaller = remainder;
+
+			iters--;
+		}
+
+		return -1;
+	}
+	function checkBoilers(stats) {
+		var LCD = lowestCommonDenominator()
+
+		var optimal_boiler;
+		var optimal_LCD_boiler_count = 99999;
+		var optimal_LCD_turbine_count = 99999;
+		var optimal_LCD_boiler;
+		for(var i=0;i<boilers.length;i++) {
+			var boiler = boilers[i];
+			if (typeof optimal_boiler == "undefined" && boiler.output >= stats.optimal_flow) {
+				optimal_boiler = boiler;
+			}
+
+			var LCD = lowestCommonDenominator(boiler.output,stats.optimal_flow);
+			var LCD_boiler_count = boiler.output / LCD;
+			var LCD_turbine_count = stats.optimal_flow / LCD;
+			if (LCD != -1 && LCD_boiler_count < optimal_LCD_boiler_count && LCD_turbine_count < optimal_LCD_turbine_count) {
+				optimal_LCD_turbine_count = LCD_boiler_count;
+				optimal_LCD_boiler_count = LCD_turbine_count;
+				optimal_LCD_boiler = boiler;
+			}
+		}
+
+		var ret = "";
+
+		if (typeof optimal_boiler != "undefined") {
+			ret = "You'll need at least " + escapehtml(boiler.name) + " (" + boiler.output + " mb/t) to keep up with this turbine blade.";
+		} else {
+			var max_boiler = boilers[boilers.length-1];
+			var amount = Math.ceil(stats.optimal_flow / max_boiler.output);
+			ret = "You'd need " + amount + " " + escapehtml(max_boiler.name) + "s to keep up with this turbine blade.";
+		}
+
+		if (typeof optimal_LCD_boiler != "undefined") {
+			ret += "<br>You'll need " + optimal_LCD_boiler_count + " " + optimal_LCD_boiler.name + "s and " + optimal_LCD_turbine_count + " turbines to exactly match production with consumption.";
+		}
+
+		return ret;
+	}
+	function checkHeatExchanger(stats,fuel) {
+		/*
+			Large heat exchanger can produce:
+			With lava:
+			Max normal steam: ((999 * 4) * 2) = 3996 mb/t
+			Max superheated: (((2000 * 4) * 2) / 2) = 8000 mb/t
+
+			With IC2 coolant:
+			Max normal steam: ((3999 * 2) * 2) = 15996 mb/t
+			Max superheated: (((8000 * 2) * 2) / 2) = 16000 mb/t
+		*/
+
+		var max_produced_lava = 0;
+		var max_produced_coolant = 0;
+
+		var max_consumed_lava = 0;
+		var max_consumed_coolant = 0;
+		if (fuel.name == "Steam") {
+			max_produced_lava = 3996;
+			max_produced_coolant = 15996;
+
+			max_consumed_lava = 999;
+			max_consumed_coolant = 3999;
+		} else { // superheated steam
+			max_produced_lava = 8000;
+			max_produced_coolant = 16000;
+
+			max_consumed_lava = 2000;
+			max_consumed_coolant = 8000;
+		}
+
+		var amount_lava = Math.ceil(max_produced_lava / stats.optimal_flow);
+		var amount_coolant = Math.ceil(max_produced_coolant / stats.optimal_flow);
+
+		return "<p>If you use lava, you'll need "+amount_lava+" turbines to keep up with a single heat exchanger running at max speed"+
+						" (uses "+max_consumed_lava+" mb/t of lava to produce "+max_produced_lava+" mb/t of "+escapehtml(fuel.name)+").<br>"+
+				"If you use IC2 coolant, you'll need "+amount_coolant+" turbines to keep up with a single heat exchanger running at max speed"+
+						" (uses "+max_consumed_coolant+" mb/t of coolant to produce "+max_produced_coolant+" mb/t of "+escapehtml(fuel.name)+").</p>";
+	}
 
 	function displayFuelStats() {
 		var fuel_stats = $( ".fuel-stats", card );
@@ -220,10 +359,20 @@
 		function update() {
 			var stats = calculateStats(selected_fuel,selected_material[selected_size]);
 
+			var steam_stats = "";
+			if (selected_fuel.name == "Steam" || selected_fuel.name == "Superheated Steam") {
+				steam_stats = 
+					"<hr><h5>Boiler stats</h5>"+
+					"<p>"+checkBoilers(stats,selected_fuel)+"</p>"+
+					"<h5>Heat exchanger stats</h5>"+
+					"<p>"+checkHeatExchanger(stats,selected_fuel)+"</p>"
+			}
+
 			stats_container.empty();
 			stats_container.append([
 				"<h5>Stats</h5>",
 				"<p>Optimal flow: " + stats.optimal_flow + " mb/t<br>Power output: " + stats.energy_output + " eu/t</p>",
+				steam_stats
 			]);
 
 			transfer_table.empty();
