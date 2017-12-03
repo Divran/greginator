@@ -307,7 +307,7 @@
 		/*
 			Large heat exchanger can produce:
 			With lava:
-			Max normal steam: ((999 * 4) * 2) = 3996 mb/t
+			Max normal steam: ((999 * 4) * 2) = 7992 mb/t
 			Max superheated: (((2000 * 4) * 2) / 2) = 8000 mb/t
 
 			With IC2 coolant:
@@ -321,7 +321,7 @@
 		var max_consumed_lava = 0;
 		var max_consumed_coolant = 0;
 		if (fuel.name == "Steam") {
-			max_produced_lava = 3996;
+			max_produced_lava = 7992;
 			max_produced_coolant = 15996;
 
 			max_consumed_lava = 999;
@@ -360,12 +360,16 @@
 			var stats = calculateStats(selected_fuel,selected_material[selected_size]);
 
 			var steam_stats = "";
-			if (selected_fuel.name == "Steam" || selected_fuel.name == "Superheated Steam") {
+			if (selected_fuel.name == "Steam") {
 				steam_stats = 
 					"<h5>Boiler stats</h5>"+
-					"<p>"+checkBoilers(stats,selected_fuel)+"</p>"+
+					"<p>"+checkBoilers(stats,selected_fuel)+"</p>";
+			}
+
+			if (selected_fuel.name == "Steam" || selected_fuel.name == "Superheated Steam") {
+				steam_stats += 
 					"<h5>Heat exchanger stats</h5>"+
-					"<p>"+checkHeatExchanger(stats,selected_fuel)+"</p>"
+					"<p>"+checkHeatExchanger(stats,selected_fuel)+"</p>";
 			}
 
 			stats_container.empty();
