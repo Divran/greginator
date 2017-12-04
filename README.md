@@ -5,3 +5,5 @@ Currently supports Gregtech 5. Will probably also support future versions if the
 
 # how to use
 Download, dump on desktop, double click index.html, done
+OR
+go to https://divran.github.io/greginator/
