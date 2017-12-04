@@ -13,6 +13,7 @@
 	var gregtech_pipes;
 	var gregtech_pumps;
 	var boilers;
+	var dynamos;
 
 	function init(b) {
 		if (!b) {collapse.collapse("toggle");}
@@ -26,6 +27,7 @@
 			gregtech_pipes = data.get("gregtech pipes");
 			gregtech_pumps = data.get("gregtech pumps");
 			boilers = data.get("boilers");
+			dynamos = data.get("dynamo hatches");
 			initialize();
 		}
 	}
@@ -35,6 +37,22 @@
 	var selected_material;
 	var selected_fuel;
 	var selected_size = "large";
+
+	function formatTime(time) {
+		var timestr = [];
+		var time_years = Math.floor(time / 31556926);
+		if (time_years > 0) {time = time % 31556926; timestr.push(time_years + " years");}
+		var time_months = Math.floor(time / 2629744);
+		if (time_months > 0) {time = time % 2629744; timestr.push(time_months + " months");}
+		var time_days = Math.floor(time / 86400);
+		if (time_days > 0) {time = time % 86400; timestr.push(time_days + " days");}
+		var time_hours = Math.floor(time / 3600);
+		if (time_hours > 0) {time = time % 3600; timestr.push(time_hours + " hours");}
+		var time_minutes = Math.floor(time / 60);
+		if (time_minutes > 0) {time = time % 60; timestr.push(time_minutes + " minutes");}
+		if (time > 0) {timestr.push(Math.ceil(time) + " seconds");}
+		return timestr.join(", ");
+	}
 
 	function getMaterialByName(name) {
 		for(var i=0;i<turbine_blades.length;i++) {
@@ -342,6 +360,15 @@
 				"If you use IC2 coolant, you'll need <strong>"+amount_coolant+"</strong> turbines to keep up with a single heat exchanger running at max speed"+
 						" (uses "+max_consumed_coolant+" mb/t of coolant to produce "+max_produced_coolant+" mb/t of "+escapehtml(fuel.name)+").</p>";
 	}
+	function checkDynamos(stats) {
+		for(i=0;i<dynamos.length;i++) {
+			if (dynamos[i].output >= stats.energy_output) {
+				return "<strong>"+dynamos[i].name + "</strong> (" + dynamos[i].output + " eu/t)";
+			}
+		}
+
+		return "wut? couldn't find a dynamo hatch???";
+	}
 
 	function displayFuelStats() {
 		var fuel_stats = $( ".fuel-stats", card );
@@ -372,10 +399,23 @@
 					"<p>"+checkHeatExchanger(stats,selected_fuel)+"</p>";
 			}
 
+			var durability_time = 0;
+			if (selected_fuel.name.indexOf("Plasma") != -1) {
+				// durability for plasma is ((eu)^0.7)/t
+				durability_time = selected_material[selected_size].durability / (((stats.energy_output ^ 0.7) / 3000)*20);
+			} else {
+				// durability for non-plasma is 20% of energy output every 3000 ticks
+				durability_time = selected_material[selected_size].durability / ((stats.energy_output * 0.2 / 3000)*20);
+			}
+			durability_time = formatTime(durability_time);
+
 			stats_container.empty();
 			stats_container.append([
 				"<h5>Stats</h5>",
-				"<p>Optimal flow: <strong>" + stats.optimal_flow + "</strong> mb/t<br>Power output: <strong>" + stats.energy_output + "</strong> eu/t</p>",
+				"<p>Optimal flow: <strong>" + stats.optimal_flow + "</strong> mb/t<br>"+
+				"Power output: <strong>" + stats.energy_output + "</strong> eu/t<br>"+
+				"Time until destroyed: Approximately <strong>" + durability_time + "</strong><br>"+
+				"Required dynamo hatch: " + checkDynamos(stats) + "</p>",
 				steam_stats
 			]);
 
@@ -395,20 +435,7 @@
 			// Bedrockium drum stats
 			var stored = 65536000;
 			var time = Math.floor(stored / stats.optimal_flow / 20);
-
-			var timestr = [];
-			var time_years = Math.floor(time / 31556926);
-			if (time_years > 0) {time = time % 31556926; timestr.push(time_years + " years");}
-			var time_months = Math.floor(time / 2629744);
-			if (time_months > 0) {time = time % 2629744; timestr.push(time_months + " months");}
-			var time_days = Math.floor(time / 86400);
-			if (time_days > 0) {time = time % 86400; timestr.push(time_days + " days");}
-			var time_hours = Math.floor(time / 3600);
-			if (time_hours > 0) {time = time % 3600; timestr.push(time_hours + " hours");}
-			var time_minutes = Math.floor(time / 60);
-			if (time_minutes > 0) {time = time % 60; timestr.push(time_minutes + " minutes");}
-			if (time > 0) {timestr.push(Math.ceil(time) + " seconds");}
-			timestr = timestr.join(", ");
+			var timestr = formatTime(time);
 
 			var total_eu = Math.floor(stored / stats.optimal_flow * stats.energy_output).toLocaleString();
 
@@ -454,17 +481,29 @@
 		var material_search = $( ".material-search", card );
 
 		function buildTbl(name,v1,v2,v3) {
+			var w1 = "200px";
+			if (name == "Material") {w1 = "235px; padding-left:40px;";} // Special case
+
 			return "<table><tr>"+
-						"<td style=\"width:200px\">"+name+"</td>"+
+						"<td style=\"width:"+w1+"\">"+name+"</td>"+
 						"<td style=\"width:80px\"><small class=\"text-muted\">"+v1+"</small></td>"+
 						"<td style=\"width:70px\"><small class=\"text-muted\">"+v2+"</small></td>"+
 						"<td style=\"width:50px\"><small class=\"text-muted\">"+v3+"</small></td>"+
 					"</tr></table>";
 		}
 
-		var opts = [];
-		opts.push("<option value='-' disabled selected>Select material...</option>");
-		opts.push("<option value='-' disabled data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'></option>");
+		var opt1 = "<option value='-' disabled selected>Select material...</option>";
+		var opt2 = "<option value='-' disabled data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'></option>";
+
+		turbine_blades.sort(function(a,b) {
+			if (a.large.durability == b.large.durability) {return 0;}
+			return a.large.durability < b.large.durability ? 1 : -1;
+		});
+
+		var great = $( "<optgroup label='Great'>" );
+		var acceptable = $( "<optgroup label='Acceptable'>" );
+		var garbage = $( "<optgroup label='Garbage'>" );
+
 		for(var i=0;i<turbine_blades.length;i++) {
 			var blade = turbine_blades[i];
 			var name = escapehtml(blade.material);
@@ -477,9 +516,15 @@
 				fun_fact = " (" + blade.fun_fact + ")";
 			}
 
-			opts.push("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow + fun_fact)+"'>"+name+"</option>" );
+			var prnt = garbage;
+			if (typeof blade.category != "undefined") {
+				if (blade.category == "great") {prnt = great;}
+				else if (blade.category == "acceptable") {prnt = acceptable;}
+			}
+
+			prnt.append("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow + fun_fact)+"'>"+name+"</option>" );
 		}
-		material_search.append(opts);
+		material_search.append([opt1,opt2,great,acceptable,garbage]);
 		material_search.selectpicker({liveSearch:true,maxOptions:1});
 
 		var fuel_search = $( ".fuel-search", card );

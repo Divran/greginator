@@ -103,6 +103,8 @@ data.add("turbine blades",[
 		"flow":6000
 	},
 	"material":"Graphene",
+	"fun fact":"Surprisingly high flow rate",
+	"category":"acceptable",
 	"large":{
 		"durability":9600,
 		"efficiency":110,
@@ -287,6 +289,7 @@ data.add("turbine blades",[
 		"flow":14000
 	},
 	"material":"Mithril",
+	"category":"acceptable",
 	"large":{
 		"durability":19200,
 		"efficiency":130,
@@ -655,6 +658,7 @@ data.add("turbine blades",[
 		"flow":12000
 	},
 	"material":"Thaumium",
+	"category":"acceptable",
 	"large":{
 		"durability":76800,
 		"efficiency":130,
@@ -1023,6 +1027,7 @@ data.add("turbine blades",[
 		"flow":7500
 	},
 	"material":"Blue Steel",
+	"category":"acceptable",
 	"large":{
 		"durability":307200,
 		"efficiency":120,
@@ -1231,6 +1236,7 @@ data.add("turbine blades",[
 	},
 	"material":"Fluxed Electrum",
 	"fun_fact":"Surprisingly high flow rate",
+	"category":"acceptable",
 	"large":{
 		"durability":153600,
 		"efficiency":130,
@@ -1369,6 +1375,7 @@ data.add("turbine blades",[
 		"flow":3000
 	},
 	"material":"Vanadiumsteel",
+	"category":"acceptable",
 	"large":{
 		"durability":576000,
 		"efficiency":130,
@@ -1461,6 +1468,7 @@ data.add("turbine blades",[
 		"flow":7000
 	},
 	"material":"Titanium",
+	"category":"acceptable",
 	"large":{
 		"durability":480000,
 		"efficiency":130,
@@ -1484,6 +1492,7 @@ data.add("turbine blades",[
 		"flow":7000
 	},
 	"material":"Tungsten",
+	"category":"acceptable",
 	"large":{
 		"durability":768000,
 		"efficiency":130,
@@ -1508,6 +1517,7 @@ data.add("turbine blades",[
 	},
 	"material":"Tungstensteel",
 	"fun_fact":"Recommended, all around good material",
+	"category":"great",
 	"large":{
 		"durability":768000,
 		"efficiency":140,
@@ -1555,6 +1565,7 @@ data.add("turbine blades",[
 	},
 	"material":"Knightmetal",
 	"fun_fact":"Recommended as your very first turbine blade.",
+	"category":"great",
 	"large":{
 		"durability":307200,
 		"efficiency":130,
@@ -1693,6 +1704,7 @@ data.add("turbine blades",[
 		"flow":10000
 	},
 	"material":"HSS-G",
+	"category":"great",
 	"large":{
 		"durability":1200000,
 		"efficiency":130,
@@ -1716,6 +1728,7 @@ data.add("turbine blades",[
 		"flow":10000
 	},
 	"material":"HSS-E",
+	"category":"great",
 	"large":{
 		"durability":1536000,
 		"efficiency":140,
@@ -1739,6 +1752,7 @@ data.add("turbine blades",[
 		"flow":14000
 	},
 	"material":"HSS-S",
+	"category":"great",
 	"large":{
 		"durability":900000,
 		"efficiency":140,
@@ -1877,6 +1891,7 @@ data.add("turbine blades",[
 		"flow":8000
 	},
 	"material":"Naquadah Alloy",
+	"category":"great",
 	"large":{
 		"durability":1536000,
 		"efficiency":150,
@@ -1900,6 +1915,7 @@ data.add("turbine blades",[
 		"flow":16000
 	},
 	"material":"Duranium",
+	"category":"great",
 	"large":{
 		"durability":1536000,
 		"efficiency":150,
@@ -1923,6 +1939,7 @@ data.add("turbine blades",[
 		"flow":20000
 	},
 	"material":"Tritanium",
+	"category":"great",
 	"large":{
 		"durability":3072000,
 		"efficiency":160,
@@ -1947,6 +1964,7 @@ data.add("turbine blades",[
 	},
 	"material":"Adamantium",
 	"fun_fact":"Much easier to make than other materials with comparable stats",
+	"category":"great",
 	"large":{
 		"durability":1536000,
 		"efficiency":150,
@@ -1970,6 +1988,7 @@ data.add("turbine blades",[
 		"flow":24000
 	},
 	"material":"Neutronium",
+	"category":"great",
 	"large":{
 		"durability":196608000,
 		"efficiency":160,
