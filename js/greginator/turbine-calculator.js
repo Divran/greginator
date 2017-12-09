@@ -300,7 +300,7 @@
 		if (result == "") {result = "Not compatible.";}
 
 		var note = "";
-		if (remaining != 0) {note = "**";}
+		if (remaining != 0 && stats.optimal_flow > gregtech_pumps[0].speed) {note = "**";}
 
 		return "<td>"+result+note+"</td><td>"+remaining + " mb/t remaining</td>";
 	}
