@@ -1,4 +1,14 @@
 data.add("boilers",[
+	/*
+	{
+		name:"LP Railcraft Boiler",
+		output:360
+	},
+	{
+		name:"HP Railcraft Boiler",
+		output:720
+	},
+	*/
 	{
 		name:"Large Bronze Boiler",
 		output: 800

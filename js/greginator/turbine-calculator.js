@@ -342,14 +342,14 @@
 			max_produced_lava = 7992;
 			max_produced_coolant = 15996;
 
-			max_consumed_lava = 999;
-			max_consumed_coolant = 3999;
+			max_consumed_lava = 999 / 20;
+			max_consumed_coolant = 3999 / 20;
 		} else { // superheated steam
 			max_produced_lava = 8000;
 			max_produced_coolant = 16000;
 
-			max_consumed_lava = 2000;
-			max_consumed_coolant = 8000;
+			max_consumed_lava = 2000 / 20;
+			max_consumed_coolant = 8000 / 20;
 		}
 
 		var amount_lava = Math.ceil(max_produced_lava / stats.optimal_flow);
@@ -559,6 +559,7 @@
 			selected_fuel = getFuelByName(fuel_search.val());
 
 			displayFuelStats();
+			$(window).off('resize.getSize scroll.getSize');
 		});
 	}
 })();
