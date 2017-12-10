@@ -484,11 +484,21 @@
 
 			var total_eu = Math.floor(stored / stats.optimal_flow * stats.energy_output).toLocaleString();
 
+			// Quantum tank stats
+			var stored_quantum = 2076192000;
+			var time_quantum = Math.floor(stored_quantum / stats.optimal_flow / 20);
+			var timestr_quantum = formatTime(time_quantum);
+			var total_eu_quantum = Math.floor(stored_quantum / stats.optimal_flow * stats.energy_output).toLocaleString();
+
 			bedrockium_drum_container.empty();
 			bedrockium_drum_container.append([
 				"<h5>Bedrockium drum stats</h5>",
 				"<p>Time to empty bedrockium drum: " + timestr + "<br>"+
-				"Total EU stored in bedrockium drum: " + total_eu + " EU</p>"
+				"Total EU stored in bedrockium drum: " + total_eu + " EU</p>",
+
+				"<h5>GT Quantum Tank V stats</h5>",
+				"<p>Time to empty quantum tank: " + timestr_quantum + "<br>"+
+				"Total EU stored in quantum tank: " + total_eu_quantum + " EU</p>"
 			]);
 		}
 
