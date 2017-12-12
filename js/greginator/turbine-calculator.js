@@ -15,6 +15,11 @@
 	var boilers;
 	var dynamos;
 
+	var note_1 = "<sup>(1)</sup>";
+	var note_2 = "<sup>(2)</sup>";
+	var note_3 = "<sup>(3)</sup>";
+	var note_12 = "<sup>(1,2)</sup>";
+
 	function init(b) {
 		if (!b) {collapse.collapse("toggle");}
 
@@ -167,7 +172,7 @@
 				remaining = remaining - speed*amount;
 
 				if (amount > 4) { // if we have more than 4
-					note = "*";
+					note = note_1;
 				}
 
 				result.push(amount + " x " + escapehtml(conduit.name));
@@ -188,7 +193,7 @@
 
 					if (remaining2 == 0) {
 						if (amount > 4) { // if we have more than 4
-							note = "*";
+							note = note_1;
 						}
 						result = [amount + " x " + escapehtml(conduit.name)];
 						remaining = 0;
@@ -203,8 +208,8 @@
 		var result = result.join(", ");
 		if (result == "") {result = "Not compatible.";}
 		else if (remaining != 0) {
-			if (note == "") {note = "**";}
-			else {note += " **";}
+			if (note == "") {note = note_2;}
+			else {note = note_12;}
 		}
 
 		return "<td>"+result+note+"</td><td>"+remaining + " mb/t remaining</td>";
@@ -222,8 +227,11 @@
 		var amount_with = Math.floor(stats.optimal_flow / transfer_with);
 		var amount_without = Math.floor((stats.optimal_flow % transfer_with) / transfer_without);
 		var note = "";
-		if (amount_with+amount_without) {note = "*";}
-		return "<td>" + amount_with + " with glowstone + " + amount_without + " without.</td><td>"+(stats.optimal_flow % transfer_without) + " mb/t remaining.</td>";
+		if (amount_with+amount_without) {note = note_1;}
+		if (stats.optimal_flow % transfer_without != 0) {
+			if (note == "") {note = note_2;} else {note = note_12;}
+		}
+		return "<td>" + amount_with + " with glowstone + " + amount_without + " without."+note+"</td><td>"+(stats.optimal_flow % transfer_without) + " mb/t remaining.</td>";
 	}
 	function checkGregtechPipes(stats) {
 		var names = ["Tiny ","Small ","","Large ","Huge "]
@@ -262,14 +270,14 @@
 		var ret2 = [];
 		if (typeof cheapest_pipe != "undefined") {
 			var note = "";
-			if (cheapest_capacity != stats.optimal_flow) {note = "***";}
+			if (cheapest_capacity != stats.optimal_flow) {note = note_3;}
 			ret1.push("Cheapest: "+names[cheapest_capacity]+escapehtml(cheapest_pipe.material)+" ("+(cheapest_pipe.capacity * multipliers[cheapest_capacity])+" mb/t)" + note);
 			ret2.push(((cheapest_pipe.capacity * multipliers[cheapest_capacity]) % stats.optimal_flow) + " mb/t remaining");
 		}
 
 		if (typeof closest_pipe != "undefined") {
 			var note = "";
-			if (closest_capacity != stats.optimal_flow) {note = "***";}
+			if (closest_capacity != stats.optimal_flow) {note = note_3;}
 			ret1.push("Closest: " + names[closest_capacity] + escapehtml(closest_pipe.material)+" ("+(closest_pipe.capacity * multipliers[closest_capacity])+" mb/t)" + note);
 			ret2.push(((closest_pipe.capacity * multipliers[closest_capacity]) % stats.optimal_flow) + " mb/t remaining");
 		}
@@ -300,7 +308,7 @@
 		if (result == "") {result = "Not compatible.";}
 
 		var note = "";
-		if (remaining != 0 && stats.optimal_flow > gregtech_pumps[0].speed) {note = "**";}
+		if (remaining != 0 && stats.optimal_flow > gregtech_pumps[0].speed) {note = note_2;}
 
 		return "<td>"+result+note+"</td><td>"+remaining + " mb/t remaining</td>";
 	}
@@ -507,9 +515,9 @@
 		transfer_container.append([
 			"<h5>Optimal transfer methods</h5>",
 			transfer_table,
-			"<small><strong>*</strong>: This configuration can't transfer into one face of one block (of a turbine input hatch). You'll need to either use multiple input hatches or a middle stage tank to accept fluid from more than one side.<br>"+
-			"<strong>**</strong>: This configuration does not exactly match the required flow rate. You can probably attach an IC2 regulator in paralel, or a different type of pipe, to catch the remainder.<br>"+
-			"<strong>***</strong>: This gregtech pipe has a transfer rate higher than required. You'll need to make sure your pumps are an exact match instead.</small>"
+			"<small><strong>1.</strong> This configuration can't transfer into one face of one block (of a turbine input hatch). You'll need to either use multiple input hatches or a middle stage tank to accept fluid from more than one side.<br>"+
+			"<strong>2.</strong> This configuration does not exactly match the required flow rate. You can probably attach an IC2 regulator in paralel, or a different type of pipe, to catch the remainder.<br>"+
+			"<strong>3.</strong> This gregtech pipe has a transfer rate higher than required. You'll need to make sure your pumps are an exact match instead.</small>"
 		]);
 
 		var bedrockium_drum_container = $( "<div class='card-body'>" );
