@@ -312,6 +312,20 @@
 
 		return "<td>"+result+note+"</td><td>"+remaining + " mb/t remaining</td>";
 	}
+	function checkGregtechRegulators(stats) {
+		// GT Regulators have the same max speed as their pump counterparts
+		for(var i=0;i<gregtech_pumps.length;i++) {
+			var pump = gregtech_pumps[i];
+			var speed = pump.speed;
+			if (speed >= stats.optimal_flow) {
+				return "<td>" + escapehtml(pump.name) + " regulator or better.</td><td>0 mb/t remaining</td>";
+			}
+		}
+
+		var remaining = stats.optimal_flow - gregtech_pumps[gregtech_pumps.length-1].speed;
+
+		return "<td>Not compatible.</td><td>" + remaining + " mb/t remaining</td>";
+	}
 	function lowestCommonDenominator(larger,smaller) {
 		if (larger < smaller) {
 			let temp = larger;
@@ -474,16 +488,18 @@
 
 			transfer_table.empty();
 
-			// Check if IC2 regulator works
-			transfer_table.append( "<tr><th>IC2 Fluid Regulator</th>" + checkIC2Regulator(stats));
+			// Check gretech regulator
+			transfer_table.append( "<tr><th>Gregtech Regulator</th>" + checkGregtechRegulators(stats) + "</tr>" );
+			// Check IC2 regulator
+			transfer_table.append( "<tr><th>IC2 Fluid Regulator</th>" + checkIC2Regulator(stats) + "</tr>");
 			// Check Ender IO pipes
-			transfer_table.append( "<tr><th>Ender IO conduits</th>" + checkEnderIOPipes(stats) );
+			transfer_table.append( "<tr><th>Ender IO conduits</th>" + checkEnderIOPipes(stats) + "</tr>");
 			// Check transfer nodes
-			transfer_table.append( "<tr><th>Translocators</th>" + checkTranslocators(stats) );
+			transfer_table.append( "<tr><th>Translocators</th>" + checkTranslocators(stats) + "</tr>");
 			// Check gregtech pumps
-			transfer_table.append( "<tr><th>Gregtech Pumps</th>" + checkGregtechPumps(stats) );
+			transfer_table.append( "<tr><th>Gregtech Pumps</th>" + checkGregtechPumps(stats) + "</tr>");
 			// Check gregtech pipes
-			transfer_table.append( "<tr><th>Gregtech Pipes</th>" + checkGregtechPipes(stats) );
+			transfer_table.append( "<tr><th>Gregtech Pipes</th>" + checkGregtechPipes(stats) + "</tr>");
 
 			// Bedrockium drum stats
 			var stored = 65536000;
@@ -516,7 +532,7 @@
 			"<h5>Optimal transfer methods</h5>",
 			transfer_table,
 			"<small><strong>1.</strong> This configuration can't transfer into one face of one block (of a turbine input hatch). You'll need to either use multiple input hatches or a middle stage tank to accept fluid from more than one side.<br>"+
-			"<strong>2.</strong> This configuration does not exactly match the required flow rate. You can probably attach an IC2 regulator in paralel, or a different type of pipe, to catch the remainder.<br>"+
+			"<strong>2.</strong> This configuration does not exactly match the required flow rate. You can probably attach a regulator in paralel, or a different type of pipe, to catch the remainder.<br>"+
 			"<strong>3.</strong> This gregtech pipe has a transfer rate higher than required. You'll need to make sure your pumps are an exact match instead.</small>"
 		]);
 
