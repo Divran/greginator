@@ -467,13 +467,14 @@
 			}
 
 			var durability_time = 0;
+			// durability for non-plasma is 20% of energy output every 3000 ticks
+			var damage_taken = ((stats.energy_output*0.2)/3000);
 			if (selected_fuel.name.indexOf("Plasma") != -1) {
-				// durability for plasma is ((eu)^0.7)/t
-				durability_time = selected_material[selected_size].durability / (((stats.energy_output ^ 0.7) / 3000)*20);
-			} else {
-				// durability for non-plasma is 20% of energy output every 3000 ticks
-				durability_time = selected_material[selected_size].durability / ((stats.energy_output * 0.2 / 3000)*20);
+				// durability for plasma is min(eu*0.2,eu^0.6)
+				damage_taken = Math.min(damage_taken,(stats.energy_output^0.6)/3000);
 			}
+
+			durability_time = selected_material[selected_size].durability / (damage_taken * 20); // divide by another 20 to get duration in seconds instead of ticks
 			durability_time = formatTime(durability_time);
 
 			stats_container.empty();
