@@ -617,6 +617,11 @@
 		for(var i=0;i<turbine_fuels.length;i++) {
 			var category = turbine_fuels[i];
 
+			category.fuels.sort(function(a,b) {
+				if (a.fuel_value == b.fuel_value) {return 0;}
+				return a.fuel_value < b.fuel_value ? 1 : -1;
+			});
+
 			var cat = $( "<optgroup label='" + escapehtml(category.name) + "'></optgroup>" );
 			for(var j=0;j<category.fuels.length;j++) {
 				var fuel = category.fuels[j];
