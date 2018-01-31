@@ -29,6 +29,10 @@ data.add("turbine fuels",[
 			{
 				name:"Biogas",
 				fuel_value: 32
+			},
+			{
+				name:"LPG",
+				fuel_value: 256
 			}
 		]
 	},
