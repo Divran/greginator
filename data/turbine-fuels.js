@@ -33,6 +33,10 @@ data.add("turbine fuels",[
 			{
 				name:"LPG",
 				fuel_value: 256
+			},
+			{
+				name:"Naphtha",
+				fuel_value: 256
 			}
 		]
 	},
