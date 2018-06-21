@@ -19,3 +19,26 @@ body {
 .btn-light {
 	background-color: #e7e8e8 !important;
 }
+
+.item-grid {
+	text-align:center;
+}
+
+.item-grid table {
+	max-width:400px;
+}
+
+.item-grid table td {
+	padding:0;
+	margin:0;
+	border-color:#EEE;
+	border-width:2px;
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	image-rendering: pixelated;
+}
+
+.item-grid table td:hover {
+	background-color:#EEE;
+}

@@ -6,11 +6,16 @@
 	}
 
 	function get(name) {
-		return JSON.parse(JSON.stringify(registered_data[name]));
+		return registered_data[name];
+	}
+
+	function getCopy(name) {
+		return JSON.parse(JSON.stringify(get(name)));
 	}
 
 	window.data = {
 		add:add,
-		get:get
+		get:get,
+		getCopy:getCopy
 	}
 })();

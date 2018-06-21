@@ -25,14 +25,14 @@
 
 		if (!initialized) {
 			initialized = true;
-			turbine_blades = data.get("turbine blades");
-			turbine_fuels = data.get("turbine fuels");
-			enderio_conduits = data.get("ender io conduits");
-			translocators = data.get("fluid translocators");
-			gregtech_pipes = data.get("gregtech pipes");
-			gregtech_pumps = data.get("gregtech pumps");
-			boilers = data.get("boilers");
-			dynamos = data.get("dynamo hatches");
+			turbine_blades = data.getCopy("turbine blades");
+			turbine_fuels = data.getCopy("turbine fuels");
+			enderio_conduits = data.getCopy("ender io conduits");
+			translocators = data.getCopy("fluid translocators");
+			gregtech_pipes = data.getCopy("gregtech pipes");
+			gregtech_pumps = data.getCopy("gregtech pumps");
+			boilers = data.getCopy("boilers");
+			dynamos = data.getCopy("dynamo hatches");
 			initialize();
 		}
 	}
@@ -42,22 +42,6 @@
 	var selected_material;
 	var selected_fuel;
 	var selected_size = "large";
-
-	function formatTime(time) {
-		var timestr = [];
-		var time_years = Math.floor(time / 31556926);
-		if (time_years > 0) {time = time % 31556926; timestr.push(time_years + " years");}
-		var time_months = Math.floor(time / 2629744);
-		if (time_months > 0) {time = time % 2629744; timestr.push(time_months + " months");}
-		var time_days = Math.floor(time / 86400);
-		if (time_days > 0) {time = time % 86400; timestr.push(time_days + " days");}
-		var time_hours = Math.floor(time / 3600);
-		if (time_hours > 0) {time = time % 3600; timestr.push(time_hours + " hours");}
-		var time_minutes = Math.floor(time / 60);
-		if (time_minutes > 0) {time = time % 60; timestr.push(time_minutes + " minutes");}
-		if (time > 0) {timestr.push(Math.ceil(time) + " seconds");}
-		return timestr.join(", ");
-	}
 
 	function getMaterialByName(name) {
 		for(var i=0;i<turbine_blades.length;i++) {

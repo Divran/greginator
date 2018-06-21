@@ -1,0 +1,6 @@
+* ic2 nuclear
+* bigreactor
+* small single block GT steam turbine calculations
+* railcraft boiler calculations
+* fix possible bug in "left over steam" calculations
+* 

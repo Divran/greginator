@@ -10,6 +10,7 @@
 		<script src="js/greginator/helpers.js"></script>
 		<script src="js/selectpicker/bootstrap-select.min.js"></script>
 		<script src="js/selectpicker/defaults-en_US.min.js"></script>
+		<script src="js/biginteger.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/greginator.css" rel="stylesheet">
 		<link href="css/bootstrap-select.min.css" rel="stylesheet">
@@ -21,6 +22,7 @@
 		<script src="data/pipes.js"></script>
 		<script src="data/boilers.js"></script>
 		<script src="data/dynamo-hatches.js"></script>
+		<script src="data/ic2-nuclear.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -46,7 +48,79 @@
 			</div>
 			<script src="js/greginator/turbine-calculator.js"></script>
 
-			<!-- other stuff... ? -->
+			<br>
+
+			<!-- GT Vein Finder -->
+			<div class="card" id="gt-vein-finder">
+				<div class="card-header">
+					<h4 class="card-title">GT Vein Finder</h4>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6">
+								<p>Enter coordinates:</p>
+								<div class="input-group mb-3">
+									<div class="input-group-addon">
+										<span class="input-group-text">X</span>
+									</div>
+									<input type="number" id="gt-vein-finder-x" class="form-control">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-addon">
+										<span class="input-group-text">Z</span>
+									</div>
+									<input type="number" id="gt-vein-finder-z" class="form-control">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<p>These coordinates are:</p>
+								<div class="btn-group btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-secondary active">
+										<input type="radio" name="gt-vein-finder-coord-type" id="gt-vein-finder-coord-type-player" value="player" checked> Player Coordinates
+									</label>
+									<label class="btn btn-secondary">
+										<input type="radio" name="gt-vein-finder-coord-type" id="gt-vein-finder-coord-type-chunk" value="chunk"> Chunk Coordinates
+									</label>
+								</div>
+							</div>
+						</div>
+						<div id="gt-vein-finder-result" class="alert"></div>
+					</div>
+				</div>
+			</div>
+			<script src="js/greginator/vein-finder.js"></script>
+
+			<!-- IC2 Nuclear simulator -->
+			<!--
+			<div class="card" id="ic2-nuclear-simulator-card">
+				<div class="card-header">
+					<h4 class="card-title">IC2 Nuclear Simulator</h4>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<div class="item-grid"></div>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="form-group">
+									<div class="item-selection">
+
+									</div>
+									<br>
+									<input type="text" class="code form-control" placeholder="Code">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				-->
+			</div>
+			<script src="js/greginator/ic2-nuclear-simulator.js"></script>
 		</div>
 
 		<div class="credits">
