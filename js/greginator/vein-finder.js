@@ -37,45 +37,45 @@
 
 		// Calculate chunk or player position
 		if (playercoords.is( ":checked" )) {
-			chunkx = playerx >= 0 ? Math.floor(playerx / 16) : Math.ceil(playerx / 16);
-			chunkz = playerz >= 0 ? Math.floor(playerz / 16) : Math.ceil(playerz / 16);
+			chunkx = playerx >= 0 ? Math.floor(playerx / 16) : (Math.ceil((playerx-1) / 16)-1);
+			chunkz = playerz >= 0 ? Math.floor(playerz / 16) : (Math.ceil((playerz-1) / 16)-1);
 		} else {
 			playerx = playerx * 16 + 8;
 			playerz = playerz * 16 + 8;
 		}
 
 		// Check if on top of possible vein
-		var modx = chunkx % 3 - 1;
-		var modz = chunkz % 3 - 1;
+		function checkChunk(x,z) {
+			var modx = x % 3 - (x < 0 ? -1 : 1);
+			var modz = z % 3 - (z < 0 ? -1 : 1);
 
-		if (modx == 0 && modz == 0) {
+			return (modx == 0 && modz == 0);
+		}
+
+		if (checkChunk(chunkx,chunkz)) {
 			result.removeClass( "alert-danger" ).addClass( "alert-success" ).text( "You are on top of a possible vein spawn!" );
 			result.show();
 			return;
 		}
 
 		// Find closest possible vein spawn
-		var closest = 999999;
 		var closest_x = 0;
 		var closest_z = 0;
-		for(var x=-3;x<=3;x++) {
-			for(var z=-3;z<=3;z++) {
-				var checkx = chunkx * 16 + x * 16 + 8;
-				var checkz = chunkz * 16 + z * 16 + 8;
+		for(var x=-1;x<=1;x++) {
+			for(var z=-1;z<=1;z++) {
+				var checkx = chunkx + x
+				var checkz = chunkz + z
 
-				var diffx = playerx - checkx;
-				var diffz = playerz - checkz;
-				var distance = Math.floor(Math.sqrt(diffx*diffx+diffz*diffz));
-				if (distance < closest) {
-					closest = distance;
-					closest_x = diffx;
-					closest_z = diffz;
+				if (checkChunk(checkx,checkz)) {
+					closest_x = checkx;
+					closest_z = checkz;
+					break;
 				}
 			}
 		}
 
-		var diffx = Math.floor(closest_x / 16);
-		var diffz =  Math.floor(closest_z / 16);
+		var diffx = chunkx - closest_x;
+		var diffz = chunkz - closest_z;
 
 		var diffs = [];
 
@@ -85,6 +85,7 @@
 			var dir = 1;
 			if (diff < 0) {dir = -1;}
 			diff = Math.abs(diff);
+
 			var dirname = (
 				dir == (playercoord <= 0 ? 1 : -1)
 				? dirnames[0]
