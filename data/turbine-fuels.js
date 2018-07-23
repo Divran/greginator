@@ -6,7 +6,7 @@ data.add("turbine fuels",[
 			{
 				name: "Steam",
 				multiplier:0.5,
-				fuel_value: 1
+				fuel_value: 0.5
 			},
 			{
 				name: "Superheated Steam",
