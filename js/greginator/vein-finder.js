@@ -46,10 +46,10 @@
 
 		// Check if on top of possible vein
 		function checkChunk(x,z) {
-			var modx = x % 3 - (x < 0 ? -1 : 1);
-			var modz = z % 3 - (z < 0 ? -1 : 1);
+			var modx = Math.abs(x) % 3;
+			var modz = Math.abs(z) % 3;
 
-			return (modx == 0 && modz == 0);
+			return (modx == 1 && modz == 1);
 		}
 
 		if (checkChunk(chunkx,chunkz)) {
@@ -87,7 +87,7 @@
 			diff = Math.abs(diff);
 
 			var dirname = (
-				dir == (playercoord <= 0 ? 1 : -1)
+				dir == 1 //(playercoord <= 0 ? 1 : -1)
 				? dirnames[0]
 				: dirnames[1]
 			);
