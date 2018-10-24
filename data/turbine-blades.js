@@ -1822,6 +1822,7 @@ data.add("turbine blades",[
 		"flow":8000
 	},
 	"material":"Steeleaf",
+	"category":"acceptable",
 	"large":{
 		"durability":230400,
 		"efficiency":130,
