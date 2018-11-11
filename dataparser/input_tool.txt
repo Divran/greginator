@@ -1,0 +1,129 @@
+Sealed Wood	2400	3		Not obtainable
+Rubber	1600	1.5	
+Wood	1600	2
+
+Bismuth	6400	6		
+Blaze	1600	2	Fire Aspect III	
+Brass	9600	7		
+Certus Quartz	3200	5		
+Cupronickel	6400	6		
+Epoxid	3200	3		GregTech 5 Unofficial
+Flint	6400	2.5		
+Graphene	3200	6		Not obtainable
+Lead	6400	8		
+Nether Quartz	3200	1		
+Polycaprolactam	3200	3		GregTech 5 Unofficial
+Polyethylene (Plastic)	3200	3		
+Polysiloxane	12800	3		GregTech 5 Unofficial
+Polytetrafluoroethylene	3200	3		GregTech 5 Unofficial
+Stone	3200	4		
+
+Aluminium	12800	10		
+Astral Silver	6400	10		Metallurgy 4
+Beryllium	6400	14		
+Bismuth Bronze	25600	8		
+Black Bronze	25600	12		
+Black Steel	76800	6.5		
+Blue Steel	102400	7.5		
+Bronze	19200	6		
+Carbon	6400	1		
+Cobalt Brass	25600	8		
+Damascus Steel	128000	8		Only found as Loot
+Deep Iron	38400	6		Metallurgy 4
+Electrum	6400	12		
+Emerald	25600	7		
+Gold	6400	12		
+Graphite	3200	5		
+Green Sapphire	25600	7		
+Invar	25600	6		
+Iron	25600	6		
+Iron Wood	38400	6	Fortune I	
+Kanthal	6400	10		
+Magnalium	25600	6		
+Magnetic Iron	25600	6		
+Magnetic Neodymium	51200	7		
+Magnetic Steel	51200	6		
+Manganese	51200	7		
+Meteoric Iron	38400	6		Galacticraft
+Meteoric Steel	76800	6		Galacticraft
+Midasium	6400	12	Fortune II	Metallurgy 4
+Molybdenum	51200	7		
+Nichrome	6400	6		
+Neodymium	51200	7		
+Nickel	6400	6		
+Olivine	25600	7		
+Opal	25600	7		
+Palladium	51200	8		
+Pig Iron	38400	6		Tinkers' Construct
+Platinum	6400	12		
+Red Garnet	12800	7		
+Red Steel	89600	7		
+Rose Gold	12800	14		
+Ruby	25600	7		
+Sapphire	25600	7		
+Silver	6400	10		
+Shadow Iron	38400	6		Metallurgy 4
+Shadow Steel	76800	6		Metallurgy 4
+Stainless Steel	48000	7		
+Steel	51200	6		
+Sterling Silver	12800	13		
+Tanzanite	25600	7		
+Thorium	51200	6		
+Tin Alloy	9600	6.5		GregTech 5 Unofficial
+Wrought Iron	38400	6		
+Yellow Garnet	12800	7
+
+Aer	6400	8		Thaumcraft 4
+Amethyst	25600	7		
+Aqua	6400	8	Fortune III	Thaumcraft 4
+Black Granite	6400	6		
+Blue Topaz	25600	7		
+Chrome	25600	11		
+Cobalt	51200	8		
+Dark Iron	38400	7		Metallurgy 4
+Diamond	128000	8		
+Enderium	25600	8	Silk Touch I	Thermal Expansion 4
+Fiery Blood	25600	8	Fire Aspect III	Twilight Forest
+Fire Stone	128000	6	Fire Aspect III	
+Fluxed Electrum	51200	16		Redstone Arsenal
+Force	12800	10	Silk Touch I	DartCraft
+HSLA Steel	50000	6		RotaryCraft
+HSS-G	400000	10		GregTech 5 Unofficial
+Ignis	6400	7	Fire Aspect III	Thaumcraft 4
+Infused Gold	6400	12		Not obtainable
+Mithril	6400	14	Fortune III	Metallurgy 4
+Plutonium-241	51200	6	Radioactivity III	
+Plutonium-244	51200	6	Radioactivity I	
+Ordo	6400	8	Silk Touch I	Thaumcraft 4
+Red Granite	6400	4		
+Steel Leaf	76800	8	Fortune II
+Terra	25600	8		Thaumcraft 4
+Thaumium	25600	12	Fortune II	Thaumcraft 4
+Titanium	256000	8		
+Tungsten	512000	8		
+Topaz	25600	7		
+Ultimet	51200	6		
+Uranium-235	51200	6	Radioactivity II	
+Uranium-238	51200	6		
+Vanadiumsteel	192000	3		GregTech 5 Unofficial
+Vinteum	12800	10	Fortune I	Ars Magica 2
+
+Duranium	128000	8		GregTech 5 Unofficial
+Enriched Naquadah	128000	6	Radioactivity IV	
+HSS-E	512000	10		GregTech 5 Unofficial
+HSS-S	300000	14		GregTech 5 Unofficial
+Iridium	512000	6		
+Osmiridium	300000	8		GregTech 5 Unofficial
+Osmium	128000	16		
+Naquadah	128000	6		
+Naquadria	51200	1	Radioactivity V	
+Nether Star	512000	1	Silk Touch I	
+Perditio	6400	32		Thaumcraft 4
+Tritanium	256000	6		GregTech 5 Unofficial
+Tungsten Steel	512000	10		
+Tungstencarbide	128000	14		GregTech 5 Unofficial
+
+Adamantium	512000	10		Thaumcraft 4
+Naquadah Alloy	512000	8		GregTech 5 Unofficial
+
+Neutronium	8192000	6		GregTech 5 Unofficial

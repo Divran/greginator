@@ -23,6 +23,7 @@
 		<script src="data/boilers.js"></script>
 		<script src="data/dynamo-hatches.js"></script>
 		<script src="data/ic2-nuclear.js"></script>
+		<script src="data/tools.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -47,6 +48,126 @@
 				</div>
 			</div>
 			<script src="js/greginator/turbine-calculator.js"></script>
+
+			<br>
+
+			<!-- GT Tool Browser -->
+			<div class="card" id="gt-tool-browser">
+				<div class="card-header">
+					<h4 class="card-title">GT Tool Browser</h4>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-5">
+								<div class="card">
+									<div class="card-body">
+										<h5>Sort by</h5>
+
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-light active">
+												<input type="radio" name="gt-tool-browser-sort" id="gt-tool-browser-sort-durability" value="durability" checked> Durability
+											</label>
+											<label class="btn btn-light">
+												<input type="radio" name="gt-tool-browser-sort" id="gt-tool-browser-sort-speed" value="speed" checked> Speed
+											</label>
+											<label class="btn btn-light">
+												<input type="radio" name="gt-tool-browser-sort" id="gt-tool-browser-sort-damage" value="damage" checked> Damage
+											</label>
+										</div>
+									</div>
+								</div>
+								<br>
+								<small><p>Note: Only lists base stats. Each tool type still has the same stats relative to other tools of the same type, so this list can still be used for comparisons. See <a href="https://ftb.gamepedia.com/Meta-Tools_(GregTech_5)#Properties">this page</a> for more details.</p>
+								<p>Note: Sword damage is equal to "mining tier + 4".</p>
+								<p>Tip: Use your browser's search box to search (win: CTRL+F / mac: CMD+F)</p></small>
+							</div>
+							<div class="col-md-7">
+								<div class="card">
+									<div class="card-body">
+										<h5>Filter to</h5>
+
+										<div class="row">
+											<div class="col-md-8">
+												Obtainable in age (filters to selected or below)
+
+												<div class="btn-group btn-group-toggle" data-toggle="buttons">
+													<label class="btn btn-light active">
+														<input type="radio" name="gt-tool-browser-filter-age" value="5" checked> Any
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-age" value="0"> Steam age
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-age" value="1"> LV
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-age" value="2"> MV
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-age" value="3"> HV
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-age" value="4"> EV
+													</label>
+												</div>
+												<br>
+												Mining tier (filters to selected or above)
+
+												<div class="btn-group btn-group-toggle" data-toggle="buttons">
+													<label class="btn btn-light active">
+														<input type="radio" name="gt-tool-browser-filter-tier" value="0" checked> Any
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-tier" value="1"> 1
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-tier" value="2"> 2
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-tier" value="3"> 3
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-tier" value="4"> 4
+													</label>
+													<label class="btn btn-light">
+														<input type="radio" name="gt-tool-browser-filter-tier" value="5"> 5
+													</label>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-check">
+													<input class="form-check-input" id="gt-tool-browser-filter-fortune" type="checkbox">
+													<label class="form-check-label" for="gt-tool-browser-filter-fortune">Must have fortune</label>
+												</div>
+
+												<div class="form-check">
+													<input class="form-check-input" id="gt-tool-browser-filter-silk-touch" type="checkbox">
+													<label class="form-check-label" for="gt-tool-browser-filter-silk-touch">Must have silk touch</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Material</th>
+								<th>Durability</th>
+								<th>Speed (of pickaxe)</th>
+								<th>Mining tier</th>
+								<th class="d-none d-md-table-cell">Enchantments</th>
+								<th class="d-none d-lg-table-cell">Comment</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+			<script src="js/greginator/tool-browser.js"></script>
 
 			<br>
 
@@ -77,10 +198,10 @@
 							<div class="col-md-6">
 								<p>These coordinates are:</p>
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-secondary active">
+									<label class="btn btn-light active">
 										<input type="radio" name="gt-vein-finder-coord-type" id="gt-vein-finder-coord-type-player" value="player" checked> Player Coordinates
 									</label>
-									<label class="btn btn-secondary">
+									<label class="btn btn-light">
 										<input type="radio" name="gt-vein-finder-coord-type" id="gt-vein-finder-coord-type-chunk" value="chunk"> Chunk Coordinates
 									</label>
 								</div>

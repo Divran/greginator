@@ -20,6 +20,10 @@ body {
 	background-color: #e7e8e8 !important;
 }
 
+.btn-light.active {
+	box-shadow: 0 0 0 0.2rem rgba(134,142,150,.5) !important;
+}
+
 .item-grid {
 	text-align:center;
 }
@@ -41,4 +45,8 @@ body {
 
 .item-grid table td:hover {
 	background-color:#EEE;
+}
+
+.form-check-input {
+	margin-left:0; /* undo bootstrap's margin */
 }

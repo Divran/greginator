@@ -562,9 +562,22 @@
 		var opt1 = "<option value='-' disabled selected>Select material...</option>";
 		var opt2 = "<option value='-' disabled data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'></option>";
 
+		function compareNum(a,b) {
+			if (a==b) {return 0;}
+			return a < b ? 1 : -1;
+		}
+
 		turbine_blades.sort(function(a,b) {
-			if (a.large.durability == b.large.durability) {return 0;}
-			return a.large.durability < b.large.durability ? 1 : -1;
+			// first compare these values in order
+			var comparisons = ["durability","efficiency","flow"];
+			for(var i=0;i<comparisons.length;i++) {
+				let idx = comparisons[i];
+				let n = compareNum(a.large[idx],b.large[idx]);
+				if (n != 0) {return n;}
+			}
+			
+			// if it's still not sorted, sort alphabetically by name last
+			return a.material.localeCompare(b.material);
 		});
 
 		var great = $( "<optgroup label='Great'>" );
