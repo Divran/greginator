@@ -164,11 +164,11 @@
 			html.push("<td>"+escapehtml(tool.speed)+"</td>");
 			html.push("<td>"+escapehtml(tool.tier)+"</td>");
 			html.push("<td>"+age_names[tool.age]+"</td>");
-			html.push("<td class='d-none d-md-table-cell'>"+escapehtml(tool.enchant)+"</td>");
+			html.push("<td class='d-none d-md-table-cell'>"+escapehtmlWithLineBreaks(tool.enchant)+"</td>");
 			if (show_recommended) {
-				html.push("<td>"+escapehtml(tool.recommended)+"</td>");
+				html.push("<td>"+tool.recommended+"</td>");
 			}
-			html.push("<td class='d-none d-lg-table-cell'>"+escapehtml(tool.comment || "")+"</td>");
+			html.push("<td class='d-none d-lg-table-cell'>"+(tool.comment || "")+"</td>");
 			html.push("</tr>");
 		}
 

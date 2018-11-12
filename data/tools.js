@@ -339,7 +339,7 @@ data.add("tools",[
 	"othermod":"",
 	"durability":38400,
 	"tier":2,
-	"enchant":"Fortune I",
+	"enchant":"Fortune I<br>Looting I",
 	"age":1
 },
 {
@@ -671,7 +671,7 @@ data.add("tools",[
 	"othermod":"Thaumcraft 4",
 	"durability":6400,
 	"tier":3,
-	"enchant":"Fortune III",
+	"enchant":"Fortune III<br>Looting III",
 	"age":0,
 	"recommended":"Highest fortune enchant in the game.<br><small>Has garbage durability, but good at (for example) getting leather due to high looting enchant.</small>",
 },
@@ -804,7 +804,7 @@ data.add("tools",[
 	"othermod":"",
 	"durability":76800,
 	"tier":3,
-	"enchant":"Fortune II",
+	"enchant":"Fortune II<br>Looting II",
 	"age":0,
 	"recommended":"Best material in the game for soft mallet.<br>"+
 					"Highest damage before HV age for swords.<br>"+
@@ -827,7 +827,7 @@ data.add("tools",[
 	"othermod":"Thaumcraft 4",
 	"durability":25600,
 	"tier":3,
-	"enchant":"Fortune II",
+	"enchant":"Fortune II<br>Looting II",
 	"age":0
 },
 {

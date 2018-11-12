@@ -7,13 +7,13 @@
 		}
 
 		escape_element.text( text );
-		var ret = escape_element.text();
+		var ret = escape_element.html();
 		escape_element.text( "" );
 		return ret;
 	}
 
 	window.escapehtmlWithLineBreaks = function( text ) {
-		return escapehtml(text).replace( /\n/g, "<br>");
+		return escapehtml(text.replace(/<br>/g,"\n")).replace( /\n/g, "<br>");
 	}
 
 	window.formatTime = function(time) {
