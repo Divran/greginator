@@ -652,7 +652,8 @@ data.add("tools",[
 	"durability":6400,
 	"tier":3,
 	"enchant":"",
-	"age":0
+	"age":0,
+	"comment":"Requires thaumium tool rod. Also known as thaumcraft air shard.",
 },
 {
 	"soft":0,
@@ -673,6 +674,7 @@ data.add("tools",[
 	"tier":3,
 	"enchant":"Fortune III<br>Looting III",
 	"age":0,
+	"comment":"Requires thaumium tool rod. Also known as thaumcraft water shard.",
 	"recommended":"Highest fortune enchant in the game.<br><small>Has garbage durability, but good at (for example) getting leather due to high looting enchant.</small>",
 },
 {
@@ -765,7 +767,8 @@ data.add("tools",[
 	"durability":6400,
 	"tier":3,
 	"enchant":"Fire Aspect III",
-	"age":0
+	"age":0,
+	"comment":"Requires thaumium tool rod. Also known as thaumcraft fire shard.",
 },
 {
 	"soft":0,
@@ -795,7 +798,8 @@ data.add("tools",[
 	"durability":6400,
 	"tier":3,
 	"enchant":"Silk Touch I",
-	"age":0
+	"age":0,
+	"comment":"Requires thaumium tool rod. Also known as thaumcraft order shard.",
 },
 {
 	"soft":1,
@@ -818,7 +822,8 @@ data.add("tools",[
 	"durability":25600,
 	"tier":3,
 	"enchant":"",
-	"age":0
+	"age":0,
+	"comment":"Requires thaumium tool rod. Also known as thaumcraft earth shard.",
 },
 {
 	"soft":0,
@@ -1009,7 +1014,8 @@ data.add("tools",[
 	"durability":6400,
 	"tier":4,
 	"enchant":"",
-	"age":0
+	"age":0,
+	"comment":"Requires thaumium tool rod. Also known as thaumcraft entropy shard.",
 },
 {
 	"soft":0,

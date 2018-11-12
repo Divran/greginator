@@ -9,6 +9,8 @@
 		collapse.collapse( "toggle" );
 	});
 
+	$("[title][title!='']",card).tooltip();
+
 	function getSelectedSort() {
 		var sort = $("input[name='gt-tool-browser-sort']:checked",card).val()
 
