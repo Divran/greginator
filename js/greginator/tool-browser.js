@@ -9,8 +9,6 @@
 		collapse.collapse( "toggle" );
 	});
 
-	var SWORD_DAMAGE = 4;
-
 	function getSelectedSort() {
 		var sort = $("input[name='gt-tool-browser-sort']:checked",card).val()
 
@@ -32,13 +30,11 @@
 			}
 		} else if (sort == "damage") { // Sort by damage first, durability second
 			return function(a,b) {
-				var damageA = a.tier + SWORD_DAMAGE;
-				var damageB = a.tier + SWORD_DAMAGE;
-				if (damageA == damageB) {
+				if (a.tier == b.tier) {
 					if (a.durability == b.durability) {return 0;}
 					return (a.durability < b.durability) ? 1 : -1;
 				}
-				return (damageA < damageB) ? 1 : -1;
+				return (a.tier < b.tier) ? 1 : -1;
 			}
 		}
 	}
