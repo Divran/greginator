@@ -162,6 +162,7 @@ data.add("turbine blades",[
 		"flow":32000
 	}
 },
+/*
 {
 	"medium":{
 		"durability":12800,
@@ -185,6 +186,7 @@ data.add("turbine blades",[
 		"flow":48000
 	}
 },
+*/
 {
 	"medium":{
 		"durability":12800,
@@ -277,6 +279,7 @@ data.add("turbine blades",[
 		"flow":40000
 	}
 },
+/*
 {
 	"medium":{
 		"durability":12800,
@@ -301,6 +304,7 @@ data.add("turbine blades",[
 		"flow":56000
 	}
 },
+*/
 {
 	"medium":{
 		"durability":12800,
@@ -370,6 +374,7 @@ data.add("turbine blades",[
 		"flow":48000
 	}
 },
+/*
 {
 	"medium":{
 		"durability":12800,
@@ -393,6 +398,7 @@ data.add("turbine blades",[
 		"flow":48000
 	}
 },
+*/
 {
 	"medium":{
 		"durability":12800,

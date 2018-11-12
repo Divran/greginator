@@ -78,9 +78,12 @@
 									</div>
 								</div>
 								<br>
-								<small><p>Note: Only lists base stats. Each tool type still has the same stats relative to other tools of the same type, so this list can still be used for comparisons. See <a href="https://ftb.gamepedia.com/Meta-Tools_(GregTech_5)#Properties">this page</a> for more details.</p>
-								<p>Note: Sword damage is equal to "mining tier + 4".</p>
-								<p>Tip: Use your browser's search box to search (win: CTRL+F / mac: CMD+F)</p></small>
+								<small class="smallmargin">
+									<p>Note: Only lists base stats. Each tool type still has the same stats relative to other tools of the same type, so this list can still be used for comparisons. See <a href="https://ftb.gamepedia.com/Meta-Tools_(GregTech_5)#Properties">this page</a> for more details.</p>
+									<p>Note: Sword damage is equal to "mining tier + 4".</p>
+									<p>Tip: Use your browser's search box to search (win: CTRL+F / mac: CMD+F)</p>
+									<p>*: 'Hide garbage' hides all tools with speed below 4, tier below 2, or durability below 25600.</p>
+								</small>
 							</div>
 							<div class="col-md-7">
 								<div class="card">
@@ -137,10 +140,16 @@
 											</div>
 											<div class="col-xl-4">
 												<label class="btn btn-light" data-toggle="buttons">
+													<input style="display:none;" type="checkbox" id="gt-tool-browser-filter-recommended"> Show recommended
+												</label>
+												<label class="btn btn-light" data-toggle="buttons">
 													<input style="display:none;" type="checkbox" id="gt-tool-browser-filter-fortune"> Must have fortune
 												</label>
 												<label class="btn btn-light" data-toggle="buttons">
 													<input style="display:none;" type="checkbox" id="gt-tool-browser-filter-silk-touch"> Must have silk touch
+												</label>
+												<label class="btn btn-light active" data-toggle="buttons">
+													<input style="display:none;" type="checkbox" id="gt-tool-browser-filter-garbage" checked> Hide garbage*
 												</label>
 											</div>
 										</div>
@@ -154,9 +163,11 @@
 							<tr>
 								<th>Material</th>
 								<th>Durability</th>
-								<th>Speed (of pickaxe)</th>
+								<th>Speed</th>
 								<th>Mining tier</th>
+								<th>Age</th>
 								<th class="d-none d-md-table-cell">Enchantments</th>
+								<th class="gt-tool-browser-thead-recommended">Recommendations</th>
 								<th class="d-none d-lg-table-cell">Comment</th>
 							</tr>
 						</thead>

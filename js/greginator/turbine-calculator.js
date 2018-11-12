@@ -637,13 +637,16 @@
 
 			displayMaterialStats();
 			displayFuelStats();
-			$(window).off('resize.getSize scroll.getSize');
 		});
 
 		fuel_search.on( "changed.bs.select", function() {
 			selected_fuel = getFuelByName(fuel_search.val());
 
 			displayFuelStats();
+		});
+
+		// Fix lag caused by selectpicker
+		$(".dropdown-menu").focusout(function(a) {
 			$(window).off('resize.getSize scroll.getSize');
 		});
 	}

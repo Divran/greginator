@@ -258,7 +258,8 @@ data.add("tools",[
 	"durability":128000,
 	"tier":2,
 	"enchant":"",
-	"age":0
+	"age":0,
+	"recommended":" Best early-game material.<br><small>Easy to find as loot in villages, with high durability, fast mining speed.</small>"
 },
 {
 	"soft":0,
@@ -630,7 +631,8 @@ data.add("tools",[
 	"durability":38400,
 	"tier":2,
 	"enchant":"",
-	"age":0
+	"age":0,
+	"recommended":"Good early-game material<br><small>If you ever make iron tools - don't. Upgrade it to wrought iron first!</small>"
 },
 {
 	"soft":0,
@@ -670,7 +672,8 @@ data.add("tools",[
 	"durability":6400,
 	"tier":3,
 	"enchant":"Fortune III",
-	"age":0
+	"age":0,
+	"recommended":"Highest fortune enchant in the game.<br><small>Has garbage durability, but good at (for example) getting leather due to high looting enchant.</small>",
 },
 {
 	"soft":0,
@@ -700,7 +703,8 @@ data.add("tools",[
 	"durability":51200,
 	"tier":3,
 	"enchant":"",
-	"age":0
+	"age":0,
+	"recommended":"Great early-game material."
 },
 {
 	"soft":0,
@@ -801,7 +805,10 @@ data.add("tools",[
 	"durability":76800,
 	"tier":3,
 	"enchant":"Fortune II",
-	"age":0
+	"age":0,
+	"recommended":"Best material in the game for soft mallet.<br>"+
+					"Highest damage before HV age for swords.<br>"+
+					"<small>Excellent early-game material. Could be better than damascus steel in some cases.</small>"
 },
 {
 	"soft":0,
@@ -941,7 +948,8 @@ data.add("tools",[
 	"durability":512000,
 	"tier":4,
 	"enchant":"",
-	"age":0
+	"age":0,
+	"recommended":"Recommended as your first electric drill.<br><small>Normally you accumulate small amounts of iridium in IC2 form just in time to use this as your first electric drill, which it's pretty good for due to its high durability.</small>"
 },
 {
 	"soft":0,
@@ -1021,7 +1029,8 @@ data.add("tools",[
 	"durability":512000,
 	"tier":4,
 	"enchant":"",
-	"age":3
+	"age":3,
+	"recommended":"Third best tool material in the game."
 },
 {
 	"soft":0,
@@ -1041,8 +1050,9 @@ data.add("tools",[
 	"durability":512000,
 	"tier":5,
 	"enchant":"",
-	"age":0,
-	"comment":"Supposed to be gated behind EV, but can be bypassed because devs forgot tiny dust > nugget > ingot recipe."
+	"age":4,
+	"comment":"Use golden enchanted apples in a brewery to get nebrisum essentia.",
+	"recommended":"Second best tool material in the game, after neutronium.<br><small>(Supposed to be gated behind EV, but available at steam age because devs forgot tiny dust > nugget > ingot recipe. If you don't mind exploits.)</small>"
 },
 {
 	"soft":0,
@@ -1062,7 +1072,6 @@ data.add("tools",[
 	"durability":8192000,
 	"tier":6,
 	"enchant":"",
-	"age":5,
-	"comment":"Can be obtained early using Infused Crops from Thaumic Tinkerer"
+	"age":5
 }
 ]);

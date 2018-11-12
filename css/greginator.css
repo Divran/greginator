@@ -51,3 +51,14 @@ body {
 .form-check-input {
 	margin-left:0; /* undo bootstrap's margin */
 }
+
+.smallmargin p {
+	margin-bottom:4px;
+}
+
+#gt-tool-browser table td small {
+	color:#199a03!important;
+	display:block;
+	margin-top:8px;
+	line-height:1.2;
+}
