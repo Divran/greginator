@@ -851,7 +851,7 @@ data.add("tools",[
 	"material":"Tungsten",
 	"othermod":"",
 	"durability":512000,
-	"tier":3,
+	"tier":4,
 	"enchant":"",
 	"age":3
 },
@@ -870,7 +870,7 @@ data.add("tools",[
 	"speed":6,
 	"material":"Ultimet",
 	"othermod":"",
-	"durability":51200,
+	"durability":204800,
 	"tier":3,
 	"enchant":"",
 	"age":3
