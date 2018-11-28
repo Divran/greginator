@@ -240,7 +240,7 @@
 					var amount = Math.floor(capacity / stats.optimal_flow);
 					if (amount == 1) {
 						var remainder = capacity % stats.optimal_flow;
-						if (remainder < closest_pipe_remainder) {
+						if (remainder <= closest_pipe_remainder) {
 							closest_pipe_remainder = remainder;
 							closest_pipe = pipe;
 							closest_capacity = j;
@@ -254,14 +254,14 @@
 		var ret2 = [];
 		if (typeof cheapest_pipe != "undefined") {
 			var note = "";
-			if (cheapest_capacity != stats.optimal_flow) {note = note_3;}
+			if (cheapest_pipe.capacity * multipliers[cheapest_capacity] != stats.optimal_flow) {note = note_3;}
 			ret1.push("Cheapest: "+names[cheapest_capacity]+escapehtml(cheapest_pipe.material)+" ("+(cheapest_pipe.capacity * multipliers[cheapest_capacity])+" mb/t)" + note);
 			ret2.push(((cheapest_pipe.capacity * multipliers[cheapest_capacity]) % stats.optimal_flow) + " mb/t remaining");
 		}
 
 		if (typeof closest_pipe != "undefined") {
 			var note = "";
-			if (closest_capacity != stats.optimal_flow) {note = note_3;}
+			if (closest_pipe.capacity * multipliers[closest_capacity] != stats.optimal_flow) {note = note_3;}
 			ret1.push("Closest: " + names[closest_capacity] + escapehtml(closest_pipe.material)+" ("+(closest_pipe.capacity * multipliers[closest_capacity])+" mb/t)" + note);
 			ret2.push(((closest_pipe.capacity * multipliers[closest_capacity]) % stats.optimal_flow) + " mb/t remaining");
 		}

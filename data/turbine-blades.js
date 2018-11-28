@@ -1557,7 +1557,7 @@ data.add("turbine blades",[
 		"durability":512000,
 		"efficiency":120,
 		"flow":56000
-	},
+	}
 },
 {
 	"medium":{
