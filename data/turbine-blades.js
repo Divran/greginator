@@ -1547,6 +1547,7 @@ data.add("turbine blades",[
 		"flow":14000
 	},
 	"material":"TungstenCarbide",
+	"category":"acceptable",
 	"large":{
 		"durability":384000,
 		"efficiency":140,
@@ -1556,7 +1557,7 @@ data.add("turbine blades",[
 		"durability":512000,
 		"efficiency":120,
 		"flow":56000
-	}
+	},
 },
 {
 	"medium":{
@@ -1782,6 +1783,7 @@ data.add("turbine blades",[
 		"flow":9000
 	},
 	"material":"Ultimet",
+	"category":"great",
 	"large":{
 		"durability":614400,
 		"efficiency":140,
