@@ -8,6 +8,7 @@ onVersionChanged(function(version) {
 		$("#gt-tool-browser-disclaimer").html(
 			'<p>Note: Only lists base stats. Each tool type still has the same stats relative '+
 			'to other tools of the same type, so this list can still be used for comparisons. '+
+			'<p>Note: Sword damage is equal to "mining tier + 5".</p>'+
 			'<p>Tip: Use your browser\'s search box to search (win: CTRL+F / mac: CMD+F)</p>'
 		);
 	} else {
