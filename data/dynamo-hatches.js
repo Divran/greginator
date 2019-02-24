@@ -1,4 +1,4 @@
-data.add("dynamo hatches",[
+data.add("dynamo hatches","it2",[
 	{
 		name:"LV",
 		output:32

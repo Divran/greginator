@@ -1,4 +1,4 @@
-data.add("ic2 nuclear items",[
+data.add("ic2 nuclear items","it2",[
 	{name:"empty",						image:""},
 	{name:"fuelRodUranium",				image:"ic2/reactorUraniumSimple.png"},
 	{name:"dualFuelRodUranium",			image:"ic2/reactorUraniumDual.png"},
@@ -37,7 +37,7 @@ data.add("ic2 nuclear items",[
 	{name:"iridiumNeutronReflector",	image:"gregtech/gt.neutronreflector.png"},
 ]);
 
-var items = data.get("ic2 nuclear items");
+var items = data.get("ic2 nuclear items","it2",);
 var items_old = []
 items_old[0] = "empty";
 items_old[1] = "fuelRodUranium";
@@ -88,4 +88,4 @@ for(var i=0;i<45;i++) {
 	}
 }
 
-data.add("ic2 nuclear items old code",items_old);
+data.add("ic2 nuclear items old code","it2",items_old);

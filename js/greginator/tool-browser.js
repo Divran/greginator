@@ -1,13 +1,39 @@
-(function() {
+onVersionChanged(function(version) {
 	var card = $( "#gt-tool-browser" );
+
+	var garbage_durability_limit = 25600;
+	if (version == "it3") {
+		garbage_durability_limit = 2560;
+
+		$("#gt-tool-browser-disclaimer").html(
+			'<p>Note: Only lists base stats. Each tool type still has the same stats relative '+
+			'to other tools of the same type, so this list can still be used for comparisons. '+
+			'<p>Tip: Use your browser\'s search box to search (win: CTRL+F / mac: CMD+F)</p>'
+		);
+	} else {
+		$("#gt-tool-browser-disclaimer").html(
+			'<p>Note: Only lists base stats. Each tool type still has the same stats relative '+
+			'to other tools of the same type, so this list can still be used for comparisons. '+
+			'See <a href="https://ftb.gamepedia.com/Meta-Tools_(GregTech_5)#Properties">this page</a> '+
+			'for more details.</p>'+
+			'<p>Note: Sword damage is equal to "mining tier + 4".</p>'+
+			'<p>Tip: Use your browser\'s search box to search (win: CTRL+F / mac: CMD+F)</p>'
+		);
+	}
 
 	var header = $( ".card-header", card );
 	header.addClass( "link-pointer" );
 	var collapse = $( ".collapse", card );
 
-	header.click(function() {
+	header.off("click");
+	header.on("click",function() {
 		collapse.collapse( "toggle" );
 	});
+
+	$("#gt-tool-browser-filter-garbage").parent().attr("title",
+		"Hides all tools with speed below 4, tier below 2, or durability below "+
+		garbage_durability_limit+". This setting is ignored if 'show recommended' is on."
+	);
 
 	$("[title][title!='']",card).tooltip();
 
@@ -97,7 +123,7 @@
 
 		return function(tool) {
 			if (val) {
-				return (tool.speed >= 4 && tool.tier >= 2 && tool.durability >= 25600);
+				return (tool.speed >= 4 && tool.tier >= 2 && tool.durability >= garbage_durability_limit);
 			} else {
 				return true;
 			}
@@ -118,7 +144,7 @@
 	}
 
 	function update() {
-		var tools = data.getCopy("tools");
+		var tools = data.getCopy("tools",version);
 		var filters = [
 			getShowRecommended(),
 			getSelectedAge(),
@@ -130,6 +156,7 @@
 
 		// Check if recommendation is enabled
 		var show_recommended = recommended.is(":checked");
+		var show_comments = false;
 
 		for(var i=tools.length-1;i>=0;i--) { // iterate backwards to allow deleting
 			let tool = tools[i];
@@ -148,13 +175,17 @@
 
 			if (filtered) {
 				tools.splice(i,1);
+			} else {
+				// if ANY non-filtered tool has a comment, show the comments column
+				if (typeof tool.comment != "undefined" && tool.comment != "") {
+					show_comments = true;
+				}
 			}
 		}
 
 		tools.sort(getSelectedSort());
 
 		var age_names = ["Stm","LV","MV","HV","EV","IV+"];
-
 
 		var html = [];
 		for(var i=0;i<tools.length;i++) {
@@ -170,7 +201,9 @@
 			if (show_recommended) {
 				html.push("<td>"+tool.recommended+"</td>");
 			}
-			html.push("<td class='d-none d-lg-table-cell'>"+(tool.comment || "")+"</td>");
+			if (show_comments) {
+				html.push("<td class='d-none d-lg-table-cell'>"+(tool.comment || "")+"</td>");
+			}
 			html.push("</tr>");
 		}
 
@@ -179,6 +212,13 @@
 			$(".gt-tool-browser-thead-recommended",card).show();
 		} else {
 			$(".gt-tool-browser-thead-recommended",card).hide();
+		}
+
+		// Check if comments are enabled
+		if (show_comments) {
+			$(".gt-tool-browser-thead-comment",card).show().removeClass("extra-hide");
+		} else {
+			$(".gt-tool-browser-thead-comment",card).hide().addClass("extra-hide");
 		}
 
 		var tbl = $("tbody",card);
@@ -204,4 +244,4 @@
 		});
 	});
 	update();
-})();
+});

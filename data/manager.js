@@ -1,16 +1,16 @@
 (function() {
-	var registered_data = {};
+	var registered_data = {it2:{},it3:{}};
 
-	function add(name,data) {
-		registered_data[name] = data;
+	function add(name,version,data) {
+		registered_data[version][name] = data;
 	}
 
-	function get(name) {
-		return registered_data[name];
+	function get(name,version) {
+		return registered_data[version][name];
 	}
 
-	function getCopy(name) {
-		return JSON.parse(JSON.stringify(get(name)));
+	function getCopy(name,version) {
+		return JSON.parse(JSON.stringify(get(name,version)));
 	}
 
 	window.data = {

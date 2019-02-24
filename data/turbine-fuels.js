@@ -1,4 +1,4 @@
-data.add("turbine fuels",[
+data.add("turbine fuels","it2",[
 	{
 		name: "Steam",
 		multiplier:1,

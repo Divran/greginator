@@ -1,5 +1,12 @@
-(function() {
+onVersionChanged(function(version) {
 	var card = $( "#turbine-calculator-card" );
+
+	if (version == "it3") {
+		card.hide();
+		return;
+	} else {
+		card.show();
+	}
 
 	var header = $( ".card-header", card );
 	header.addClass( "link-pointer" );
@@ -25,18 +32,19 @@
 
 		if (!initialized) {
 			initialized = true;
-			turbine_blades = data.getCopy("turbine blades");
-			turbine_fuels = data.getCopy("turbine fuels");
-			enderio_conduits = data.getCopy("ender io conduits");
-			translocators = data.getCopy("fluid translocators");
-			gregtech_pipes = data.getCopy("gregtech pipes");
-			gregtech_pumps = data.getCopy("gregtech pumps");
-			boilers = data.getCopy("boilers");
-			dynamos = data.getCopy("dynamo hatches");
+			turbine_blades = data.getCopy("turbine blades",version);
+			turbine_fuels = data.getCopy("turbine fuels",version);
+			enderio_conduits = data.getCopy("ender io conduits",version);
+			translocators = data.getCopy("fluid translocators",version);
+			gregtech_pipes = data.getCopy("gregtech pipes",version);
+			gregtech_pumps = data.getCopy("gregtech pumps",version);
+			boilers = data.getCopy("boilers",version);
+			dynamos = data.getCopy("dynamo hatches",version);
 			initialize();
 		}
 	}
-	header.click(function() {init();});
+	header.off("click");
+	header.on("click",function() {init();});
 	if (collapse.hasClass("show")) {init(true);}
 
 	var selected_material;
@@ -545,109 +553,123 @@
 	}
 
 	function initialize() {
-		var material_search = $( ".material-search", card );
+		var material_search = $($( ".material-search", card )[0]);
+		var fuel_search = $($( ".fuel-search", card )[0]);
 
-		function buildTbl(name,v1,v2,v3) {
-			var w1 = "200px";
-			if (name == "Material") {w1 = "235px; padding-left:40px;";} // Special case
+		// delete and re-create these element
+		var p1 = material_search.parent();
+		material_search.remove();
+		material_search = $('<select class="material-search form-control">');
+		p1.append(material_search);
 
-			return "<table><tr>"+
-						"<td style=\"width:"+w1+"\">"+name+"</td>"+
-						"<td style=\"width:80px\"><small class=\"text-muted\">"+v1+"</small></td>"+
-						"<td style=\"width:70px\"><small class=\"text-muted\">"+v2+"</small></td>"+
-						"<td style=\"width:50px\"><small class=\"text-muted\">"+v3+"</small></td>"+
-					"</tr></table>";
-		}
+		// delete and re-create this element
+		var p2 = fuel_search.parent();
+		fuel_search.remove();
+		fuel_search = $('<select class="fuel-search form-control">');
+		p2.append(fuel_search);
 
-		var opt1 = "<option value='-' disabled selected>Select material...</option>";
-		var opt2 = "<option value='-' disabled data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'></option>";
+		setTimeout(function() {
+			function buildTbl(name,v1,v2,v3) {
+				var w1 = "200px";
+				if (name == "Material") {w1 = "235px; padding-left:40px;";} // Special case
 
-		function compareNum(a,b) {
-			if (a==b) {return 0;}
-			return a < b ? 1 : -1;
-		}
-
-		turbine_blades.sort(function(a,b) {
-			// first compare these values in order
-			var comparisons = ["durability","efficiency","flow"];
-			for(var i=0;i<comparisons.length;i++) {
-				let idx = comparisons[i];
-				let n = compareNum(a.large[idx],b.large[idx]);
-				if (n != 0) {return n;}
-			}
-			
-			// if it's still not sorted, sort alphabetically by name last
-			return a.material.localeCompare(b.material);
-		});
-
-		var great = $( "<optgroup label='Great'>" );
-		var acceptable = $( "<optgroup label='Acceptable'>" );
-		var garbage = $( "<optgroup label='Garbage'>" );
-
-		for(var i=0;i<turbine_blades.length;i++) {
-			var blade = turbine_blades[i];
-			var name = escapehtml(blade.material);
-			var dur = blade.large.durability.toLocaleString();
-			var eff = blade.large.efficiency + "%";
-			var flow = blade.large.flow.toLocaleString();
-
-			var fun_fact = "";
-			if (typeof blade.fun_fact != "undefined") {
-				fun_fact = " (" + blade.fun_fact + ")";
+				return "<table><tr>"+
+							"<td style=\"width:"+w1+"\">"+name+"</td>"+
+							"<td style=\"width:80px\"><small class=\"text-muted\">"+v1+"</small></td>"+
+							"<td style=\"width:70px\"><small class=\"text-muted\">"+v2+"</small></td>"+
+							"<td style=\"width:50px\"><small class=\"text-muted\">"+v3+"</small></td>"+
+						"</tr></table>";
 			}
 
-			var prnt = garbage;
-			if (typeof blade.category != "undefined") {
-				if (blade.category == "great") {prnt = great;}
-				else if (blade.category == "acceptable") {prnt = acceptable;}
+			var opt1 = "<option value='-' disabled selected>Select material...</option>";
+			var opt2 = "<option value='-' disabled data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'></option>";
+
+			function compareNum(a,b) {
+				if (a==b) {return 0;}
+				return a < b ? 1 : -1;
 			}
 
-			prnt.append("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow + fun_fact)+"'>"+name+"</option>" );
-		}
-		material_search.append([opt1,opt2,great,acceptable,garbage]);
-		material_search.selectpicker({liveSearch:true,maxOptions:1});
-
-		var fuel_search = $( ".fuel-search", card );
-
-		var opts = [];
-		opts.push("<option value='-' disabled selected>Select fuel...</option>");
-		for(var i=0;i<turbine_fuels.length;i++) {
-			var category = turbine_fuels[i];
-
-			category.fuels.sort(function(a,b) {
-				if (a.fuel_value == b.fuel_value) {return 0;}
-				return a.fuel_value < b.fuel_value ? 1 : -1;
+			turbine_blades.sort(function(a,b) {
+				// first compare these values in order
+				var comparisons = ["durability","efficiency","flow"];
+				for(var i=0;i<comparisons.length;i++) {
+					let idx = comparisons[i];
+					let n = compareNum(a.large[idx],b.large[idx]);
+					if (n != 0) {return n;}
+				}
+				
+				// if it's still not sorted, sort alphabetically by name last
+				return a.material.localeCompare(b.material);
 			});
 
-			var cat = $( "<optgroup label='" + escapehtml(category.name) + "'></optgroup>" );
-			for(var j=0;j<category.fuels.length;j++) {
-				var fuel = category.fuels[j];
-				var name = escapehtml(fuel.name);
-				var f = fuel.fuel_value
+			var great = $( "<optgroup label='Great'>" );
+			var acceptable = $( "<optgroup label='Acceptable'>" );
+			var garbage = $( "<optgroup label='Garbage'>" );
 
-				$("<option value='"+name+"' data-subtext='"+f+"'>"+name+"</option>").appendTo(cat);
+			for(var i=0;i<turbine_blades.length;i++) {
+				var blade = turbine_blades[i];
+				var name = escapehtml(blade.material);
+				var dur = blade.large.durability.toLocaleString();
+				var eff = blade.large.efficiency + "%";
+				var flow = blade.large.flow.toLocaleString();
+
+				var fun_fact = "";
+				if (typeof blade.fun_fact != "undefined") {
+					fun_fact = " (" + blade.fun_fact + ")";
+				}
+
+				var prnt = garbage;
+				if (typeof blade.category != "undefined") {
+					if (blade.category == "great") {prnt = great;}
+					else if (blade.category == "acceptable") {prnt = acceptable;}
+				}
+
+				prnt.append("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow + fun_fact)+"'>"+name+"</option>" );
 			}
-			opts.push(cat);
-		}
-		fuel_search.append(opts);
-		fuel_search.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true});
+			material_search.append([opt1,opt2,great,acceptable,garbage]);
+			material_search.selectpicker({liveSearch:true,maxOptions:1});
 
-		material_search.on( "changed.bs.select", function() {
-			selected_material = getMaterialByName(material_search.val());
+			var opts = [];
+			opts.push("<option value='-' disabled selected>Select fuel...</option>");
+			for(var i=0;i<turbine_fuels.length;i++) {
+				var category = turbine_fuels[i];
 
-			displayMaterialStats();
-			displayFuelStats();
-		});
+				category.fuels.sort(function(a,b) {
+					if (a.fuel_value == b.fuel_value) {return 0;}
+					return a.fuel_value < b.fuel_value ? 1 : -1;
+				});
 
-		fuel_search.on( "changed.bs.select", function() {
-			selected_fuel = getFuelByName(fuel_search.val());
+				var cat = $( "<optgroup label='" + escapehtml(category.name) + "'></optgroup>" );
+				for(var j=0;j<category.fuels.length;j++) {
+					var fuel = category.fuels[j];
+					var name = escapehtml(fuel.name);
+					var f = fuel.fuel_value
 
-			displayFuelStats();
-		});
+					$("<option value='"+name+"' data-subtext='"+f+"'>"+name+"</option>").appendTo(cat);
+				}
+				opts.push(cat);
+			}
+			fuel_search.append(opts);
+			fuel_search.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true});
 
-		// Fix lag caused by selectpicker
-		$(".dropdown-menu").focusout(function(a) {
-			$(window).off('resize.getSize scroll.getSize');
-		});
+			material_search.on( "changed.bs.select", function() {
+				selected_material = getMaterialByName(material_search.val());
+
+				displayMaterialStats();
+				displayFuelStats();
+			});
+
+			fuel_search.on( "changed.bs.select", function() {
+				selected_fuel = getFuelByName(fuel_search.val());
+
+				displayFuelStats();
+			});
+
+			// Fix lag caused by selectpicker
+			$(".dropdown-menu").off("focusout");
+			$(".dropdown-menu").on("focusout",function(a) {
+				$(window).off('resize.getSize scroll.getSize');
+			});
+		},1);
 	}
-})();
+});

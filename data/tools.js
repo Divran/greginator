@@ -1,4 +1,4 @@
-data.add("tools",[
+data.add("tools","it2",[
 {
 	"soft":1,
 	"speed":1.5,
@@ -259,7 +259,7 @@ data.add("tools",[
 	"tier":2,
 	"enchant":"",
 	"age":0,
-	"recommended":" Best early-game material.<br><small>Easy to find as loot in villages, with high durability, fast mining speed.</small>"
+	"recommended":"Best early-game material.<br><small>Easy to find as loot in villages, with high durability, fast mining speed.</small>"
 },
 {
 	"soft":0,

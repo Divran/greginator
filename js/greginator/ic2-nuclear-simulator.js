@@ -1,5 +1,12 @@
-(function() {
+onVersionChanged(function(version) {
 	var card = $( "#ic2-nuclear-simulator-card" );
+
+    if (version == "it3") {
+        card.hide();
+        return;
+    } else {
+        card.show();
+    }
 
 	var header = $( ".card-header", card );
 	header.addClass( "link-pointer" );
@@ -41,13 +48,14 @@
 
 		if (!initialized) {
 			initialized = true;
-			items = data.get("ic2 nuclear items");
-			items_old = data.get("ic2 nuclear items old code");
+			items = data.get("ic2 nuclear items",version);
+			items_old = data.get("ic2 nuclear items old code",version);
 			clearGrid();
 			initialize();
 		}
 	}
-	header.click(function() {init();});
+    header.off("click");
+	header.on("click",function() {init();});
 	if (collapse.hasClass("show")) {init(true);}
 
 	function parseCodeNew(code) {
@@ -475,4 +483,4 @@
         return null;
         */
 	}
-})();
+});

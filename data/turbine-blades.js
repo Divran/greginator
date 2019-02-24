@@ -1,4 +1,4 @@
-data.add("turbine blades",[
+data.add("turbine blades","it2",[
 {
 	"medium":{
 		"durability":3200,

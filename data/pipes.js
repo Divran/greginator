@@ -1,4 +1,4 @@
-data.add("ender io conduits",[
+data.add("ender io conduits","it2",[
 	// Ender IO
 	{
 		name:"Basic",
@@ -16,7 +16,7 @@ data.add("ender io conduits",[
 		max_input:1200
 	}
 ]);
-data.add("fluid translocators",[
+data.add("fluid translocators","it2",[
 	// Translocators
 	{
 		name:"Without glowstone",
@@ -29,7 +29,7 @@ data.add("fluid translocators",[
 		max_input:5000
 	}
 ]);
-data.add("gregtech pipes",[
+data.add("gregtech pipes","it2",[
 	{
 		material:"Copper",
 		capacity:200/20
@@ -55,7 +55,7 @@ data.add("gregtech pipes",[
 		capacity:2000/20
 	}
 ]);
-data.add("gregtech pumps",[
+data.add("gregtech pumps","it2",[
 	{
 		name:"LV",
 		speed:640/20

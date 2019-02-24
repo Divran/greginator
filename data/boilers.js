@@ -1,4 +1,4 @@
-data.add("boilers",[
+data.add("boilers","it2",[
 	/*
 	{
 		name:"LP Railcraft Boiler",

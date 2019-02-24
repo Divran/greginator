@@ -15,6 +15,36 @@
 		<link href="css/greginator.css" rel="stylesheet">
 		<link href="css/bootstrap-select.min.css" rel="stylesheet">
 
+		<script>
+			// version handling
+			(function() {
+				var callbacks = [];
+				function onVersionChanged(callback) {
+					callbacks.push(callback);
+				}
+				window.onVersionChanged = onVersionChanged;
+
+				var version = localStorage["version"] || "it2";
+				function versionChanged() {
+					$.each(callbacks,function(key,val) {
+						val(version);
+					});
+				}
+
+				$(document).ready(function() {
+					$("input[name='version-selector']").change(function() {
+						if ($(this).is(":checked")) {
+							version = $(this).val();
+							localStorage["version"] = $(this).val();
+							versionChanged();
+						}
+					});
+
+					$("input[name='version-selector'][value='"+version+"']").click();
+				});
+			})();
+		</script>
+
 		<!-- load all data -->
 		<script src="data/manager.js"></script>
 		<script src="data/turbine-blades.js"></script>
@@ -24,9 +54,26 @@
 		<script src="data/dynamo-hatches.js"></script>
 		<script src="data/ic2-nuclear.js"></script>
 		<script src="data/tools.js"></script>
+
+		<!--  load all it3 data -->
+		<script src="data/tools_it3.js"></script>
 	</head>
 	<body>
 		<div class="container">
+			<div class="card">
+				<div class="card-body">
+					<span class='version-title'>Version:</span>
+					<div class="btn-group btn-group-toggle" data-toggle="buttons">
+						<label class="btn btn-light active">
+							<input type="radio" name="version-selector" id="version-selector-it2" value="it2"> InfiTech 2
+						</label>
+						<label class="btn btn-light">
+							<input type="radio" name="version-selector" id="version-selector-it3" value="it3"> InfiTech 3
+						</label>
+					</div>
+				</div>
+			</div>
+
 			<!-- Turbine calculator -->
 			<div class="card" id="turbine-calculator-card">
 				<div class="card-header">
@@ -48,8 +95,6 @@
 				</div>
 			</div>
 			<script src="js/greginator/turbine-calculator.js"></script>
-
-			<br>
 
 			<!-- GT Tool Browser -->
 			<div class="card" id="gt-tool-browser">
@@ -78,10 +123,8 @@
 									</div>
 								</div>
 								<br>
-								<small class="smallmargin">
-									<p>Note: Only lists base stats. Each tool type still has the same stats relative to other tools of the same type, so this list can still be used for comparisons. See <a href="https://ftb.gamepedia.com/Meta-Tools_(GregTech_5)#Properties">this page</a> for more details.</p>
-									<p>Note: Sword damage is equal to "mining tier + 4".</p>
-									<p>Tip: Use your browser's search box to search (win: CTRL+F / mac: CMD+F)</p>
+								<small class="smallmargin" id="gt-tool-browser-disclaimer">
+									
 								</small>
 							</div>
 							<div class="col-md-7">
@@ -167,7 +210,7 @@
 								<th>Age</th>
 								<th class="d-none d-md-table-cell">Enchantments</th>
 								<th class="gt-tool-browser-thead-recommended">Recommendations</th>
-								<th class="d-none d-lg-table-cell">Comment</th>
+								<th class="gt-tool-browser-thead-comment d-none d-lg-table-cell">Comment</th>
 							</tr>
 						</thead>
 						<tbody></tbody>
@@ -175,8 +218,6 @@
 				</div>
 			</div>
 			<script src="js/greginator/tool-browser.js"></script>
-
-			<br>
 
 			<!-- GT Vein Finder -->
 			<div class="card" id="gt-vein-finder">

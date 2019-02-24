@@ -1,11 +1,19 @@
-(function() {
+onVersionChanged(function(version) {
 	var card = $( "#gt-vein-finder" );
+
+	if (version == "it3") {
+		card.hide();
+		return;
+	} else {
+		card.show();
+	}
 
 	var header = $( ".card-header", card );
 	header.addClass( "link-pointer" );
 	var collapse = $( ".collapse", card );
 
-	header.click(function() {
+	header.off("click");
+	header.on("click",function() {
 		collapse.collapse( "toggle" );
 	});
 
@@ -110,5 +118,4 @@
 
 	input_x.on( "input", update );
 	input_z.on( "input", update );
-
-})();
+});

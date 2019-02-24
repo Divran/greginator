@@ -62,3 +62,16 @@ body {
 	margin-top:8px;
 	line-height:1.2;
 }
+
+.version-title {
+	font-weight:500;
+	line-height:1.2;
+	font-size:1.25rem;
+	margin-right:16px;
+}
+
+.card {
+	margin-bottom:16px;
+}
+
+.extra-hide {display:none!important;}
