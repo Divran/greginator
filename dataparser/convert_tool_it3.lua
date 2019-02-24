@@ -113,9 +113,33 @@ end
 --[[
 local s = [==[public static IngotMaterial Aluminium = new IngotMaterial(1, "aluminium", 0x80C8F0, MaterialIconSet.DULL, 2, of(), EXT2_METAL | GENERATE_SMALL_GEAR | GENERATE_ORE | GENERATE_RING | GENERATE_FRAME, Element.Al, 10.0F, 128, 1700);]==]
 print(string.match(s,"^.*IngotMaterial%(%d+,%s\"([%w_]+)\",.-,.-,%s(%d+),.*,%s([%d%.]+)F,%s(%d+).*$"))
+
+local s = [==[val materialCompressedWroughtIron = MaterialRegistry.createIngotMaterial(700, "compressed_wrought_iron", 0xC8B4B4, "dull", 2, [<material:iron> * 1, <material:carbon> * 25], 7.0F, 460);]==]
+    local name, mining_tier, speed, durability = string.match(s,"^.*IngotMaterial%(%d+,%s\"([%w_]+)\",.-,.-,%s(%d+),.*,%s([%d%.]+)F,%s(%d+).*$")
+    print(name,mining_tier,speed,durability)
 ]]
 
-local str = [[  /**
+local str = [[
+    /** IT3 custom materials **/
+    /* "F" was added after the floats to make the regex work */
+
+    val materialCompressedWroughtIron = MaterialRegistry.createIngotMaterial(700, "compressed_wrought_iron", 0xC8B4B4, "dull", 2, [<material:iron> * 1, <material:carbon> * 25], 7.0F, 460);
+    materialCompressedWroughtIron.addFlags(["GENERATE_PLATE", "GENERATE_ROD", "GENERATE_BOLT_SCREW"]);
+
+    val materialCompressedIron = MaterialRegistry.createIngotMaterial(701, "compressed_iron", 0xC8D4D4, "dull", 2, [<material:iron> * 1], 6.0F, 435);
+    materialCompressedIron.addFlags(["GENERATE_PLATE", "GENERATE_ROD", "GENERATE_BOLT_SCREW"]);
+
+    val materialEnderium = MaterialRegistry.createIngotMaterial(702, "enderium", 0x2E574F, "shiny", 3, null, 8.0F, 256, 3000);
+    materialEnderium.addFlags(["GENERATE_BOLT_SCREW", "GENERATE_GEAR"]);
+
+    val materialSignalum = MaterialRegistry.createIngotMaterial(703, "signalum", 0xFFAA33, "shiny", 2, null, 5.0F, 128, 1000);
+    materialSignalum.addFlags(["GENERATE_BOLT_SCREW", "GENERATE_GEAR"]);
+
+    val materialThaumium = MaterialRegistry.createIngotMaterial(706, "thaumium", 0x7A007A, "shiny", 2, null, 7.6F, 740);
+    materialThaumium.addFlags(["GENERATE_PLATE", "GENERATE_ROD", "GENERATE_BOLT_SCREW"]);
+
+
+    /**
      * Direct Elements
      */
     public static IngotMaterial Aluminium = new IngotMaterial(1, "aluminium", 0x80C8F0, MaterialIconSet.DULL, 2, of(), EXT2_METAL | GENERATE_SMALL_GEAR | GENERATE_ORE | GENERATE_RING | GENERATE_FRAME, Element.Al, 10.0F, 128, 1700);

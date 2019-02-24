@@ -1,4 +1,60 @@
 data.add("tools","it3",[
+
+// IT3 custom materials
+{
+	"age":0,
+	"tier":2,
+	"enchant":"",
+	"material":"Compressed wrought iron",
+	"othermod":"",
+	"speed":7.0,
+	"soft":0,
+	"durability":4600
+},
+{
+	"age":0,
+	"tier":2,
+	"enchant":"",
+	"material":"Compressed iron",
+	"othermod":"",
+	"speed":6.0,
+	"soft":0,
+	"durability":4350
+},
+{
+	"age":0,
+	"tier":3,
+	"enchant":"",
+	"material":"Enderium",
+	"othermod":"",
+	"speed":8.0,
+	"soft":0,
+	"durability":2560
+},
+{
+	"age":0,
+	"tier":2,
+	"enchant":"",
+	"material":"Signalum",
+	"othermod":"",
+	"speed":5.0,
+	"soft":0,
+	"durability":1280
+},
+{
+	"age":0,
+	"tier":2,
+	"enchant":"",
+	"material":"Thaumium",
+	"othermod":"",
+	"speed":7.6,
+	"soft":0,
+	"durability":7400,
+	"recommended":"Excellent early-game material if you do some thaumcraft research."
+},
+
+
+// GTCE materials
 {
 	"age":0,
 	"enchant":"",
@@ -341,7 +397,7 @@ data.add("tools","it3",[
 	"material":"Blue steel",
 	"tier":2,
 	"othermod":"",
-	"recommended":"Great mid-game material<br><small>This material can be made as soon as you have your first blast furnace."
+	"recommended":"Great mid-game material<br><small>This material can be made as soon as you have your first electric blast furnace."
 },
 {
 	"age":0,
