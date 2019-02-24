@@ -30,11 +30,6 @@ onVersionChanged(function(version) {
 		collapse.collapse( "toggle" );
 	});
 
-	$("#gt-tool-browser-filter-garbage").parent().attr("title",
-		"Hides all tools with speed below 4, tier below 2, or durability below "+
-		garbage_durability_limit+". This setting is ignored if 'show recommended' is on."
-	);
-
 	$("[title][title!='']",card).tooltip();
 
 	function getSelectedSort() {
