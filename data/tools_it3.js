@@ -305,7 +305,7 @@ data.add("tools","it3",[
 	"material":"Ultimet",
 	"tier":4,
 	"othermod":"",
-	"recommended":"All around excellent mod-game material."
+	"recommended":"All around excellent mid-game material."
 },
 {
 	"age":0,
