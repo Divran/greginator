@@ -47,9 +47,9 @@ data.add("tools","it3",[
 	"enchant":"",
 	"material":"Thaumium",
 	"othermod":"",
-	"speed":7.6,
+	"speed":10,
 	"soft":0,
-	"durability":7400,
+	"durability":3150,
 	"recommended":"Excellent early-game material if you do some thaumcraft research."
 },
 
