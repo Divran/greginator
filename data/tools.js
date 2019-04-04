@@ -254,12 +254,13 @@ data.add("tools","it2",[
 	"soft":0,
 	"speed":8,
 	"material":"Damascus Steel",
-	"othermod":"Only found as Loot",
+	"othermod":"",
 	"durability":128000,
 	"tier":2,
 	"enchant":"",
 	"age":0,
-	"recommended":"Best early-game material.<br><small>Easy to find as loot in villages, with high durability, fast mining speed.</small>"
+	"recommended":"Excellent early-game material.<br><small>If you find it in a village early on.<br>"+
+				  "Overtaken by Steeleaf and Knightmetal later, due to its low mining tier.</small>"
 },
 {
 	"soft":0,
@@ -351,6 +352,18 @@ data.add("tools","it2",[
 	"tier":2,
 	"enchant":"",
 	"age":3
+},
+{
+	"soft":0,
+	"speed":8,
+	"material":"Knightmetal",
+	"othermod":"",
+	"durability":102400,
+	"tier":3,
+	"enchant":"",
+	"age":0,
+	"recommended":"Higher durability than steeleaf, but does not have enchantments.<br>"+
+				  "<small>About equally easy to produce as well.</small>"
 },
 {
 	"soft":0,
@@ -632,7 +645,7 @@ data.add("tools","it2",[
 	"tier":2,
 	"enchant":"",
 	"age":0,
-	"recommended":"Good early-game material<br><small>If you ever make iron tools - don't. Upgrade it to wrought iron first!</small>"
+	"recommended":"Good as your 1st material after flint tools.<br><small>If you ever make iron tools - don't. Upgrade it to wrought iron first!</small>"
 },
 {
 	"soft":0,
@@ -812,7 +825,7 @@ data.add("tools","it2",[
 	"age":0,
 	"recommended":"Best material in the game for soft mallet.<br>"+
 					"Highest damage before HV age for swords.<br>"+
-					"<small>Excellent early-game material. Could be better than damascus steel in some cases.</small>"
+					"<small>Excellent early-game material.</small>"
 },
 {
 	"soft":0,
