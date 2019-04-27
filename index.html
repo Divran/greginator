@@ -57,6 +57,7 @@
 
 		<!--  load all it3 data -->
 		<script src="data/tools_it3.js"></script>
+		<script src="data/food.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -260,6 +261,49 @@
 				</div>
 			</div>
 			<script src="js/greginator/vein-finder.js"></script>
+
+			<div class="card" id="gt-food-browser">
+				<div class="card-header">
+					<h4 class="card-title">Food Browser</h4>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6">
+								<h5>Sort by</h5>
+
+								<div class="btn-group btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-light">
+										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-food-value" value="food-value" checked> Food Value
+									</label>
+									<label class="btn btn-light">
+										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-saturation" value="saturation"> Saturation
+									</label>
+									<label class="btn btn-light active">
+										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-compost" value="compost"> Compost
+									</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<p>Note: This list is very large (1090 items). Hit CTRL+F in your browser to search. ⌘+F on mac.</p>
+							</div>
+						</div>
+					</div>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Mod</th>
+								<th>Food Value</th>
+								<th>Saturation</th>
+								<th>Compost</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+			<script src="js/greginator/food-browser.js"></script>
 
 			<!-- IC2 Nuclear simulator -->
 			<!--

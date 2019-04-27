@@ -1,0 +1,1091 @@
+Foods:
+- harvestcraft:grilled eggplant Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:venison cooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cornbread Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:gravy Heal amount: 3 Saturation amount: 1.2
+- minecraft:apple Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:tomato soup Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:plum yogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:peanu tbutter cupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:cassava Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:durian milkshake Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chik-o-roll Heal amount: 10 Saturation amount: 1.2
+- thaumcraft:brain Heal amount: 4 Saturation amount: 0.2
+- nuclearcraft:ground_cocoa_nibs Heal amount: 1 Saturation amount: 0.2
+- harvestcraft:cheeseburger Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:mushroom ketchup omelet Heal amount: 3 Saturation amount: 1.2
+- minecraft:rabbit_stew Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:strawberry jelly sandwich Heal amount: 6 Saturation amount: 1.2
+- biomesoplenty:pear Heal amount: 5 Saturation amount: 0.3
+- harvestcraft:corndog Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:kung pao chicken Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:perch raw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:pineapple Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:mango jelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pork sausage Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:waffles Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:persimmon Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:turkey cooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:baked sweet potato Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:banana Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:blackberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:loadedbakedpotato Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:tortilla Heal amount: 3 Saturation amount: 1.2
+- biomesoplenty:persimmon Heal amount: 5 Saturation amount: 0.2
+- harvestcraft:grapefruit soda Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:blueberry juice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:chips and salsa Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:cranberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:chicken dinner Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:durian Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:kiwi smoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:papaya yogurt Heal amount: 2 Saturation amount: 1.2
+- minecraft:cooked_beef Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:millet Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:spicy greens Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cherry smoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:barley Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:tamarind Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:grape Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:baked beans Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:chocolate roll Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chocolate strawberry Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:almond butter Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:nachoes Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:garlic mashed potatoes Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:huckleberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:banana split Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:meat feast pizza Heal amount: 24 Saturation amount: 1.2
+- harvestcraft:char siu Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:cucumber sandwich Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:strawberry smoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:stuffed eggplant Heal amount: 7 Saturation amount: 1.2
+- minecraft:cooked_rabbit Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:pepper jelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:spicebun Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:earl grey tea Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:raw tofish Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:trout raw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lasagna Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:white mushroom Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:blackberry jelly sandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:walnut raisin bread Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:eel raw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:grapefruit jelly sandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:date nut bread Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:grilled cheese vegemite toast Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:orange yogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pork rinds Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:oyster cooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:frosted donut Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:jam roll Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:kenaf Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:fruit punch Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:korean dinner Heal amount: 24 Saturation amount: 1.2
+- harvestcraft:watermelon jelly Heal amount: 2 Saturation amount: 1.2
+- nuclearcraft:milk_chocolate Heal amount: 4 Saturation amount: 0.6
+- harvestcraft:pinkel Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:grilled mushroom Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:energy drink Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:wonton soup Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:rice soup Heal amount: 3 Saturation amount: 1.2
+- nuclearcraft:marshmallow Heal amount: 1 Saturation amount: 0.2
+- harvestcraft:bubble tea Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:miso paste Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:pumpkin soup Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:ploughmans lunch Heal amount: 18 Saturation amount: 1.2
+- harvestcraft:orange jelly sandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:weekend picnic Heal amount: 19 Saturation amount: 1.2
+- harvestcraft:mussel cooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:bbq pulled pork Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:green egg sand ham Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:leafy fish sandwich Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:cooked tofish Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pomegranate yogurt Heal amount: 2 Saturation amount: 1.2
+- minecraft:cooked_cod Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:timtam Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:pot roast Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:crackers Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:tuna fish sandwich Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:strawberry rhubarb pie Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:nutella Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:sunday high tea Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:cherry yogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:omelet Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:bread fruit Heal amount: 1 Saturation amount: 0.6
+- minecraft:cooked_fish Heal amount: 5 Saturation amount: 0.6
+- minecraft:cooked_fish:1 Heal amount: 6 Saturation amount: 0.8
+- harvestcraft:chicken and waffles Heal amount: 14 Saturation amount: 1.2
+- harvestcraft:cooked tofurkey Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:banana milkshake Heal amount: 3 Saturation amount: 1.2
+- minecraft:rabbit Heal amount: 1 Saturation amount: 0.6
+- minecraft:cooked_porkchop Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:dried soup Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:stuffed mushroom Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:takoyaki Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:cornish pasty Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:mushroom steak Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:orange smoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:shrimp cooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:raw tofacon Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:pad thai Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:zucchini bread Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:potatoes o'brien Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:sunflower seeds Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:ham and cheese sandwich Heal amount: 7 Saturation amount: 1.2
+- minecraft:cooked_chicken Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:cheeze puffs Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:pomegranate jelly sandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:boiled egg Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:glazed carrots Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:brownie Heal amount: 8 Saturation amount: 1.2
+- minecraft:golden_apple Heal amount: 4 Saturation amount: 1.2
+- minecraft:golden_apple:1 Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:guava Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:kohlrabi Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:raw toficken Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:escargot Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:persimmon jelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pomegranate smoothie Heal amount: 3 Saturation amount: 1.2
+- forestry:honey_pot Heal amount: 2 Saturation amount: 0.2
+- harvestcraft:sugar cookie Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:pinacolada Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:chocolate bar Heal amount: 1 Saturation amount: 1.2
+- minecraft:puffer fish Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:sweet potato souffle Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:succotash Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:strawberry pie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:broccoli mac Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:mulberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cherry juice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pepper mint Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cream of avocado soup Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:melon yogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:strawberry jelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:sardine raw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:chicken paella Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:onion soup Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:salted sunflower seeds Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:lavender shortbread Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:haggis Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:coleslaw Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:fig juice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:akutuq Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:potato and cheese pirogi Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:netherstar toast Heal amount: 16 Saturation amount: 1.2
+- harvestcraft:grapefruit juice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:braised onions Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:lemon bar Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:deviled egg Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:eggs benedict Heal amount: 12 Saturation amount: 1.2
+- harvestcraft:tortilla chips Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:radish Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cooked grub Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:caramel icecream Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:soft pretzel Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:toasted coconut Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:bbq jackfruit Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pistachio baked salmon Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:pistachio icecream Heal amount: 4 Saturation amount: 1.2
+- minecraft:cookie Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:papaya smoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:gourmet mutton burger Heal amount: 16 Saturation amount: 1.2
+- harvestcraft:coconut milk Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:three bean salad Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cracker Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:nutmeg Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lamb with mint sauce Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:salsa Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:asparagus Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:gourmet pork patty Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:baked turnips Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:gumbo Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:snickers bar Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:okra creole Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chili Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:fish dinner Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:sesame snaps Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cooked tofenison Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:meatloaf sandwich Heal amount: 12 Saturation amount: 1.2
+- harvestcraft:honeybun Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:baked alaska Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:bacon wrapped dates Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:honey lemon lamb Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:black paella Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:apple snow Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:pecan pie Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:fried bologna sandwich Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:strawberry soda Heal amount: 4 Saturation amount: 1.2
+- minecraft:pumpkin_pie Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:bbq platter Heal amount: 14 Saturation amount: 1.2
+- harvestcraft:frogleg stir fry Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:walnut Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:chocolate cupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:mincepie Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:meaty stew Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:apricot juice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cherry pie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:green tea Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:stuffed duck Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:garlic chicken Heal amount: 6 Saturation amount: 1.2
+- minecraft:chorus_fruit Heal amount: 4 Saturation amount: 0.3
+- harvestcraft:bratwurst Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:plumjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:chickencurry Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:springroll Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:persimmonyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pumpkinoatscones Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:raspberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:saucedlambkebab Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:garlicbread Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:almond Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cranberrysmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:marshmellowchicks Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:pitepalt Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:applepie Heal amount: 5 Saturation amount: 1.2
+- biomesoplenty:filled_honeycomb Heal amount: 3 Saturation amount: 0.4
+- harvestcraft:hotdog Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cherry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cranberrysauce Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:eggplant Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:ceasarsalad Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:maplesyrup Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:steamedspinach Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:vegemiteontoast Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:chilipoppers Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:oats Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:fiestacornsalad Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:passionfruit Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bean Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:meringuebrownie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:coconutyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:fruitcreamfestivalbread Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:crispyricepuffcereal Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:extremechili Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:babaganoush Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:summerradishsalad Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:tunapotato Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:cucumbersoup Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:rawtofutton Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:ovenroastedcauliflower Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:sourcreamandonionpotatochips Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:chilicupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:enchilada Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:spidereyepie Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:peanutbuttercup Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:dimsum Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:mudfishraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cashewbutter Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:butteredpotato Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:wintersquash Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:spidereyesoup Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:bakedcactus Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:cherryslushie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:oldworldveggiesoup Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:imitationcrabsticks Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:seedsoup Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:crayfishraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:raisincookies Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:sundayroast Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:cinnamontoast Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:baconcheeseburger Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:roastedchestnut Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:strawberryjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:scallionbakedpotato Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:fishlettucewrap Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:lambkebab Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:waterchestnut Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:blackberryyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pecan Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:fishandchips Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:coffeecupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:jellybeans Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:hamsweetpicklesandwich Heal amount: 12 Saturation amount: 1.2
+- harvestcraft:plumjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:jaffa Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chocolateyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pistachio Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:suadero Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:duckraw Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:tunasalad Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:potatochips Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:mobsoup Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:cinnamonroll Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:grits Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:honey Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:heartybreakfast Heal amount: 15 Saturation amount: 1.2
+- harvestcraft:eggroll Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:cinnamonappleoatmeal Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:blackberryjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:mustardseeds Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lambbarleysoup Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:beetsalad Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:strawberrysouffle Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:potstickers Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:creepercookie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:sunflowerbroccolisalad Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:gooseberrymilkshake Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:naan Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:elderberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:apricotsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:grapesoda Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:scrambledegg Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:celery Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bentobox Heal amount: 18 Saturation amount: 1.2
+- harvestcraft:spicymustardpork Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:summersquashwithradish Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:sausage Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:baklava Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:roastedpumpkinseeds Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:pineappleyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:deluxechickencurry Heal amount: 19 Saturation amount: 1.2
+- harvestcraft:springsalad Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:rutabaga Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:tomatoherbchicken Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:dragonfruit Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:dandelionsalad Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:jellyfishraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:rhubarb Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:ramen Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:steamedpeas Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:octopuscooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:briochebun Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:cheeseontoast Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:misosoup Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:crawfishetoufee Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:coconutcream Heal amount: 2 Saturation amount: 1.2
+- nuclearcraft:dark_chocolate Heal amount: 3 Saturation amount: 0.4
+- harvestcraft:snapperraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:coffee Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:bakedham Heal amount: 4 Saturation amount: 1.2
+- minecraft:baked_potato Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:donut Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:lemonchicken Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:guacamole Heal amount: 5 Saturation amount: 1.2
+- minecraft:bread Heal amount: 3 Saturation amount: 1.2
+- minecraft:carrot Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:anchovypepperonipizza Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:greenbeancasserole Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:celerysoup Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:caramelapple Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:pearsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:zucchinifries Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:mettbrotchen Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:potatoskins Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:mochaicecream Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:splitpeasoup Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:spinach Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:softpretzelandmustard Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:herringraw Heal amount: 1 Saturation amount: 0.6
+- minecraft:clownfish Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:timpano Heal amount: 19 Saturation amount: 1.2
+- harvestcraft:candiedginger Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pearyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:thankfuldinner Heal amount: 24 Saturation amount: 1.2
+- harvestcraft:grapefruitsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:maplesyrupwaffles Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:pearjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:meringueroulade Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:marzipan Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:clamchowder Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:walleyeraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:gigapickle Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:theatrebox Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:grapejelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:szechuaneggplant Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:calamaricooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:honeysoyribs Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:buttercookie Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:okra Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:nopalessalad Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:caramel Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:curry Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:grouperraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:honeybread Heal amount: 5 Saturation amount: 1.2
+- extrabotany:gildedmashedpotato Heal amount: 4 Saturation amount: 0.2
+- harvestcraft:limeyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cornedbeefhash Heal amount: 18 Saturation amount: 1.2
+- harvestcraft:blackberryjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:rawtofuduck Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:gourmetbeefburger Heal amount: 19 Saturation amount: 1.2
+- harvestcraft:crayfishcooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:figjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:slimegummies Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:eggnog Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cottagepie Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:sausageinbread Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:chilidog Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:chickenbiscuit Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:cornonthecob Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:lime Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:rivermudcake Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:kiwijelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:museli Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:carpraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:vanillayogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:jellydonut Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:orange Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:onionhamburger Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:rye Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:candiedpecans Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:figjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:kalechips Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:musubi Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:cornflakes Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:hotwings Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:peas Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:rosepetaltea Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cactussoup Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:swedishmeatballs Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:sweetpickle Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:eggplantparm Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:pralines Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pumpkinbread Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:chilichocolate Heal amount: 2 Saturation amount: 1.2
+- minecraft:beetroot_soup Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:spinachpie Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:mashedsweetpotatoes Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:sausagebeanmelt Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:plainyogurt Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:ironbrew Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:lemonsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:figbar Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:strawberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:pawpaw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:fairybread Heal amount: 8 Saturation amount: 1.2
+- minecraft:cooked_salmon Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:supremepizza Heal amount: 14 Saturation amount: 1.2
+- harvestcraft:bbqchickenbiscuit Heal amount: 14 Saturation amount: 1.2
+- harvestcraft:chaitea Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:honeyglazedcarrots Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:baconpancakes Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:shrimptempera Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:hazelnut Heal amount: 1 Saturation amount: 0.6
+- minecraft:wheat Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:strawberryyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:rainbowcurry Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:crabcooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:sushi Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:gingerbread Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:chocolateorange Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:vanillaicecream Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:pastagardenia Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:broccolindip Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:toastsandwich Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:croissant Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:mushroomketchup Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:bibimbap Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:blueberryyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:turkeyraw Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:cookedtofacon Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:grapefruitjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pickles Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:raspberryjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:frogcooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pambitsbox Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:damper Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:durianmuffin Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:epicbacon Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:cookedtofeak Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:bakedbeets Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:hamandpineapplepizza Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:persimmonjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:maplesyruppancakes Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:pumpkinmuffin Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:friedpecanokra Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:crabraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:grilledcheese Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:creamedcorn Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:fruitcrumble Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:peachjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:brusselsprout Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:gourmetbeefpatty Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:maplesausage Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:garlic Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cauliflower Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:zucchini Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:homestylelunch Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:melonjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:biscuitsandgravy Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:avocadoburrito Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:cranberryjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pomegranate Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:dandeliontea Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:squidinkspaghetti Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:fishsandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:starfruitjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:festivalbread Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cobblestonecobbler Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:eggsalad Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:seaweed Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:coffeebean Heal amount: 1 Saturation amount: 0.6
+- nuclearcraft:cocoa_butter Heal amount: 2 Saturation amount: 0.2
+- harvestcraft:yorkshirepudding Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:meatloaf Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:octopusraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:merveilleux Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:apricotglazedpork Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:imagawayaki Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:beetburger Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:cherryjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:peachsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:pineappleham Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:grapeyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:paneertikkamasala Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:poachedpear Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:pumpkinspicelatte Heal amount: 8 Saturation amount: 1.2
+- nuclearcraft:graham_cracker Heal amount: 1 Saturation amount: 0.2
+- harvestcraft:beansontoast Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:peanutbutter Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:epicblt Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:applefritter Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:bananasmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chocolatecaramelfudge Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gravlax Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:pickledbeets Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:ricepudding Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:sprinklescupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:marinatedcucumbers Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:amaranth Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:caramelcupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:paradiseburger Heal amount: 16 Saturation amount: 1.2
+- harvestcraft:pearjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gyudon Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:blueberrypancakes Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:veggiestrips Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:buttertart Heal amount: 10 Saturation amount: 1.2
+- minecraft:chicken Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:rootbeersoda Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:sweetandsourchicken Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:peanut Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:grilledasparagus Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:shrimpokrahushpuppies Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:arrowroot Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cherrysoda Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chestnutbutter Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:lemoncupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:custard Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:chickenpotpie Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:lemonmeringue Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chocovoxels Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:etonmess Heal amount: 4 Saturation amount: 1.2
+- minecraft:rotten_flesh Heal amount: 4 Saturation amount: 0.1
+- harvestcraft:peaandhamsoup Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:keylimepie Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:gourmetmuttonpatty Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:orangejuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:sunflowerwheatrolls Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:meesua Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:californiaroll Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:netherwings Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:beefwellington Heal amount: 7 Saturation amount: 1.2
+- minecraft:spider_eye Heal amount: 2 Saturation amount: 0.8
+- harvestcraft:gourmetporkburger Heal amount: 14 Saturation amount: 1.2
+- harvestcraft:kiwi Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:omurice Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:sardinesinhotsauce Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:kohlundpinkel Heal amount: 14 Saturation amount: 1.2
+- harvestcraft:vegetablesoup Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:fruitsalad Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gardensoup Heal amount: 4 Saturation amount: 1.2
+- minecraft:beef Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cucumbersalad Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:plumsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chickenparmasan Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cornedbeefbreakfast Heal amount: 26 Saturation amount: 1.2
+- harvestcraft:turnip Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:glisteningsalad Heal amount: 12 Saturation amount: 1.2
+- harvestcraft:pemmican Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:figsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:montecristosandwich Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:zucchinibake Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:parsnip Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cotton Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:asparagusquiche Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:potatosalad Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:ricecake Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:hummus Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:beefjerky Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:strawberrysalad Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:mozzerellasticks Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:pistachiobutter Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:salisburysteak Heal amount: 17 Saturation amount: 1.2
+- harvestcraft:applesauce Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:rawtofenison Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:breadedporkchop Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:herbbutterparsnips Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:chipsanddip Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:paneer Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:gourmetvenisonburger Heal amount: 20 Saturation amount: 1.2
+- harvestcraft:creeperwings Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:spagettiandmeatballs Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:crispyricepuffbars Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:pbandj Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:flax Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:anchovyraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:corn Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:creamedbroccolisoup Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:eggtart Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:friedfeast Heal amount: 18 Saturation amount: 1.2
+- harvestcraft:cashewchicken Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:charrraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:slawdog Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:generaltsochicken Heal amount: 7 Saturation amount: 1.2
+- minecraft:cod Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:banana nut bread Heal amount: 5 Saturation amount: 1.2
+- forestry:cherry Heal amount: 1 Saturation amount: 0.2
+- forestry:walnut Heal amount: 1 Saturation amount: 0.2
+- forestry:chestnut Heal amount: 1 Saturation amount: 0.2
+- forestry:lemon Heal amount: 1 Saturation amount: 0.2
+- forestry:plum Heal amount: 1 Saturation amount: 0.2
+- forestry:date Heal amount: 1 Saturation amount: 0.2
+- forestry:papaya Heal amount: 1 Saturation amount: 0.2
+- harvestcraft:blueberrypie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:pepperjellyandcrackers Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:clamraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:jackfruit Heal amount: 1 Saturation amount: 0.6
+- minecraft:salmon Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:rawtofurkey Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:orangechicken Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:breakfastburrito Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:appleyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:jicama Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cornedbeef Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:chickengumbo Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:limejuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:agave Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lemon Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bamboosteamedrice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gingeredrhubarbtart Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:raspberryicedtea Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:jelliedeel Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:beet Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cranberryyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:coconut Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:mochidessert Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:grapejuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:soursop Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cookedtofeeg Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:kimchi Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cranberryjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:starfruitjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:sausageroll Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:battenberg Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:cinnamon Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:sisal Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:mintcupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:biscuit Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:scallopraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lentil Heal amount: 1 Saturation amount: 0.6
+- biomesoplenty:berries Heal amount: 1 Saturation amount: 0.1
+- extrabotany:Halloween candy eins Heal amount: 2 Saturation amount: 0.15
+- extrabotany:halloween candy zwei Heal amount: 2 Saturation amount: 0.15
+- extrabotany:halloween candy drei Heal amount: 2 Saturation amount: 0.15
+- nuclearcraft:unsweetened_chocolate Heal amount: 2 Saturation amount: 0.2
+- harvestcraft:espresso Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:tunaraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:steaktartare Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:rawtofeeg Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:silkentofu Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:lemonyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:poutine Heal amount: 7 Saturation amount: 1.2
+- minecraft:cooked_mutton Heal amount: 2 Saturation amount: 0.6
+- harvestcraft:citrussalad Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:peanutsoup Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:trailmix Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:blt Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:marshmellows Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:zeppole Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:starfruitjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:mashedpotatoeschickenbiscuit Heal amount: 12 Saturation amount: 1.2
+- harvestcraft:mapleoatmeal Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:smores Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:chestnut Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:shrimpraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:mangochutney Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:spumoniicecream Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:avocado Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:catfishraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:blueberrysmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:carrotjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:icecream Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:mushroomlasagna Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:cantaloupe Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:roastchicken Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:applejuice Heal amount: 2 Saturation amount: 1.2
+- biomesoplenty:peach Heal amount: 5 Saturation amount: 0.2
+- integrateddynamics:menril_berries Heal amount: 4 Saturation amount: 0.3
+- harvestcraft:sesameball Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:blackberrysmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:harvestpumpkin Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lemonjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:meatystirfry Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:meatpie Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:bolognasandwich Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:chocolatedonut Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:pear Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:toast Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:taco Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:cottoncandy Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:vindaloo Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:honeycombchocolatebar Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:scallopcooked Heal amount: 2 Saturation amount: 1.2
+- extrabotany:manadrink Heal amount: 1 Saturation amount: 0.1
+- harvestcraft:fishtaco Heal amount: 8 Saturation amount: 1.2
+- forestry:honeyed_slice Heal amount: 8 Saturation amount: 0.6
+- harvestcraft:lemonjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:tiropita Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:groiledcheesesandwich Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:kiwijellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:monsterfrieddumplings Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:bambooshoot Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:shrimpcocktail Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:vegetarianlettucewrap Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:sweettea Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:turtlecooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:raspberrypie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:taiyaki Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:baconmushroomburger Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:apricotjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:shepardspie Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:seedenergygel Heal amount: 3 Saturation amount: 1.2
+- minecraft:mushroom_stew Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cheesedanish Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:papayajellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chocolatepudding Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:asparagussoup Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:fishsticks Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:bbqsauce Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:peanutbuttercookies Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:southernstylebreakfast Heal amount: 20 Saturation amount: 1.2
+- harvestcraft:gingersoda Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:pearjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:carrotsoup Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:pomegranatejelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:hushpuppies Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:kiwijuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:blueberryjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:crackersandcheese Heal amount: 8 Saturation amount: 1.2
+- forestry:ambrosia Heal amount: 8 Saturation amount: 0.6
+- harvestcraft:starfruityogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cheese Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:persimmonsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:watermelonjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:tilapiaraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bologna Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:limesmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chickpea Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:kiwiyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:raisins Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gooseberrysmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:apricot Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cheesesteak Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:peachjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:chickencordonbleu Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:leek Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bassraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:tomato Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:chorizo Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:redvelvetcupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:bulgogi Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:applesmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:cookiesandmilk Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:sauerbraten Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:steakfajita Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:raspberryyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:clamcooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:spiceleaf Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:salmononigiri Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:guiso Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:cookedtofabbit Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:leekbaconsoup Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:figyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:potatosoup Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:turtleraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bangersandmash Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:minerstew Heal amount: 25 Saturation amount: 1.2
+- harvestcraft:candiedlemon Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:mangojellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:greenheartfish Heal amount: 1 Saturation amount: 0.6
+- minecraft:fish Heal amount: 2 Saturation amount: 0.1
+- minecraft:clown fish Heal amount: 1 Saturation amount: 0.1
+- minecraft:pufferfish Heal amount: 1 Saturation amount: 0.1
+- harvestcraft:grapefruityogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:taffy Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:peachesandcreamoatmeal Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:stock Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gooseberrypie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:stuffedchilipeppers Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:lychee Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cactusfruitjuice Heal amount: 2 Saturation amount: 1.2
+- minecraft:beetroot Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:tea Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:bellpepper Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:springfieldcashewchicken Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:edibleroot Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:slimepie Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:hotchocolate Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:garlicsteak Heal amount: 6 Saturation amount: 1.2
+- minecraft:golden_carrot Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:steakandchips Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:sweetandsourmeatballs Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:lemonaide Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:hotcocoa Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:papayajuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:orangeduck Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:vegemite Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:batteredsausage Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:grapesalad Heal amount: 3 Saturation amount: 1.2
+- extrabotany:friedchicken Heal amount: 8 Saturation amount: 0.45
+- harvestcraft:lycheetea Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:tealeaf Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cashew Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:rawtofabbit Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:calamariraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:onigiri Heal amount: 3 Saturation amount: 1.2
+- minecraft:porkchop Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lemonlimesoda Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:apricotyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cassoulet Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:gingerchicken Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:tatertots Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chocolatemilkshake Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:deluxenachoes Heal amount: 16 Saturation amount: 1.2
+- harvestcraft:zestyzucchini Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chocolatemilk Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gingersnaps Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:date Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:chilipepper Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:gummybears Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:cranberrybar Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:raspberryjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:fig Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:blueberryjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cookedtofutton Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:gooseberryyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:peachcobbler Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:grapefruit Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:roastpotatoes Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:deluxecheeseburger Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:greengrape Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:maplecandiedbacon Heal amount: 3 Saturation amount: 1.2
+- minecraft:potato Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:quesadilla Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:porklomein Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:strawberrycupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:liverandonions Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:futomaki Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:mintchocolatechipicecream Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:stuffedpepper Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:orangejelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:turnipsoup Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:duckcooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:strawberrymilkshake Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:footlong Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:celeryandpeanutbutter Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:candiedwalnuts Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:toastedwestern Heal amount: 12 Saturation amount: 1.2
+- harvestcraft:chimichanga Heal amount: 17 Saturation amount: 1.2
+- harvestcraft:mcpam Heal amount: 16 Saturation amount: 1.2
+- harvestcraft:popcorn Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:peppercorn Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:honeysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:peanutbutterbananasandwich Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:hamburger Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:olive Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cactusfruit Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cranberryjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chocolatecoconutbar Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:chocolateicecream Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:broccoli Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:artichoke Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:melonsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:vanillaconchasbread Heal amount: 7 Saturation amount: 1.2
+- minecraft:melon Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:pickledonions Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:soybean Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:zombiejerky Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:beansandrice Heal amount: 5 Saturation amount: 1.2
+- minecraft:mutton Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:lemondrizzlecake Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:chorusfruitsoup Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:jambalaya Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:saltedcaramel Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:delightedmeal Heal amount: 15 Saturation amount: 1.2
+- harvestcraft:firmtofu Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cheesyshrimpquinoa Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:pekingduck Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:grilledskewers Heal amount: 4 Saturation amount: 1.2
+- biomesoplenty:shroompowder Heal amount: 1 Saturation amount: 0.1
+- harvestcraft:friedrice Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:potatocakes Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:cabbage Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:limejelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:chocolatecherry Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:dango Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:refriedbeans Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:cucumber Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:raspberryjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:sweetpotatopie Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:cookedtofuduck Heal amount: 2 Saturation amount: 0.6
+- nuclearcraft:moresmore Heal amount: 20 Saturation amount: 2.4
+- harvestcraft:quinoa Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:blueberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:raspberrysmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:fries Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:patreonpie Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:mochicake Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:potatoandleeksoup Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:berrymeringuenest Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:papaya Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:chocolatebacon Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:cinnamonbread Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:raspberrytrifle Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:carrotcupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:oystersauce Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:sesameseeds Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:okrachips Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:cherryicecream Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:pizzasoup Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:limejellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:rambutan Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:hotdishcasserole Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:powdereddonut Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:hash Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:rice Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:pepperoni Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:rootbeerfloat Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:oysterraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:frenchtoast Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:coffeeconleche Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:mixedsalad Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:cherryjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:leafychickensandwich Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:cherrycoconutchocolatebar Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:bbqpotatochips Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:chickenchowmein Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:beanburrito Heal amount: 7 Saturation amount: 1.2
+- extrabotany:spiritfuel Heal amount: 0 Saturation amount: 0.0
+- harvestcraft:mashedpotatoes Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:turkishdelight Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:scallion Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bananayogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:crayfishsalad Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:frograw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:pizza Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:berryvinaigrettesalad Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:kale Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:venisonraw Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:fruitcake Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:mango Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:applejelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:soymilk Heal amount: 1 Saturation amount: 1.2
+- harvestcraft:sweetpotato Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:grapesmoothie Heal amount: 3 Saturation amount: 1.2
+- thaumcraft:triple_meat_treat Heal amount: 6 Saturation amount: 0.8
+- harvestcraft:toadinthehole Heal amount: 11 Saturation amount: 1.2
+- harvestcraft:candiedsweetpotatoes Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:spaghettidinner Heal amount: 13 Saturation amount: 1.2
+- harvestcraft:manjuu Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:pho Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chaoscookie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:ceviche Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:spagetti Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:baconandeggs Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:colasoda Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chickennoodlesoup Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:cheddarandsourcreampotatochips Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:peach Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cantonesenoodles Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:pumpkinyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:cookedtoficken Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:jute Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:cracklins Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:friedchicken Heal amount: 8 Saturation amount: 1.2
+- nuclearcraft:smore Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:pancakes Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:chickencelerycasserole Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:dhal Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:mochi Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chilidonut Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:peasandcelery Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:mangojuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:neapolitanicecream Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:tunaonigiri Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:mangoyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:randomtaco Heal amount: 12 Saturation amount: 1.2
+- harvestcraft:onion Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:bbqchickenpizza Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:raspberrymilkshake Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:strawberryicecream Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:orangesoda Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:gourmetvenisonpatty Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:rawtofeak Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:starfruitsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:vanillacupcake Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:honeyglazedham Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cinnamonsugardonut Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:ginger Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:beetsoup Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:peachjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:blazingsoup Heal amount: 9 Saturation amount: 1.2
+- nuclearcraft:dominos Heal amount: 16 Saturation amount: 1.8
+- harvestcraft:hotandsoursoup Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:musselraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:taro Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:vanillabean Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:meringuebombe Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:papayajelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:coleslawburger Heal amount: 10 Saturation amount: 1.2
+- harvestcraft:coconutshrimp Heal amount: 7 Saturation amount: 1.2
+- harvestcraft:curryleaf Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:peachyogurt Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:meringuecookie Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:friedgreentomatoes Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cantonesegreens Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:fortunecookie Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:mushroomrisotto Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:starfruit Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:crabkimbap Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:plumjuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:blackberrycobbler Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:porklettucewrap Heal amount: 3 Saturation amount: 1.2
+- thaumcraft:beef nugget Heal amount: 1 Saturation amount: 0.3
+- thaumcraft:chicken nugget Heal amount: 1 Saturation amount: 0.3
+- thaumcraft:pork nugget Heal amount: 1 Saturation amount: 0.3
+- thaumcraft:fish nugget Heal amount: 1 Saturation amount: 0.3
+- thaumcraft:rabbit nugget Heal amount: 1 Saturation amount: 0.3
+- thaumcraft:mutton nugget Heal amount: 1 Saturation amount: 0.3
+- harvestcraft:friedonions Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:applecider Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:mangosmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:plum Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:teriyakichicken Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:persimmonjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:surfandturf Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:coconutsmoothie Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:schnitzel Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:lettuce Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:candleberry Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:friedegg Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:chickenkatsu Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:chickensandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:creamcookie Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:roastedrootveggiemedley Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:snailraw Heal amount: 1 Saturation amount: 0.6
+- harvestcraft:gherkin Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:cornchips Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:gooseberryjelly Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:pomegranatejuice Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:blueberrymuffin Heal amount: 4 Saturation amount: 1.2
+- harvestcraft:snailcooked Heal amount: 2 Saturation amount: 1.2
+- harvestcraft:veggiestirfry Heal amount: 5 Saturation amount: 1.2
+- harvestcraft:stuffing Heal amount: 8 Saturation amount: 1.2
+- harvestcraft:gooseberry Heal amount: 1 Saturation amount: 0.6
+- biomesoplenty:ricebowl Heal amount: 2 Saturation amount: 0.6
+- minecraft:poisonous_potato Heal amount: 2 Saturation amount: 0.3
+- harvestcraft:applejellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:salmonpatties Heal amount: 9 Saturation amount: 1.2
+- harvestcraft:baconwrappedchili Heal amount: 3 Saturation amount: 1.2
+- harvestcraft:gooseberryjellysandwich Heal amount: 6 Saturation amount: 1.2
+- harvestcraft:apricotjelly Heal amount: 2 Saturation amount: 1.2

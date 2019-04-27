@@ -1,0 +1,7632 @@
+data.add("food","it3",[
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"agave",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"akutuq",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"almond",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"almond butter",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"amaranth",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"forestry",
+	"saturation":0.6,
+	"name":"ambrosia",
+	"compost_amount":270
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"anchovypepperonipizza",
+	"compost_amount":440
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"anchovyraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"apple",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"apple snow",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applecider",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applefritter",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applejelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applejellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applejuice",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applepie",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applesauce",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"applesmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"appleyogurt",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"apricot",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"apricot juice",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"apricotglazedpork",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"apricotjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"apricotjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"apricotsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"apricotyogurt",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"arrowroot",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"artichoke",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"asparagus",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"asparagusquiche",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"asparagussoup",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"avocado",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"avocadoburrito",
+	"compost_amount":290
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"babaganoush",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bacon wrapped dates",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baconandeggs",
+	"compost_amount":170
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baconcheeseburger",
+	"compost_amount":350
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baconmushroomburger",
+	"compost_amount":380
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baconpancakes",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baconwrappedchili",
+	"compost_amount":140
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baked alaska",
+	"compost_amount":260
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baked beans",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baked sweet potato",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baked turnips",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"baked_potato",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bakedbeets",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bakedcactus",
+	"compost_amount":80
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bakedham",
+	"compost_amount":170
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"baklava",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"bambooshoot",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bamboosteamedrice",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"banana",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"banana milkshake",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"banana nut bread",
+	"compost_amount":200
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"banana split",
+	"compost_amount":260
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bananasmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bananayogurt",
+	"compost_amount":110
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bangersandmash",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"barley",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"bassraw",
+	"compost_amount":60
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"battenberg",
+	"compost_amount":380
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"batteredsausage",
+	"compost_amount":260
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bbq jackfruit",
+	"compost_amount":110
+},
+{
+	"heal":14,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bbq platter",
+	"compost_amount":470
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bbq pulled pork",
+	"compost_amount":290
+},
+{
+	"heal":14,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bbqchickenbiscuit",
+	"compost_amount":470
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bbqchickenpizza",
+	"compost_amount":320
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bbqpotatochips",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bbqsauce",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"bean",
+	"compost_amount":60
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beanburrito",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beansandrice",
+	"compost_amount":200
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beansontoast",
+	"compost_amount":350
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"beef",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"thaumcraft",
+	"saturation":0.3,
+	"name":"beef nugget",
+	"compost_amount":50
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beefjerky",
+	"compost_amount":140
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beefwellington",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"beet",
+	"compost_amount":60
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beetburger",
+	"compost_amount":440
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"beetroot",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"beetroot_soup",
+	"compost_amount":320
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beetsalad",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"beetsoup",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"bellpepper",
+	"compost_amount":60
+},
+{
+	"heal":18,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bentobox",
+	"compost_amount":590
+},
+{
+	"heal":1,
+	"mod":"biomesoplenty",
+	"saturation":0.1,
+	"name":"berries",
+	"compost_amount":50
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"berrymeringuenest",
+	"compost_amount":290
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"berryvinaigrettesalad",
+	"compost_amount":230
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bibimbap",
+	"compost_amount":290
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"biscuit",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"biscuitsandgravy",
+	"compost_amount":290
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"black paella",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"blackberry",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blackberry jelly sandwich",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blackberrycobbler",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blackberryjelly",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blackberryjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blackberrysmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blackberryyogurt",
+	"compost_amount":110
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blazingsoup",
+	"compost_amount":320
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blt",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"blueberry",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberry juice",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberryjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberryjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberrymuffin",
+	"compost_amount":170
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberrypancakes",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberrypie",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberrysmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"blueberryyogurt",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"boiled egg",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bologna",
+	"compost_amount":110
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bolognasandwich",
+	"compost_amount":320
+},
+{
+	"heal":4,
+	"mod":"thaumcraft",
+	"saturation":0.2,
+	"name":"brain",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"braised onions",
+	"compost_amount":200
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bratwurst",
+	"compost_amount":440
+},
+{
+	"heal":3,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"bread",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"bread fruit",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"breadedporkchop",
+	"compost_amount":200
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"breakfastburrito",
+	"compost_amount":350
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"briochebun",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"broccoli",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"broccoli mac",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"broccolindip",
+	"compost_amount":140
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"brownie",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"brusselsprout",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bubble tea",
+	"compost_amount":170
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"bulgogi",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"buttercookie",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"butteredpotato",
+	"compost_amount":170
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"buttertart",
+	"compost_amount":350
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cabbage",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cactusfruit",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cactusfruitjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cactussoup",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"calamaricooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"calamariraw",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"californiaroll",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"candiedginger",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"candiedlemon",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"candiedpecans",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"candiedsweetpotatoes",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"candiedwalnuts",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"candleberry",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cantaloupe",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cantonesegreens",
+	"compost_amount":110
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cantonesenoodles",
+	"compost_amount":350
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"caramel",
+	"compost_amount":80
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"caramel icecream",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"caramelapple",
+	"compost_amount":140
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"caramelcupcake",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"carpraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"carrot",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"carrotcupcake",
+	"compost_amount":290
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"carrotjuice",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"carrotsoup",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cashew",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cashewbutter",
+	"compost_amount":80
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cashewchicken",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cassava",
+	"compost_amount":60
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cassoulet",
+	"compost_amount":440
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"catfishraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cauliflower",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ceasarsalad",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"celery",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"celeryandpeanutbutter",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"celerysoup",
+	"compost_amount":200
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ceviche",
+	"compost_amount":260
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chaitea",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chaoscookie",
+	"compost_amount":140
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"char siu",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"charrraw",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheddarandsourcreampotatochips",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheese",
+	"compost_amount":110
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheeseburger",
+	"compost_amount":290
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheesedanish",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheeseontoast",
+	"compost_amount":230
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheesesteak",
+	"compost_amount":350
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheesyshrimpquinoa",
+	"compost_amount":320
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cheeze puffs",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"cherry",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cherry",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherry juice",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherry pie",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherry smoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherry yogurt",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherrycoconutchocolatebar",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherryicecream",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherryjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherryjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherryslushie",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cherrysoda",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"chestnut",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"chestnut",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chestnutbutter",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"chicken",
+	"compost_amount":60
+},
+{
+	"heal":14,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chicken and waffles",
+	"compost_amount":470
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chicken dinner",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"thaumcraft",
+	"saturation":0.3,
+	"name":"chicken nugget",
+	"compost_amount":50
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chicken paella",
+	"compost_amount":290
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickenbiscuit",
+	"compost_amount":440
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickencelerycasserole",
+	"compost_amount":230
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickenchowmein",
+	"compost_amount":290
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickencordonbleu",
+	"compost_amount":260
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickencurry",
+	"compost_amount":320
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickengumbo",
+	"compost_amount":320
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickenkatsu",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickennoodlesoup",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickenparmasan",
+	"compost_amount":200
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickenpotpie",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chickensandwich",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"chickpea",
+	"compost_amount":60
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chik-o-roll",
+	"compost_amount":350
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chili",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chilichocolate",
+	"compost_amount":110
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chilicupcake",
+	"compost_amount":290
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chilidog",
+	"compost_amount":350
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chilidonut",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"chilipepper",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chilipoppers",
+	"compost_amount":230
+},
+{
+	"heal":17,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chimichanga",
+	"compost_amount":560
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chips and salsa",
+	"compost_amount":350
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chipsanddip",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolate bar",
+	"compost_amount":80
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolate cupcake",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolate roll",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolate strawberry",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatebacon",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatecaramelfudge",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatecherry",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatecoconutbar",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatedonut",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolateicecream",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatemilk",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatemilkshake",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolateorange",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolatepudding",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocolateyogurt",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chocovoxels",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chorizo",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"minecraft",
+	"saturation":0.3,
+	"name":"chorus_fruit",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"chorusfruitsoup",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cinnamon",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cinnamonappleoatmeal",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cinnamonbread",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cinnamonroll",
+	"compost_amount":200
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cinnamonsugardonut",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cinnamontoast",
+	"compost_amount":260
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"citrussalad",
+	"compost_amount":110
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"clamchowder",
+	"compost_amount":350
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"clamcooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"clamraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.1,
+	"name":"clown fish",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"clownfish",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cobblestonecobbler",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"nuclearcraft",
+	"saturation":0.2,
+	"name":"cocoa_butter",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"coconut",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coconut milk",
+	"compost_amount":80
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coconutcream",
+	"compost_amount":110
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coconutshrimp",
+	"compost_amount":260
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coconutsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coconutyogurt",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cod",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coffee",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"coffeebean",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coffeeconleche",
+	"compost_amount":230
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coffeecupcake",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"colasoda",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coleslaw",
+	"compost_amount":170
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"coleslawburger",
+	"compost_amount":350
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cooked grub",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cooked tofenison",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cooked tofish",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cooked tofurkey",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_beef",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_chicken",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_cod",
+	"compost_amount":90
+},
+{
+	"heal":5,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_fish",
+	"compost_amount":180
+},
+{
+	"heal":6,
+	"mod":"minecraft",
+	"saturation":0.8,
+	"name":"cooked_fish:1",
+	"compost_amount":220
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_mutton",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_porkchop",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_rabbit",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"cooked_salmon",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cookedtofabbit",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cookedtofacon",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cookedtofeak",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cookedtofeeg",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cookedtoficken",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cookedtofuduck",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cookedtofutton",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"cookie",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cookiesandmilk",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"corn",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornbread",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornchips",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"corndog",
+	"compost_amount":230
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornedbeef",
+	"compost_amount":320
+},
+{
+	"heal":26,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornedbeefbreakfast",
+	"compost_amount":830
+},
+{
+	"heal":18,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornedbeefhash",
+	"compost_amount":590
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornflakes",
+	"compost_amount":110
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornish pasty",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cornonthecob",
+	"compost_amount":140
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cottagepie",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cotton",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cottoncandy",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crabcooked",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crabkimbap",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"crabraw",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cracker",
+	"compost_amount":170
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crackers",
+	"compost_amount":230
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crackersandcheese",
+	"compost_amount":290
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cracklins",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cranberry",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cranberrybar",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cranberryjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cranberryjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cranberryjuice",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cranberrysauce",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cranberrysmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cranberryyogurt",
+	"compost_amount":110
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crawfishetoufee",
+	"compost_amount":350
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crayfishcooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"crayfishraw",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crayfishsalad",
+	"compost_amount":290
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cream of avocado soup",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"creamcookie",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"creamedbroccolisoup",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"creamedcorn",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"creepercookie",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"creeperwings",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crispyricepuffbars",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"crispyricepuffcereal",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"croissant",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"cucumber",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cucumber sandwich",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cucumbersalad",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"cucumbersoup",
+	"compost_amount":170
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"curry",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"curryleaf",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"custard",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"damper",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"dandelionsalad",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"dandeliontea",
+	"compost_amount":140
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"dango",
+	"compost_amount":350
+},
+{
+	"heal":3,
+	"mod":"nuclearcraft",
+	"saturation":0.4,
+	"name":"dark_chocolate",
+	"compost_amount":120
+},
+{
+	"heal":1,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"date",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"date",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"date nut bread",
+	"compost_amount":200
+},
+{
+	"heal":15,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"delightedmeal",
+	"compost_amount":500
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"deluxecheeseburger",
+	"compost_amount":350
+},
+{
+	"heal":19,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"deluxechickencurry",
+	"compost_amount":620
+},
+{
+	"heal":16,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"deluxenachoes",
+	"compost_amount":530
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"deviled egg",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"dhal",
+	"compost_amount":260
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"dimsum",
+	"compost_amount":290
+},
+{
+	"heal":16,
+	"mod":"nuclearcraft",
+	"saturation":1.8,
+	"name":"dominos",
+	"compost_amount":550
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"donut",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"dragonfruit",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"dried soup",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"duckcooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"duckraw",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"durian",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"durian milkshake",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"durianmuffin",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"earl grey tea",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"edibleroot",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"eel raw",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"eggnog",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"eggplant",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"eggplantparm",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"eggroll",
+	"compost_amount":230
+},
+{
+	"heal":12,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"eggs benedict",
+	"compost_amount":410
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"eggsalad",
+	"compost_amount":170
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"eggtart",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"elderberry",
+	"compost_amount":60
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"enchilada",
+	"compost_amount":380
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"energy drink",
+	"compost_amount":200
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"epicbacon",
+	"compost_amount":320
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"epicblt",
+	"compost_amount":440
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"escargot",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"espresso",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"etonmess",
+	"compost_amount":170
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"extremechili",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fairybread",
+	"compost_amount":290
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"festivalbread",
+	"compost_amount":200
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fiestacornsalad",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"fig",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fig juice",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"figbar",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"figjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"figjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"figsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"figyogurt",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"biomesoplenty",
+	"saturation":0.4,
+	"name":"filled_honeycomb",
+	"compost_amount":120
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"firmtofu",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.1,
+	"name":"fish",
+	"compost_amount":80
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fish dinner",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"thaumcraft",
+	"saturation":0.3,
+	"name":"fish nugget",
+	"compost_amount":50
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fishandchips",
+	"compost_amount":260
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fishlettucewrap",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fishsandwich",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fishsticks",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fishtaco",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"flax",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"footlong",
+	"compost_amount":290
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fortunecookie",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"frenchtoast",
+	"compost_amount":290
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fried bologna sandwich",
+	"compost_amount":290
+},
+{
+	"heal":8,
+	"mod":"extrabotany",
+	"saturation":0.45,
+	"name":"friedchicken",
+	"compost_amount":270
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"friedchicken",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"friedegg",
+	"compost_amount":140
+},
+{
+	"heal":18,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"friedfeast",
+	"compost_amount":590
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"friedgreentomatoes",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"friedonions",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"friedpecanokra",
+	"compost_amount":170
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"friedrice",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fries",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"frogcooked",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"frogleg stir fry",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"frograw",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"frosted donut",
+	"compost_amount":290
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fruit punch",
+	"compost_amount":110
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fruitcake",
+	"compost_amount":380
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fruitcreamfestivalbread",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fruitcrumble",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"fruitsalad",
+	"compost_amount":110
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"futomaki",
+	"compost_amount":320
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gardensoup",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"garlic",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"garlic chicken",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"garlic mashed potatoes",
+	"compost_amount":230
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"garlicbread",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"garlicsteak",
+	"compost_amount":230
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"generaltsochicken",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gherkin",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"gigapickle",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"extrabotany",
+	"saturation":0.2,
+	"name":"gildedmashedpotato",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"ginger",
+	"compost_amount":60
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gingerbread",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gingerchicken",
+	"compost_amount":230
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gingeredrhubarbtart",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gingersnaps",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gingersoda",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"glazed carrots",
+	"compost_amount":170
+},
+{
+	"heal":12,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"glisteningsalad",
+	"compost_amount":410
+},
+{
+	"heal":4,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"golden_apple",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"golden_apple:1",
+	"compost_amount":170
+},
+{
+	"heal":6,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"golden_carrot",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"gooseberry",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gooseberryjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gooseberryjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gooseberrymilkshake",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gooseberrypie",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gooseberrysmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gooseberryyogurt",
+	"compost_amount":110
+},
+{
+	"heal":16,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmet mutton burger",
+	"compost_amount":530
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmet pork patty",
+	"compost_amount":230
+},
+{
+	"heal":19,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmetbeefburger",
+	"compost_amount":620
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmetbeefpatty",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmetmuttonpatty",
+	"compost_amount":230
+},
+{
+	"heal":14,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmetporkburger",
+	"compost_amount":470
+},
+{
+	"heal":20,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmetvenisonburger",
+	"compost_amount":650
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gourmetvenisonpatty",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"nuclearcraft",
+	"saturation":0.2,
+	"name":"graham_cracker",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"grape",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"grapefruit",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapefruit jelly sandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapefruit juice",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapefruit soda",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapefruitjelly",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapefruitsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapefruityogurt",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapejelly",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapejuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapesalad",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapesmoothie",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapesoda",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grapeyogurt",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gravlax",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gravy",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"green egg sand ham",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"green tea",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"greenbeancasserole",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"greengrape",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"greenheartfish",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grilled cheese vegemite toast",
+	"compost_amount":320
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grilled eggplant",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grilled mushroom",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grilledasparagus",
+	"compost_amount":110
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grilledcheese",
+	"compost_amount":290
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grilledskewers",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"grits",
+	"compost_amount":170
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"groiledcheesesandwich",
+	"compost_amount":350
+},
+{
+	"heal":1,
+	"mod":"nuclearcraft",
+	"saturation":0.2,
+	"name":"ground_cocoa_nibs",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"grouperraw",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"guacamole",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"guava",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"guiso",
+	"compost_amount":320
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gumbo",
+	"compost_amount":440
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gummybears",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"gyudon",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"haggis",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"extrabotany",
+	"saturation":0.15,
+	"name":"halloween candy drei",
+	"compost_amount":80
+},
+{
+	"heal":2,
+	"mod":"extrabotany",
+	"saturation":0.15,
+	"name":"Halloween candy eins",
+	"compost_amount":80
+},
+{
+	"heal":2,
+	"mod":"extrabotany",
+	"saturation":0.15,
+	"name":"halloween candy zwei",
+	"compost_amount":80
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ham and cheese sandwich",
+	"compost_amount":260
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hamandpineapplepizza",
+	"compost_amount":320
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hamburger",
+	"compost_amount":230
+},
+{
+	"heal":12,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hamsweetpicklesandwich",
+	"compost_amount":410
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"harvestpumpkin",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hash",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"hazelnut",
+	"compost_amount":60
+},
+{
+	"heal":15,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"heartybreakfast",
+	"compost_amount":500
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"herbbutterparsnips",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"herringraw",
+	"compost_amount":60
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"homestylelunch",
+	"compost_amount":380
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"honey",
+	"compost_amount":90
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honey lemon lamb",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"honey_pot",
+	"compost_amount":80
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honeybread",
+	"compost_amount":200
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honeybun",
+	"compost_amount":320
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honeycombchocolatebar",
+	"compost_amount":140
+},
+{
+	"heal":8,
+	"mod":"forestry",
+	"saturation":0.6,
+	"name":"honeyed_slice",
+	"compost_amount":270
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honeyglazedcarrots",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honeyglazedham",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honeysandwich",
+	"compost_amount":230
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"honeysoyribs",
+	"compost_amount":320
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hotandsoursoup",
+	"compost_amount":350
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hotchocolate",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hotcocoa",
+	"compost_amount":200
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hotdishcasserole",
+	"compost_amount":320
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hotdog",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hotwings",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"huckleberry",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hummus",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"hushpuppies",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"icecream",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"imagawayaki",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"imitationcrabsticks",
+	"compost_amount":230
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ironbrew",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"jackfruit",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"jaffa",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"jam roll",
+	"compost_amount":170
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"jambalaya",
+	"compost_amount":440
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"jelliedeel",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"jellybeans",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"jellydonut",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"jellyfishraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"jicama",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"jute",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"kale",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kalechips",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"kenaf",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"keylimepie",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kimchi",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"kiwi",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kiwi smoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kiwijelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kiwijellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kiwijuice",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kiwiyogurt",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"kohlrabi",
+	"compost_amount":60
+},
+{
+	"heal":14,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kohlundpinkel",
+	"compost_amount":470
+},
+{
+	"heal":24,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"korean dinner",
+	"compost_amount":770
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"kung pao chicken",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lamb with mint sauce",
+	"compost_amount":230
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lambbarleysoup",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lambkebab",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lasagna",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lavender shortbread",
+	"compost_amount":170
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"leafy fish sandwich",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"leafychickensandwich",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"leek",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"leekbaconsoup",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"lemon",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"lemon",
+	"compost_amount":50
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemon bar",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonaide",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonchicken",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemoncupcake",
+	"compost_amount":290
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemondrizzlecake",
+	"compost_amount":260
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonlimesoda",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonmeringue",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lemonyogurt",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"lentil",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"lettuce",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"lime",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"limejelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"limejellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"limejuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"limesmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"limeyogurt",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"liverandonions",
+	"compost_amount":170
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"loadedbakedpotato",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"lychee",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"lycheetea",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"extrabotany",
+	"saturation":0.1,
+	"name":"manadrink",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"mango",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mango jelly",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mangochutney",
+	"compost_amount":170
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mangojellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mangojuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mangosmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mangoyogurt",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"manjuu",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"maplecandiedbacon",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mapleoatmeal",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"maplesausage",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"maplesyrup",
+	"compost_amount":60
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"maplesyruppancakes",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"maplesyrupwaffles",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"marinatedcucumbers",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"nuclearcraft",
+	"saturation":0.2,
+	"name":"marshmallow",
+	"compost_amount":50
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"marshmellowchicks",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"marshmellows",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"marzipan",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mashedpotatoes",
+	"compost_amount":200
+},
+{
+	"heal":12,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mashedpotatoeschickenbiscuit",
+	"compost_amount":410
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mashedsweetpotatoes",
+	"compost_amount":140
+},
+{
+	"heal":16,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mcpam",
+	"compost_amount":530
+},
+{
+	"heal":24,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meat feast pizza",
+	"compost_amount":770
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meatloaf",
+	"compost_amount":290
+},
+{
+	"heal":12,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meatloaf sandwich",
+	"compost_amount":410
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meatpie",
+	"compost_amount":350
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meaty stew",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meatystirfry",
+	"compost_amount":230
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meesua",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"melon",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"melon yogurt",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"melonjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"melonsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"integrateddynamics",
+	"saturation":0.3,
+	"name":"menril_berries",
+	"compost_amount":70
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meringuebombe",
+	"compost_amount":320
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meringuebrownie",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meringuecookie",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"meringueroulade",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"merveilleux",
+	"compost_amount":140
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mettbrotchen",
+	"compost_amount":290
+},
+{
+	"heal":4,
+	"mod":"nuclearcraft",
+	"saturation":0.6,
+	"name":"milk_chocolate",
+	"compost_amount":150
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"millet",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mincepie",
+	"compost_amount":320
+},
+{
+	"heal":25,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"minerstew",
+	"compost_amount":800
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mintchocolatechipicecream",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mintcupcake",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"miso paste",
+	"compost_amount":80
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"misosoup",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mixedsalad",
+	"compost_amount":230
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mobsoup",
+	"compost_amount":380
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mochaicecream",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mochi",
+	"compost_amount":140
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mochicake",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mochidessert",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"monsterfrieddumplings",
+	"compost_amount":230
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"montecristosandwich",
+	"compost_amount":380
+},
+{
+	"heal":20,
+	"mod":"nuclearcraft",
+	"saturation":2.4,
+	"name":"moresmore",
+	"compost_amount":690
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mozzerellasticks",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"mudfishraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"mulberry",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"museli",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mushroom ketchup omelet",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mushroom steak",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"mushroom_stew",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mushroomketchup",
+	"compost_amount":80
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mushroomlasagna",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mushroomrisotto",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"mussel cooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"musselraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"mustardseeds",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"musubi",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"mutton",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"thaumcraft",
+	"saturation":0.3,
+	"name":"mutton nugget",
+	"compost_amount":50
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"naan",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"nachoes",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"neapolitanicecream",
+	"compost_amount":170
+},
+{
+	"heal":16,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"netherstar toast",
+	"compost_amount":530
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"netherwings",
+	"compost_amount":320
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"nopalessalad",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"nutella",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"nutmeg",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"oats",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"octopuscooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"octopusraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"okra",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"okra creole",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"okrachips",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"oldworldveggiesoup",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"olive",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"omelet",
+	"compost_amount":170
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"omurice",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"onigiri",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"onion",
+	"compost_amount":60
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"onion soup",
+	"compost_amount":380
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"onionhamburger",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"orange",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orange jelly sandwich",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orange smoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orange yogurt",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orangechicken",
+	"compost_amount":230
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orangeduck",
+	"compost_amount":260
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orangejelly",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orangejuice",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"orangesoda",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ovenroastedcauliflower",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"oyster cooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"oysterraw",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"oystersauce",
+	"compost_amount":170
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pad thai",
+	"compost_amount":290
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pambitsbox",
+	"compost_amount":290
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pancakes",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"paneer",
+	"compost_amount":80
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"paneertikkamasala",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"papaya",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"papaya",
+	"compost_amount":50
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"papaya smoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"papaya yogurt",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"papayajelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"papayajellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"papayajuice",
+	"compost_amount":110
+},
+{
+	"heal":16,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"paradiseburger",
+	"compost_amount":530
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"parsnip",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"passionfruit",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pastagardenia",
+	"compost_amount":230
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"patreonpie",
+	"compost_amount":350
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"pawpaw",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pbandj",
+	"compost_amount":230
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peaandhamsoup",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"biomesoplenty",
+	"saturation":0.2,
+	"name":"peach",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"peach",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peachcobbler",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peachesandcreamoatmeal",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peachjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peachjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peachjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peachsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peachyogurt",
+	"compost_amount":110
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peanu tbutter cupcake",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"peanut",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peanutbutter",
+	"compost_amount":80
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peanutbutterbananasandwich",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peanutbuttercookies",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peanutbuttercup",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peanutsoup",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"pear",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"biomesoplenty",
+	"saturation":0.3,
+	"name":"pear",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pearjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pearjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pearjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pearsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pearyogurt",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"peas",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"peasandcelery",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"pecan",
+	"compost_amount":60
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pecan pie",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pekingduck",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pemmican",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pepper jelly",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pepper mint",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"peppercorn",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pepperjellyandcrackers",
+	"compost_amount":290
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pepperoni",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"perch raw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"persimmon",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"biomesoplenty",
+	"saturation":0.2,
+	"name":"persimmon",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"persimmon jelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"persimmonjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"persimmonjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"persimmonsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"persimmonyogurt",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pho",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pickledbeets",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pickledonions",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pickles",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pinacolada",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"pineapple",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pineappleham",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pineappleyogurt",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pinkel",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"pistachio",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pistachio baked salmon",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pistachio icecream",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pistachiobutter",
+	"compost_amount":80
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pitepalt",
+	"compost_amount":230
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pizza",
+	"compost_amount":380
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pizzasoup",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"plainyogurt",
+	"compost_amount":80
+},
+{
+	"heal":18,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ploughmans lunch",
+	"compost_amount":590
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"plum",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"plum",
+	"compost_amount":50
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"plum yogurt",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"plumjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"plumjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"plumjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"plumsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"poachedpear",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.3,
+	"name":"poisonous_potato",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"pomegranate",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pomegranate jelly sandwich",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pomegranate smoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pomegranate yogurt",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pomegranatejelly",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pomegranatejuice",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"popcorn",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"thaumcraft",
+	"saturation":0.3,
+	"name":"pork nugget",
+	"compost_amount":50
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pork rinds",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pork sausage",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"porkchop",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"porklettucewrap",
+	"compost_amount":140
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"porklomein",
+	"compost_amount":320
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pot roast",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"potato",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potato and cheese pirogi",
+	"compost_amount":230
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potatoandleeksoup",
+	"compost_amount":260
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potatocakes",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potatochips",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potatoes o'brien",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potatosalad",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potatoskins",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potatosoup",
+	"compost_amount":170
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"potstickers",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"poutine",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"powdereddonut",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pralines",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"puffer fish",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.1,
+	"name":"pufferfish",
+	"compost_amount":50
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pumpkin soup",
+	"compost_amount":170
+},
+{
+	"heal":4,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"pumpkin_pie",
+	"compost_amount":170
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pumpkinbread",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pumpkinmuffin",
+	"compost_amount":170
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pumpkinoatscones",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pumpkinspicelatte",
+	"compost_amount":290
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"pumpkinyogurt",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"quesadilla",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"quinoa",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"rabbit",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"thaumcraft",
+	"saturation":0.3,
+	"name":"rabbit nugget",
+	"compost_amount":50
+},
+{
+	"heal":6,
+	"mod":"minecraft",
+	"saturation":1.2,
+	"name":"rabbit_stew",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"radish",
+	"compost_amount":60
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"rainbowcurry",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raisincookies",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raisins",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rambutan",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ramen",
+	"compost_amount":170
+},
+{
+	"heal":12,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"randomtaco",
+	"compost_amount":410
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"raspberry",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberryicedtea",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberryjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberryjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberryjuice",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberrymilkshake",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberrypie",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberrysmoothie",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberrytrifle",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"raspberryyogurt",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"raw tofacon",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"raw toficken",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"raw tofish",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rawtofabbit",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rawtofeak",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rawtofeeg",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rawtofenison",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rawtofuduck",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rawtofurkey",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rawtofutton",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"redvelvetcupcake",
+	"compost_amount":290
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"refriedbeans",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rhubarb",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rice",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"rice soup",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"biomesoplenty",
+	"saturation":0.6,
+	"name":"ricebowl",
+	"compost_amount":90
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ricecake",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"ricepudding",
+	"compost_amount":200
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"rivermudcake",
+	"compost_amount":380
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"roastchicken",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"roastedchestnut",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"roastedpumpkinseeds",
+	"compost_amount":80
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"roastedrootveggiemedley",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"roastpotatoes",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"rootbeerfloat",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"rootbeersoda",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"rosepetaltea",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"minecraft",
+	"saturation":0.1,
+	"name":"rotten_flesh",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rutabaga",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"rye",
+	"compost_amount":60
+},
+{
+	"heal":17,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"salisburysteak",
+	"compost_amount":560
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"salmon",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"salmononigiri",
+	"compost_amount":200
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"salmonpatties",
+	"compost_amount":320
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"salsa",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"salted sunflower seeds",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"saltedcaramel",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"sardine raw",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sardinesinhotsauce",
+	"compost_amount":140
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"saucedlambkebab",
+	"compost_amount":350
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sauerbraten",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sausage",
+	"compost_amount":170
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sausagebeanmelt",
+	"compost_amount":350
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sausageinbread",
+	"compost_amount":320
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sausageroll",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"scallion",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"scallionbakedpotato",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"scallopcooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"scallopraw",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"schnitzel",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"scrambledegg",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"seaweed",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"seedenergygel",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"seedsoup",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sesame snaps",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sesameball",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"sesameseeds",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"shepardspie",
+	"compost_amount":290
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"shrimp cooked",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"shrimpcocktail",
+	"compost_amount":200
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"shrimpokrahushpuppies",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"shrimpraw",
+	"compost_amount":60
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"shrimptempera",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"biomesoplenty",
+	"saturation":0.1,
+	"name":"shroompowder",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"silkentofu",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"sisal",
+	"compost_amount":60
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"slawdog",
+	"compost_amount":380
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"slimegummies",
+	"compost_amount":110
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"slimepie",
+	"compost_amount":260
+},
+{
+	"heal":8,
+	"mod":"nuclearcraft",
+	"saturation":1.2,
+	"name":"smore",
+	"compost_amount":290
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"smores",
+	"compost_amount":320
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"snailcooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"snailraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"snapperraw",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"snickers bar",
+	"compost_amount":140
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"soft pretzel",
+	"compost_amount":230
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"softpretzelandmustard",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sourcreamandonionpotatochips",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"soursop",
+	"compost_amount":60
+},
+{
+	"heal":20,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"southernstylebreakfast",
+	"compost_amount":650
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"soybean",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"soymilk",
+	"compost_amount":80
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spagetti",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spagettiandmeatballs",
+	"compost_amount":200
+},
+{
+	"heal":13,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spaghettidinner",
+	"compost_amount":440
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spicebun",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"spiceleaf",
+	"compost_amount":60
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spicy greens",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spicymustardpork",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"minecraft",
+	"saturation":0.8,
+	"name":"spider_eye",
+	"compost_amount":100
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spidereyepie",
+	"compost_amount":230
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spidereyesoup",
+	"compost_amount":170
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"spinach",
+	"compost_amount":60
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spinachpie",
+	"compost_amount":350
+},
+{
+	"heal":0,
+	"mod":"extrabotany",
+	"saturation":0.0,
+	"name":"spiritfuel",
+	"compost_amount":20
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"splitpeasoup",
+	"compost_amount":230
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"springfieldcashewchicken",
+	"compost_amount":380
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"springroll",
+	"compost_amount":260
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"springsalad",
+	"compost_amount":110
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sprinklescupcake",
+	"compost_amount":290
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"spumoniicecream",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"squidinkspaghetti",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"starfruit",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"starfruitjelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"starfruitjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"starfruitjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"starfruitsmoothie",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"starfruityogurt",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"steakandchips",
+	"compost_amount":170
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"steakfajita",
+	"compost_amount":320
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"steaktartare",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"steamedpeas",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"steamedspinach",
+	"compost_amount":110
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"stock",
+	"compost_amount":20
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"strawberry",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberry jelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberry jelly sandwich",
+	"compost_amount":230
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberry pie",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberry rhubarb pie",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberry smoothie",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberry soda",
+	"compost_amount":170
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberrycupcake",
+	"compost_amount":290
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberryicecream",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberryjuice",
+	"compost_amount":110
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberrymilkshake",
+	"compost_amount":140
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberrysalad",
+	"compost_amount":140
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberrysouffle",
+	"compost_amount":260
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"strawberryyogurt",
+	"compost_amount":110
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"stuffed duck",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"stuffed eggplant",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"stuffed mushroom",
+	"compost_amount":260
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"stuffedchilipeppers",
+	"compost_amount":260
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"stuffedpepper",
+	"compost_amount":140
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"stuffing",
+	"compost_amount":290
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"suadero",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"succotash",
+	"compost_amount":200
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sugar cookie",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"summerradishsalad",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"summersquashwithradish",
+	"compost_amount":200
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sunday high tea",
+	"compost_amount":320
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sundayroast",
+	"compost_amount":290
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"sunflower seeds",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sunflowerbroccolisalad",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sunflowerwheatrolls",
+	"compost_amount":230
+},
+{
+	"heal":14,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"supremepizza",
+	"compost_amount":470
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"surfandturf",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sushi",
+	"compost_amount":170
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"swedishmeatballs",
+	"compost_amount":350
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sweet potato souffle",
+	"compost_amount":260
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sweetandsourchicken",
+	"compost_amount":290
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sweetandsourmeatballs",
+	"compost_amount":230
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sweetpickle",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"sweetpotato",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sweetpotatopie",
+	"compost_amount":320
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"sweettea",
+	"compost_amount":170
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"szechuaneggplant",
+	"compost_amount":320
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"taco",
+	"compost_amount":290
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"taffy",
+	"compost_amount":110
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"taiyaki",
+	"compost_amount":200
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"takoyaki",
+	"compost_amount":350
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"tamarind",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"taro",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tatertots",
+	"compost_amount":140
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tea",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"tealeaf",
+	"compost_amount":60
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"teriyakichicken",
+	"compost_amount":290
+},
+{
+	"heal":24,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"thankfuldinner",
+	"compost_amount":770
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"theatrebox",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"three bean salad",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"tilapiaraw",
+	"compost_amount":60
+},
+{
+	"heal":19,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"timpano",
+	"compost_amount":620
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"timtam",
+	"compost_amount":170
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tiropita",
+	"compost_amount":290
+},
+{
+	"heal":11,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"toadinthehole",
+	"compost_amount":380
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"toast",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"toasted coconut",
+	"compost_amount":110
+},
+{
+	"heal":12,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"toastedwestern",
+	"compost_amount":410
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"toastsandwich",
+	"compost_amount":320
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"tomato",
+	"compost_amount":60
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tomato soup",
+	"compost_amount":140
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tomatoherbchicken",
+	"compost_amount":170
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tortilla",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tortilla chips",
+	"compost_amount":200
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"trailmix",
+	"compost_amount":170
+},
+{
+	"heal":6,
+	"mod":"thaumcraft",
+	"saturation":0.8,
+	"name":"triple_meat_treat",
+	"compost_amount":220
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"trout raw",
+	"compost_amount":60
+},
+{
+	"heal":10,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tuna fish sandwich",
+	"compost_amount":350
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tunaonigiri",
+	"compost_amount":200
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tunapotato",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"tunaraw",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"tunasalad",
+	"compost_amount":320
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"turkey cooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"turkeyraw",
+	"compost_amount":80
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"turkishdelight",
+	"compost_amount":200
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"turnip",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"turnipsoup",
+	"compost_amount":230
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"turtlecooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"turtleraw",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"nuclearcraft",
+	"saturation":0.2,
+	"name":"unsweetened_chocolate",
+	"compost_amount":80
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"vanillabean",
+	"compost_amount":60
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vanillaconchasbread",
+	"compost_amount":260
+},
+{
+	"heal":8,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vanillacupcake",
+	"compost_amount":290
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vanillaicecream",
+	"compost_amount":170
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vanillayogurt",
+	"compost_amount":110
+},
+{
+	"heal":4,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vegemite",
+	"compost_amount":170
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vegemiteontoast",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vegetablesoup",
+	"compost_amount":200
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vegetarianlettucewrap",
+	"compost_amount":140
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"veggiestirfry",
+	"compost_amount":200
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"veggiestrips",
+	"compost_amount":200
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"venison cooked",
+	"compost_amount":110
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"venisonraw",
+	"compost_amount":80
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"vindaloo",
+	"compost_amount":260
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"waffles",
+	"compost_amount":230
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"walleyeraw",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"forestry",
+	"saturation":0.2,
+	"name":"walnut",
+	"compost_amount":50
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"walnut",
+	"compost_amount":60
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"walnut raisin bread",
+	"compost_amount":260
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"waterchestnut",
+	"compost_amount":60
+},
+{
+	"heal":2,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"watermelon jelly",
+	"compost_amount":110
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"watermelonjellysandwich",
+	"compost_amount":230
+},
+{
+	"heal":19,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"weekend picnic",
+	"compost_amount":620
+},
+{
+	"heal":1,
+	"mod":"minecraft",
+	"saturation":0.6,
+	"name":"wheat",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"white mushroom",
+	"compost_amount":60
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"wintersquash",
+	"compost_amount":60
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"wonton soup",
+	"compost_amount":320
+},
+{
+	"heal":7,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"yorkshirepudding",
+	"compost_amount":260
+},
+{
+	"heal":5,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"zeppole",
+	"compost_amount":200
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"zestyzucchini",
+	"compost_amount":230
+},
+{
+	"heal":3,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"zombiejerky",
+	"compost_amount":140
+},
+{
+	"heal":1,
+	"mod":"harvestcraft",
+	"saturation":0.6,
+	"name":"zucchini",
+	"compost_amount":60
+},
+{
+	"heal":6,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"zucchini bread",
+	"compost_amount":230
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"zucchinibake",
+	"compost_amount":320
+},
+{
+	"heal":9,
+	"mod":"harvestcraft",
+	"saturation":1.2,
+	"name":"zucchinifries",
+	"compost_amount":320
+}
+]);
