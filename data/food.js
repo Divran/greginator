@@ -6649,6 +6649,7 @@ data.add("food","it3",[
 	"name":"spinachpie",
 	"compost_amount":350
 },
+/*
 {
 	"heal":0,
 	"mod":"extrabotany",
@@ -6656,6 +6657,7 @@ data.add("food","it3",[
 	"name":"spiritfuel",
 	"compost_amount":20
 },
+*/
 {
 	"heal":6,
 	"mod":"harvestcraft",
