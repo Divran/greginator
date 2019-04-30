@@ -216,6 +216,8 @@ onVersionChanged(function(version) {
 			else {note = note_12;}
 		}
 
+		if (result_amount.length == 0) {result_amount.push(0);}
+
 		return "<td>"+result+note+"</td>"+
 				"<td>"+result_amount.reduce(function(a,b) {return a+b;})+" mb/t</td>"+
 				"<td>"+getRemainingText(remaining)+"</td>";
@@ -227,7 +229,7 @@ onVersionChanged(function(version) {
 		var transfer_without = translocators[0].max_extract;
 
 		if (stats.optimal_flow < transfer_without) {
-			return "<td>Not compatible.</td><td>"+getRemainingText(stats.optimal_flow)+"</td>";
+			return "<td>Not compatible</td><td>0 mb/t</td><td>"+getRemainingText(stats.optimal_flow)+"</td>";
 		}
 
 		var amount_with = Math.floor(stats.optimal_flow / transfer_with);
@@ -284,7 +286,8 @@ onVersionChanged(function(version) {
 			if (cheapest_pipe.capacity * multipliers[cheapest_capacity] != stats.optimal_flow) {note = note_3;}
 			ret1.push("Cheapest: "+names[cheapest_capacity]+escapehtml(cheapest_pipe.material) + note);
 			ret2.push(cheapest_pipe.capacity * multipliers[cheapest_capacity] + " mb/t");
-			var remain = ((cheapest_pipe.capacity * multipliers[cheapest_capacity]) % stats.optimal_flow);
+			console.log(cheapest_pipe.capacity,multipliers[cheapest_capacity],stats.optimal_flow,((cheapest_pipe.capacity * multipliers[cheapest_capacity])));
+			var remain = stats.optimal_flow - (cheapest_pipe.capacity * multipliers[cheapest_capacity]);
 			ret3.push(getRemainingText(remain,true));
 		}
 
@@ -293,7 +296,7 @@ onVersionChanged(function(version) {
 			if (closest_pipe.capacity * multipliers[closest_capacity] != stats.optimal_flow) {note = note_3;}
 			ret1.push("Closest: " + names[closest_capacity] + escapehtml(closest_pipe.material) + note);
 			ret2.push(closest_pipe.capacity * multipliers[closest_capacity] + " mb/t");
-			var remain = ((closest_pipe.capacity * multipliers[closest_capacity]) % stats.optimal_flow);
+			var remain = stats.optimal_flow - (closest_pipe.capacity * multipliers[closest_capacity]);
 			ret3.push(getRemainingText(remain,true));
 		}
 
@@ -330,6 +333,8 @@ onVersionChanged(function(version) {
 		if (remaining != 0 && stats.optimal_flow > gregtech_pumps[0].speed) {note = note_2;}
 
 		var remaining_txt = getRemainingText(remaining);
+
+		if (total_amount.length == 0) {total_amount.push(0);}
 
 		return "<td>"+result+note+"</td>"+
 				"<td>"+total_amount.reduce(function(a,b){return a+b;})+" mb/t</td>"+
