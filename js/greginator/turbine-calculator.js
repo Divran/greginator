@@ -286,7 +286,6 @@ onVersionChanged(function(version) {
 			if (cheapest_pipe.capacity * multipliers[cheapest_capacity] != stats.optimal_flow) {note = note_3;}
 			ret1.push("Cheapest: "+names[cheapest_capacity]+escapehtml(cheapest_pipe.material) + note);
 			ret2.push(cheapest_pipe.capacity * multipliers[cheapest_capacity] + " mb/t");
-			console.log(cheapest_pipe.capacity,multipliers[cheapest_capacity],stats.optimal_flow,((cheapest_pipe.capacity * multipliers[cheapest_capacity])));
 			var remain = stats.optimal_flow - (cheapest_pipe.capacity * multipliers[cheapest_capacity]);
 			ret3.push(getRemainingText(remain,true));
 		}
