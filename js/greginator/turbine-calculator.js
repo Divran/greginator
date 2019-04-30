@@ -140,9 +140,12 @@ onVersionChanged(function(version) {
 	}
 
 	function getRemainingText(remaining,flip) {
-		if (remaining < 0 && !flip || remaining > 0 && flip) {
+		var sign = Math.sign(remaining);
+		remaining = Math.abs(remaining);
+
+		if (sign == -1 && !flip || sign == 1 && flip) {
 			return remaining + " mb/t excess";
-		} else if (remaining > 0 && !flip || remaining < 0 && flip) {
+		} else if (sign == 1 && !flip || sign == -1 && flip) {
 			return remaining + " mb/t remaining";
 		}
 
@@ -164,16 +167,18 @@ onVersionChanged(function(version) {
 		for(var i=enderio_conduits.length-1;i>=0;i--) {
 			var conduit = enderio_conduits[i];
 			var speed = conduit.max_extract;
-			if (speed <= remaining) {
-				var amount = Math.floor(remaining / speed);
-				remaining = remaining - speed*amount;
+			if (speed <= remaining || (i<enderio_conduits.length-2 && remaining>speed*0.5)) {
+				var amount = Math.round(remaining / speed);
+				if (amount > 0) {
+					remaining = remaining - speed*amount;
 
-				if (amount > 4) { // if we have more than 4
-					note = note_1;
+					if (amount > 4) { // if we have more than 4
+						note = note_1;
+					}
+
+					result.push(amount + " x " + escapehtml(conduit.name));
+					result_amount.push(amount * speed);
 				}
-
-				result.push(amount + " x " + escapehtml(conduit.name));
-				result_amount.push(amount * speed);
 			}
 
 			if (remaining == 0) {break;}
@@ -226,14 +231,14 @@ onVersionChanged(function(version) {
 		}
 
 		var amount_with = Math.floor(stats.optimal_flow / transfer_with);
-		var amount_without = Math.floor((stats.optimal_flow % transfer_with) / transfer_without);
+		var amount_without = Math.ceil((stats.optimal_flow % transfer_with) / transfer_without);
 		var note = "";
-		if (amount_with+amount_without) {note = note_1;}
+		if (amount_with+amount_without>1) {note = note_1;}
 		if (stats.optimal_flow % transfer_without != 0) {
 			if (note == "") {note = note_2;} else {note = note_12;}
 		}
 
-		var remain = stats.optimal_flow % transfer_without;
+		var remain = stats.optimal_flow - (transfer_with*amount_with +transfer_without*amount_without);
 		return "<td>" + amount_with + " with glowstone + " + amount_without + " without."+note+"</td>"+
 				"<td>"+(amount_with*transfer_with+amount_without*transfer_without)+" mb/t</td>"+
 				"<td>"+getRemainingText(remain)+"</td>";
