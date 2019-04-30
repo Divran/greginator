@@ -139,20 +139,25 @@ onVersionChanged(function(version) {
 		}
 	}
 
-	function checkIC2Regulator(stats) {
-		var is = stats.optimal_flow <= 1000;
-
-		var res_str = "Is compatible.";
-		if (!is) {
-			var amount_needed = Math.ceil(stats.optimal_flow/1000);
-			res_str = "Not compatible (You'd need " + amount_needed + " of them).";
+	function getRemainingText(remaining,flip) {
+		if (remaining < 0 && !flip || remaining > 0 && flip) {
+			return remaining + " mb/t excess";
+		} else if (remaining > 0 && !flip || remaining < 0 && flip) {
+			return remaining + " mb/t remaining";
 		}
 
-		return "<td>"+res_str+"</td><td>"+(is ? 0 : (stats.optimal_flow-1000))+ " mb/t remaining</td>";
+		return "0 mb/t remaining";
+	}
+
+	function checkIC2Regulator(stats) {
+		var amount_needed = Math.ceil(stats.optimal_flow/1000);
+		var res_str = amount_needed + " x Regulators";
+		return "<td>"+res_str+"</td><td>Up to 1000 mb/t</td><td>-</td>";
 	}
 	function checkEnderIOPipes(stats) {
 		var remaining = stats.optimal_flow;
 		var result = [];
+		var result_amount = [];
 		var note = "";
 
 		// check combination of pipes
@@ -168,6 +173,7 @@ onVersionChanged(function(version) {
 				}
 
 				result.push(amount + " x " + escapehtml(conduit.name));
+				result_amount.push(amount * speed);
 			}
 
 			if (remaining == 0) {break;}
@@ -188,6 +194,7 @@ onVersionChanged(function(version) {
 							note = note_1;
 						}
 						result = [amount + " x " + escapehtml(conduit.name)];
+						result_amount = [amount * speed];
 						remaining = 0;
 						break;
 					}
@@ -204,7 +211,9 @@ onVersionChanged(function(version) {
 			else {note = note_12;}
 		}
 
-		return "<td>"+result+note+"</td><td>"+remaining + " mb/t remaining</td>";
+		return "<td>"+result+note+"</td>"+
+				"<td>"+result_amount.reduce(function(a,b) {return a+b;})+" mb/t</td>"+
+				"<td>"+getRemainingText(remaining)+"</td>";
 	}
 	function checkTranslocators(stats) {
 		var max_input = translocators[0].max_input;
@@ -213,7 +222,7 @@ onVersionChanged(function(version) {
 		var transfer_without = translocators[0].max_extract;
 
 		if (stats.optimal_flow < transfer_without) {
-			return "<td>Not compatible.</td><td>"+stats.optimal_flow + " mb/t remaining</td>";
+			return "<td>Not compatible.</td><td>"+getRemainingText(stats.optimal_flow)+"</td>";
 		}
 
 		var amount_with = Math.floor(stats.optimal_flow / transfer_with);
@@ -223,7 +232,11 @@ onVersionChanged(function(version) {
 		if (stats.optimal_flow % transfer_without != 0) {
 			if (note == "") {note = note_2;} else {note = note_12;}
 		}
-		return "<td>" + amount_with + " with glowstone + " + amount_without + " without."+note+"</td><td>"+(stats.optimal_flow % transfer_without) + " mb/t remaining.</td>";
+
+		var remain = stats.optimal_flow % transfer_without;
+		return "<td>" + amount_with + " with glowstone + " + amount_without + " without."+note+"</td>"+
+				"<td>"+(amount_with*transfer_with+amount_without*transfer_without)+" mb/t</td>"+
+				"<td>"+getRemainingText(remain)+"</td>";
 	}
 	function checkGregtechPipes(stats) {
 		var names = ["Tiny ","Small ","","Large ","Huge "]
@@ -260,30 +273,38 @@ onVersionChanged(function(version) {
 
 		var ret1 = [];
 		var ret2 = [];
+		var ret3 = [];
 		if (typeof cheapest_pipe != "undefined") {
 			var note = "";
 			if (cheapest_pipe.capacity * multipliers[cheapest_capacity] != stats.optimal_flow) {note = note_3;}
-			ret1.push("Cheapest: "+names[cheapest_capacity]+escapehtml(cheapest_pipe.material)+" ("+(cheapest_pipe.capacity * multipliers[cheapest_capacity])+" mb/t)" + note);
-			ret2.push(((cheapest_pipe.capacity * multipliers[cheapest_capacity]) % stats.optimal_flow) + " mb/t remaining");
+			ret1.push("Cheapest: "+names[cheapest_capacity]+escapehtml(cheapest_pipe.material) + note);
+			ret2.push(cheapest_pipe.capacity * multipliers[cheapest_capacity] + " mb/t");
+			var remain = ((cheapest_pipe.capacity * multipliers[cheapest_capacity]) % stats.optimal_flow);
+			ret3.push(getRemainingText(remain,true));
 		}
 
 		if (typeof closest_pipe != "undefined") {
 			var note = "";
 			if (closest_pipe.capacity * multipliers[closest_capacity] != stats.optimal_flow) {note = note_3;}
-			ret1.push("Closest: " + names[closest_capacity] + escapehtml(closest_pipe.material)+" ("+(closest_pipe.capacity * multipliers[closest_capacity])+" mb/t)" + note);
-			ret2.push(((closest_pipe.capacity * multipliers[closest_capacity]) % stats.optimal_flow) + " mb/t remaining");
+			ret1.push("Closest: " + names[closest_capacity] + escapehtml(closest_pipe.material) + note);
+			ret2.push(closest_pipe.capacity * multipliers[closest_capacity] + " mb/t");
+			var remain = ((closest_pipe.capacity * multipliers[closest_capacity]) % stats.optimal_flow);
+			ret3.push(getRemainingText(remain,true));
 		}
 
 		if (ret1.length == 0) {
-			return "<td>Not compatible.</td><td></td>";
+			return "<td>Not compatible</td><td></td>";
 		} else {
-			return "<td>"+ret1.join("<br>")+"</td><td>"+ret2.join("<br>")+"</td>";
+			return "<td>"+ret1.join("<br>")+"</td>"+
+					"<td>"+ret2.join("<br>")+"</td>"+
+					"<td>"+ret3.join("<br>")+"</td>";
 		}
 
 	}
 	function checkGregtechPumps(stats) {
 		var remaining = stats.optimal_flow;
 		var result = [];
+		var total_amount = [];
 		for(var i=gregtech_pumps.length-1;i>=0;i--) {
 			var pump = gregtech_pumps[i];
 			var speed = pump.speed;
@@ -291,6 +312,7 @@ onVersionChanged(function(version) {
 				var amount = Math.floor(remaining / speed);
 				remaining = remaining % speed;
 				result.push(amount + " x " + escapehtml(pump.name));
+				total_amount.push(amount * speed);
 			}
 
 			if (remaining == 0) {break;}
@@ -302,7 +324,11 @@ onVersionChanged(function(version) {
 		var note = "";
 		if (remaining != 0 && stats.optimal_flow > gregtech_pumps[0].speed) {note = note_2;}
 
-		return "<td>"+result+note+"</td><td>"+remaining + " mb/t remaining</td>";
+		var remaining_txt = getRemainingText(remaining);
+
+		return "<td>"+result+note+"</td>"+
+				"<td>"+total_amount.reduce(function(a,b){return a+b;})+" mb/t</td>"+
+				"<td>"+remaining_txt+"</td>";
 	}
 	function checkGregtechRegulators(stats) {
 		// GT Regulators have the same max speed as their pump counterparts
@@ -310,13 +336,16 @@ onVersionChanged(function(version) {
 			var pump = gregtech_pumps[i];
 			var speed = pump.speed;
 			if (speed >= stats.optimal_flow) {
-				return "<td>" + escapehtml(pump.name) + " regulator or better.</td><td>0 mb/t remaining</td>";
+				return "<td>" + escapehtml(pump.name) + " regulator or better.</td>"+
+						"<td>Up to " + speed + " mb/t</td>"+
+						"<td>-</td>";
 			}
 		}
 
 		var remaining = stats.optimal_flow - gregtech_pumps[gregtech_pumps.length-1].speed;
-
-		return "<td>Not compatible.</td><td>" + remaining + " mb/t remaining</td>";
+		return "<td>Not compatible</td>"+
+				"<td>Up to " + gregtech_pumps[gregtech_pumps.length-1].speed + " mb/t</td>"+
+				"<td>" + remaining + " mb/t excess</td>";
 	}
 	function lowestCommonDenominator(larger,smaller) {
 		if (larger < smaller) {
@@ -480,6 +509,8 @@ onVersionChanged(function(version) {
 			]);
 
 			transfer_table.empty();
+
+			transfer_table.append("<tr><th>Name</th><th>Amount</th><th>Throughput</th><th>Remainder</th></tr>");
 
 			// Check gretech regulator
 			transfer_table.append( "<tr><th>Gregtech Regulator</th>" + checkGregtechRegulators(stats) + "</tr>" );
