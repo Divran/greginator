@@ -76,7 +76,7 @@ onVersionChanged(function(version) {
 		var val = parseInt($("input[name='gt-tool-browser-filter-age']:checked",card).val());
 
 		return function(tool) {
-			return tool.age <= val;
+			return tool.age <= val && (val == 5 ? true : (tool.age > -1));
 		}
 	}
 
@@ -119,7 +119,7 @@ onVersionChanged(function(version) {
 
 		return function(tool) {
 			if (val) {
-				return (tool.speed >= 4 && tool.tier >= 2 && tool.durability >= garbage_durability_limit);
+				return (tool.speed >= 4 && tool.tier >= 2 && tool.durability >= garbage_durability_limit && tool.age > -1);
 			} else {
 				return true;
 			}
@@ -182,6 +182,7 @@ onVersionChanged(function(version) {
 		tools.sort(getSelectedSort());
 
 		var age_names = ["Stm","LV","MV","HV","EV","IV+"];
+		age_names[-1] = "X <span title=\"Unobtainable - This material currently can't be crafted in any way. A way to craft it might be added in the future.\" class='question-icon'>?</span>";
 
 		var html = [];
 		for(var i=0;i<tools.length;i++) {
