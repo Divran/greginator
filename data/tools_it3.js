@@ -22,7 +22,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":3,
 	"othermod":"",
 	"material":"Enderium",
 	"soft":0,
@@ -32,7 +32,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Signalum",
 	"soft":0,
@@ -53,7 +53,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Aluminium",
 	"soft":0,
@@ -63,7 +63,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Chrome",
 	"soft":0,
@@ -84,7 +84,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Iridium",
 	"soft":0,
@@ -124,7 +124,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Neodymium",
 	"soft":0,
@@ -134,7 +134,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":-1,
 	"othermod":"",
 	"material":"Darmstadtium",
 	"soft":0,
@@ -144,7 +144,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":3,
 	"othermod":"",
 	"material":"Osmium",
 	"soft":0,
@@ -154,7 +154,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Palladium",
 	"soft":0,
@@ -174,7 +174,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":3,
 	"othermod":"",
 	"material":"Titanium",
 	"soft":0,
@@ -184,7 +184,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"Tungsten",
 	"soft":0,
@@ -264,7 +264,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Stainless steel",
 	"soft":0,
@@ -284,7 +284,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Ultimet",
 	"soft":0,
@@ -306,7 +306,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"Osmiridium",
 	"soft":0,
@@ -316,7 +316,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Sterling silver",
 	"soft":0,
@@ -326,7 +326,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Rose gold",
 	"soft":0,
@@ -336,7 +336,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Black bronze",
 	"soft":0,
@@ -346,7 +346,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Bismuth bronze",
 	"soft":0,
@@ -356,7 +356,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Black steel",
 	"soft":0,
@@ -366,7 +366,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Red steel",
 	"soft":0,
@@ -376,7 +376,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Blue steel",
 	"soft":0,
@@ -398,7 +398,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"Tungsten steel",
 	"soft":0,
@@ -418,7 +418,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"Tungsten carbide",
 	"soft":0,
@@ -428,7 +428,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Vanadium steel",
 	"soft":0,
@@ -438,7 +438,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"HSS-G",
 	"soft":0,
@@ -448,7 +448,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"HSS-E",
 	"soft":0,
@@ -459,7 +459,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"HSS-S",
 	"soft":0,
@@ -469,7 +469,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":4,
 	"othermod":"",
 	"material":"Naquadah",
 	"soft":0,
@@ -479,7 +479,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":5,
 	"othermod":"",
 	"material":"Naquadah alloy",
 	"soft":0,
@@ -489,7 +489,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":2,
 	"othermod":"",
 	"material":"Naquadah enriched",
 	"soft":0,
@@ -499,7 +499,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":-1,
 	"othermod":"",
 	"material":"Tritanium",
 	"soft":0,
@@ -509,7 +509,7 @@ data.add("tools","it3",[
 },
 {
 	"enchant":"",
-	"age":0,
+	"age":-1,
 	"othermod":"",
 	"material":"Duranium",
 	"soft":0,
