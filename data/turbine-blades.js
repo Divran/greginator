@@ -572,6 +572,8 @@ data.add("turbine blades","it2",[
 		"flow":14000
 	},
 	"material":"Rose Gold",
+	"fun_fact":"Cheap material, high flow rate",
+	"category":"acceptable",
 	"large":{
 		"durability":38400,
 		"efficiency":120,
@@ -1241,7 +1243,7 @@ data.add("turbine blades","it2",[
 		"flow":16000
 	},
 	"material":"Fluxed Electrum",
-	"fun_fact":"Surprisingly high flow rate",
+	"fun_fact":"Cheap material, high flow rate",
 	"category":"acceptable",
 	"large":{
 		"durability":153600,
