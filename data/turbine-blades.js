@@ -103,8 +103,6 @@ data.add("turbine blades","it2",[
 		"flow":6000
 	},
 	"material":"Graphene",
-	"fun fact":"Surprisingly high flow rate",
-	"category":"acceptable",
 	"large":{
 		"durability":9600,
 		"efficiency":110,
