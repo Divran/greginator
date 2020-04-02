@@ -88,3 +88,7 @@ body {
 	vertical-align: top;
 	font-weight: 700;
 }
+
+.dropdown-item.active .text-muted {
+	color:white !important;
+}
