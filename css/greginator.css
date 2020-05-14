@@ -56,7 +56,7 @@ body {
 	margin-bottom:4px;
 }
 
-#gt-tool-browser table td small {
+table td small {
 	color:#199a03!important;
 	display:block;
 	margin-top:8px;

@@ -54,6 +54,7 @@
 		<script src="data/dynamo-hatches.js"></script>
 		<script src="data/ic2-nuclear.js"></script>
 		<script src="data/tools.js"></script>
+		<script src="data/cables.js"></script>
 
 		<!--  load all it3 data -->
 		<script src="data/tools_it3.js"></script>
@@ -220,6 +221,34 @@
 			</div>
 			<script src="js/greginator/tool-browser.js"></script>
 
+			<div class="card" id="gt-cable-browser">
+				<div class="card-header">
+					<h4 class="card-title">Cable Browser</h4>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						<div class="btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-light active">
+								<input type="checkbox" id="gt-cable-browser-recommended" checked> Show recommended
+							</label>
+						</div>
+					</div>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Material</th>
+								<th>Voltage</th>
+								<th>Amperage (max)</th>
+								<th>Loss</th>
+								<th class='gt-cables-recommended'>Recommendations</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+			<script src="js/greginator/cable-browser.js"></script>
+
 			<!-- GT Vein Finder -->
 			<div class="card" id="gt-vein-finder">
 				<div class="card-header">
@@ -331,9 +360,9 @@
 						</div>
 					</div>
 				</div>
-				-->
 			</div>
 			<script src="js/greginator/ic2-nuclear-simulator.js"></script>
+			-->
 		</div>
 
 		<div class="credits">
