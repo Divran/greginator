@@ -83,7 +83,8 @@ data.add("gt_cables","it2",[
 		name:"Silver",
 		amperage_mult:1,
 		loss:1,
-		voltage:512
+		voltage:512,
+		recommended:"A good choice, if you don't have enough electrotine to make Blue Alloy cables.<br><small>Because silver isn't used for much else, it's far better to use it for cables than gold.</small>"
 	},
 	{
 		name:"Blue Alloy",
@@ -134,7 +135,7 @@ data.add("gt_cables","it2",[
 		amperage_mult:2,
 		loss:1,
 		voltage:8192,
-		recommended:"Technically the most efficient cable for IV tier. <small>...however platinum is expensive and is needed for many other things. Use carefully. I recommend skipping IV and jumping to Vanadium-Gallium cables instead.</small>"
+		recommended:"Technically the most efficient cable for IV tier. <small>...however platinum is expensive and is needed for many other things. Use carefully. I recommend skipping IV cables entirely and jumping to Vanadium-Gallium cables instead.</small>"
 	},
 	{
 		name:"Tungstensteel",

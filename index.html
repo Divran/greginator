@@ -40,7 +40,8 @@
 						}
 					});
 
-					$("input[name='version-selector'][value='"+version+"']").click();
+					localStorage["version"] = version;
+					versionChanged();
 				});
 			})();
 		</script>
@@ -227,10 +228,17 @@
 				</div>
 				<div class="collapse">
 					<div class="card-body">
-						<div class="btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-light active">
-								<input type="checkbox" id="gt-cable-browser-recommended" checked> Show recommended
-							</label>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-light active">
+										<input type="checkbox" id="gt-cable-browser-recommended" checked> Show recommended
+									</label>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<small>Remember that you don't need to use the correct tier cable for each tier of machines/voltages. You can use a higher tier cable for a lower tier voltage. For example, you can skip directly to blue alloy cables as soon as possible, and use them even for LV and MV machines, even though the cables themselves are HV tier. All you need to remember is that doing this increases the risk of blowing up machines as opposed to melting cables as a consequence of accidentally connecting the wrong tier power source to the cable.</small>
+							</div>
 						</div>
 					</div>
 					<table class="table table-striped">

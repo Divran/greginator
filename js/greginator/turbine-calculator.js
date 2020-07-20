@@ -21,6 +21,7 @@ onVersionChanged(function(version) {
 	var gregtech_pumps;
 	var boilers;
 	var dynamos;
+	var boiler_stats = "";
 
 	var note_1 = "<sup>(1)</sup>";
 	var note_2 = "<sup>(2)</sup>";
@@ -380,7 +381,7 @@ onVersionChanged(function(version) {
 		return -1;
 	}
 	function checkBoilers(stats) {
-		var LCD = lowestCommonDenominator()
+		var LCD = -1;
 
 		var optimal_boiler;
 		var optimal_LCD_boiler_count = 99999;
@@ -485,9 +486,12 @@ onVersionChanged(function(version) {
 
 			var steam_stats = "";
 			if (selected_fuel.name == "Steam") {
+				var toggle_btn = "<div class='btn btn-light link-pointer' data-toggle='collapse' data-target='#collapseBoilerStats'>More boiler stats</div>";
+
 				steam_stats = 
-					"<h5>Boiler stats</h5>"+
-					"<p>"+checkBoilers(stats,selected_fuel)+"</p>";
+					"<h5>Boiler stats "+toggle_btn+"</h5>"+
+					"<p>"+checkBoilers(stats,selected_fuel)+"</p>"+
+					boiler_stats;
 			}
 
 			if (selected_fuel.name == "Steam" || selected_fuel.name == "Superheated Steam") {
@@ -547,8 +551,8 @@ onVersionChanged(function(version) {
 			var timestr_quantum = formatTime(time_quantum);
 			var total_eu_quantum = Math.floor(stored_quantum / stats.optimal_flow * stats.energy_output).toLocaleString();
 
-			bedrockium_drum_container.empty();
-			bedrockium_drum_container.append([
+			$(".card-body",bedrockium_drum_container).empty();
+			$(".card-body",bedrockium_drum_container).append([
 				"<h5>Bedrockium drum stats</h5>",
 				"<p>Time to empty bedrockium drum: " + timestr + "<br>"+
 				"Total EU stored in bedrockium drum: " + total_eu + " EU</p>",
@@ -559,23 +563,39 @@ onVersionChanged(function(version) {
 			]);
 		}
 
-		var transfer_container = $( "<div class='card-body'>" );
+		var transfer_container = $( "<div class='card-body' style='padding-top:0px; padding-bottom:4px;'>" );
 		var transfer_table = $( "<table class='table table-bordered transfer-table'>" );
-		transfer_container.append([
-			"<h5>Optimal transfer methods</h5>",
+		var transfer_card = $("<div class='card'>").append([
+			"<div class='card-header link-pointer'><h5 class='card-title'>Optimal transfer methods</h5></div>",
+			"<div class='collapse'></div>"
+		])
+		$(".card-header",transfer_card).click(function() {
+			$(".collapse",transfer_card).collapse("toggle");
+		});
+
+		transfer_container.append(transfer_card);
+		$(".collapse",transfer_card).append($("<div class='card-body'>").append([
 			transfer_table,
 			"<small><strong>1.</strong> This configuration can't transfer into one face of one block (of a turbine input hatch). You'll need to either use multiple input hatches or a middle stage tank to accept fluid from more than one side.<br>"+
 			"<strong>2.</strong> This configuration does not exactly match the required flow rate. You can probably attach a regulator in paralel, or a different type of pipe, to catch the remainder.<br>"+
 			"<strong>3.</strong> This gregtech pipe has a transfer rate higher than required. You'll need to make sure your pumps are an exact match instead.</small>"
-		]);
+		]));
 
-		var bedrockium_drum_container = $( "<div class='card-body'>" );
+		var bedrockium_drum_container = $( "<div class='card-body' style='padding-top:0px; padding-bottom:4px;'>" );
+		var bedrockium_drum_card = $("<div class='card'>").append([
+			"<div class='card-header link-pointer'><h5 class='card-title'>Fun info</h5></div>",
+			"<div class='collapse'><div class='card-body'></div></div>"
+		])
+		$(".card-header",bedrockium_drum_card).click(function() {
+			$(".collapse",bedrockium_drum_card).collapse("toggle");
+		});
+		bedrockium_drum_container.append(bedrockium_drum_card);
 
 		fuel_stats.append([
 			stats_container,
-			"<hr>",
+			//"<hr>",
 			transfer_container,
-			"<hr>",
+			//"<hr>",
 			bedrockium_drum_container,
 			//"<hr>",
 			//other
@@ -595,6 +615,20 @@ onVersionChanged(function(version) {
 	function initialize() {
 		var material_search = $($( ".material-search", card )[0]);
 		var fuel_search = $($( ".fuel-search", card )[0]);
+
+		boiler_stats = [];
+		boiler_stats.push("<div class='collapse' id='collapseBoilerStats'>");
+		boiler_stats.push("<table class='table table-bordered'><thead><tr><th>Tier</th><th>Production</th><th>Consumption (Fuel value per tick)</th></tr></thead>");
+		for(var i=0;i<boilers.length;i++) {
+			let boiler = boilers[i];
+			boiler_stats.push(
+				"<tr><td>"+boiler.name.match(/Large (.+) Boiler/)[1]+"</td>"+
+				"<td>"+boiler.output+" mb/t</td>"+
+				"<td>"+Math.floor((1600/boiler.charcoal_time)*100)/100+ " val/t</td>"
+			)
+		}
+		boiler_stats.push("</table></div>");
+		boiler_stats = boiler_stats.join("")
 
 		// delete and re-create these element
 		var p1 = material_search.parent();
