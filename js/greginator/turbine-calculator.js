@@ -450,8 +450,8 @@ onVersionChanged(function(version) {
 			max_consumed_coolant = 8000 / 20;
 		}
 
-		var amount_lava = Math.ceil(max_produced_lava / stats.optimal_flow);
-		var amount_coolant = Math.ceil(max_produced_coolant / stats.optimal_flow);
+		var amount_lava = Math.round(max_produced_lava / stats.optimal_flow * 100) / 100;
+		var amount_coolant = Math.round(max_produced_coolant / stats.optimal_flow * 100) / 100;
 
 		return "<p>If you use lava, you'll need <strong>"+amount_lava+"</strong> turbines to keep up with a single heat exchanger running at max speed"+
 						" (uses "+max_consumed_lava+" mb/t of lava to produce "+max_produced_lava+" mb/t of "+escapehtml(fuel.name)+").<br>"+
