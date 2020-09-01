@@ -74,7 +74,7 @@ onVersionChanged(function(version) {
 		txt.push("Energy consumption: <strong>" + energy + "</strong> eu/t" + amps_txt+".");
 		txt.push("Production: <strong>" + output + "</strong> every <strong>" + time + "</strong> second(s) " + 
 			"for a total of <strong>" + round3(output_per_sec) + "</strong> per second." );
-		txt.push("Consumption: <strong>" + input + "</strong> per operation, <strong>" + round3(input/time) + "</strong>/s.");
+		txt.push("Consumption: <strong>" + round3(input/time) + "</strong> per second.");
 
 		var processing_array = "<p>In a processing array, uses <strong>" + (energy*amps*16) + "</strong> eu/t, produces <strong>" + round3(output_per_sec*16) + "</strong>/s, "+
 				" and consumes <strong>" + round3(input/time*16) + "</strong>/s.</p>";
