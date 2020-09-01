@@ -305,60 +305,54 @@
 				</div>
 				<div class="collapse">
 					<div class="card-body">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="gt-overclock-energy">Energy use per tick:</label>
-									<input type="number" value="16" id="gt-overclock-energy" class="form-control">
-								</div>
-								<div class="form-group">
-									<label>Overclock to:</label>
-									<div class="btn-group btn-group-toggle" data-toggle="buttons">
-										<label class="btn btn-light">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-1" value="128">MV <small>(128)</small>
-										</label>
-										<label class="btn btn-light">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-2" value="512" checked>HV <small>(512)</small>
-										</label>
-										<label class="btn btn-light">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-3" value="2048">EV <small>(2048)</small>
-										</label>
-										<label class="btn btn-light">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-4" value="8192">IV <small>(8192)</small>
-										</label>
-										<label class="btn btn-light">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-5" value="32768">LuV <small>(32768)</small>
-										</label>
-										<label class="btn btn-light">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-6" value="131072">ZPM <small>(131072)</small>
-										</label>
-										<label class="btn btn-light">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-7" value="524288">UV <small>(524288)</small>
-										</label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="gt-overclock-output">Amount of items/fluids produced:</label>
-									<input type="number" value="1" id="gt-overclock-output" class="form-control">
-								</div>
-								<div class="form-group">
-									<label for="gt-overclock-time">Time of recipe (in seconds):</label>
-									<input type="number" value="1" id="gt-overclock-time" class="form-control">
+						<div class="form-group">
+							<label for="gt-overclock-energy">Energy use per tick:</label>
+							<input type="number" value="16" id="gt-overclock-energy" class="form-control" style="max-width:200px;">
+						</div>
+						<div class="form-group clearfix">
+							<label for="gt-overclock-amps">Number of amps (useful for therm.centr. etc)</label>
+							<div>
+								<input type="number" id="gt-overclock-amps" class="form-control" value="1" style="float:left; width:calc(100% - 105px); max-width:200px;">
+								<div class="btn-group" style="float:left; width:100px; margin-left:2px;">
+									<button type="button" class="btn btn-light" name="gt-overclock-amps" id="gt-overclock-amps-1" value="1">1</button>
+									<button type="button" class="btn btn-light" name="gt-overclock-amps" id="gt-overclock-amps-2" value="2">2</button>
+									<button type="button" class="btn btn-light" name="gt-overclock-amps" id="gt-overclock-amps-3" value="3">3</button>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="gt-overclock-amps">Number of amps (useful for therm.centr. etc)</label>
-									<div>
-										<div class="btn-group" style="float:left; width:100px; margin-right:2px;">
-											<button type="button" class="btn btn-light" name="gt-overclock-amps" id="gt-overclock-amps-1" value="1">1</button>
-											<button type="button" class="btn btn-light" name="gt-overclock-amps" id="gt-overclock-amps-2" value="2">2</button>
-											<button type="button" class="btn btn-light" name="gt-overclock-amps" id="gt-overclock-amps-3" value="3">3</button>
-										</div>
-										<input type="number" id="gt-overclock-amps" class="form-control" value="1" style="float:left; width:calc(100% - 105px);">
-									</div>
-								</div>
+						</div>
+						<div class="form-group">
+							<label style="display:block;">Overclock to:</label>
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-light">
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-1" value="128">MV <small>(128)</small>
+								</label>
+								<label class="btn btn-light">
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-2" value="512" checked>HV <small>(512)</small>
+								</label>
+								<label class="btn btn-light">
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-3" value="2048">EV <small>(2048)</small>
+								</label>
+								<label class="btn btn-light">
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-4" value="8192">IV <small>(8192)</small>
+								</label>
+								<label class="btn btn-light">
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-5" value="32768">LuV <small>(32768)</small>
+								</label>
+								<label class="btn btn-light">
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-6" value="131072">ZPM <small>(131072)</small>
+								</label>
+								<label class="btn btn-light">
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-7" value="524288">UV <small>(524288)</small>
+								</label>
 							</div>
+						</div>
+						<div class="form-group">
+							<label for="gt-overclock-output">Amount of items/fluids produced:</label>
+							<input type="number" value="1" id="gt-overclock-output" class="form-control" style="max-width:200px;">
+						</div>
+						<div class="form-group">
+							<label for="gt-overclock-time">Time of recipe (in seconds):</label>
+							<input type="number" value="1" id="gt-overclock-time" class="form-control" style="max-width:200px;">
 						</div>
 						<div class="card">
 							<div id="gt-overclock-results" class="card-body"></div>
