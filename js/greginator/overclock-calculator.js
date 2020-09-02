@@ -129,7 +129,7 @@ onVersionChanged(function(version) {
 		results.html("<h5>Results</h5><p>"+txt.join("<br>")+"</p>"+processing_array+wanted_str);
 	}
 
-	$([energy_elem[0],amps_elem[0],output_elem[0],time_elem[0],wanted_elem[0],wanted_check[0]]).click(function() {
+	$([energy_elem[0],amps_elem[0],output_elem[0],input_elem[0],time_elem[0],wanted_elem[0],wanted_check[0]]).click(function() {
 		$(this).select();
 	}).on("input",doCalc);
 	amps_buttons.click(function() {
