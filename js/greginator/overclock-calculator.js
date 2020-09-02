@@ -65,9 +65,8 @@ onVersionChanged(function(version) {
 		var output_per_sec = output/time;
 		var input_per_sec = input/time;
 
-		function round3(n) {
-			return Math.round(n*1000)/1000;
-		}
+		function round3(n) {return Math.round(n*1000)/1000;}
+		function round6(n) {return Math.round(n*1000000)/1000000;}
 
 		var amps_txt = "";
 		if (amps > 1) {
@@ -95,7 +94,7 @@ onVersionChanged(function(version) {
 				wanted_str += "A single machine is enough to keep up with " + wanted + "/s.";
 			} else {
 				var wanted_machines = wanted/output_per_sec;
-				wanted_str += "To produce <strong>" + wanted + "</strong> items/s, ";
+				wanted_str += "To produce <strong>" + round6(wanted) + "</strong> items/s, ";
 				wanted_str += "you need <strong>" + Math.ceil(wanted_machines) + "</strong>";
 
 				if (round3(wanted_machines) != Math.ceil(wanted_machines)) {
