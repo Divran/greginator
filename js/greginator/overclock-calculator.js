@@ -53,8 +53,6 @@ onVersionChanged(function(version) {
 		var tier = getTier(energy);
 		var target_tier = getTier(target);
 
-		console.log(target_tier,tier,target_tier<tier);
-
 		if (target_tier < tier) {
 			results.text("Your target tier is too low.");
 			return;
