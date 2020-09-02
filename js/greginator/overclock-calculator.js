@@ -25,11 +25,12 @@ onVersionChanged(function(version) {
 	var time_elem = $("#gt-overclock-time",card);
 	var results = $("#gt-overclock-results",card);
 	var wanted_elem = $("#gt-overclock-wanted",card);
+	var wanted_check = $("#gt-overclock-wanted-flip",card);
 
 	function getTier(voltage) {
 		if (voltage <= 8) {return 1;}
-		var logn = Math.log(voltage)/Math.log(4);
-		return Math.floor(logn)-1;
+		var logn = Math.log(voltage)/Math.log(4)-1.5;
+		return Math.ceil(logn);
 	}
 
 	function doCalc() {
@@ -39,10 +40,10 @@ onVersionChanged(function(version) {
 		var amps = parseInt(amps_elem.val());
 		var target_elem = $("[name='gt-overclock-target']:checked",card);
 		var target = parseInt(target_elem.val());
-		var output = parseInt(output_elem.val());
-		var time = parseInt(time_elem.val());
-		var input = parseInt(input_elem.val());
-		var wanted = parseInt(wanted_elem.val());
+		var output = parseFloat(output_elem.val());
+		var time = parseFloat(time_elem.val());
+		var input = parseFloat(input_elem.val());
+		var wanted = parseFloat(wanted_elem.val());
 
 		if (isNaN(energy) || isNaN(amps) || isNaN(target) || isNaN(output) || isNaN(time) || isNaN(input)) {
 			results.text("One or more of your inputs is an invalid number.");
@@ -51,6 +52,8 @@ onVersionChanged(function(version) {
 
 		var tier = getTier(energy);
 		var target_tier = getTier(target);
+
+		console.log(target_tier,tier,target_tier<tier);
 
 		if (target_tier < tier) {
 			results.text("Your target tier is too low.");
@@ -85,6 +88,10 @@ onVersionChanged(function(version) {
 
 		var wanted_str = "";
 		if (!isNaN(wanted)) {
+			if (wanted_check.is(":checked")) {
+				wanted = 1/wanted;
+			}
+
 			wanted_str += "<hr>";
 			if (wanted < output_per_sec) {
 				wanted_str += "A single machine is enough to keep up with " + wanted + "/s.";
@@ -125,7 +132,7 @@ onVersionChanged(function(version) {
 		results.html("<h5>Results</h5><p>"+txt.join("<br>")+"</p>"+processing_array+wanted_str);
 	}
 
-	$([energy_elem[0],amps_elem[0],output_elem[0],time_elem[0],wanted_elem[0]]).click(function() {
+	$([energy_elem[0],amps_elem[0],output_elem[0],time_elem[0],wanted_elem[0],wanted_check[0]]).click(function() {
 		$(this).select();
 	}).on("input",doCalc);
 	amps_buttons.click(function() {
