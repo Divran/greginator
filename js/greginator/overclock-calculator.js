@@ -119,7 +119,7 @@ onVersionChanged(function(version) {
 				if (wanted_arrays > 0) {
 					var wanted_arrays = 
 					wanted_str += " In processing arrays, consumes <strong>"+round3(energy*amps*wanted_arrays*16)+"</strong> eu/t"+
-									" and <strong>"+round3(input_per_sec*wanted_arrays)+"</strong> items/s.";
+									" and <strong>"+round3(input_per_sec*wanted_arrays*16)+"</strong> items/s.";
 				}
 			}
 
