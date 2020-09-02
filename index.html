@@ -330,40 +330,36 @@
 							<label style="display:block;">Energy tier of machine:</label>
 							<div class="btn-group btn-group-toggle" data-toggle="buttons">
 								<label class="btn btn-light">
-									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-1" value="128">MV <small>(128)</small>
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-1" value="128" data-voltage="MV">MV <small>(128)</small>
 								</label>
 								<label class="btn btn-light">
-									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-2" value="512" checked>HV <small>(512)</small>
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-2" value="512" data-voltage="HV" checked>HV <small>(512)</small>
 								</label>
 								<label class="btn btn-light">
-									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-3" value="2048">EV <small>(2048)</small>
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-3" value="2048" data-voltage="EV">EV <small>(2048)</small>
 								</label>
 								<label class="btn btn-light">
-									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-4" value="8192">IV <small>(8192)</small>
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-4" value="8192" data-voltage="IV">IV <small>(8192)</small>
 								</label>
 								<label class="btn btn-light">
-									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-5" value="32768">LuV <small>(32768)</small>
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-5" value="32768" data-voltage="LuV">LuV <small>(32768)</small>
 								</label>
 								<label class="btn btn-light">
-									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-6" value="131072">ZPM <small>(131072)</small>
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-6" value="131072" data-voltage="ZPM">ZPM <small>(131072)</small>
 								</label>
 								<label class="btn btn-light">
-									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-7" value="524288">UV <small>(524288)</small>
+									<input type="radio" name="gt-overclock-target" id="gt-overclock-target-7" value="524288" data-voltage="UV">UV <small>(524288)</small>
 								</label>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="gt-overclock-output">Amount of items/fluids produced:</label>
-									<input type="number" value="1" id="gt-overclock-output" class="form-control">
-								</div>
+							<div class="form-group col-md-6">
+								<label for="gt-overclock-output">Amount of items/fluids produced:</label>
+								<input type="number" value="1" id="gt-overclock-output" class="form-control">
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="gt-overclock-input">Amount of items/fluids consumed:</label>
-									<input type="number" value="1" id="gt-overclock-input" class="form-control">
-								</div>
+							<div class="form-group col-md-6">
+								<label for="gt-overclock-input">Amount of items/fluids consumed:</label>
+								<input type="number" value="1" id="gt-overclock-input" class="form-control">
 							</div>
 						</div>
 						<div class="row">
@@ -371,7 +367,12 @@
 								<label for="gt-overclock-time">Time of recipe (in seconds):</label>
 								<input type="number" value="1" id="gt-overclock-time" class="form-control">
 							</div>
+							<div class="form-group col-md-6">
+								<label for="gt-overclock-wanted">Want to produce X per second:</label>
+								<input type="number" value="" id="gt-overclock-wanted" class="form-control">
+							</div>
 						</div>
+						<p><small>Note: All processing array calculations assume they always contain 16 machines.</small></p>
 						<div class="card">
 							<div id="gt-overclock-results" class="card-body"></div>
 						</div>
