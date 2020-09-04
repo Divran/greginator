@@ -107,8 +107,9 @@ onVersionChanged(function(version) {
 				if (wanted_arrays > 0) {
 					wanted_str += ", or <strong>" + Math.ceil(wanted_machines/16) + "</strong>";
 					if (round3(wanted_machines/16) != Math.ceil(wanted_machines/16)) {
-						wanted_str += " <small>("+round3(wanted_machines/16)+")</small> processing arrays.";
+						wanted_str += " <small>("+round3(wanted_machines/16)+")</small>";
 					}
+					wanted_str += " processing arrays."
 				} else {
 					wanted_str += ".";
 				}
