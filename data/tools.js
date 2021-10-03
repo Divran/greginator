@@ -264,6 +264,17 @@ data.add("tools","it2",[
 },
 {
 	"soft":0,
+	"speed":8,
+	"material":"Dark Steel",
+	"othermod":"",
+	"durability":51200,
+	"tier":3,
+	"enchant":"",
+	"age":0,
+	"recommended":"Can be found in villages and used to mine diamonds in the early game. Also has decent stats."
+},
+{
+	"soft":0,
 	"speed":12,
 	"material":"Electrum",
 	"othermod":"",
