@@ -156,11 +156,13 @@ onVersionChanged(function(version) {
 			filters = [];
 
 			$(".gt-tool-browser-thead-comment",card).hide().addClass("extra-hide");
-			$(".gt-tool-browser-thead-recommended",card).hide();
-			$(".gt-tool-browser-thead-age",card).hide();
+			$(".gt-tool-browser-thead-recommended",card).hide().addClass("extra-hide");
+			$(".gt-tool-browser-thead-age",card).hide().addClass("extra-hide");
+			$(".gt-tool-browser-thead-enchantments",card).hide().addClass("extra-hide");
 			$(".tool-browser-filters",card).hide();
 		} else {
-			$(".gt-tool-browser-thead-age",card).show();
+			$(".gt-tool-browser-thead-age",card).show().removeClass("extra-hide");
+			$(".gt-tool-browser-thead-enchantments",card).show().removeClass("extra-hide");
 			$(".tool-browser-filters",card).show();
 		}
 
@@ -207,13 +209,15 @@ onVersionChanged(function(version) {
 			html.push("<td>"+escapehtml(tool.durability)+"</td>");
 			html.push("<td>"+escapehtml(tool.speed)+"</td>");
 			html.push("<td>"+escapehtml(tool.tier)+"</td>");
-			html.push("<td>"+(age_names[tool.age] || "")+"</td>");
-			html.push("<td class='d-none d-md-table-cell'>"+escapehtmlWithLineBreaks(tool.enchant || "")+"</td>");
-			if (show_recommended) {
-				html.push("<td>"+tool.recommended+"</td>");
-			}
-			if (show_comments) {
-				html.push("<td class='d-none d-lg-table-cell'>"+(tool.comment || "")+"</td>");
+			if (version != "gtnh") {
+				html.push("<td>"+(age_names[tool.age] || "")+"</td>");
+				html.push("<td class='d-none d-md-table-cell'>"+escapehtmlWithLineBreaks(tool.enchant || "")+"</td>");
+				if (show_recommended) {
+					html.push("<td>"+tool.recommended+"</td>");
+				}
+				if (show_comments) {
+					html.push("<td class='d-none d-lg-table-cell'>"+(tool.comment || "")+"</td>");
+				}
 			}
 			html.push("</tr>");
 		}
