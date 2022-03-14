@@ -61,7 +61,7 @@ local f = io.open("input_gtnh.txt")
 local output = {}
 for line in f:lines() do
 	local matName, toolSpeed, toolDurability, toolQuality, displayName = 
-		string.match(line,"^%s*public static Materials (%w+)%s*= new Materials%([%s%d]+,[%s%w%._]+,%s*([%d%.F?]+)%s*,%s*(%d+)%s*,%s*(%d+)%s*,[^\"]+[^\"]+\"([^\"]+)\"%s*,")
+		string.match(line,"^%s*public static Materials (%w+)%s*= new Materials%([%s%d]+,[%s%w%._]+,%s*([%d%.F?]+)%s*,%s*(%d+)%s*,%s*(%d+)%s*,[^\"]+\"[^\"]+\"%s*,%s*\"([^\"]+)\"%s*,")
 	
 	if matName then
 		toolSpeed = string.gsub(toolSpeed,"F","")

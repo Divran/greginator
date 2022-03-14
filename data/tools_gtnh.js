@@ -1,2852 +1,2852 @@
 data.add("tools","gtnh",[
 {
 	"speed":10.0,
+	"material":"Aluminium",
 	"durability":128,
-	"tier":2,
-	"material":"Aluminium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Americium",
 	"durability":0,
-	"tier":3,
-	"material":"Americium"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Antimony",
 	"durability":0,
-	"tier":2,
-	"material":"Antimony"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Argon",
 	"durability":0,
-	"tier":2,
-	"material":"Argon"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Arsenic",
 	"durability":0,
-	"tier":2,
-	"material":"Arsenic"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Barium",
 	"durability":0,
-	"tier":2,
-	"material":"Barium"
+	"tier":2
 },
 {
 	"speed":14.0,
+	"material":"Beryllium",
 	"durability":64,
-	"tier":2,
-	"material":"Beryllium"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Bismuth",
 	"durability":64,
-	"tier":1,
-	"material":"Bismuth"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Boron",
 	"durability":0,
-	"tier":2,
-	"material":"Boron"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Caesium",
 	"durability":0,
-	"tier":2,
-	"material":"Caesium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Calcium",
 	"durability":0,
-	"tier":2,
-	"material":"Calcium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Carbon",
 	"durability":64,
-	"tier":2,
-	"material":"Carbon"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Cadmium",
 	"durability":0,
-	"tier":2,
-	"material":"Cadmium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Cerium",
 	"durability":0,
-	"tier":2,
-	"material":"Cerium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Chlorine",
 	"durability":0,
-	"tier":2,
-	"material":"Chlorine"
+	"tier":2
 },
 {
 	"speed":11.0,
+	"material":"Chrome",
 	"durability":256,
-	"tier":3,
-	"material":"Chrome"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Cobalt",
 	"durability":512,
-	"tier":3,
-	"material":"Cobalt"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Copper",
 	"durability":0,
-	"tier":1,
-	"material":"Copper"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Deuterium",
 	"durability":0,
-	"tier":2,
-	"material":"Deuterium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Dysprosium",
 	"durability":0,
-	"tier":2,
-	"material":"Dysprosium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Empty",
 	"durability":0,
-	"tier":2,
-	"material":"Empty"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Erbium",
 	"durability":0,
-	"tier":2,
-	"material":"Erbium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Europium",
 	"durability":0,
-	"tier":2,
-	"material":"Europium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Fluorine",
 	"durability":0,
-	"tier":2,
-	"material":"Fluorine"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Gadolinium",
 	"durability":0,
-	"tier":2,
-	"material":"Gadolinium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Gallium",
 	"durability":64,
-	"tier":2,
-	"material":"Gallium"
+	"tier":2
 },
 {
 	"speed":12.0,
+	"material":"Gold",
 	"durability":64,
-	"tier":2,
-	"material":"Gold"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Holmium",
 	"durability":0,
-	"tier":2,
-	"material":"Holmium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Hydrogen",
 	"durability":0,
-	"tier":2,
-	"material":"Hydrogen"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Helium",
 	"durability":0,
-	"tier":2,
-	"material":"Helium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Indium",
 	"durability":0,
-	"tier":2,
-	"material":"Indium"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Iridium",
 	"durability":2560,
-	"tier":3,
-	"material":"Iridium"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Iron",
 	"durability":256,
-	"tier":2,
-	"material":"Iron"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Lanthanum",
 	"durability":0,
-	"tier":2,
-	"material":"Lanthanum"
+	"tier":2
 },
 {
 	"speed":8.0,
+	"material":"Lead",
 	"durability":64,
-	"tier":1,
-	"material":"Lead"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Lithium",
 	"durability":0,
-	"tier":2,
-	"material":"Lithium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Lutetium",
 	"durability":0,
-	"tier":2,
-	"material":"Lutetium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Magnesium",
 	"durability":0,
-	"tier":2,
-	"material":"Magnesium"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Manganese",
 	"durability":512,
-	"tier":2,
-	"material":"Manganese"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Mercury",
 	"durability":0,
-	"tier":0,
-	"material":"Mercury"
+	"tier":0
 },
 {
 	"speed":7.0,
+	"material":"Molybdenum",
 	"durability":512,
-	"tier":2,
-	"material":"Molybdenum"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Neodymium",
 	"durability":512,
-	"tier":2,
-	"material":"Neodymium"
+	"tier":2
 },
 {
 	"speed":24.0,
+	"material":"Neutronium",
 	"durability":655360,
-	"tier":6,
-	"material":"Neutronium"
+	"tier":6
 },
 {
 	"speed":6.0,
+	"material":"Nickel",
 	"durability":64,
-	"tier":2,
-	"material":"Nickel"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Niobium",
 	"durability":0,
-	"tier":2,
-	"material":"Niobium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Nitrogen",
 	"durability":0,
-	"tier":2,
-	"material":"Nitrogen"
+	"tier":2
 },
 {
 	"speed":16.0,
+	"material":"Osmium",
 	"durability":1280,
-	"tier":4,
-	"material":"Osmium"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Oxygen",
 	"durability":0,
-	"tier":2,
-	"material":"Oxygen"
+	"tier":2
 },
 {
 	"speed":8.0,
+	"material":"Palladium",
 	"durability":512,
-	"tier":4,
-	"material":"Palladium"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Phosphorus",
 	"durability":0,
-	"tier":2,
-	"material":"Phosphorus"
+	"tier":2
 },
 {
 	"speed":12.0,
+	"material":"Platinum",
 	"durability":64,
-	"tier":4,
-	"material":"Platinum"
+	"tier":4
 },
 {
 	"speed":6.0,
+	"material":"Plutonium 239",
 	"durability":512,
-	"tier":3,
-	"material":"Plutonium"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Plutonium 241",
 	"durability":512,
-	"tier":3,
-	"material":"Plutonium241"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Potassium",
 	"durability":0,
-	"tier":1,
-	"material":"Potassium"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Praseodymium",
 	"durability":0,
-	"tier":2,
-	"material":"Praseodymium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Promethium",
 	"durability":0,
-	"tier":2,
-	"material":"Promethium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Radon",
 	"durability":0,
-	"tier":2,
-	"material":"Radon"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Rubidium",
 	"durability":0,
-	"tier":2,
-	"material":"Rubidium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Samarium",
 	"durability":0,
-	"tier":2,
-	"material":"Samarium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Scandium",
 	"durability":0,
-	"tier":2,
-	"material":"Scandium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Silicon",
 	"durability":0,
-	"tier":2,
-	"material":"Silicon"
+	"tier":2
 },
 {
 	"speed":10.0,
+	"material":"Silver",
 	"durability":64,
-	"tier":2,
-	"material":"Silver"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Sodium",
 	"durability":0,
-	"tier":2,
-	"material":"Sodium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Strontium",
 	"durability":0,
-	"tier":2,
-	"material":"Strontium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Sulfur",
 	"durability":0,
-	"tier":2,
-	"material":"Sulfur"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Tantalum",
 	"durability":0,
-	"tier":2,
-	"material":"Tantalum"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Tellurium",
 	"durability":0,
-	"tier":2,
-	"material":"Tellurium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Terbium",
 	"durability":0,
-	"tier":2,
-	"material":"Terbium"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Thorium",
 	"durability":512,
-	"tier":2,
-	"material":"Thorium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Thulium",
 	"durability":0,
-	"tier":2,
-	"material":"Thulium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Tin",
 	"durability":0,
-	"tier":3,
-	"material":"Tin"
+	"tier":3
 },
 {
 	"speed":7.0,
+	"material":"Titanium",
 	"durability":1600,
-	"tier":3,
-	"material":"Titanium"
+	"tier":3
 },
 {
 	"speed":20.0,
+	"material":"Tritanium",
 	"durability":1435392,
-	"tier":6,
-	"material":"Tritanium"
+	"tier":6
 },
 {
 	"speed":1.0,
+	"material":"Tritium",
 	"durability":0,
-	"tier":2,
-	"material":"Tritium"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Tungsten",
 	"durability":2560,
-	"tier":3,
-	"material":"Tungsten"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Uranium 238",
 	"durability":512,
-	"tier":3,
-	"material":"Uranium"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Uranium 235",
 	"durability":512,
-	"tier":3,
-	"material":"Uranium235"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Vanadium",
 	"durability":0,
-	"tier":2,
-	"material":"Vanadium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Ytterbium",
 	"durability":0,
-	"tier":2,
-	"material":"Ytterbium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Yttrium",
 	"durability":0,
-	"tier":2,
-	"material":"Yttrium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Zinc",
 	"durability":0,
-	"tier":1,
-	"material":"Zinc"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Flerovium",
 	"durability":0,
-	"tier":0,
-	"material":"Flerovium_GT5U"
+	"tier":0
 },
 {
 	"speed":16.0,
+	"material":"Endium",
 	"durability":1024,
-	"tier":4,
-	"material":"HeeEndium"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Platinum Group Sludge",
 	"durability":0,
-	"tier":2,
-	"material":"PlatinumGroupSludge"
+	"tier":2
 },
 {
 	"speed":20.0,
+	"material":"Draconium",
 	"durability":32768,
-	"tier":7,
-	"material":"Draconium"
+	"tier":7
 },
 {
 	"speed":40.0,
+	"material":"Awakened Draconium",
 	"durability":65536,
-	"tier":9,
-	"material":"DraconiumAwakened"
+	"tier":9
 },
 {
 	"speed":15.0,
+	"material":"Adamantium",
 	"durability":8192,
-	"tier":8,
-	"material":"Adamantium"
+	"tier":8
 },
 {
 	"speed":3.0,
+	"material":"Alduorite",
 	"durability":384,
-	"tier":2,
-	"material":"Alduorite"
+	"tier":2
 },
 {
 	"speed":4.0,
+	"material":"Amber",
 	"durability":128,
-	"tier":2,
-	"material":"Amber"
+	"tier":2
 },
 {
 	"speed":10.0,
+	"material":"Angmallen",
 	"durability":128,
-	"tier":2,
-	"material":"Angmallen"
+	"tier":2
 },
 {
 	"speed":18.0,
+	"material":"Ardite",
 	"durability":1024,
-	"tier":4,
-	"material":"Ardite"
+	"tier":4
 },
 {
 	"speed":6.0,
+	"material":"Atlarus",
 	"durability":64,
-	"tier":2,
-	"material":"Atlarus"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Blizz",
 	"durability":0,
-	"tier":2,
-	"material":"Blizz"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Blueschist",
 	"durability":0,
-	"tier":2,
-	"material":"Blueschist"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Bluestone",
 	"durability":0,
-	"tier":2,
-	"material":"Bluestone"
+	"tier":2
 },
 {
 	"speed":16.0,
+	"material":"Carmot",
 	"durability":128,
-	"tier":1,
-	"material":"Carmot"
+	"tier":1
 },
 {
 	"speed":10.0,
+	"material":"Celenegil",
 	"durability":4096,
-	"tier":2,
-	"material":"Celenegil"
+	"tier":2
 },
 {
 	"speed":5.0,
+	"material":"Certus Quartz",
 	"durability":32,
-	"tier":1,
-	"material":"CertusQuartz"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Ceruclase",
 	"durability":1280,
-	"tier":2,
-	"material":"Ceruclase"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Cobalt Hexahydrate",
 	"durability":0,
-	"tier":2,
-	"material":"CobaltHexahydrate"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Construction Foam",
 	"durability":0,
-	"tier":2,
-	"material":"ConstructionFoam"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Chert",
 	"durability":0,
-	"tier":2,
-	"material":"Chert"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Crude Oil",
 	"durability":0,
-	"tier":2,
-	"material":"CrudeOil"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Dacite",
 	"durability":0,
-	"tier":2,
-	"material":"Dacite"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Dark Iron",
 	"durability":384,
-	"tier":3,
-	"material":"DarkIron"
+	"tier":3
 },
 {
 	"speed":20.0,
+	"material":"Desh",
 	"durability":1280,
-	"tier":4,
-	"material":"Desh"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Dilithium",
 	"durability":0,
-	"tier":1,
-	"material":"Dilithium"
+	"tier":1
 },
 {
 	"speed":16.0,
+	"material":"Duranium",
 	"durability":5120,
-	"tier":5,
-	"material":"Duranium"
+	"tier":5
 },
 {
 	"speed":1.0,
+	"material":"Eclogite",
 	"durability":0,
-	"tier":2,
-	"material":"Eclogite"
+	"tier":2
 },
 {
 	"speed":16.0,
+	"material":"Fluxed Electrum",
 	"durability":512,
-	"tier":3,
-	"material":"ElectrumFlux"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Emery",
 	"durability":0,
-	"tier":2,
-	"material":"Emery"
+	"tier":2
 },
 {
 	"speed":16.0,
+	"material":"Enderium Base",
 	"durability":768,
-	"tier":4,
-	"material":"EnderiumBase"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Epidote",
 	"durability":0,
-	"tier":2,
-	"material":"Epidote"
+	"tier":2
 },
 {
 	"speed":5.0,
+	"material":"Eximite",
 	"durability":2560,
-	"tier":3,
-	"material":"Eximite"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Fiery Steel",
 	"durability":256,
-	"tier":3,
-	"material":"FierySteel"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Firestone",
 	"durability":1280,
-	"tier":3,
-	"material":"Firestone"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Ruby",
 	"durability":0,
-	"tier":2,
-	"material":"FoolsRuby"
+	"tier":2
 },
 {
 	"speed":10.0,
+	"material":"Force",
 	"durability":128,
-	"tier":3,
-	"material":"Force"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Forcicium",
 	"durability":0,
-	"tier":1,
-	"material":"Forcicium"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Forcillium",
 	"durability":0,
-	"tier":1,
-	"material":"Forcillium"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Gabbro",
 	"durability":0,
-	"tier":1,
-	"material":"Gabbro"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Glowstone",
 	"durability":0,
-	"tier":1,
-	"material":"Glowstone"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Gneiss",
 	"durability":0,
-	"tier":1,
-	"material":"Gneiss"
+	"tier":1
 },
 {
 	"speed":5.0,
+	"material":"Graphite",
 	"durability":32,
-	"tier":2,
-	"material":"Graphite"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Graphene",
 	"durability":32,
-	"tier":1,
-	"material":"Graphene"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Green Schist",
 	"durability":0,
-	"tier":1,
-	"material":"Greenschist"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Greenstone",
 	"durability":0,
-	"tier":1,
-	"material":"Greenstone"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Greywacke",
 	"durability":0,
-	"tier":1,
-	"material":"Greywacke"
+	"tier":1
 },
 {
 	"speed":10.0,
+	"material":"Haderoth",
 	"durability":3200,
-	"tier":3,
-	"material":"Haderoth"
+	"tier":3
 },
 {
 	"speed":12.0,
+	"material":"Hepatizon",
 	"durability":128,
-	"tier":2,
-	"material":"Hepatizon"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"HSLA Steel",
 	"durability":500,
-	"tier":3,
-	"material":"HSLA"
+	"tier":3
 },
 {
 	"speed":12.0,
+	"material":"Ignatius",
 	"durability":512,
-	"tier":2,
-	"material":"Ignatius"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Infuscolium",
 	"durability":64,
-	"tier":2,
-	"material":"Infuscolium"
+	"tier":2
 },
 {
 	"speed":12.0,
+	"material":"Infused Gold",
 	"durability":64,
-	"tier":3,
-	"material":"InfusedGold"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Aer",
 	"durability":64,
-	"tier":3,
-	"material":"InfusedAir"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Ignis",
 	"durability":64,
-	"tier":3,
-	"material":"InfusedFire"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Terra",
 	"durability":256,
-	"tier":3,
-	"material":"InfusedEarth"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Aqua",
 	"durability":64,
-	"tier":3,
-	"material":"InfusedWater"
+	"tier":3
 },
 {
 	"speed":32.0,
+	"material":"Perditio",
 	"durability":64,
-	"tier":4,
-	"material":"InfusedEntropy"
+	"tier":4
 },
 {
 	"speed":8.0,
+	"material":"Ordo",
 	"durability":64,
-	"tier":3,
-	"material":"InfusedOrder"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Inolashite",
 	"durability":2304,
-	"tier":3,
-	"material":"Inolashite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Jade",
 	"durability":16,
-	"tier":2,
-	"material":"Jade"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Jasper",
 	"durability":0,
-	"tier":2,
-	"material":"Jasper"
+	"tier":2
 },
 {
 	"speed":5.0,
+	"material":"Kalendrite",
 	"durability":2560,
-	"tier":3,
-	"material":"Kalendrite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Komatiite",
 	"durability":0,
-	"tier":1,
-	"material":"Komatiite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Lava",
 	"durability":0,
-	"tier":1,
-	"material":"Lava"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Lemurite",
 	"durability":0,
-	"tier":2,
-	"material":"Lemurite"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Meteoric Iron",
 	"durability":384,
-	"tier":3,
-	"material":"MeteoricIron"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Meteoric Steel",
 	"durability":768,
-	"tier":4,
-	"material":"MeteoricSteel"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Meutoite",
 	"durability":0,
-	"tier":1,
-	"material":"Meutoite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Migmatite",
 	"durability":0,
-	"tier":1,
-	"material":"Migmatite"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Naquadah",
 	"durability":1280,
-	"tier":4,
-	"material":"Naquadah"
+	"tier":4
 },
 {
 	"speed":8.0,
+	"material":"Naquadah Alloy",
 	"durability":5120,
-	"tier":5,
-	"material":"NaquadahAlloy"
+	"tier":5
 },
 {
 	"speed":6.0,
+	"material":"Enriched Naquadah",
 	"durability":1280,
-	"tier":4,
-	"material":"NaquadahEnriched"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Naquadria",
 	"durability":512,
-	"tier":4,
-	"material":"Naquadria"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Nether Brick",
 	"durability":0,
-	"tier":1,
-	"material":"NetherBrick"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Nether Quartz",
 	"durability":32,
-	"tier":1,
-	"material":"NetherQuartz"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Nether Star",
 	"durability":5120,
-	"tier":4,
-	"material":"NetherStar"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Oilsands",
 	"durability":0,
-	"tier":1,
-	"material":"Oilsands"
+	"tier":1
 },
 {
 	"speed":4.5,
+	"material":"Orichalcum",
 	"durability":3456,
-	"tier":3,
-	"material":"Orichalcum"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Oureclase",
 	"durability":1920,
-	"tier":3,
-	"material":"Oureclase"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Prometheum",
 	"durability":512,
-	"tier":1,
-	"material":"Prometheum"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Quartzite",
 	"durability":0,
-	"tier":1,
-	"material":"Quartzite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Rhyolite",
 	"durability":0,
-	"tier":1,
-	"material":"Rhyolite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Rubracium",
 	"durability":128,
-	"tier":1,
-	"material":"Rubracium"
+	"tier":1
 },
 {
 	"speed":3.0,
+	"material":"Sanguinite",
 	"durability":4480,
-	"tier":4,
-	"material":"Sanguinite"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Siltstone",
 	"durability":0,
-	"tier":1,
-	"material":"Siltstone"
+	"tier":1
 },
 {
 	"speed":20.0,
+	"material":"Tartarite",
 	"durability":7680,
-	"tier":5,
-	"material":"Tartarite"
+	"tier":5
 },
 {
 	"speed":1.0,
+	"material":"UU-Amplifier",
 	"durability":0,
-	"tier":1,
-	"material":"UUAmplifier"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"UU-Matter",
 	"durability":0,
-	"tier":1,
-	"material":"UUMatter"
+	"tier":1
 },
 {
 	"speed":16.0,
+	"material":"Void",
 	"durability":512,
-	"tier":4,
-	"material":"Void"
+	"tier":4
 },
 {
 	"speed":6.0,
+	"material":"Vulcanite",
 	"durability":64,
-	"tier":2,
-	"material":"Vulcanite"
+	"tier":2
 },
 {
 	"speed":9.0,
+	"material":"Vyroxeres",
 	"durability":768,
-	"tier":3,
-	"material":"Vyroxeres"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Biofuel",
 	"durability":0,
-	"tier":0,
-	"material":"BioFuel"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Forestry Biomass",
 	"durability":0,
-	"tier":0,
-	"material":"Biomass"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Cheese",
 	"durability":0,
-	"tier":0,
-	"material":"Cheese"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Chili",
 	"durability":0,
-	"tier":0,
-	"material":"Chili"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Chocolate",
 	"durability":0,
-	"tier":0,
-	"material":"Chocolate"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Coalfuel",
 	"durability":0,
-	"tier":0,
-	"material":"CoalFuel"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Cocoa",
 	"durability":0,
-	"tier":0,
-	"material":"Cocoa"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Coffee",
 	"durability":0,
-	"tier":0,
-	"material":"Coffee"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Creosote",
 	"durability":0,
-	"tier":0,
-	"material":"Creosote"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Ethanol",
 	"durability":0,
-	"tier":0,
-	"material":"Ethanol"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Fish Oil",
 	"durability":0,
-	"tier":0,
-	"material":"FishOil"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Diesel",
 	"durability":0,
-	"tier":0,
-	"material":"Fuel"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Refined Glue",
 	"durability":0,
-	"tier":0,
-	"material":"Glue"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Gunpowder",
 	"durability":0,
-	"tier":0,
-	"material":"Gunpowder"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Hot Frying Oil",
 	"durability":0,
-	"tier":0,
-	"material":"FryingOilHot"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Honey",
 	"durability":0,
-	"tier":0,
-	"material":"Honey"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Lubricant",
 	"durability":0,
-	"tier":0,
-	"material":"Lubricant"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Mc Guffium 239",
 	"durability":0,
-	"tier":0,
-	"material":"McGuffium239"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Raw Meat",
 	"durability":0,
-	"tier":0,
-	"material":"MeatRaw"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Cooked Meat",
 	"durability":0,
-	"tier":0,
-	"material":"MeatCooked"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Milk",
 	"durability":0,
-	"tier":0,
-	"material":"Milk"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Oil",
 	"durability":0,
-	"tier":0,
-	"material":"Oil"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Paper",
 	"durability":0,
-	"tier":0,
-	"material":"Paper"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Rare Earth",
 	"durability":0,
-	"tier":0,
-	"material":"RareEarth"
+	"tier":0
 },
 {
 	"speed":7.0,
+	"material":"Reinforced",
 	"durability":480,
-	"tier":4,
-	"material":"Reinforced"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Seed Oil",
 	"durability":0,
-	"tier":0,
-	"material":"SeedOil"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Hemp Seed Oil",
 	"durability":0,
-	"tier":0,
-	"material":"SeedOilHemp"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Lin Seed Oil",
 	"durability":0,
-	"tier":0,
-	"material":"SeedOilLin"
+	"tier":0
 },
 {
 	"speed":4.0,
+	"material":"Stone",
 	"durability":32,
-	"tier":1,
-	"material":"Stone"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Unstable",
 	"durability":0,
-	"tier":4,
-	"material":"Unstable"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Wheat",
 	"durability":0,
-	"tier":0,
-	"material":"Wheat"
+	"tier":0
 },
 {
 	"speed":7.0,
+	"material":"Osmiridium",
 	"durability":1600,
-	"tier":3,
-	"material":"Osmiridium"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Sunnarium",
 	"durability":0,
-	"tier":1,
-	"material":"Sunnarium"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Endstone",
 	"durability":0,
-	"tier":1,
-	"material":"Endstone"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Netherrack",
 	"durability":0,
-	"tier":0,
-	"material":"Netherrack"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Methane",
 	"durability":0,
-	"tier":1,
-	"material":"Methane"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Carbon Dioxide",
 	"durability":0,
-	"tier":2,
-	"material":"CarbonDioxide"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Noble Gases",
 	"durability":0,
-	"tier":2,
-	"material":"NobleGases"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Liquid Air",
 	"durability":0,
-	"tier":2,
-	"material":"LiquidAir"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Liquid Nitrogen",
 	"durability":0,
-	"tier":2,
-	"material":"LiquidNitrogen"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Liquid Oxygen",
 	"durability":0,
-	"tier":2,
-	"material":"LiquidOxygen"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Almandine",
 	"durability":0,
-	"tier":1,
-	"material":"Almandine"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Andradite",
 	"durability":0,
-	"tier":1,
-	"material":"Andradite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Annealed Copper",
 	"durability":0,
-	"tier":2,
-	"material":"AnnealedCopper"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Asbestos",
 	"durability":0,
-	"tier":1,
-	"material":"Asbestos"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Ashes",
 	"durability":0,
-	"tier":1,
-	"material":"Ash"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Banded Iron",
 	"durability":0,
-	"tier":2,
-	"material":"BandedIron"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Battery Alloy",
 	"durability":0,
-	"tier":1,
-	"material":"BatteryAlloy"
+	"tier":1
 },
 {
 	"speed":7.0,
+	"material":"Blue Topaz",
 	"durability":256,
-	"tier":3,
-	"material":"BlueTopaz"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Bone",
 	"durability":0,
-	"tier":1,
-	"material":"Bone"
+	"tier":1
 },
 {
 	"speed":7.0,
+	"material":"Brass",
 	"durability":96,
-	"tier":1,
-	"material":"Brass"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Bronze",
 	"durability":192,
-	"tier":2,
-	"material":"Bronze"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Brown Limonite",
 	"durability":0,
-	"tier":1,
-	"material":"BrownLimonite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Calcite",
 	"durability":0,
-	"tier":1,
-	"material":"Calcite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Cassiterite",
 	"durability":0,
-	"tier":3,
-	"material":"Cassiterite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Cassiterite Sand",
 	"durability":0,
-	"tier":1,
-	"material":"CassiteriteSand"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Chalcopyrite",
 	"durability":0,
-	"tier":1,
-	"material":"Chalcopyrite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Charcoal",
 	"durability":0,
-	"tier":1,
-	"material":"Charcoal"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Chromite",
 	"durability":0,
-	"tier":1,
-	"material":"Chromite"
+	"tier":1
 },
 {
 	"speed":11.0,
+	"material":"Chromium Dioxide",
 	"durability":256,
-	"tier":3,
-	"material":"ChromiumDioxide"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Cinnabar",
 	"durability":0,
-	"tier":1,
-	"material":"Cinnabar"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Water",
 	"durability":0,
-	"tier":0,
-	"material":"Water"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Clay",
 	"durability":0,
-	"tier":1,
-	"material":"Clay"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Coal",
 	"durability":0,
-	"tier":1,
-	"material":"Coal"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Cobaltite",
 	"durability":0,
-	"tier":1,
-	"material":"Cobaltite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Sheldonite",
 	"durability":0,
-	"tier":1,
-	"material":"Cooperite"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Cupronickel",
 	"durability":64,
-	"tier":1,
-	"material":"Cupronickel"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Dark Ashes",
 	"durability":0,
-	"tier":1,
-	"material":"DarkAsh"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Deep Iron",
 	"durability":384,
-	"tier":2,
-	"material":"DeepIron"
+	"tier":2
 },
 {
 	"speed":8.0,
+	"material":"Diamond",
 	"durability":1280,
-	"tier":4,
-	"material":"Diamond"
+	"tier":4
 },
 {
 	"speed":12.0,
+	"material":"Electrum",
 	"durability":64,
-	"tier":2,
-	"material":"Electrum"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Emerald",
 	"durability":256,
-	"tier":4,
-	"material":"Emerald"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Galena",
 	"durability":0,
-	"tier":3,
-	"material":"Galena"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Garnierite",
 	"durability":0,
-	"tier":3,
-	"material":"Garnierite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Glyceryl Trinitrate",
 	"durability":0,
-	"tier":1,
-	"material":"Glyceryl"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Grossular",
 	"durability":0,
-	"tier":1,
-	"material":"Grossular"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Holy Water",
 	"durability":0,
-	"tier":0,
-	"material":"HolyWater"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Ice",
 	"durability":0,
-	"tier":0,
-	"material":"Ice"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Ilmenite",
 	"durability":0,
-	"tier":3,
-	"material":"Ilmenite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Rutile",
 	"durability":0,
-	"tier":2,
-	"material":"Rutile"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Bauxite",
 	"durability":0,
-	"tier":1,
-	"material":"Bauxite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Titaniumtetrachloride",
 	"durability":0,
-	"tier":2,
-	"material":"Titaniumtetrachloride"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Magnesiumchloride",
 	"durability":0,
-	"tier":2,
-	"material":"Magnesiumchloride"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Invar",
 	"durability":256,
-	"tier":2,
-	"material":"Invar"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Kanthal",
 	"durability":64,
-	"tier":2,
-	"material":"Kanthal"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Lazurite",
 	"durability":0,
-	"tier":1,
-	"material":"Lazurite"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Magnalium",
 	"durability":256,
-	"tier":2,
-	"material":"Magnalium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Magnesite",
 	"durability":0,
-	"tier":2,
-	"material":"Magnesite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Magnetite",
 	"durability":0,
-	"tier":2,
-	"material":"Magnetite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Molybdenite",
 	"durability":0,
-	"tier":2,
-	"material":"Molybdenite"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Nichrome",
 	"durability":64,
-	"tier":2,
-	"material":"Nichrome"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Niobium Nitride",
 	"durability":0,
-	"tier":2,
-	"material":"NiobiumNitride"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Niobium-Titanium",
 	"durability":0,
-	"tier":2,
-	"material":"NiobiumTitanium"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Nitro-Carbon",
 	"durability":0,
-	"tier":1,
-	"material":"NitroCarbon"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Nitrogen Dioxide",
 	"durability":0,
-	"tier":1,
-	"material":"NitrogenDioxide"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Obsidian",
 	"durability":0,
-	"tier":3,
-	"material":"Obsidian"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Phosphate",
 	"durability":0,
-	"tier":1,
-	"material":"Phosphate"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Pig Iron",
 	"durability":384,
-	"tier":2,
-	"material":"PigIron"
+	"tier":2
 },
 {
 	"speed":3.0,
+	"material":"Polyethylene",
 	"durability":32,
-	"tier":1,
-	"material":"Plastic"
+	"tier":1
 },
 {
 	"speed":3.0,
+	"material":"Epoxid",
 	"durability":32,
-	"tier":1,
-	"material":"Epoxid"
+	"tier":1
 },
 {
 	"speed":3.0,
+	"material":"Silicone Rubber",
 	"durability":128,
-	"tier":1,
-	"material":"Silicone"
+	"tier":1
 },
 {
 	"speed":3.0,
+	"material":"Polycaprolactam",
 	"durability":32,
-	"tier":1,
-	"material":"Polycaprolactam"
+	"tier":1
 },
 {
 	"speed":3.0,
+	"material":"Polytetrafluoroethylene",
 	"durability":32,
-	"tier":1,
-	"material":"Polytetrafluoroethylene"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Powellite",
 	"durability":0,
-	"tier":2,
-	"material":"Powellite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Pumice",
 	"durability":0,
-	"tier":2,
-	"material":"Pumice"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Pyrite",
 	"durability":0,
-	"tier":1,
-	"material":"Pyrite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Pyrolusite",
 	"durability":0,
-	"tier":2,
-	"material":"Pyrolusite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Pyrope",
 	"durability":0,
-	"tier":2,
-	"material":"Pyrope"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Rock Salt",
 	"durability":0,
-	"tier":1,
-	"material":"RockSalt"
+	"tier":1
 },
 {
 	"speed":1.5,
+	"material":"Rubber",
 	"durability":32,
-	"tier":0,
-	"material":"Rubber"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Raw Rubber",
 	"durability":0,
-	"tier":0,
-	"material":"RawRubber"
+	"tier":0
 },
 {
 	"speed":7.0,
+	"material":"Ruby",
 	"durability":256,
-	"tier":2,
-	"material":"Ruby"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Salt",
 	"durability":0,
-	"tier":1,
-	"material":"Salt"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Saltpeter",
 	"durability":0,
-	"tier":1,
-	"material":"Saltpeter"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Scheelite",
 	"durability":0,
-	"tier":3,
-	"material":"Scheelite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Snow",
 	"durability":0,
-	"tier":0,
-	"material":"Snow"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Sodalite",
 	"durability":0,
-	"tier":1,
-	"material":"Sodalite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Sodium Persulfate",
 	"durability":0,
-	"tier":2,
-	"material":"SodiumPersulfate"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Sodium Sulfide",
 	"durability":0,
-	"tier":2,
-	"material":"SodiumSulfide"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Hydrogen Sulfide",
 	"durability":0,
-	"tier":2,
-	"material":"HydricSulfide"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Heavy Oil",
 	"durability":0,
-	"tier":0,
-	"material":"OilHeavy"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Raw Oil",
 	"durability":0,
-	"tier":0,
-	"material":"OilMedium"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Light Oil",
 	"durability":0,
-	"tier":0,
-	"material":"OilLight"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Natural Gas",
 	"durability":0,
-	"tier":1,
-	"material":"NatruralGas"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Sulfuric Gas",
 	"durability":0,
-	"tier":1,
-	"material":"SulfuricGas"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Refinery Gas",
 	"durability":0,
-	"tier":1,
-	"material":"Gas"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Sulfuric Naphtha",
 	"durability":0,
-	"tier":0,
-	"material":"SulfuricNaphtha"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Sulfuric Light Fuel",
 	"durability":0,
-	"tier":0,
-	"material":"SulfuricLightFuel"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Sulfuric Heavy Fuel",
 	"durability":0,
-	"tier":0,
-	"material":"SulfuricHeavyFuel"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Naphtha",
 	"durability":0,
-	"tier":0,
-	"material":"Naphtha"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Light Fuel",
 	"durability":0,
-	"tier":0,
-	"material":"LightFuel"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Heavy Fuel",
 	"durability":0,
-	"tier":0,
-	"material":"HeavyFuel"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"LPG",
 	"durability":0,
-	"tier":0,
-	"material":"LPG"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Soldering Alloy",
 	"durability":0,
-	"tier":1,
-	"material":"SolderingAlloy"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Gallium Arsenide",
 	"durability":0,
-	"tier":1,
-	"material":"GalliumArsenide"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Indium Gallium Phosphide",
 	"durability":0,
-	"tier":1,
-	"material":"IndiumGalliumPhosphide"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Spessartine",
 	"durability":0,
-	"tier":2,
-	"material":"Spessartine"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Sphalerite",
 	"durability":0,
-	"tier":1,
-	"material":"Sphalerite"
+	"tier":1
 },
 {
 	"speed":7.0,
+	"material":"Stainless Steel",
 	"durability":480,
-	"tier":4,
-	"material":"StainlessSteel"
+	"tier":4
 },
 {
 	"speed":6.0,
+	"material":"Steel",
 	"durability":512,
-	"tier":3,
-	"material":"Steel"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Stibnite",
 	"durability":0,
-	"tier":2,
-	"material":"Stibnite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Sulfuric Acid",
 	"durability":0,
-	"tier":2,
-	"material":"SulfuricAcid"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Tanzanite",
 	"durability":256,
-	"tier":2,
-	"material":"Tanzanite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Tetrahedrite",
 	"durability":0,
-	"tier":2,
-	"material":"Tetrahedrite"
+	"tier":2
 },
 {
 	"speed":6.5,
+	"material":"Tin Alloy",
 	"durability":96,
-	"tier":2,
-	"material":"TinAlloy"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Topaz",
 	"durability":256,
-	"tier":3,
-	"material":"Topaz"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Tungstate",
 	"durability":0,
-	"tier":3,
-	"material":"Tungstate"
+	"tier":3
 },
 {
 	"speed":9.0,
+	"material":"Ultimet",
 	"durability":2048,
-	"tier":4,
-	"material":"Ultimet"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Uraninite",
 	"durability":0,
-	"tier":3,
-	"material":"Uraninite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Uvarovite",
 	"durability":0,
-	"tier":2,
-	"material":"Uvarovite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Vanadium-Gallium",
 	"durability":0,
-	"tier":2,
-	"material":"VanadiumGallium"
+	"tier":2
 },
 {
 	"speed":2.0,
+	"material":"Wood",
 	"durability":16,
-	"tier":0,
-	"material":"Wood"
+	"tier":0
 },
 {
 	"speed":6.0,
+	"material":"Wrought Iron",
 	"durability":384,
-	"tier":2,
-	"material":"WroughtIron"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Wulfenite",
 	"durability":0,
-	"tier":3,
-	"material":"Wulfenite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Yellow Limonite",
 	"durability":0,
-	"tier":2,
-	"material":"YellowLimonite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Yttrium Barium Cuprate",
 	"durability":0,
-	"tier":2,
-	"material":"YttriumBariumCuprate"
+	"tier":2
 },
 {
 	"speed":3.0,
+	"material":"Sealed Wood",
 	"durability":24,
-	"tier":0,
-	"material":"WoodSealed"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Liveroot",
 	"durability":0,
-	"tier":1,
-	"material":"LiveRoot"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Ironwood",
 	"durability":384,
-	"tier":2,
-	"material":"IronWood"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Glass",
 	"durability":4,
-	"tier":0,
-	"material":"Glass"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Perlite",
 	"durability":0,
-	"tier":1,
-	"material":"Perlite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Borax",
 	"durability":0,
-	"tier":1,
-	"material":"Borax"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Lignite Coal",
 	"durability":0,
-	"tier":0,
-	"material":"Lignite"
+	"tier":0
 },
 {
 	"speed":7.0,
+	"material":"Olivine",
 	"durability":256,
-	"tier":2,
-	"material":"Olivine"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Opal",
 	"durability":256,
-	"tier":2,
-	"material":"Opal"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Amethyst",
 	"durability":256,
-	"tier":3,
-	"material":"Amethyst"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Redstone",
 	"durability":0,
-	"tier":2,
-	"material":"Redstone"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Lapis",
 	"durability":0,
-	"tier":1,
-	"material":"Lapis"
+	"tier":1
 },
 {
 	"speed":2.0,
+	"material":"Blaze",
 	"durability":16,
-	"tier":1,
-	"material":"Blaze"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Enderpearl",
 	"durability":16,
-	"tier":1,
-	"material":"EnderPearl"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Endereye",
 	"durability":16,
-	"tier":1,
-	"material":"EnderEye"
+	"tier":1
 },
 {
 	"speed":2.5,
+	"material":"Flint",
 	"durability":128,
-	"tier":1,
-	"material":"Flint"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Diatomite",
 	"durability":0,
-	"tier":1,
-	"material":"Diatomite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Volcanic Ashes",
 	"durability":0,
-	"tier":0,
-	"material":"VolcanicAsh"
+	"tier":0
 },
 {
 	"speed":1.0,
+	"material":"Niter",
 	"durability":0,
-	"tier":1,
-	"material":"Niter"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Pyrotheum",
 	"durability":0,
-	"tier":1,
-	"material":"Pyrotheum"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Cryotheum",
 	"durability":0,
-	"tier":1,
-	"material":"Cryotheum"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Hydrated Coal",
 	"durability":0,
-	"tier":1,
-	"material":"HydratedCoal"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Apatite",
 	"durability":0,
-	"tier":1,
-	"material":"Apatite"
+	"tier":1
 },
 {
 	"speed":5.0,
+	"material":"Alumite",
 	"durability":768,
-	"tier":2,
-	"material":"Alumite"
+	"tier":2
 },
 {
 	"speed":25.0,
+	"material":"Manyullyn",
 	"durability":2048,
-	"tier":5,
-	"material":"Manyullyn"
+	"tier":5
 },
 {
 	"speed":8.0,
+	"material":"Steeleaf",
 	"durability":768,
-	"tier":3,
-	"material":"Steeleaf"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Knightmetal",
 	"durability":1024,
-	"tier":3,
-	"material":"Knightmetal"
+	"tier":3
 },
 {
 	"speed":13.0,
+	"material":"Sterling Silver",
 	"durability":128,
-	"tier":2,
-	"material":"SterlingSilver"
+	"tier":2
 },
 {
 	"speed":14.0,
+	"material":"Rose Gold",
 	"durability":128,
-	"tier":2,
-	"material":"RoseGold"
+	"tier":2
 },
 {
 	"speed":12.0,
+	"material":"Black Bronze",
 	"durability":256,
-	"tier":2,
-	"material":"BlackBronze"
+	"tier":2
 },
 {
 	"speed":8.0,
+	"material":"Bismuth Bronze",
 	"durability":256,
-	"tier":2,
-	"material":"BismuthBronze"
+	"tier":2
 },
 {
 	"speed":6.5,
+	"material":"Black Steel",
 	"durability":768,
-	"tier":3,
-	"material":"BlackSteel"
+	"tier":3
 },
 {
 	"speed":7.0,
+	"material":"Red Steel",
 	"durability":896,
-	"tier":4,
-	"material":"RedSteel"
+	"tier":4
 },
 {
 	"speed":7.5,
+	"material":"Blue Steel",
 	"durability":1024,
-	"tier":4,
-	"material":"BlueSteel"
+	"tier":4
 },
 {
 	"speed":8.0,
+	"material":"Damascus Steel",
 	"durability":1280,
-	"tier":3,
-	"material":"DamascusSteel"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Tungstensteel",
 	"durability":2560,
-	"tier":4,
-	"material":"TungstenSteel"
+	"tier":4
 },
 {
 	"speed":1.0,
+	"material":"Cetane-Boosted Diesel",
 	"durability":0,
-	"tier":2,
-	"material":"NitroFuel"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Red Alloy",
 	"durability":0,
-	"tier":0,
-	"material":"RedAlloy"
+	"tier":0
 },
 {
 	"speed":8.0,
+	"material":"Cobalt Brass",
 	"durability":256,
-	"tier":2,
-	"material":"CobaltBrass"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Tricalcium Phosphate",
 	"durability":0,
-	"tier":2,
-	"material":"TricalciumPhosphate"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Basalt",
 	"durability":64,
-	"tier":1,
-	"material":"Basalt"
+	"tier":1
 },
 {
 	"speed":7.0,
+	"material":"Red Garnet",
 	"durability":128,
-	"tier":2,
-	"material":"GarnetRed"
+	"tier":2
 },
 {
 	"speed":7.0,
+	"material":"Yellow Garnet",
 	"durability":128,
-	"tier":2,
-	"material":"GarnetYellow"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Marble",
 	"durability":16,
-	"tier":1,
-	"material":"Marble"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Sugar",
 	"durability":0,
-	"tier":1,
-	"material":"Sugar"
+	"tier":1
 },
 {
 	"speed":12.0,
+	"material":"Thaumium",
 	"durability":256,
-	"tier":3,
-	"material":"Thaumium"
+	"tier":3
 },
 {
 	"speed":10.0,
+	"material":"Vinteum",
 	"durability":128,
-	"tier":3,
-	"material":"Vinteum"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Redrock",
 	"durability":0,
-	"tier":1,
-	"material":"Redrock"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Potassium Feldspar",
 	"durability":0,
-	"tier":1,
-	"material":"PotassiumFeldspar"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Biotite",
 	"durability":0,
-	"tier":1,
-	"material":"Biotite"
+	"tier":1
 },
 {
 	"speed":4.0,
+	"material":"Black Granite",
 	"durability":64,
-	"tier":3,
-	"material":"GraniteBlack"
+	"tier":3
 },
 {
 	"speed":4.0,
+	"material":"Red Granite",
 	"durability":64,
-	"tier":3,
-	"material":"GraniteRed"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Chrysotile",
 	"durability":0,
-	"tier":2,
-	"material":"Chrysotile"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Realgar",
 	"durability":32,
-	"tier":1,
-	"material":"Realgar"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Vanadium Magnetite",
 	"durability":0,
-	"tier":2,
-	"material":"VanadiumMagnetite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Basaltic Mineral Sand",
 	"durability":0,
-	"tier":1,
-	"material":"BasalticMineralSand"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Granitic Mineral Sand",
 	"durability":0,
-	"tier":1,
-	"material":"GraniticMineralSand"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Garnet Sand",
 	"durability":0,
-	"tier":1,
-	"material":"GarnetSand"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Quartz Sand",
 	"durability":0,
-	"tier":1,
-	"material":"QuartzSand"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Bastnasite",
 	"durability":0,
-	"tier":2,
-	"material":"Bastnasite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Pentlandite",
 	"durability":0,
-	"tier":2,
-	"material":"Pentlandite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Spodumene",
 	"durability":0,
-	"tier":2,
-	"material":"Spodumene"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Pollucite",
 	"durability":0,
-	"tier":2,
-	"material":"Pollucite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Tantalite",
 	"durability":0,
-	"tier":3,
-	"material":"Tantalite"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Lepidolite",
 	"durability":0,
-	"tier":2,
-	"material":"Lepidolite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Glauconite",
 	"durability":0,
-	"tier":2,
-	"material":"Glauconite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Glauconite Sand",
 	"durability":0,
-	"tier":2,
-	"material":"GlauconiteSand"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Vermiculite",
 	"durability":0,
-	"tier":2,
-	"material":"Vermiculite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Bentonite",
 	"durability":0,
-	"tier":2,
-	"material":"Bentonite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Fullers Earth",
 	"durability":0,
-	"tier":2,
-	"material":"FullersEarth"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Pitchblende",
 	"durability":0,
-	"tier":3,
-	"material":"Pitchblende"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Monazite",
 	"durability":0,
-	"tier":1,
-	"material":"Monazite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Malachite",
 	"durability":0,
-	"tier":1,
-	"material":"Malachite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Mirabilite",
 	"durability":0,
-	"tier":2,
-	"material":"Mirabilite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Mica",
 	"durability":0,
-	"tier":1,
-	"material":"Mica"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Trona",
 	"durability":0,
-	"tier":1,
-	"material":"Trona"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Barite",
 	"durability":0,
-	"tier":2,
-	"material":"Barite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Gypsum",
 	"durability":0,
-	"tier":1,
-	"material":"Gypsum"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Alunite",
 	"durability":0,
-	"tier":2,
-	"material":"Alunite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Dolomite",
 	"durability":0,
-	"tier":1,
-	"material":"Dolomite"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Wollastonite",
 	"durability":0,
-	"tier":2,
-	"material":"Wollastonite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Zeolite",
 	"durability":0,
-	"tier":2,
-	"material":"Zeolite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Kyanite",
 	"durability":0,
-	"tier":2,
-	"material":"Kyanite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Kaolinite",
 	"durability":0,
-	"tier":2,
-	"material":"Kaolinite"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Talc",
 	"durability":0,
-	"tier":2,
-	"material":"Talc"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Soapstone",
 	"durability":0,
-	"tier":1,
-	"material":"Soapstone"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Concrete",
 	"durability":0,
-	"tier":1,
-	"material":"Concrete"
+	"tier":1
 },
 {
 	"speed":6.0,
+	"material":"Magnetic Iron",
 	"durability":256,
-	"tier":2,
-	"material":"IronMagnetic"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Magnetic Steel",
 	"durability":512,
-	"tier":3,
-	"material":"SteelMagnetic"
+	"tier":3
 },
 {
 	"speed":7.0,
+	"material":"Magnetic Neodymium",
 	"durability":512,
-	"tier":2,
-	"material":"NeodymiumMagnetic"
+	"tier":2
 },
 {
 	"speed":1.0,
+	"material":"Magnetic Samarium",
 	"durability":0,
-	"tier":2,
-	"material":"SamariumMagnetic"
+	"tier":2
 },
 {
 	"speed":14.0,
+	"material":"Tungstencarbide",
 	"durability":1280,
-	"tier":4,
-	"material":"TungstenCarbide"
+	"tier":4
 },
 {
 	"speed":3.0,
+	"material":"Vanadiumsteel",
 	"durability":1920,
-	"tier":3,
-	"material":"VanadiumSteel"
+	"tier":3
 },
 {
 	"speed":10.0,
+	"material":"HSS-G",
 	"durability":4000,
-	"tier":3,
-	"material":"HSSG"
+	"tier":3
 },
 {
 	"speed":10.0,
+	"material":"HSS-E",
 	"durability":5120,
-	"tier":4,
-	"material":"HSSE"
+	"tier":4
 },
 {
 	"speed":14.0,
+	"material":"HSS-S",
 	"durability":3000,
-	"tier":4,
-	"material":"HSSS"
+	"tier":4
 },
 {
 	"speed":3.0,
+	"material":"Fiber-Reinforced Epoxy Resin",
 	"durability":64,
-	"tier":1,
-	"material":"EpoxidFiberReinforced"
+	"tier":1
 },
 {
 	"speed":3.0,
+	"material":"Polybenzimidazole",
 	"durability":64,
-	"tier":1,
-	"material":"Polybenzimidazole"
+	"tier":1
 },
 {
 	"speed":1.0,
+	"material":"Electrotine",
 	"durability":0,
-	"tier":1,
-	"material":"Electrotine"
+	"tier":1
 },
 {
 	"speed":16.0,
+	"material":"Galgadorian",
 	"durability":3600,
-	"tier":3,
-	"material":"Galgadorian"
+	"tier":3
 },
 {
 	"speed":32.0,
+	"material":"Enhanced Galgadorian",
 	"durability":7200,
-	"tier":5,
-	"material":"EnhancedGalgadorian"
+	"tier":5
 },
 {
 	"speed":10.0,
+	"material":"Blood Infused Iron",
 	"durability":384,
-	"tier":2,
-	"material":"BloodInfusedIron"
+	"tier":2
 },
 {
 	"speed":32.0,
+	"material":"Shadow Metal",
 	"durability":8192,
-	"tier":4,
-	"material":"Shadow"
+	"tier":4
 },
 {
 	"speed":15.0,
+	"material":"Ledox",
 	"durability":1024,
-	"tier":4,
-	"material":"Ledox"
+	"tier":4
 },
 {
 	"speed":18.0,
+	"material":"Quantium",
 	"durability":2048,
-	"tier":4,
-	"material":"Quantium"
+	"tier":4
 },
 {
 	"speed":8.0,
+	"material":"Mytryl",
 	"durability":512,
-	"tier":4,
-	"material":"Mytryl"
+	"tier":4
 },
 {
 	"speed":36.0,
+	"material":"Black Plutonium",
 	"durability":8192,
-	"tier":8,
-	"material":"BlackPlutonium"
+	"tier":8
 },
 {
 	"speed":9.0,
+	"material":"Callisto Ice",
 	"durability":1024,
-	"tier":4,
-	"material":"CallistoIce"
+	"tier":4
 },
 {
 	"speed":16.0,
+	"material":"Duralumin",
 	"durability":512,
-	"tier":3,
-	"material":"Duralumin"
+	"tier":3
 },
 {
 	"speed":32.0,
+	"material":"Oriharukon",
 	"durability":10240,
-	"tier":5,
-	"material":"Oriharukon"
+	"tier":5
 },
 {
 	"speed":8.0,
+	"material":"Mysterious Crystal",
 	"durability":256,
-	"tier":6,
-	"material":"MysteriousCrystal"
+	"tier":6
 },
 {
 	"speed":3.0,
+	"material":"Redstone Alloy",
 	"durability":128,
-	"tier":2,
-	"material":"RedstoneAlloy"
+	"tier":2
 },
 {
 	"speed":8.0,
+	"material":"Soularium",
 	"durability":256,
-	"tier":2,
-	"material":"Soularium"
+	"tier":2
 },
 {
 	"speed":6.0,
+	"material":"Conductive Iron",
 	"durability":256,
-	"tier":3,
-	"material":"ConductiveIron"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Electrical Steel",
 	"durability":512,
-	"tier":2,
-	"material":"ElectricalSteel"
+	"tier":2
 },
 {
 	"speed":12.0,
+	"material":"Energetic Alloy",
 	"durability":1024,
-	"tier":3,
-	"material":"EnergeticAlloy"
+	"tier":3
 },
 {
 	"speed":18.0,
+	"material":"Vibrant Alloy",
 	"durability":4048,
-	"tier":4,
-	"material":"VibrantAlloy"
+	"tier":4
 },
 {
 	"speed":6.0,
+	"material":"Pulsating Iron",
 	"durability":256,
-	"tier":3,
-	"material":"PulsatingIron"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Dark Steel",
 	"durability":512,
-	"tier":3,
-	"material":"DarkSteel"
+	"tier":3
 },
 {
 	"speed":12.0,
+	"material":"End Steel",
 	"durability":2000,
-	"tier":4,
-	"material":"EndSteel"
+	"tier":4
 },
 {
 	"speed":2.0,
+	"material":"Clay Compound",
 	"durability":64,
-	"tier":2,
-	"material":"CrudeSteel"
+	"tier":2
 },
 {
 	"speed":18.0,
+	"material":"Crystalline Alloy",
 	"durability":768,
-	"tier":4,
-	"material":"CrystallineAlloy"
+	"tier":4
 },
 {
 	"speed":24.0,
+	"material":"Melodic Alloy",
 	"durability":1024,
-	"tier":5,
-	"material":"MelodicAlloy"
+	"tier":5
 },
 {
 	"speed":96.0,
+	"material":"Stellar Alloy",
 	"durability":10240,
-	"tier":7,
-	"material":"StellarAlloy"
+	"tier":7
 },
 {
 	"speed":6.0,
+	"material":"Crystalline Pink Slime",
 	"durability":128,
-	"tier":3,
-	"material":"CrystallinePinkSlime"
+	"tier":3
 },
 {
 	"speed":8.0,
+	"material":"Energetic Silver",
 	"durability":512,
-	"tier":3,
-	"material":"EnergeticSilver"
+	"tier":3
 },
 {
 	"speed":12.0,
+	"material":"Vivid Alloy",
 	"durability":768,
-	"tier":4,
-	"material":"VividAlloy"
+	"tier":4
 },
 {
 	"speed":8.0,
+	"material":"Enderium",
 	"durability":1500,
-	"tier":3,
-	"material":"Enderium"
+	"tier":3
 },
 {
 	"speed":14.0,
+	"material":"Mithril",
 	"durability":64,
-	"tier":3,
-	"material":"Mithril"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Blue Alloy",
 	"durability":0,
-	"tier":0,
-	"material":"BlueAlloy"
+	"tier":0
 },
 {
 	"speed":6.0,
+	"material":"Shadow Iron",
 	"durability":384,
-	"tier":3,
-	"material":"ShadowIron"
+	"tier":3
 },
 {
 	"speed":6.0,
+	"material":"Shadow Steel",
 	"durability":768,
-	"tier":4,
-	"material":"ShadowSteel"
+	"tier":4
 },
 {
 	"speed":10.0,
+	"material":"Astral Silver",
 	"durability":64,
-	"tier":2,
-	"material":"AstralSilver"
+	"tier":2
 },
 {
 	"speed":64.0,
+	"material":"Infinity Catalyst",
 	"durability":1310720,
-	"tier":10,
-	"material":"InfinityCatalyst"
+	"tier":10
 },
 {
 	"speed":256.0,
+	"material":"Infinity",
 	"durability":2621440,
-	"tier":17,
-	"material":"Infinity"
+	"tier":17
 },
 {
 	"speed":128.0,
+	"material":"Trinium",
 	"durability":51200,
-	"tier":8,
-	"material":"Trinium"
+	"tier":8
 },
 {
 	"speed":32.0,
+	"material":"Ichorium",
 	"durability":850000,
-	"tier":7,
-	"material":"Ichorium"
+	"tier":7
 },
 {
 	"speed":96.0,
+	"material":"Cosmic Neutronium",
 	"durability":163840,
-	"tier":12,
-	"material":"CosmicNeutronium"
+	"tier":12
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base MV",
 	"durability":0,
-	"tier":3,
-	"material":"Pentacadmiummagnesiumhexaoxid"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base HV",
 	"durability":0,
-	"tier":3,
-	"material":"Titaniumonabariumdecacoppereikosaoxid"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base EV",
 	"durability":0,
-	"tier":3,
-	"material":"Uraniumtriplatinid"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base IV",
 	"durability":0,
-	"tier":3,
-	"material":"Vanadiumtriindinid"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base LuV",
 	"durability":0,
-	"tier":3,
-	"material":"Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base ZPM",
 	"durability":0,
-	"tier":3,
-	"material":"Tetranaquadahdiindiumhexaplatiumosminid"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base UV",
 	"durability":0,
-	"tier":3,
-	"material":"Longasssuperconductornameforuvwire"
+	"tier":3
 },
 {
 	"speed":1.0,
+	"material":"Superconductor Base UHV",
 	"durability":0,
-	"tier":3,
-	"material":"Longasssuperconductornameforuhvwire"
+	"tier":3
 }
 ]);
