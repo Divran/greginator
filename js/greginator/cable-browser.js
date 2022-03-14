@@ -1,7 +1,7 @@
 onVersionChanged(function(version) {
 	var card = $( "#gt-cable-browser" );
 
-	if (version == "it3") {
+	if (version != "it2") {
 		card.hide();
 		return;
 	} else {

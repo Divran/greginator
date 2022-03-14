@@ -1,5 +1,5 @@
 (function() {
-	var registered_data = {it2:{},it3:{}};
+	var registered_data = {it2:{},it3:{},gtnh:{}};
 
 	function add(name,version,data) {
 		registered_data[version][name] = data;

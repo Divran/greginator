@@ -141,6 +141,7 @@ onVersionChanged(function(version) {
 
 	function update() {
 		var tools = data.getCopy("tools",version);
+
 		var filters = [
 			getShowRecommended(),
 			getSelectedAge(),
@@ -149,6 +150,19 @@ onVersionChanged(function(version) {
 			getMiningTier(),
 			getHideGarbage()
 		];
+
+		// gtnh
+		if (version == "gtnh") {
+			filters = [];
+
+			$(".gt-tool-browser-thead-comment",card).hide().addClass("extra-hide");
+			$(".gt-tool-browser-thead-recommended",card).hide();
+			$(".gt-tool-browser-thead-age",card).hide();
+			$(".tool-browser-filters",card).hide();
+		} else {
+			$(".gt-tool-browser-thead-age",card).show();
+			$(".tool-browser-filters",card).show();
+		}
 
 		// Check if recommendation is enabled
 		var show_recommended = recommended.is(":checked");
@@ -193,8 +207,8 @@ onVersionChanged(function(version) {
 			html.push("<td>"+escapehtml(tool.durability)+"</td>");
 			html.push("<td>"+escapehtml(tool.speed)+"</td>");
 			html.push("<td>"+escapehtml(tool.tier)+"</td>");
-			html.push("<td>"+age_names[tool.age]+"</td>");
-			html.push("<td class='d-none d-md-table-cell'>"+escapehtmlWithLineBreaks(tool.enchant)+"</td>");
+			html.push("<td>"+(age_names[tool.age] || "")+"</td>");
+			html.push("<td class='d-none d-md-table-cell'>"+escapehtmlWithLineBreaks(tool.enchant || "")+"</td>");
 			if (show_recommended) {
 				html.push("<td>"+tool.recommended+"</td>");
 			}

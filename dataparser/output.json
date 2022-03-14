@@ -1,983 +1,2852 @@
 [
 {
-	"soft":1,
-	"speed":1.5,
-	"material":"Rubber",
-	"othermod":"",
-	"durability":1600,
+	"speed":10.0,
+	"durability":128,
+	"tier":2,
+	"material":"Aluminium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Americium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Antimony"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Argon"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Arsenic"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Barium"
+},
+{
+	"speed":14.0,
+	"durability":64,
+	"tier":2,
+	"material":"Beryllium"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":1,
+	"material":"Bismuth"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Boron"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Caesium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Calcium"
+},
+{
+	"speed":1.0,
+	"durability":64,
+	"tier":2,
+	"material":"Carbon"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Cadmium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Cerium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Chlorine"
+},
+{
+	"speed":11.0,
+	"durability":256,
+	"tier":3,
+	"material":"Chrome"
+},
+{
+	"speed":8.0,
+	"durability":512,
+	"tier":3,
+	"material":"Cobalt"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Copper"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Deuterium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Dysprosium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Empty"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Erbium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Europium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Fluorine"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Gadolinium"
+},
+{
+	"speed":1.0,
+	"durability":64,
+	"tier":2,
+	"material":"Gallium"
+},
+{
+	"speed":12.0,
+	"durability":64,
+	"tier":2,
+	"material":"Gold"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Holmium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Hydrogen"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Helium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Indium"
+},
+{
+	"speed":6.0,
+	"durability":2560,
+	"tier":3,
+	"material":"Iridium"
+},
+{
+	"speed":6.0,
+	"durability":256,
+	"tier":2,
+	"material":"Iron"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Lanthanum"
+},
+{
+	"speed":8.0,
+	"durability":64,
+	"tier":1,
+	"material":"Lead"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Lithium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Lutetium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Magnesium"
+},
+{
+	"speed":7.0,
+	"durability":512,
+	"tier":2,
+	"material":"Manganese"
+},
+{
+	"speed":1.0,
+	"durability":0,
 	"tier":0,
-	"enchant":""
+	"material":"Mercury"
 },
 {
-	"soft":1,
-	"speed":2,
-	"material":"Wood",
-	"othermod":"",
-	"durability":1600,
-	"tier":0,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Bismuth",
-	"othermod":"",
-	"durability":6400,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":2,
-	"material":"Blaze",
-	"othermod":"",
-	"durability":1600,
-	"tier":1,
-	"enchant":"Fire Aspect III"
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Brass",
-	"othermod":"",
-	"durability":9600,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":5,
-	"material":"Certus Quartz",
-	"othermod":"",
-	"durability":3200,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Cupronickel",
-	"othermod":"",
-	"durability":6400,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":3,
-	"material":"Epoxid",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":3200,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":2.5,
-	"material":"Flint",
-	"othermod":"",
-	"durability":6400,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Lead",
-	"othermod":"",
-	"durability":6400,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":1,
-	"material":"Nether Quartz",
-	"othermod":"",
-	"durability":3200,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":3,
-	"material":"Polycaprolactam",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":3200,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":3,
-	"material":"Polyethylene (Plastic)",
-	"othermod":"",
-	"durability":3200,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":1,
-	"speed":3,
-	"material":"Polysiloxane",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":12800,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":3,
-	"material":"Polytetrafluoroethylene",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":3200,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":4,
-	"material":"Stone",
-	"othermod":"",
-	"durability":3200,
-	"tier":1,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":10,
-	"material":"Aluminium",
-	"othermod":"",
-	"durability":12800,
+	"speed":7.0,
+	"durability":512,
 	"tier":2,
-	"enchant":""
+	"material":"Molybdenum"
 },
 {
-	"soft":0,
-	"speed":14,
-	"material":"Beryllium",
-	"othermod":"",
-	"durability":6400,
+	"speed":7.0,
+	"durability":512,
 	"tier":2,
-	"enchant":""
+	"material":"Neodymium"
 },
 {
-	"soft":0,
-	"speed":8,
-	"material":"Bismuth Bronze",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":12,
-	"material":"Black Bronze",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6.5,
-	"material":"Black Steel",
-	"othermod":"",
-	"durability":76800,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7.5,
-	"material":"Blue Steel",
-	"othermod":"",
-	"durability":102400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Bronze",
-	"othermod":"",
-	"durability":19200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":1,
-	"material":"Carbon",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Cobalt Brass",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Damascus Steel",
-	"othermod":"Only found as Loot",
-	"durability":128000,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":12,
-	"material":"Electrum",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Emerald",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":12,
-	"material":"Gold",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":5,
-	"material":"Graphite",
-	"othermod":"",
-	"durability":3200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Green Sapphire",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Invar",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Iron",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":1,
-	"speed":6,
-	"material":"Iron Wood",
-	"othermod":"",
-	"durability":38400,
-	"tier":2,
-	"enchant":"Fortune I"
-},
-{
-	"soft":0,
-	"speed":10,
-	"material":"Kanthal",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Magnalium",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Magnetic Iron",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Magnetic Neodymium",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Magnetic Steel",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Manganese",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Meteoric Iron",
-	"othermod":"Galacticraft",
-	"durability":38400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Meteoric Steel",
-	"othermod":"Galacticraft",
-	"durability":76800,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Molybdenum",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Nichrome",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Neodymium",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Nickel",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Olivine",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Opal",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Palladium",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Pig Iron",
-	"othermod":"Tinkers' Construct",
-	"durability":38400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":12,
-	"material":"Platinum",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Red Garnet",
-	"othermod":"",
-	"durability":12800,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Red Steel",
-	"othermod":"",
-	"durability":89600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":14,
-	"material":"Rose Gold",
-	"othermod":"",
-	"durability":12800,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Ruby",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Sapphire",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":10,
-	"material":"Silver",
-	"othermod":"",
-	"durability":6400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Stainless Steel",
-	"othermod":"",
-	"durability":48000,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Steel",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":13,
-	"material":"Sterling Silver",
-	"othermod":"",
-	"durability":12800,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Tanzanite",
-	"othermod":"",
-	"durability":25600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Thorium",
-	"othermod":"",
-	"durability":51200,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6.5,
-	"material":"Tin Alloy",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":9600,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Wrought Iron",
-	"othermod":"",
-	"durability":38400,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Yellow Garnet",
-	"othermod":"",
-	"durability":12800,
-	"tier":2,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Aer",
-	"othermod":"Thaumcraft 4",
-	"durability":6400,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Amethyst",
-	"othermod":"",
-	"durability":25600,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Aqua",
-	"othermod":"Thaumcraft 4",
-	"durability":6400,
-	"tier":3,
-	"enchant":"Fortune III"
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Black Granite",
-	"othermod":"",
-	"durability":6400,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Blue Topaz",
-	"othermod":"",
-	"durability":25600,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":11,
-	"material":"Chrome",
-	"othermod":"",
-	"durability":25600,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Cobalt",
-	"othermod":"",
-	"durability":51200,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Diamond",
-	"othermod":"",
-	"durability":128000,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Enderium",
-	"othermod":"Thermal Expansion 4",
-	"durability":25600,
-	"tier":3,
-	"enchant":"Silk Touch I"
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Fire Stone",
-	"othermod":"",
-	"durability":128000,
-	"tier":3,
-	"enchant":"Fire Aspect III"
-},
-{
-	"soft":0,
-	"speed":16,
-	"material":"Fluxed Electrum",
-	"othermod":"Redstone Arsenal",
-	"durability":51200,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":10,
-	"material":"HSS-G",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":400000,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Ignis",
-	"othermod":"Thaumcraft 4",
-	"durability":6400,
-	"tier":3,
-	"enchant":"Fire Aspect III"
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Plutonium-241",
-	"othermod":"",
-	"durability":51200,
-	"tier":3,
-	"enchant":"Radioactivity III"
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Plutonium-244",
-	"othermod":"",
-	"durability":51200,
-	"tier":3,
-	"enchant":"Radioactivity I"
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Ordo",
-	"othermod":"Thaumcraft 4",
-	"durability":6400,
-	"tier":3,
-	"enchant":"Silk Touch I"
-},
-{
-	"soft":0,
-	"speed":4,
-	"material":"Red Granite",
-	"othermod":"",
-	"durability":6400,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":1,
-	"speed":8,
-	"material":"Steel Leaf",
-	"othermod":"",
-	"durability":76800,
-	"tier":3,
-	"enchant":"Fortune II"
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Terra",
-	"othermod":"Thaumcraft 4",
-	"durability":25600,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":12,
-	"material":"Thaumium",
-	"othermod":"Thaumcraft 4",
-	"durability":25600,
-	"tier":3,
-	"enchant":"Fortune II"
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Titanium",
-	"othermod":"",
-	"durability":256000,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Tungsten",
-	"othermod":"",
-	"durability":512000,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":7,
-	"material":"Topaz",
-	"othermod":"",
-	"durability":25600,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Ultimet",
-	"othermod":"",
-	"durability":51200,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Uranium-235",
-	"othermod":"",
-	"durability":51200,
-	"tier":3,
-	"enchant":"Radioactivity II"
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Uranium-238",
-	"othermod":"",
-	"durability":51200,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":3,
-	"material":"Vanadiumsteel",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":192000,
-	"tier":3,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Duranium",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":128000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Enriched Naquadah",
-	"othermod":"",
-	"durability":128000,
-	"tier":4,
-	"enchant":"Radioactivity IV"
-},
-{
-	"soft":0,
-	"speed":10,
-	"material":"HSS-E",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":512000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":14,
-	"material":"HSS-S",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":300000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Iridium",
-	"othermod":"",
-	"durability":512000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Osmiridium",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":300000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":16,
-	"material":"Osmium",
-	"othermod":"",
-	"durability":128000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Naquadah",
-	"othermod":"",
-	"durability":128000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":1,
-	"material":"Naquadria",
-	"othermod":"",
-	"durability":51200,
-	"tier":4,
-	"enchant":"Radioactivity V"
-},
-{
-	"soft":0,
-	"speed":1,
-	"material":"Nether Star",
-	"othermod":"",
-	"durability":512000,
-	"tier":4,
-	"enchant":"Silk Touch I"
-},
-{
-	"soft":0,
-	"speed":32,
-	"material":"Perditio",
-	"othermod":"Thaumcraft 4",
-	"durability":6400,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Tritanium",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":256000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":10,
-	"material":"Tungsten Steel",
-	"othermod":"",
-	"durability":512000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":14,
-	"material":"Tungstencarbide",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":128000,
-	"tier":4,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":10,
-	"material":"Adamantium",
-	"othermod":"Thaumcraft 4",
-	"durability":512000,
-	"tier":5,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":8,
-	"material":"Naquadah Alloy",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":512000,
-	"tier":5,
-	"enchant":""
-},
-{
-	"soft":0,
-	"speed":6,
-	"material":"Neutronium",
-	"othermod":"GregTech 5 Unofficial",
-	"durability":8192000,
+	"speed":24.0,
+	"durability":655360,
 	"tier":6,
-	"enchant":""
+	"material":"Neutronium"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":2,
+	"material":"Nickel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Niobium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Nitrogen"
+},
+{
+	"speed":16.0,
+	"durability":1280,
+	"tier":4,
+	"material":"Osmium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Oxygen"
+},
+{
+	"speed":8.0,
+	"durability":512,
+	"tier":4,
+	"material":"Palladium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Phosphorus"
+},
+{
+	"speed":12.0,
+	"durability":64,
+	"tier":4,
+	"material":"Platinum"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":3,
+	"material":"Plutonium"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":3,
+	"material":"Plutonium241"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Potassium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Praseodymium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Promethium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Radon"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Rubidium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Samarium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Scandium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Silicon"
+},
+{
+	"speed":10.0,
+	"durability":64,
+	"tier":2,
+	"material":"Silver"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Sodium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Strontium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Sulfur"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Tantalum"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Tellurium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Terbium"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":2,
+	"material":"Thorium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Thulium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Tin"
+},
+{
+	"speed":7.0,
+	"durability":1600,
+	"tier":3,
+	"material":"Titanium"
+},
+{
+	"speed":20.0,
+	"durability":1435392,
+	"tier":6,
+	"material":"Tritanium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Tritium"
+},
+{
+	"speed":7.0,
+	"durability":2560,
+	"tier":3,
+	"material":"Tungsten"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":3,
+	"material":"Uranium"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":3,
+	"material":"Uranium235"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Vanadium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Ytterbium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Yttrium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Zinc"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Flerovium_GT5U"
+},
+{
+	"speed":16.0,
+	"durability":1024,
+	"tier":4,
+	"material":"HeeEndium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"PlatinumGroupSludge"
+},
+{
+	"speed":20.0,
+	"durability":32768,
+	"tier":7,
+	"material":"Draconium"
+},
+{
+	"speed":40.0,
+	"durability":65536,
+	"tier":9,
+	"material":"DraconiumAwakened"
+},
+{
+	"speed":15.0,
+	"durability":8192,
+	"tier":8,
+	"material":"Adamantium"
+},
+{
+	"speed":3.0,
+	"durability":384,
+	"tier":2,
+	"material":"Alduorite"
+},
+{
+	"speed":4.0,
+	"durability":128,
+	"tier":2,
+	"material":"Amber"
+},
+{
+	"speed":10.0,
+	"durability":128,
+	"tier":2,
+	"material":"Angmallen"
+},
+{
+	"speed":18.0,
+	"durability":1024,
+	"tier":4,
+	"material":"Ardite"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":2,
+	"material":"Atlarus"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Blizz"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Blueschist"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Bluestone"
+},
+{
+	"speed":16.0,
+	"durability":128,
+	"tier":1,
+	"material":"Carmot"
+},
+{
+	"speed":10.0,
+	"durability":4096,
+	"tier":2,
+	"material":"Celenegil"
+},
+{
+	"speed":5.0,
+	"durability":32,
+	"tier":1,
+	"material":"CertusQuartz"
+},
+{
+	"speed":6.0,
+	"durability":1280,
+	"tier":2,
+	"material":"Ceruclase"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"CobaltHexahydrate"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"ConstructionFoam"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Chert"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"CrudeOil"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Dacite"
+},
+{
+	"speed":7.0,
+	"durability":384,
+	"tier":3,
+	"material":"DarkIron"
+},
+{
+	"speed":20.0,
+	"durability":1280,
+	"tier":4,
+	"material":"Desh"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Dilithium"
+},
+{
+	"speed":16.0,
+	"durability":5120,
+	"tier":5,
+	"material":"Duranium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Eclogite"
+},
+{
+	"speed":16.0,
+	"durability":512,
+	"tier":3,
+	"material":"ElectrumFlux"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Emery"
+},
+{
+	"speed":16.0,
+	"durability":768,
+	"tier":4,
+	"material":"EnderiumBase"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Epidote"
+},
+{
+	"speed":5.0,
+	"durability":2560,
+	"tier":3,
+	"material":"Eximite"
+},
+{
+	"speed":8.0,
+	"durability":256,
+	"tier":3,
+	"material":"FierySteel"
+},
+{
+	"speed":6.0,
+	"durability":1280,
+	"tier":3,
+	"material":"Firestone"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"FoolsRuby"
+},
+{
+	"speed":10.0,
+	"durability":128,
+	"tier":3,
+	"material":"Force"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Forcicium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Forcillium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Gabbro"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Glowstone"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Gneiss"
+},
+{
+	"speed":5.0,
+	"durability":32,
+	"tier":2,
+	"material":"Graphite"
+},
+{
+	"speed":6.0,
+	"durability":32,
+	"tier":1,
+	"material":"Graphene"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Greenschist"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Greenstone"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Greywacke"
+},
+{
+	"speed":10.0,
+	"durability":3200,
+	"tier":3,
+	"material":"Haderoth"
+},
+{
+	"speed":12.0,
+	"durability":128,
+	"tier":2,
+	"material":"Hepatizon"
+},
+{
+	"speed":6.0,
+	"durability":500,
+	"tier":3,
+	"material":"HSLA"
+},
+{
+	"speed":12.0,
+	"durability":512,
+	"tier":2,
+	"material":"Ignatius"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":2,
+	"material":"Infuscolium"
+},
+{
+	"speed":12.0,
+	"durability":64,
+	"tier":3,
+	"material":"InfusedGold"
+},
+{
+	"speed":8.0,
+	"durability":64,
+	"tier":3,
+	"material":"InfusedAir"
+},
+{
+	"speed":8.0,
+	"durability":64,
+	"tier":3,
+	"material":"InfusedFire"
+},
+{
+	"speed":8.0,
+	"durability":256,
+	"tier":3,
+	"material":"InfusedEarth"
+},
+{
+	"speed":8.0,
+	"durability":64,
+	"tier":3,
+	"material":"InfusedWater"
+},
+{
+	"speed":32.0,
+	"durability":64,
+	"tier":4,
+	"material":"InfusedEntropy"
+},
+{
+	"speed":8.0,
+	"durability":64,
+	"tier":3,
+	"material":"InfusedOrder"
+},
+{
+	"speed":8.0,
+	"durability":2304,
+	"tier":3,
+	"material":"Inolashite"
+},
+{
+	"speed":1.0,
+	"durability":16,
+	"tier":2,
+	"material":"Jade"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Jasper"
+},
+{
+	"speed":5.0,
+	"durability":2560,
+	"tier":3,
+	"material":"Kalendrite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Komatiite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Lava"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Lemurite"
+},
+{
+	"speed":6.0,
+	"durability":384,
+	"tier":3,
+	"material":"MeteoricIron"
+},
+{
+	"speed":6.0,
+	"durability":768,
+	"tier":4,
+	"material":"MeteoricSteel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Meutoite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Migmatite"
+},
+{
+	"speed":6.0,
+	"durability":1280,
+	"tier":4,
+	"material":"Naquadah"
+},
+{
+	"speed":8.0,
+	"durability":5120,
+	"tier":5,
+	"material":"NaquadahAlloy"
+},
+{
+	"speed":6.0,
+	"durability":1280,
+	"tier":4,
+	"material":"NaquadahEnriched"
+},
+{
+	"speed":1.0,
+	"durability":512,
+	"tier":4,
+	"material":"Naquadria"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"NetherBrick"
+},
+{
+	"speed":1.0,
+	"durability":32,
+	"tier":1,
+	"material":"NetherQuartz"
+},
+{
+	"speed":6.0,
+	"durability":5120,
+	"tier":4,
+	"material":"NetherStar"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Oilsands"
+},
+{
+	"speed":4.5,
+	"durability":3456,
+	"tier":3,
+	"material":"Orichalcum"
+},
+{
+	"speed":6.0,
+	"durability":1920,
+	"tier":3,
+	"material":"Oureclase"
+},
+{
+	"speed":8.0,
+	"durability":512,
+	"tier":1,
+	"material":"Prometheum"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Quartzite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Rhyolite"
+},
+{
+	"speed":1.0,
+	"durability":128,
+	"tier":1,
+	"material":"Rubracium"
+},
+{
+	"speed":3.0,
+	"durability":4480,
+	"tier":4,
+	"material":"Sanguinite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Siltstone"
+},
+{
+	"speed":20.0,
+	"durability":7680,
+	"tier":5,
+	"material":"Tartarite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"UUAmplifier"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"UUMatter"
+},
+{
+	"speed":16.0,
+	"durability":512,
+	"tier":4,
+	"material":"Void"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":2,
+	"material":"Vulcanite"
+},
+{
+	"speed":9.0,
+	"durability":768,
+	"tier":3,
+	"material":"Vyroxeres"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"BioFuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Biomass"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Cheese"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Chili"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Chocolate"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"CoalFuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Cocoa"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Coffee"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Creosote"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Ethanol"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"FishOil"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Fuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Glue"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Gunpowder"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"FryingOilHot"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Honey"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Lubricant"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"McGuffium239"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"MeatRaw"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"MeatCooked"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Milk"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Oil"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Paper"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"RareEarth"
+},
+{
+	"speed":7.0,
+	"durability":480,
+	"tier":4,
+	"material":"Reinforced"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"SeedOil"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"SeedOilHemp"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"SeedOilLin"
+},
+{
+	"speed":4.0,
+	"durability":32,
+	"tier":1,
+	"material":"Stone"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":4,
+	"material":"Unstable"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Wheat"
+},
+{
+	"speed":7.0,
+	"durability":1600,
+	"tier":3,
+	"material":"Osmiridium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Sunnarium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Endstone"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Netherrack"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Methane"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"CarbonDioxide"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"NobleGases"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"LiquidAir"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"LiquidNitrogen"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"LiquidOxygen"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Almandine"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Andradite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"AnnealedCopper"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Asbestos"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Ash"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"BandedIron"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"BatteryAlloy"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":3,
+	"material":"BlueTopaz"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Bone"
+},
+{
+	"speed":7.0,
+	"durability":96,
+	"tier":1,
+	"material":"Brass"
+},
+{
+	"speed":6.0,
+	"durability":192,
+	"tier":2,
+	"material":"Bronze"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"BrownLimonite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Calcite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Cassiterite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"CassiteriteSand"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Chalcopyrite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Charcoal"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Chromite"
+},
+{
+	"speed":11.0,
+	"durability":256,
+	"tier":3,
+	"material":"ChromiumDioxide"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Cinnabar"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Water"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Clay"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Coal"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Cobaltite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Cooperite"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":1,
+	"material":"Cupronickel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"DarkAsh"
+},
+{
+	"speed":6.0,
+	"durability":384,
+	"tier":2,
+	"material":"DeepIron"
+},
+{
+	"speed":8.0,
+	"durability":1280,
+	"tier":4,
+	"material":"Diamond"
+},
+{
+	"speed":12.0,
+	"durability":64,
+	"tier":2,
+	"material":"Electrum"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":4,
+	"material":"Emerald"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Galena"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Garnierite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Glyceryl"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Grossular"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"HolyWater"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Ice"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Ilmenite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Rutile"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Bauxite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Titaniumtetrachloride"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Magnesiumchloride"
+},
+{
+	"speed":6.0,
+	"durability":256,
+	"tier":2,
+	"material":"Invar"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":2,
+	"material":"Kanthal"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Lazurite"
+},
+{
+	"speed":6.0,
+	"durability":256,
+	"tier":2,
+	"material":"Magnalium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Magnesite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Magnetite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Molybdenite"
+},
+{
+	"speed":6.0,
+	"durability":64,
+	"tier":2,
+	"material":"Nichrome"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"NiobiumNitride"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"NiobiumTitanium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"NitroCarbon"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"NitrogenDioxide"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Obsidian"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Phosphate"
+},
+{
+	"speed":6.0,
+	"durability":384,
+	"tier":2,
+	"material":"PigIron"
+},
+{
+	"speed":3.0,
+	"durability":32,
+	"tier":1,
+	"material":"Plastic"
+},
+{
+	"speed":3.0,
+	"durability":32,
+	"tier":1,
+	"material":"Epoxid"
+},
+{
+	"speed":3.0,
+	"durability":128,
+	"tier":1,
+	"material":"Silicone"
+},
+{
+	"speed":3.0,
+	"durability":32,
+	"tier":1,
+	"material":"Polycaprolactam"
+},
+{
+	"speed":3.0,
+	"durability":32,
+	"tier":1,
+	"material":"Polytetrafluoroethylene"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Powellite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Pumice"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Pyrite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Pyrolusite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Pyrope"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"RockSalt"
+},
+{
+	"speed":1.5,
+	"durability":32,
+	"tier":0,
+	"material":"Rubber"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"RawRubber"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":2,
+	"material":"Ruby"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Salt"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Saltpeter"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Scheelite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Snow"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Sodalite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"SodiumPersulfate"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"SodiumSulfide"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"HydricSulfide"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"OilHeavy"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"OilMedium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"OilLight"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"NatruralGas"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"SulfuricGas"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Gas"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"SulfuricNaphtha"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"SulfuricLightFuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"SulfuricHeavyFuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Naphtha"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"LightFuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"HeavyFuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"LPG"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"SolderingAlloy"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"GalliumArsenide"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"IndiumGalliumPhosphide"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Spessartine"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Sphalerite"
+},
+{
+	"speed":7.0,
+	"durability":480,
+	"tier":4,
+	"material":"StainlessSteel"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":3,
+	"material":"Steel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Stibnite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"SulfuricAcid"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":2,
+	"material":"Tanzanite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Tetrahedrite"
+},
+{
+	"speed":6.5,
+	"durability":96,
+	"tier":2,
+	"material":"TinAlloy"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":3,
+	"material":"Topaz"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Tungstate"
+},
+{
+	"speed":9.0,
+	"durability":2048,
+	"tier":4,
+	"material":"Ultimet"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Uraninite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Uvarovite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"VanadiumGallium"
+},
+{
+	"speed":2.0,
+	"durability":16,
+	"tier":0,
+	"material":"Wood"
+},
+{
+	"speed":6.0,
+	"durability":384,
+	"tier":2,
+	"material":"WroughtIron"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Wulfenite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"YellowLimonite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"YttriumBariumCuprate"
+},
+{
+	"speed":3.0,
+	"durability":24,
+	"tier":0,
+	"material":"WoodSealed"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"LiveRoot"
+},
+{
+	"speed":6.0,
+	"durability":384,
+	"tier":2,
+	"material":"IronWood"
+},
+{
+	"speed":1.0,
+	"durability":4,
+	"tier":0,
+	"material":"Glass"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Perlite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Borax"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"Lignite"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":2,
+	"material":"Olivine"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":2,
+	"material":"Opal"
+},
+{
+	"speed":7.0,
+	"durability":256,
+	"tier":3,
+	"material":"Amethyst"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Redstone"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Lapis"
+},
+{
+	"speed":2.0,
+	"durability":16,
+	"tier":1,
+	"material":"Blaze"
+},
+{
+	"speed":1.0,
+	"durability":16,
+	"tier":1,
+	"material":"EnderPearl"
+},
+{
+	"speed":1.0,
+	"durability":16,
+	"tier":1,
+	"material":"EnderEye"
+},
+{
+	"speed":2.5,
+	"durability":128,
+	"tier":1,
+	"material":"Flint"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Diatomite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"VolcanicAsh"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Niter"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Pyrotheum"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Cryotheum"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"HydratedCoal"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Apatite"
+},
+{
+	"speed":5.0,
+	"durability":768,
+	"tier":2,
+	"material":"Alumite"
+},
+{
+	"speed":25.0,
+	"durability":2048,
+	"tier":5,
+	"material":"Manyullyn"
+},
+{
+	"speed":8.0,
+	"durability":768,
+	"tier":3,
+	"material":"Steeleaf"
+},
+{
+	"speed":8.0,
+	"durability":1024,
+	"tier":3,
+	"material":"Knightmetal"
+},
+{
+	"speed":13.0,
+	"durability":128,
+	"tier":2,
+	"material":"SterlingSilver"
+},
+{
+	"speed":14.0,
+	"durability":128,
+	"tier":2,
+	"material":"RoseGold"
+},
+{
+	"speed":12.0,
+	"durability":256,
+	"tier":2,
+	"material":"BlackBronze"
+},
+{
+	"speed":8.0,
+	"durability":256,
+	"tier":2,
+	"material":"BismuthBronze"
+},
+{
+	"speed":6.5,
+	"durability":768,
+	"tier":3,
+	"material":"BlackSteel"
+},
+{
+	"speed":7.0,
+	"durability":896,
+	"tier":4,
+	"material":"RedSteel"
+},
+{
+	"speed":7.5,
+	"durability":1024,
+	"tier":4,
+	"material":"BlueSteel"
+},
+{
+	"speed":8.0,
+	"durability":1280,
+	"tier":3,
+	"material":"DamascusSteel"
+},
+{
+	"speed":8.0,
+	"durability":2560,
+	"tier":4,
+	"material":"TungstenSteel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"NitroFuel"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"RedAlloy"
+},
+{
+	"speed":8.0,
+	"durability":256,
+	"tier":2,
+	"material":"CobaltBrass"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"TricalciumPhosphate"
+},
+{
+	"speed":1.0,
+	"durability":64,
+	"tier":1,
+	"material":"Basalt"
+},
+{
+	"speed":7.0,
+	"durability":128,
+	"tier":2,
+	"material":"GarnetRed"
+},
+{
+	"speed":7.0,
+	"durability":128,
+	"tier":2,
+	"material":"GarnetYellow"
+},
+{
+	"speed":1.0,
+	"durability":16,
+	"tier":1,
+	"material":"Marble"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Sugar"
+},
+{
+	"speed":12.0,
+	"durability":256,
+	"tier":3,
+	"material":"Thaumium"
+},
+{
+	"speed":10.0,
+	"durability":128,
+	"tier":3,
+	"material":"Vinteum"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Redrock"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"PotassiumFeldspar"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Biotite"
+},
+{
+	"speed":4.0,
+	"durability":64,
+	"tier":3,
+	"material":"GraniteBlack"
+},
+{
+	"speed":4.0,
+	"durability":64,
+	"tier":3,
+	"material":"GraniteRed"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Chrysotile"
+},
+{
+	"speed":1.0,
+	"durability":32,
+	"tier":1,
+	"material":"Realgar"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"VanadiumMagnetite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"BasalticMineralSand"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"GraniticMineralSand"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"GarnetSand"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"QuartzSand"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Bastnasite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Pentlandite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Spodumene"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Pollucite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Tantalite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Lepidolite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Glauconite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"GlauconiteSand"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Vermiculite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Bentonite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"FullersEarth"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Pitchblende"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Monazite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Malachite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Mirabilite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Mica"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Trona"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Barite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Gypsum"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Alunite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Dolomite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Wollastonite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Zeolite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Kyanite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Kaolinite"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"Talc"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Soapstone"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Concrete"
+},
+{
+	"speed":6.0,
+	"durability":256,
+	"tier":2,
+	"material":"IronMagnetic"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":3,
+	"material":"SteelMagnetic"
+},
+{
+	"speed":7.0,
+	"durability":512,
+	"tier":2,
+	"material":"NeodymiumMagnetic"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":2,
+	"material":"SamariumMagnetic"
+},
+{
+	"speed":14.0,
+	"durability":1280,
+	"tier":4,
+	"material":"TungstenCarbide"
+},
+{
+	"speed":3.0,
+	"durability":1920,
+	"tier":3,
+	"material":"VanadiumSteel"
+},
+{
+	"speed":10.0,
+	"durability":4000,
+	"tier":3,
+	"material":"HSSG"
+},
+{
+	"speed":10.0,
+	"durability":5120,
+	"tier":4,
+	"material":"HSSE"
+},
+{
+	"speed":14.0,
+	"durability":3000,
+	"tier":4,
+	"material":"HSSS"
+},
+{
+	"speed":3.0,
+	"durability":64,
+	"tier":1,
+	"material":"EpoxidFiberReinforced"
+},
+{
+	"speed":3.0,
+	"durability":64,
+	"tier":1,
+	"material":"Polybenzimidazole"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":1,
+	"material":"Electrotine"
+},
+{
+	"speed":16.0,
+	"durability":3600,
+	"tier":3,
+	"material":"Galgadorian"
+},
+{
+	"speed":32.0,
+	"durability":7200,
+	"tier":5,
+	"material":"EnhancedGalgadorian"
+},
+{
+	"speed":10.0,
+	"durability":384,
+	"tier":2,
+	"material":"BloodInfusedIron"
+},
+{
+	"speed":32.0,
+	"durability":8192,
+	"tier":4,
+	"material":"Shadow"
+},
+{
+	"speed":15.0,
+	"durability":1024,
+	"tier":4,
+	"material":"Ledox"
+},
+{
+	"speed":18.0,
+	"durability":2048,
+	"tier":4,
+	"material":"Quantium"
+},
+{
+	"speed":8.0,
+	"durability":512,
+	"tier":4,
+	"material":"Mytryl"
+},
+{
+	"speed":36.0,
+	"durability":8192,
+	"tier":8,
+	"material":"BlackPlutonium"
+},
+{
+	"speed":9.0,
+	"durability":1024,
+	"tier":4,
+	"material":"CallistoIce"
+},
+{
+	"speed":16.0,
+	"durability":512,
+	"tier":3,
+	"material":"Duralumin"
+},
+{
+	"speed":32.0,
+	"durability":10240,
+	"tier":5,
+	"material":"Oriharukon"
+},
+{
+	"speed":8.0,
+	"durability":256,
+	"tier":6,
+	"material":"MysteriousCrystal"
+},
+{
+	"speed":3.0,
+	"durability":128,
+	"tier":2,
+	"material":"RedstoneAlloy"
+},
+{
+	"speed":8.0,
+	"durability":256,
+	"tier":2,
+	"material":"Soularium"
+},
+{
+	"speed":6.0,
+	"durability":256,
+	"tier":3,
+	"material":"ConductiveIron"
+},
+{
+	"speed":6.0,
+	"durability":512,
+	"tier":2,
+	"material":"ElectricalSteel"
+},
+{
+	"speed":12.0,
+	"durability":1024,
+	"tier":3,
+	"material":"EnergeticAlloy"
+},
+{
+	"speed":18.0,
+	"durability":4048,
+	"tier":4,
+	"material":"VibrantAlloy"
+},
+{
+	"speed":6.0,
+	"durability":256,
+	"tier":3,
+	"material":"PulsatingIron"
+},
+{
+	"speed":8.0,
+	"durability":512,
+	"tier":3,
+	"material":"DarkSteel"
+},
+{
+	"speed":12.0,
+	"durability":2000,
+	"tier":4,
+	"material":"EndSteel"
+},
+{
+	"speed":2.0,
+	"durability":64,
+	"tier":2,
+	"material":"CrudeSteel"
+},
+{
+	"speed":18.0,
+	"durability":768,
+	"tier":4,
+	"material":"CrystallineAlloy"
+},
+{
+	"speed":24.0,
+	"durability":1024,
+	"tier":5,
+	"material":"MelodicAlloy"
+},
+{
+	"speed":96.0,
+	"durability":10240,
+	"tier":7,
+	"material":"StellarAlloy"
+},
+{
+	"speed":6.0,
+	"durability":128,
+	"tier":3,
+	"material":"CrystallinePinkSlime"
+},
+{
+	"speed":8.0,
+	"durability":512,
+	"tier":3,
+	"material":"EnergeticSilver"
+},
+{
+	"speed":12.0,
+	"durability":768,
+	"tier":4,
+	"material":"VividAlloy"
+},
+{
+	"speed":8.0,
+	"durability":1500,
+	"tier":3,
+	"material":"Enderium"
+},
+{
+	"speed":14.0,
+	"durability":64,
+	"tier":3,
+	"material":"Mithril"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":0,
+	"material":"BlueAlloy"
+},
+{
+	"speed":6.0,
+	"durability":384,
+	"tier":3,
+	"material":"ShadowIron"
+},
+{
+	"speed":6.0,
+	"durability":768,
+	"tier":4,
+	"material":"ShadowSteel"
+},
+{
+	"speed":10.0,
+	"durability":64,
+	"tier":2,
+	"material":"AstralSilver"
+},
+{
+	"speed":64.0,
+	"durability":1310720,
+	"tier":10,
+	"material":"InfinityCatalyst"
+},
+{
+	"speed":256.0,
+	"durability":2621440,
+	"tier":17,
+	"material":"Infinity"
+},
+{
+	"speed":128.0,
+	"durability":51200,
+	"tier":8,
+	"material":"Trinium"
+},
+{
+	"speed":32.0,
+	"durability":850000,
+	"tier":7,
+	"material":"Ichorium"
+},
+{
+	"speed":96.0,
+	"durability":163840,
+	"tier":12,
+	"material":"CosmicNeutronium"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Pentacadmiummagnesiumhexaoxid"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Titaniumonabariumdecacoppereikosaoxid"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Uraniumtriplatinid"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Vanadiumtriindinid"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Tetranaquadahdiindiumhexaplatiumosminid"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Longasssuperconductornameforuvwire"
+},
+{
+	"speed":1.0,
+	"durability":0,
+	"tier":3,
+	"material":"Longasssuperconductornameforuhvwire"
 }
 ]

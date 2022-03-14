@@ -1,7 +1,7 @@
 onVersionChanged(function(version) {
 	var card = $( "#ic2-nuclear-simulator-card" );
 
-    if (version == "it3") {
+    if (version != "it2") {
         card.hide();
         return;
     } else {

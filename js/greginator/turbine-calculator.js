@@ -1,7 +1,7 @@
 onVersionChanged(function(version) {
 	var card = $( "#turbine-calculator-card" );
 
-	if (version == "it3") {
+	if (version != "it2") {
 		card.hide();
 		return;
 	} else {

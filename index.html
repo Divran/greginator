@@ -24,7 +24,11 @@
 				}
 				window.onVersionChanged = onVersionChanged;
 
-				var version = localStorage["version"] || "it2";
+				var version = localStorage["version"];
+				if (typeof version == "undefined") version = "it2";
+				$(document).ready(function() {
+					$("#version-selector-" + version).click();
+				});
 				function versionChanged() {
 					$.each(callbacks,function(key,val) {
 						val(version);
@@ -60,6 +64,9 @@
 		<!--  load all it3 data -->
 		<script src="data/tools_it3.js"></script>
 		<script src="data/food.js"></script>
+
+		<!-- load all gtnh data -->
+		<script src="data/tools_gtnh.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -72,6 +79,9 @@
 						</label>
 						<label class="btn btn-light">
 							<input type="radio" name="version-selector" id="version-selector-it3" value="it3"> InfiTech 3
+						</label>
+						<label class="btn btn-light">
+							<input type="radio" name="version-selector" id="version-selector-gtnh" value="gtnh"> GTNH
 						</label>
 					</div>
 				</div>
@@ -131,7 +141,7 @@
 								</small>
 							</div>
 							<div class="col-md-7">
-								<div class="card">
+								<div class="card tool-browser-filters">
 									<div class="card-body">
 										<h5>Filter to</h5>
 

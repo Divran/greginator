@@ -1,7 +1,7 @@
 onVersionChanged(function(version) {
 	var card = $( "#gt-food-browser" );
 
-	if (version == "it2") {
+	if (version != "it3") {
 		card.hide();
 		return;
 	} else {
