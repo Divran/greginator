@@ -502,7 +502,7 @@ onVersionChanged(function(version) {
 
 			var durability_time = 0;
 			// durability for all turbines is min(output*0.2, output^0.6) every 1000 ticks
-			var damage_taken = Math.floor(Math.min(stats.energy_output*0.2,Math.pow(stats.energy_output,0.6))/1000*20); // multiply by 20 to convert to seconds instead of ticks
+			var damage_taken = Math.floor(Math.min(stats.energy_output*0.2,Math.pow(stats.energy_output,0.6)))/1000*20; // multiply by 20 to convert to seconds instead of ticks
 
 			durability_time = selected_material[selected_size].durability / damage_taken;
 			durability_time = formatTime(durability_time);
