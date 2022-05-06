@@ -670,7 +670,7 @@ onVersionChanged(function(version) {
 		boiler_stats.push("<table class='table table-bordered'><thead>"+
 			"<tr>"+
 				"<th colspan='3'><input class='form-control customFuelValue' type='number' placeholder='Custom fuel value'></th>"+
-				"<th class='customFuelValueOtherHeader' colspan='" + boiler_fuels.length + "'>Burn times<br><small>Burn time Equation: floor((FuelValue/80)*RuntimeBoost)</small></th>"+
+				"<th class='customFuelValueOtherHeader' colspan='" + boiler_fuels.length + "'>Burn times<br><small>Burn time equation: floor((FuelValue/80)*RuntimeBoost)</small></th>"+
 			"</tr><tr>"+
 				"<th>Tier</th>"+
 				"<th>Production</th>"+
