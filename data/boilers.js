@@ -12,21 +12,36 @@ data.add("boilers","it2",[
 	{
 		name:"Large Bronze Boiler",
 		output: 800,
-		charcoal_time: 40
+		runtime_boost: 2,
 	},
 	{
 		name:"Large Steel Boiler",
 		output: 1200,
-		charcoal_time: 30
+		runtime_boost: 1.5,
 	},
 	{
 		name:"Large Titanium Boiler",
 		output: 1600,
-		charcoal_time: 26
+		runtime_boost: 1.3,
 	},
 	{
 		name:"Large Tungstensteel Boiler",
 		output: 2000,
-		charcoal_time: 24
+		runtime_boost: 1.2,
 	},
+]);
+
+data.add("boiler fuels", "it2",[
+	{
+		name: "Charcoal/Coal",
+		fuel_value: 1600,
+	},
+	{
+		name: "Lignite",
+		fuel_value: 1200,
+	},
+	{
+		name: "Alumentum",
+		fuel_value: 6400,
+	}
 ]);

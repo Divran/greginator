@@ -20,6 +20,7 @@ onVersionChanged(function(version) {
 	var gregtech_pipes;
 	var gregtech_pumps;
 	var boilers;
+	var boiler_fuels;
 	var dynamos;
 	var boiler_stats = "";
 
@@ -40,6 +41,7 @@ onVersionChanged(function(version) {
 			gregtech_pipes = data.getCopy("gregtech pipes",version);
 			gregtech_pumps = data.getCopy("gregtech pumps",version);
 			boilers = data.getCopy("boilers",version);
+			boiler_fuels = data.getCopy("boiler fuels",version);
 			dynamos = data.getCopy("dynamo hatches",version);
 			initialize();
 		}
@@ -517,6 +519,8 @@ onVersionChanged(function(version) {
 				steam_stats
 			]);
 
+			setupCustomFuelValueInput(stats_container);
+
 			transfer_table.empty();
 
 			transfer_table.append("<tr><th>Name</th><th>Amount</th><th>Throughput</th><th>Remainder</th></tr>");
@@ -608,21 +612,92 @@ onVersionChanged(function(version) {
 		update();
 	}
 
+	function buildFuelValueCell(fuelValue, boost) {
+		let ticks = Math.floor((fuelValue/80)*boost);
+		return ticks + "t or " + (ticks/20) + "s<br><small style='color:inherit !important'>" + (Math.floor((1/(ticks/20))*1000+0.5)/1000) + " per sec</small>";
+	}
+
+	function setupCustomFuelValueInput(parent) {
+		console.log("SETUP");
+		var inp = $(".customFuelValue", parent);
+		var results = $(".customFuelValueResult", parent);
+		var header = $(".customFuelValueHeader", parent);
+		var otherHeader = $(".customFuelValueOtherHeader", parent);
+
+		function doUpdate() {
+			var customValue = parseInt(inp.val());
+			if (customValue) {
+				inp.removeClass("border-error");
+				otherHeader.attr("colspan",boiler_fuels.length+1);
+				header.show();
+			} else {
+				inp.addClass("border-error");
+				otherHeader.attr("colspan",boiler_fuels.length);
+				header.hide();
+			}
+
+			results.each(function() {
+				var that = $(this);
+				that.empty();
+
+				if (customValue) {
+					that.show();
+					var boilerId = that.attr("data-boilerid");
+					var boiler = boilers[parseInt(boilerId)];
+					that.html(buildFuelValueCell(customValue, boiler.runtime_boost));
+				} else {
+					that.hide();
+				}
+			});
+		}
+
+		inp.on("input", doUpdate );
+		doUpdate();
+	}
+
 	function initialize() {
 		var material_search = $($( ".material-search", card )[0]);
 		var fuel_search = $($( ".fuel-search", card )[0]);
 
+		var fuels_headers = [];
+		for(var i=0;i<boiler_fuels.length;i++) {
+			fuels_headers.push("<th>" + boiler_fuels[i].name + "<br><small>Fuel value: " + boiler_fuels[i].fuel_value + "</th>");
+		}
+
+
 		boiler_stats = [];
 		boiler_stats.push("<div class='collapse' id='collapseBoilerStats'>");
-		boiler_stats.push("<table class='table table-bordered'><thead><tr><th>Tier</th><th>Production</th><th>Consumption (Fuel value per tick)</th></tr></thead>");
+		boiler_stats.push("<table class='table table-bordered'><thead>"+
+			"<tr>"+
+				"<th colspan='3'><input class='form-control customFuelValue' type='number' placeholder='Custom fuel value'></th>"+
+				"<th class='customFuelValueOtherHeader' colspan='" + boiler_fuels.length + "'>Burn times<br><small>Burn time Equation: floor((FuelValue/80)*RuntimeBoost)</small></th>"+
+			"</tr><tr>"+
+				"<th>Tier</th>"+
+				"<th>Production</th>"+
+				"<th>Runtime Boost</th>"+
+				fuels_headers.join("")+
+				"<th class='customFuelValueHeader'>Custom</th>"+
+			"</tr></thead>"
+		);
 		for(var i=0;i<boilers.length;i++) {
 			let boiler = boilers[i];
+
+			var fuels_columns = [];
+			for(var j=0;j<boiler_fuels.length;j++) {
+				let fuel = boiler_fuels[j];
+				fuels_columns.push("<td>" + buildFuelValueCell(fuel.fuel_value, boiler.runtime_boost) + "</td>");
+			}
+
+			fuels_columns.push("<td class='customFuelValueResult' data-boilerid='" + i + "'></td>");
+
 			boiler_stats.push(
 				"<tr><td>"+boiler.name.match(/Large (.+) Boiler/)[1]+"</td>"+
 				"<td>"+boiler.output+" mb/t</td>"+
-				"<td>"+Math.floor((1600/boiler.charcoal_time)*100)/100+ " val/t</td>"
+				"<td>"+boiler.runtime_boost+"</td>"+
+				fuels_columns.join("")
 			)
 		}
+
 		boiler_stats.push("</table></div>");
 		boiler_stats = boiler_stats.join("")
 
