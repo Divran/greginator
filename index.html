@@ -391,6 +391,64 @@
 			</div>
 			<script src="js/greginator/overclock-calculator.js"></script>
 
+			<div class="card" id="gt-cell-calculator">
+				<div class="card card-body new-item" style="display:none;">
+					<button type="button" class="close link-pointer" style="z-index:1000;" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="row">
+						<div class="col-md-6">
+							<input type="number" class="form-control mb-2 recipe-amount" placeholder="Recipe Amount (mb)" />
+							<select class="form-control cell-search" placeholder="Cell Size">
+								<option value="1000" data-subtext="1000 mb">Regular Cell</option>
+								<option value="8000" data-subtext="8000 mb">Steel</option>
+								<option value="32000" data-subtext="32000 mb">Aluminium</option>
+								<option value="128000" data-subtext="128000 mb">Stainless</option>
+								<option value="512000" data-subtext="512000 mb">Tungstensteel</option>
+								<option value="144" data-subtext="144 mb">Flask</option>
+								<option value="250" data-subtext="250 mb">Flask</option>
+								<option value="item" data-subtext="Not a fluid">Item</option>
+							</select>
+						</div>
+						<div class="col-md-6" class="cell-result">
+							Nr of <span class="num-cells-title">Cells</span>: <span class="num-cells"></span><br />
+							Total Amount: <span class="num-fluid"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-header">
+					<span class="float-right">
+						Copy/Paste Settings: <input type="text" class="d-inline-block form-control settings-input" style="max-width:100px;" />
+					</span>
+					<h4 class="card-title">
+						Cell Calculator
+					</h4>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6">
+								<center>Inputs</center>
+								<div class="inputs"></div>
+								<div class="btn btn-block btn-success add-input">Add</div>
+							</div>
+							<div class="col-md-6" >
+								<center>Outputs</center>
+								<div class="outputs"></div>
+								<div class="btn btn-block btn-success add-output">Add</div>
+							</div>
+						</div>
+						<div class="cell-info pt-2">
+							<center>
+							You must add at least one input fluid and one output fluid before calculations begin.
+							</center>
+						</span>
+					</div>
+				</div>
+			</div>
+			<script src="js/greginator/cell-calculator.js"></script>
+
 			<div class="card" id="gt-food-browser">
 				<div class="card-header">
 					<h4 class="card-title">Food Browser</h4>
