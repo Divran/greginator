@@ -98,3 +98,16 @@ table td small {
 	top: 16px;
 	right: 16px;
 }
+
+.table-borderless td, .table-borderless th {
+	border: 0;
+}
+
+.table-padless td, .table-padless th {
+	padding: 0;
+}
+
+.table-padless th {
+	width: 1%;
+	padding-right: 8px;
+}

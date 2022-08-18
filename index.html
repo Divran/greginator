@@ -412,8 +412,20 @@
 							</select>
 						</div>
 						<div class="col-md-6" class="cell-result">
-							Nr of <span class="num-cells-title">Cells</span>: <span class="num-cells"></span><br />
-							Total Amount: <span class="num-fluid"></span>
+							<table class="table table-sm table-borderless table-padless">
+								<tr class="num-cells-row">
+									<th><span class="num-cells-title">Cells</span></th>
+									<td><span class="num-cells"></span></td>
+								</tr>
+								<tr class="num-stacks-row">
+									<th>Stacks</th>
+									<td class="num-stacks"></td>
+								</tr>
+								<tr class="num-fluid-row">
+									<th>Total</th>
+									<td><span class="num-fluid"></span></td>
+								</tr>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -442,7 +454,7 @@
 						</div>
 						<div class="cell-info pt-2">
 							<center>
-							You must add at least one input fluid and one output fluid before calculations begin.
+							You must add at least one input and one output (and at least one fluid) before calculations begin.
 							</center>
 						</div>
 					</div>

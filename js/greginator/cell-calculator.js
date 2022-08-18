@@ -65,7 +65,8 @@ onVersionChanged(function(version) {
 		function fEach(that, values_tbl) {
 			var amounts = getAmounts($(that), values_tbl);
 
-			if (!isNaN(amounts.recipe_amount) && !isNaN(amounts.cell_size)) {
+			if (!isNaN(amounts.recipe_amount) && !isNaN(amounts.cell_size) && 
+				amounts.recipe_amount > 0 && amounts.cell_size > 0) {
 				if (amounts.is_item == false) {
 					lcm_list[amounts.recipe_amount] = true;
 					lcm_list[amounts.cell_size] = true;	
@@ -81,14 +82,18 @@ onVersionChanged(function(version) {
 		settings_input.val(JSON.stringify(settings));
 
 		lcm_list = Object.keys(lcm_list);
-		if (lcm_list.length > 0 && 
-			values.inputs.filter(v=>v.is_item==false).length > 0 && 
-			values.outputs.filter(v=>v.is_item==false).length > 0) {
+		if (lcm_list.length > 1 && 
+			values.inputs.length > 0 && 
+			values.outputs.length > 0) {
 			var lcm_value = lcm_list.reduce(lcm);
+			//console.log("lcm_list:",lcm_list);
+			//console.log("lcm_value:",lcm_value);
 
 			values.outputs.sort((a,b) => a.recipe_amount-b.recipe_amount);
 			var smallest_output = values.outputs.filter(v=>v.is_item==false)[0];
+			if (smallest_output == null) smallest_output = values.inputs.filter(v=>v.is_item==false)[0];
 			var output_mult = lcm_value / smallest_output.recipe_amount;
+			//console.log("output_mult:",output_mult);
 
 			var biggest_cell = Math.max(
 				values.inputs.reduce((a,b) => Math.max(a,b.cell_size), 0),
@@ -99,6 +104,7 @@ onVersionChanged(function(version) {
 				values.outputs.reduce((a,b) => Math.min(a,b.cell_size), 512000)
 			)
 
+			// reduce down to smallest multiplier
 			while(
 				(output_mult % 2) == 0 &&
 				output_mult > (biggest_cell / smallest_cell) &&
@@ -107,19 +113,76 @@ onVersionChanged(function(version) {
 			) {
 				output_mult /= 2;
 			}
+			//console.log("output_mult after reduce:",output_mult);
 
-			values.inputs.map((v) => {
+			// increment up in case any are below 1
+			var infloop = 10;
+			var original = output_mult;
+			var fractionConverter = [1,10,5,10,5,2,5,10,5,10];
+			do {
+				infloop--;
+				if (infloop<0) {
+					alert("Unable to resolve all issues");
+					output_mult = original;
+					break;
+				}
+				var inp = values.inputs.find(v => !v.is_item && ((v.recipe_amount * output_mult) % v.cell_size) != 0);
+				if (inp) {
+					var fraction = Math.floor((((inp.recipe_amount * output_mult) / inp.cell_size) % 1) * 10);
+					output_mult *= fractionConverter[fraction] || 1;
+					//console.log("change",fractionConverter[fraction] || 1);
+					//console.log("mult",output_mult);
+					//output_mult *= inp.cell_size / ((inp.recipe_amount * output_mult) % inp.cell_size);
+					continue;
+				}
+				var out = values.outputs.find(v => !v.is_item && ((v.recipe_amount * output_mult) % v.cell_size) != 0);
+				if (out) {
+					var fraction = Math.floor((((out.recipe_amount * output_mult) / out.cell_size) % 1) * 10);
+					output_mult *= fractionConverter[fraction] || 1;
+					//console.log("change",out.cell_size / ((out.recipe_amount * output_mult) % out.cell_size));
+					//console.log("mult",output_mult);
+					//output_mult *= out.cell_size / ((out.recipe_amount * output_mult) % out.cell_size);
+					continue;
+				}
+			} while (inp != null || out != null);
+			//console.log("output_mult after inc:",output_mult);
+
+			// display results
+			function doMap(v) {
 				var total_fluid = v.recipe_amount * output_mult;
-				$(".num-cells",v.elem).text("" + (total_fluid / v.cell_size));
-				$(".num-fluid",v.elem).text(total_fluid + " mb");
+				var total_amount = (total_fluid / v.cell_size);
+
+				// nr of cells/items
+				$(".num-cells",v.elem).text("" + total_amount);
 				$(".num-cells-title",v.elem).text(v.is_item ? "Items" : "Cells");
-			});
-			values.outputs.map((v) => {
-				var total_fluid = v.recipe_amount * output_mult;
-				$(".num-cells",v.elem).text("" + (total_fluid / v.cell_size));
+
+				// generate stack size info
+				var stack_text = [];
+				var stack_title = [];
+				if (total_amount > 64) {
+					stack_text.push("" + Math.floor(total_amount/64));
+					stack_text.push(" (" + (total_amount%64) + ")");
+					stack_title.push("Nr of 64 (Remainder)");
+				}
+				if (total_amount > 127) {
+					stack_text.push(" / " + Math.floor(total_amount/127));
+					stack_text.push(" (" + (total_amount%127) + ")");
+					stack_title.push(" / Nr of 127 (Remainder)");
+				}
+				if (stack_text.length > 0) {
+					$(".num-stacks-row",v.elem).show().attr("title", stack_title.join(""));
+					$(".num-stacks",v.elem).text(stack_text.join(""));
+				} else {
+					$(".num-stacks-row",v.elem).hide();
+				}
+
+				// total amount of fluid
+				$(".num-fluid-row",v.elem)[v.is_item ? "hide" : "show"]();
 				$(".num-fluid",v.elem).text(total_fluid + " mb");
-				$(".num-cells-title",v.elem).text(v.is_item ? "Items" : "Cells");
-			});
+			}
+
+			values.inputs.map(doMap);
+			values.outputs.map(doMap);
 			
 			$(".cell-info",card).hide();
 		} else {
@@ -170,7 +233,10 @@ onVersionChanged(function(version) {
 		});
 
 
-		$(".close",clone).click(()=>clone.remove());
+		$(".close",clone).click(()=>{
+			clone.remove()
+			doMath();
+		});
 		return clone;
 	}
 
