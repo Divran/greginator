@@ -90,6 +90,24 @@ onVersionChanged(function(version) {
 			var smallest_output = values.outputs.filter(v=>v.is_item==false)[0];
 			var output_mult = lcm_value / smallest_output.recipe_amount;
 
+			var biggest_cell = Math.max(
+				values.inputs.reduce((a,b) => Math.max(a,b.cell_size), 0),
+				values.outputs.reduce((a,b) => Math.max(a,b.cell_size), 0)
+			)
+			var smallest_cell = Math.min(
+				values.inputs.reduce((a,b) => Math.min(a,b.cell_size), 512000),
+				values.outputs.reduce((a,b) => Math.min(a,b.cell_size), 512000)
+			)
+
+			while(
+				(output_mult % 2) == 0 &&
+				output_mult > (biggest_cell / smallest_cell) &&
+				values.inputs.every(v => v.is_item || ((v.recipe_amount * (output_mult/2)) % v.cell_size) == 0) &&
+				values.outputs.every(v => v.is_item || ((v.recipe_amount * (output_mult/2)) % v.cell_size) == 0)
+			) {
+				output_mult /= 2;
+			}
+
 			values.inputs.map((v) => {
 				var total_fluid = v.recipe_amount * output_mult;
 				$(".num-cells",v.elem).text("" + (total_fluid / v.cell_size));
@@ -210,7 +228,10 @@ onVersionChanged(function(version) {
 			});
 
 			doMath();
+			collapse.collapse("show");
 		}
+	}).click(() => {
+		settings_input.select();
 	});
 
 });
