@@ -214,6 +214,7 @@ onVersionChanged(function(version) {
 		elem.val(val);
 		elem.selectpicker("refresh");
 		elem.selectpicker("toggle");
+		window.applyThemeToBootstrapSelect($("div.cell-search",parent));
 	}
 
 	function makeClone() {

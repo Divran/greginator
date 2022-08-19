@@ -112,6 +112,19 @@ table td small {
 	padding-right: 8px;
 }
 
+/* some dark theme fixes */
 .text-light .text-muted {
+	color: #5a5f64 !important;
+}
+
+.bg-dark .close {
+	text-shadow: none;
+}
+
+.no-results {
+	background-color: transparent !important;
+}
+
+.form-control.bg-secondary::placeholder {
 	color: #5a5f64 !important;
 }
