@@ -815,6 +815,10 @@ onVersionChanged(function(version) {
 			$(".dropdown-menu").on("focusout",function(a) {
 				$(window).off('resize.getSize scroll.getSize');
 			});
+
+			// apply theme
+			window.applyThemeToBootstrapSelect($("div.material-search",p1));
+			window.applyThemeToBootstrapSelect($("div.fuel-search",p2));
 		},1);
 	}
 });

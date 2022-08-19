@@ -111,3 +111,7 @@ table td small {
 	width: 1%;
 	padding-right: 8px;
 }
+
+.text-light .text-muted {
+	color: #5a5f64 !important;
+}

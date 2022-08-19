@@ -17,6 +17,7 @@ onVersionChanged(function(version) {
 	var add_output = $(".add-output", card);
 	var new_item = $(".new-item", card);
 	var settings_input = $(".settings-input", card);
+	var settings_multiplier = $(".settings-multiplier", card);
 
 	// https://stackoverflow.com/a/49722579
 	var gcd = (a, b) => {return a ? gcd(b % a, a) : b;}
@@ -27,7 +28,8 @@ onVersionChanged(function(version) {
 	function doMath() {
 		var settings = {
 			inputs:[],
-			outputs:[]
+			outputs:[],
+			multiplier: ''
 		};
 
 		function getAmounts(elem, values_tbl) {
@@ -79,6 +81,8 @@ onVersionChanged(function(version) {
 		inputs.children().each((k,v) => fEach(v,"inputs"));
 		outputs.children().each((k,v) => fEach(v,"outputs"));
 
+		var mult_temp = parseInt(settings_multiplier.val()) || 1;
+		settings.multiplier = ""+mult_temp;
 		settings_input.val(JSON.stringify(settings));
 
 		lcm_list = Object.keys(lcm_list);
@@ -105,24 +109,29 @@ onVersionChanged(function(version) {
 			)
 
 			// reduce down to smallest multiplier
-			while(
-				(output_mult % 2) == 0 &&
-				output_mult > (biggest_cell / smallest_cell) &&
-				values.inputs.every(v => v.is_item || ((v.recipe_amount * (output_mult/2)) % v.cell_size) == 0) &&
-				values.outputs.every(v => v.is_item || ((v.recipe_amount * (output_mult/2)) % v.cell_size) == 0)
-			) {
-				output_mult /= 2;
+			function doReduction() {
+				while(
+					(output_mult % 2) == 0 &&
+					output_mult > (biggest_cell / smallest_cell) &&
+					values.inputs.every(v => v.is_item || ((v.recipe_amount * (output_mult/2)) % v.cell_size) == 0) &&
+					values.outputs.every(v => v.is_item || ((v.recipe_amount * (output_mult/2)) % v.cell_size) == 0)
+				) {
+					output_mult /= 2;
+				}
 			}
+
+			doReduction();
 			//console.log("output_mult after reduce:",output_mult);
 
 			// increment up in case any are below 1
 			var infloop = 10;
 			var original = output_mult;
 			var fractionConverter = [1,10,5,10,5,2,5,10,5,10];
+			$(".cell-warning").hide();
 			do {
 				infloop--;
 				if (infloop<0) {
-					alert("Unable to resolve all issues");
+					$(".cell-warning").show();
 					output_mult = original;
 					break;
 				}
@@ -146,6 +155,12 @@ onVersionChanged(function(version) {
 				}
 			} while (inp != null || out != null);
 			//console.log("output_mult after inc:",output_mult);
+
+			// reduce as far as possible again
+			doReduction();
+
+			// multiply by specified amount
+			output_mult *= mult_temp;
 
 			// display results
 			function doMap(v) {
@@ -211,6 +226,8 @@ onVersionChanged(function(version) {
 		search.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true});
 		var searchContainer = $("div.cell-search",clone);
 
+		window.applyThemeToBootstrapSelect(searchContainer);
+
 		search.on("show.bs.select",() => {
 			$(".custom",clone).remove();
 			doMath();
@@ -251,11 +268,6 @@ onVersionChanged(function(version) {
 		doMath();
 	});
 
-	settings_input.click((e) => {
-		e.preventDefault();
-		e.stopPropagation();
-	});
-
 	settings_input.on("input",() => {
 		if (settings_input.val() != "") {
 			var jsonObj = null;
@@ -292,12 +304,21 @@ onVersionChanged(function(version) {
 			jsonObj.outputs.map(v => {
 				doAdd(outputs, v);
 			});
+			settings_multiplier.val(jsonObj.multiplier || '1');
 
 			doMath();
 			collapse.collapse("show");
 		}
-	}).click(() => {
+	}).click((e) => {
 		settings_input.select();
+		e.preventDefault();
+		e.stopPropagation();
 	});
 
+	settings_multiplier.on("input",() => doMath())
+	.click((e) => {
+		settings_multiplier.select();
+		e.preventDefault();
+		e.stopPropagation();
+	});
 });

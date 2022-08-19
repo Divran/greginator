@@ -35,7 +35,39 @@
 					});
 				}
 
+				function themeChanged() {
+					var applyClassesTo = {
+						"btn-secondary": [".btn"],
+						"bg-dark": ["body", ".card"],
+						"bg-secondary": [".form-control", ".bootstrap-select .dropdown-menu"],
+						"text-light": [".card-title", ".card-body", ".form-control", ".table", ".label",
+										".bootstrap-select .dropdown-menu", ".bootstrap-select .dropdown-menu .dropdown-item"],
+					}
+
+					for(let cls in applyClassesTo) {
+						let classes = applyClassesTo[cls];
+						classes.map(v => {
+							if (v == ".btn") {
+								$(v).not(".btn-success")[localStorage['theme']!="light"?"removeClass":"addClass"]("btn-light");
+								$(v).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
+							} else {
+								$(v).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
+							}
+						});
+					}
+				}
+				window.applyThemeToBootstrapSelect = function(selectContainer) {
+					$(".btn", selectContainer)
+					.removeClass("btn-light").removeClass("btn-default")
+					.addClass(localStorage["theme"]=="light"?"btn-light":"btn-secondary");
+					console.log("stuff",$(".btn",selectContainer));
+
+					setTimeout(themeChanged,0);
+				}
+
 				$(document).ready(function() {
+					themeChanged();
+
 					$("input[name='version-selector']").change(function() {
 						if ($(this).is(":checked")) {
 							version = $(this).val();
@@ -46,6 +78,18 @@
 
 					localStorage["version"] = version;
 					versionChanged();
+
+					var theme = localStorage["theme"];
+					if (typeof theme == "undefined") theme = "light";
+					$("#theme-selector-" + theme).click();
+
+					$("input[name='theme-selector']").change(function() {
+						if ($(this).is(":checked")) {
+							localStorage["theme"] = $(this).val();
+							themeChanged();
+						}
+					});
+					
 				});
 			})();
 		</script>
@@ -83,6 +127,18 @@
 						<label class="btn btn-light">
 							<input type="radio" name="version-selector" id="version-selector-gtnh" value="gtnh"> GTNH
 						</label>
+					</div>
+
+					<div class="float-right">
+						Theme:
+						<div class="btn-group btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-light active">
+								<input type="radio" name="theme-selector" id="theme-selector-light" value="light"> Light
+							</label>
+							<label class="btn btn-light">
+								<input type="radio" name="theme-selector" id="theme-selector-dark" value="dark"> Dark
+							</label>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -393,7 +449,7 @@
 
 			<div class="card" id="gt-cell-calculator">
 				<div class="card card-body new-item" style="display:none;">
-					<button type="button" class="close link-pointer" style="z-index:1000;" aria-label="Close">
+					<button type="button" class="close link-pointer" style="z-index:10;" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<div class="row">
@@ -432,7 +488,8 @@
 
 				<div class="card-header">
 					<span class="float-right">
-						Copy/Paste Settings: <input type="text" class="d-inline-block form-control settings-input" style="max-width:100px;" />
+						<span class="label">Multiplier:</span> <input type="number" class="d-inline-block form-control settings-multiplier" style="max-width:100px;" value='1' />
+						<span class="label">Copy/Paste Settings:</span> <input type="text" class="d-inline-block form-control settings-input" style="max-width:100px;" />
 					</span>
 					<h4 class="card-title">
 						Cell Calculator
@@ -454,7 +511,12 @@
 						</div>
 						<div class="cell-info pt-2">
 							<center>
-							You must add at least one input and one output (and at least one fluid) before calculations begin.
+								You must add at least one input and one output (and at least one fluid) before calculations begin.
+							</center>
+						</div>
+						<div class="cell-warning pt-2" style="display:none;">
+							<center>
+								<div class="alert alert-danger d-inline-block">Unable to resolve all fractional multiplier issues.</div>
 							</center>
 						</div>
 					</div>
