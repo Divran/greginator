@@ -114,7 +114,7 @@ table td small {
 
 /* some dark theme fixes */
 .text-light .text-muted {
-	color: #5a5f64 !important;
+	color: #41474c !important;
 }
 
 .bg-dark .close {
