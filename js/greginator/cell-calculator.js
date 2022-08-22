@@ -1,4 +1,7 @@
 onVersionChanged(function(version) {
+	if (window.cellCalculatorInitialized) return;
+	window.cellCalculatorInitialized = true;
+
 	var card = $( "#gt-cell-calculator" );
 
 	var header = $( ".card-header", card );
@@ -72,6 +75,8 @@ onVersionChanged(function(version) {
 				if (amounts.is_item == false) {
 					lcm_list[amounts.recipe_amount] = true;
 					lcm_list[amounts.cell_size] = true;	
+				} else if (amounts.is_item && values_tbl == "inputs") {
+					lcm_list[amounts.recipe_amount] = true;
 				}
 
 				values[values_tbl].push(amounts);
@@ -85,7 +90,7 @@ onVersionChanged(function(version) {
 		settings.multiplier = ""+mult_temp;
 		settings_input.val(JSON.stringify(settings));
 
-		lcm_list = Object.keys(lcm_list);
+		lcm_list = Object.keys(lcm_list).map(v => parseInt(v));
 		if (lcm_list.length > 1 && 
 			values.inputs.length > 0 && 
 			values.outputs.length > 0) {
