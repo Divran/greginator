@@ -1,4 +1,7 @@
 onVersionChanged(function(version) {
+	if (window.turbineCalculatorInitialized) return;
+	window.turbineCalculatorInitialized = true;
+
 	var card = $( "#turbine-calculator-card" );
 
 	if (version != "it2") {
@@ -610,6 +613,9 @@ onVersionChanged(function(version) {
 		});
 
 		update();
+
+		// apply theme
+		window.applyThemeToBootstrapSelect(stats_container);
 	}
 
 	function buildFuelValueCell(fuelValue, boost) {

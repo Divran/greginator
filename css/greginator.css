@@ -128,3 +128,7 @@ table td small {
 .form-control.bg-secondary::placeholder {
 	color: #5a5f64 !important;
 }
+
+.dropdown-item.text-light:hover {
+	background-color: #596066;
+}
