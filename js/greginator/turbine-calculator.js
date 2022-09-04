@@ -564,6 +564,9 @@ onVersionChanged(function(version) {
 				"<p>Time to empty quantum tank: " + timestr_quantum + "<br>"+
 				"Total EU stored in quantum tank: " + total_eu_quantum + " EU</p>"
 			]);
+			
+			// apply theme
+			window.applyThemeToBootstrapSelect(stats_container);
 		}
 
 		var transfer_container = $( "<div class='card-body' style='padding-top:0px; padding-bottom:4px;'>" );
@@ -624,7 +627,6 @@ onVersionChanged(function(version) {
 	}
 
 	function setupCustomFuelValueInput(parent) {
-		console.log("SETUP");
 		var inp = $(".customFuelValue", parent);
 		var results = $(".customFuelValueResult", parent);
 		var header = $(".customFuelValueHeader", parent);

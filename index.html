@@ -35,7 +35,7 @@
 					});
 				}
 
-				function themeChanged() {
+				function themeChanged(parent) {
 					var applyClassesTo = {
 						"btn-secondary": [".btn"],
 						"bg-dark": ["body", ".card"],
@@ -44,24 +44,29 @@
 										".bootstrap-select .dropdown-menu", ".bootstrap-select .dropdown-menu .dropdown-item", ".text"],
 					}
 
+					if (parent) {
+						parent = parent.parent();
+					}
+
 					for(let cls in applyClassesTo) {
 						let classes = applyClassesTo[cls];
 						classes.map(v => {
 							if (v == ".btn") {
-								$(v).not(".btn-success")[localStorage['theme']!="light"?"removeClass":"addClass"]("btn-light");
-								$(v).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
+								$(v, parent).not(".btn-success")[localStorage['theme']!="light"?"removeClass":"addClass"]("btn-light");
+								$(v, parent).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
 							} else {
-								$(v).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
+								$(v, parent).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
 							}
 						});
 					}
+
 				}
 				window.applyThemeToBootstrapSelect = function(selectContainer) {
 					$(".btn", selectContainer)
 					.removeClass("btn-light").removeClass("btn-default")
 					.addClass(localStorage["theme"]=="light"?"btn-light":"btn-secondary");
 
-					setTimeout(themeChanged,5);
+					setTimeout(() => themeChanged(selectContainer),5);
 				}
 
 				$(document).ready(function() {
