@@ -1,7 +1,4 @@
 onVersionChanged(function(version) {
-	if (window.turbineCalculatorInitialized) return;
-	window.turbineCalculatorInitialized = true;
-
 	var card = $( "#turbine-calculator-card" );
 
 	if (version != "it2") {
@@ -10,6 +7,9 @@ onVersionChanged(function(version) {
 	} else {
 		card.show();
 	}
+
+	if (window.turbineCalculatorInitialized) return;
+	window.turbineCalculatorInitialized = true;
 
 	var header = $( ".card-header", card );
 	header.addClass( "link-pointer" );
