@@ -61,7 +61,8 @@ onVersionChanged(function(version) {
 		var overclocks = target_tier - tier;
 		energy = energy * Math.pow(4,overclocks);
 		var speed = Math.pow(2,overclocks);
-		time = time / speed;
+		time = Math.max(1/20,time / speed);
+
 		var output_per_sec = output/time;
 		var input_per_sec = input/time;
 
@@ -76,7 +77,7 @@ onVersionChanged(function(version) {
 		var txt = [];
 		txt.push("Overclocked: <strong>" + overclocks + "</strong> times.");
 		txt.push("Energy consumption: <strong>" + energy + "</strong> eu/t" + amps_txt+".");
-		txt.push("Production: <strong>" + output + "</strong> every <strong>" + time + "</strong> second(s) " + 
+		txt.push("Production: <strong>" + output + "</strong> every <strong>" + time + "</strong> seconds " + 
 			"for a total of <strong>" + round3(output_per_sec) + "</strong> per second." );
 		txt.push("Consumption: <strong>" + round3(input_per_sec) + "</strong> per second.");
 
@@ -130,19 +131,34 @@ onVersionChanged(function(version) {
 		results.html("<h5>Results</h5><p>"+txt.join("<br>")+"</p>"+processing_array+wanted_str);
 	}
 
-	$([energy_elem[0],amps_elem[0],output_elem[0],input_elem[0],time_elem[0],wanted_elem[0],wanted_check[0]]).click(function() {
+	$([energy_elem[0],amps_elem[0],output_elem[0],input_elem[0],time_elem[0],wanted_elem[0],wanted_check[0]]).off("click.oc_calculator").on("click.oc_calculator",function() {
 		$(this).select();
 	}).on("input",doCalc);
-	amps_buttons.click(function() {
+	amps_buttons.off("click.oc_calculator").on("click.oc_calculator",function() {
 		amps_elem.val($(this).val());
 		doCalc();
 	});
 
+	$(".fix-rounded-corners",card).removeClass("fix-rounded-corners");
+
+	var last
 	target_buttons.each(function() {
 		var that = $(this);
 		if (that.attr("checked")) {
 			that.click();
 		}
+
+		if (that.parent().hasClass("oc-gtnh") && version != "gtnh") {
+			if (last) {
+				last.parent().addClass("fix-rounded-corners");
+			}
+			that.parent().hide();
+		} else {
+			that.parent().show();
+		}
+
+		that.parent().tooltip();
+		last = that;
 	}).change(doCalc);
 
 	doCalc();

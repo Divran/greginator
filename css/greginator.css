@@ -132,3 +132,8 @@ table td small {
 .dropdown-item.text-light:hover {
 	background-color: #596066;
 }
+
+.fix-rounded-corners {
+	border-top-right-radius:  0.25rem !important;
+	border-bottom-right-radius:  0.25rem !important;
+}
