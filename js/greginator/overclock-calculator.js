@@ -33,6 +33,9 @@ onVersionChanged(function(version) {
 		return Math.ceil(logn);
 	}
 
+
+	var PA_amount = (version == "gtnh" ? 64 : 16);
+
 	function doCalc() {
 		results.empty();
 
@@ -81,8 +84,8 @@ onVersionChanged(function(version) {
 			"for a total of <strong>" + round3(output_per_sec) + "</strong> per second." );
 		txt.push("Consumption: <strong>" + round3(input_per_sec) + "</strong> per second.");
 
-		var processing_array = "<p>In a processing array, uses <strong>" + round3(energy*amps*16) + "</strong> eu/t, produces <strong>" + round3(output_per_sec*16) + "</strong> items/s, "+
-				" and consumes <strong>" + round3(input_per_sec*16) + "</strong> items/s.</p>";
+		var processing_array = "<p>In a processing array, uses <strong>" + round3(energy*amps*PA_amount) + "</strong> eu/t, produces <strong>" + round3(output_per_sec*PA_amount) + "</strong> items/s, "+
+				" and consumes <strong>" + round3(input_per_sec*PA_amount) + "</strong> items/s.</p>";
 
 		var wanted_str = "";
 		if (!isNaN(wanted)) {
@@ -104,7 +107,6 @@ onVersionChanged(function(version) {
 
 				wanted_str += " <strong>" + target_elem.attr("data-voltage") + "</strong> machines to keep up";
 
-				var PA_amount = (version == "gtnh" ? 64 : 16);
 				var wanted_arrays = wanted_machines < PA_amount ? 0 : Math.ceil(wanted_machines/PA_amount);
 				if (wanted_arrays > 0) {
 					wanted_str += ", or <strong>" + Math.ceil(wanted_machines/PA_amount) + "</strong>";
@@ -121,8 +123,8 @@ onVersionChanged(function(version) {
 
 				if (wanted_arrays > 0) {
 					var wanted_arrays = 
-					wanted_str += " In processing arrays, consumes <strong>"+round3(energy*amps*wanted_arrays*16)+"</strong> eu/t"+
-									" and <strong>"+round3(input_per_sec*wanted_arrays*16)+"</strong> items/s.";
+					wanted_str += " In processing arrays, consumes <strong>"+round3(energy*amps*wanted_arrays*PA_amount)+"</strong> eu/t"+
+									" and <strong>"+round3(input_per_sec*wanted_arrays*PA_amount)+"</strong> items/s.";
 				}
 			}
 
