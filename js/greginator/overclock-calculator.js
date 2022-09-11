@@ -104,11 +104,12 @@ onVersionChanged(function(version) {
 
 				wanted_str += " <strong>" + target_elem.attr("data-voltage") + "</strong> machines to keep up";
 
-				var wanted_arrays = wanted_machines < 16 ? 0 : Math.ceil(wanted_machines/16);
+				var PA_amount = (version == "gtnh" ? 64 : 16);
+				var wanted_arrays = wanted_machines < PA_amount ? 0 : Math.ceil(wanted_machines/PA_amount);
 				if (wanted_arrays > 0) {
-					wanted_str += ", or <strong>" + Math.ceil(wanted_machines/16) + "</strong>";
-					if (round3(wanted_machines/16) != Math.ceil(wanted_machines/16)) {
-						wanted_str += " <small>("+round3(wanted_machines/16)+")</small>";
+					wanted_str += ", or <strong>" + Math.ceil(wanted_machines/PA_amount) + "</strong>";
+					if (round3(wanted_machines/PA_amount) != Math.ceil(wanted_machines/PA_amount)) {
+						wanted_str += " <small>("+round3(wanted_machines/PA_amount)+")</small>";
 					}
 					wanted_str += " processing arrays."
 				} else {
