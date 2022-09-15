@@ -129,7 +129,7 @@ onVersionChanged(function(version) {
 			//console.log("output_mult after reduce:",output_mult);
 
 			// increment up in case any are below 1
-			var infloop = 10;
+			var infloop = 100;
 			var original = output_mult;
 								//   0, 1,2, 3,  4,5,6, 7,8, 9
 			var fractionConverter = [1,10,5,10,2.5,2,5,10,5,10];
@@ -144,12 +144,8 @@ onVersionChanged(function(version) {
 				var inp = values.inputs.find(v => !v.is_item && ((v.recipe_amount * output_mult) % v.cell_size) != 0);
 				if (inp) {
 					var amount = ((inp.recipe_amount * output_mult) / inp.cell_size);
-					if (amount < 1) {
-						output_mult *= 1/amount;
-					} else {
-						var fraction = Math.floor((amount % 1) * 10);
-						output_mult *= fractionConverter[fraction] || 1;
-					}
+					var fraction = parseInt(amount.toString().slice(-1));
+					output_mult *= fractionConverter[fraction] || 1;
 					//console.log("change",fractionConverter[fraction] || 1);
 					//console.log("mult",output_mult);
 					//output_mult *= inp.cell_size / ((inp.recipe_amount * output_mult) % inp.cell_size);
@@ -158,12 +154,8 @@ onVersionChanged(function(version) {
 				var out = values.outputs.find(v => !v.is_item && ((v.recipe_amount * output_mult) % v.cell_size) != 0);
 				if (out) {
 					var amount = ((out.recipe_amount * output_mult) / out.cell_size);
-					if (amount < 1) {
-						output_mult *= 1/amount;
-					} else {
-						var fraction = Math.floor((amount % 1) * 10);
-						output_mult *= fractionConverter[fraction] || 1;
-					}
+					var fraction = parseInt(amount.toString().slice(-1)); //Math.floor((amount % 1) * 10);
+					output_mult *= fractionConverter[fraction] || 1;
 					//console.log("change",out.cell_size / ((out.recipe_amount * output_mult) % out.cell_size));
 					//console.log("mult",output_mult);
 					//output_mult *= out.cell_size / ((out.recipe_amount * output_mult) % out.cell_size);
