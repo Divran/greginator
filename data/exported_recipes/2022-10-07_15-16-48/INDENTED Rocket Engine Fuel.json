@@ -1,0 +1,110 @@
+{
+    "n": "Rocket Engine Fuel",
+    "recs": [
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.LMP-103S",
+                    "lN": "LMP-103S"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.fluid.rocketfuelmixb",
+                    "lN": "Rp-1 Rocket Fuel"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.fluid.rocketfuelmixc",
+                    "lN": "CN3H7O3 Rocket Fuel"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Monomethylhydrazine Fuel Mix",
+                    "lN": "Monomethylhydrazine Fuel Mix"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.fluid.rocketfuelmixa",
+                    "lN": "H8N4C2O4 Rocket Fuel"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.fluid.rocketfuelmixd",
+                    "lN": "Dense Hydrazine Fuel Mixture"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Unsymmetrical Dimethylhydrazine Fuel Mix",
+                    "lN": "Unsymmetrical Dimethylhydrazine Fuel Mix"
+                }
+            ],
+            "fO": []
+        }
+    ]
+}

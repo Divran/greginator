@@ -1,0 +1,398 @@
+{
+    "n": "Combustion Generator Fuels",
+    "recs": [
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30995",
+                    "lN": "Octane Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30706",
+                    "lN": "Ethanol Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30708",
+                    "lN": "Diesel Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.butanol",
+                    "lN": "Butanol Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30707",
+                    "lN": "Oil Cell"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemCellEmpty",
+                    "lN": "Empty Cell"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30705",
+                    "lN": "Biofuel Cell"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemCellEmpty",
+                    "lN": "Empty Cell"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcell.10029",
+                    "lN": "Ether Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFluidCell",
+                    "lN": "Universal Fluid Cell"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFluidCell",
+                    "lN": "Universal Fluid Cell"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30673",
+                    "lN": "Methanol Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcell.10094",
+                    "lN": "Jet Fuel No.3 Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.for.canBiomass",
+                    "lN": "Biomass Can"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.for.canEmpty",
+                    "lN": "Can"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30712",
+                    "lN": "Creosote Cell"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFluidCell",
+                    "lN": "Universal Fluid Cell"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30998",
+                    "lN": "High Octane Gasoline Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.for.bucketShortMead",
+                    "lN": "Short Mead Bucket"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.bucket",
+                    "lN": "Bucket"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30997",
+                    "lN": "Gasoline Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30740",
+                    "lN": "Light Fuel Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcell.10086",
+                    "lN": "Ethanol Gasoline Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30737",
+                    "lN": "Sulfuric Light Fuel Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30711",
+                    "lN": "Fish Oil Cell"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemCellEmpty",
+                    "lN": "Empty Cell"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcell.10095",
+                    "lN": "Jet Fuel A Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30627",
+                    "lN": "Bio Diesel Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30709",
+                    "lN": "Cetane-Boosted Diesel Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFluidCell",
+                    "lN": "Universal Fluid Cell"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFluidCell",
+                    "lN": "Universal Fluid Cell"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        }
+    ]
+}

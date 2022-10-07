@@ -1,0 +1,151 @@
+{
+    "n": "Dissolution Tank",
+    "recs": [
+        {
+            "en": true,
+            "dur": 900,
+            "eut": 480,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2836",
+                    "lN": "Saltpeter Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 4,
+                    "uN": "gt.bwMetaGenerateddustTiny.11011",
+                    "lN": "Tiny Pile of Hafnia-Zirconia Blend Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.18",
+                    "lN": "Thorianite Dust"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.520",
+                    "lN": "Tiny Pile of Monazite Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 10000,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.Muddy Monazite Rare Earth Solution",
+                    "lN": "fluid.Muddy Monazite Rare Earth Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 11000,
+                    "uN": "fluid.Diluted Monazite Rare Earth Mud",
+                    "lN": "fluid.Diluted Monazite Rare Earth Mud"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 8100,
+            "eut": 480,
+            "iI": [
+                {
+                    "cfg": 9,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                },
+                {
+                    "a": 9,
+                    "uN": "gt.metaitem.01.2836",
+                    "lN": "Saltpeter Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 4,
+                    "uN": "gt.bwMetaGenerateddust.11011",
+                    "lN": "Hafnia-Zirconia Blend Dust"
+                },
+                {
+                    "a": 9,
+                    "uN": "gt.bwMetaGenerateddust.18",
+                    "lN": "Thorianite Dust"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.2520",
+                    "lN": "Monazite Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 90000,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 9000,
+                    "uN": "fluid.Muddy Monazite Rare Earth Solution",
+                    "lN": "fluid.Muddy Monazite Rare Earth Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 99000,
+                    "uN": "fluid.Diluted Monazite Rare Earth Mud",
+                    "lN": "fluid.Diluted Monazite Rare Earth Mud"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 1000,
+            "eut": 1920,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2836",
+                    "lN": "Saltpeter Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11109",
+                    "lN": "Gangue Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 10000,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.Conditioned Bastnasite Mud",
+                    "lN": "fluid.Conditioned Bastnasite Mud"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 11000,
+                    "uN": "fluid.Diluted Bastnasite Mud",
+                    "lN": "fluid.Diluted Bastnasite Mud"
+                }
+            ]
+        }
+    ]
+}

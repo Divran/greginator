@@ -709,7 +709,7 @@ onVersionChanged(function(version) {
 		boiler_stats.push("</table></div>");
 		boiler_stats = boiler_stats.join("")
 
-		// delete and re-create these element
+		// delete and re-create this element
 		var p1 = material_search.parent();
 		material_search.remove();
 		material_search = $('<select class="material-search form-control">');
@@ -735,7 +735,7 @@ onVersionChanged(function(version) {
 			}
 
 			var opt1 = "<option value='-' disabled selected>Select material...</option>";
-			var opt2 = "<option value='-' disabled data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'></option>";
+			var opt2 = "<option value='"+name+"' data-content='"+buildTbl("Material","Durability","Efficiency","Flow (of large blade)")+"'>"+name+"</option>";
 
 			function compareNum(a,b) {
 				if (a==b) {return 0;}
@@ -780,7 +780,7 @@ onVersionChanged(function(version) {
 				prnt.append("<option value='"+name+"' data-content='"+buildTbl(name,dur,eff,flow + fun_fact)+"'>"+name+"</option>" );
 			}
 			material_search.append([opt1,opt2,great,acceptable,garbage]);
-			material_search.selectpicker({liveSearch:true,maxOptions:1});
+			material_search.selectpicker({liveSearch:true,maxOptions:1, sanitizeFn:(i) => i});
 
 			var opts = [];
 			opts.push("<option value='-' disabled selected>Select fuel...</option>");
@@ -803,7 +803,7 @@ onVersionChanged(function(version) {
 				opts.push(cat);
 			}
 			fuel_search.append(opts);
-			fuel_search.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true});
+			fuel_search.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true, sanitizeFn:(i) => i});
 
 			material_search.on( "changed.bs.select", function() {
 				selected_material = getMaterialByName(material_search.val());

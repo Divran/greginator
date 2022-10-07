@@ -1,0 +1,20 @@
+{
+    "n": "Extreme Diesel Engine Fuel",
+    "recs": [
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.30998",
+                    "lN": "High Octane Gasoline Cell"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        }
+    ]
+}

@@ -35,42 +35,19 @@
 					});
 				}
 
-				function themeChanged(parent) {
-					var applyClassesTo = {
-						"btn-secondary": [".btn"],
-						"bg-dark": ["body", ".card"],
-						"bg-secondary": [".form-control", ".bootstrap-select .dropdown-menu"],
-						"text-light": [".card-title", ".card-body", ".form-control", ".table", ".label", ".bootstrap-select .filter-option",
-										".bootstrap-select .dropdown-menu", ".bootstrap-select .dropdown-menu .dropdown-item", ".text"],
+				function themeChanged(theme, parent) {
+					if (theme == "light") {
+						$("body").removeClass("dark-theme");
+					} else {
+						$("body").addClass("dark-theme");
 					}
-
-					if (parent) {
-						parent = parent.parent();
-					}
-
-					for(let cls in applyClassesTo) {
-						let classes = applyClassesTo[cls];
-						classes.map(v => {
-							if (v == ".btn") {
-								$(v, parent).not(".btn-success")[localStorage['theme']!="light"?"removeClass":"addClass"]("btn-light");
-								$(v, parent).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
-							} else {
-								$(v, parent).not(".btn-success")[localStorage['theme']=="light"?"removeClass":"addClass"](cls);
-							}
-						});
-					}
-
 				}
 				window.applyThemeToBootstrapSelect = function(selectContainer) {
-					$(".btn", selectContainer)
-					.removeClass("btn-light").removeClass("btn-default")
-					.addClass(localStorage["theme"]=="light"?"btn-light":"btn-secondary");
-
-					setTimeout(() => themeChanged(selectContainer),5);
+					// no longer used
 				}
 
 				$(document).ready(function() {
-					themeChanged();
+					themeChanged(localStorage["theme"]);
 
 					$("input[name='version-selector']").change(function() {
 						if ($(this).is(":checked")) {
@@ -90,7 +67,7 @@
 					$("input[name='theme-selector']").change(function() {
 						if ($(this).is(":checked")) {
 							localStorage["theme"] = $(this).val();
-							themeChanged();
+							themeChanged(localStorage["theme"]);
 						}
 					});
 					
@@ -473,6 +450,49 @@
 			</div>
 			<script src="js/greginator/overclock-calculator.js"></script>
 
+			<div class="card" id="gt-food-browser">
+				<div class="card-header">
+					<h4 class="card-title">Food Browser</h4>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6">
+								<h5>Sort by</h5>
+
+								<div class="btn-group btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-light">
+										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-food-value" value="food-value" checked> Food Value
+									</label>
+									<label class="btn btn-light">
+										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-saturation" value="saturation"> Saturation
+									</label>
+									<label class="btn btn-light active">
+										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-compost" value="compost"> Compost
+									</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<p>Note: This list is very large (1090 items). Hit CTRL+F in your browser to search. ⌘+F on mac.</p>
+							</div>
+						</div>
+					</div>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Mod</th>
+								<th>Food Value</th>
+								<th>Saturation</th>
+								<th>Compost</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+			<script src="js/greginator/food-browser.js"></script>
+
 			<div class="card" id="gt-cell-calculator">
 				<div class="card card-body new-item" style="display:none;">
 					<button type="button" class="close link-pointer" style="z-index:10;" aria-label="Close">
@@ -550,48 +570,36 @@
 			</div>
 			<script src="js/greginator/cell-calculator.js"></script>
 
-			<div class="card" id="gt-food-browser">
+			<div class="card" id="gt-recipe-conflict-checker">
 				<div class="card-header">
-					<h4 class="card-title">Food Browser</h4>
+					<span class="float-right">
+						<small class="text-right text-muted d-inline-block">Data exported using <a href="https://github.com/bigbass1997/RecEx">bigbass1997/RecEx</a><br> at 2022-10-07 with GTNH version 2.2.0.0</small>
+					</span>
+					<h4 class="card-title">Recipe Conflict Checker</h4>
 				</div>
 				<div class="collapse">
 					<div class="card-body">
-						<div class="row">
-							<div class="col-md-6">
-								<h5>Sort by</h5>
+						<small class="text-muted">Note: The data exporter does not support bio circuits and breakthrough circuits.<br>
+						Note: The dropdown menu library I'm using seems to have bugs with large amounts of data. Search to narrow down the result instead of scrolling until they fix it.</small>
+						<div class="form-group">
+							<select class="machine-search form-control"></select>
+						</div>
+						<div class="form-group">
+							<select class="recipe-search form-control nopadding"></select>
+						</div>
 
-								<div class="btn-group btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-light">
-										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-food-value" value="food-value" checked> Food Value
-									</label>
-									<label class="btn btn-light">
-										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-saturation" value="saturation"> Saturation
-									</label>
-									<label class="btn btn-light active">
-										<input type="radio" name="gt-food-browser-sort" id="gt-food-browser-sort-compost" value="compost"> Compost
-									</label>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<p>Note: This list is very large (1090 items). Hit CTRL+F in your browser to search. ⌘+F on mac.</p>
-							</div>
+						<div class="card card-body">
+							<center class="mb-1">Detected Conflicts</center>
+							<div class="conflict-results my-2"></div>
+						</div>
+						<div class="card card-body">
+							<center class="mb-1">Added Recipes</center>
+							<div class="added-recipes"></div>
 						</div>
 					</div>
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Mod</th>
-								<th>Food Value</th>
-								<th>Saturation</th>
-								<th>Compost</th>
-							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
 				</div>
 			</div>
-			<script src="js/greginator/food-browser.js"></script>
+			<script src="js/greginator/recipe-conflict-checker.js"></script>
 
 			<!-- IC2 Nuclear simulator -->
 			<!--

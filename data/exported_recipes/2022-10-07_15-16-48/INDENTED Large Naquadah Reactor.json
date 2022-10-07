@@ -1,0 +1,173 @@
+{
+    "n": "Large Naquadah Reactor",
+    "recs": [
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Uranium Based Liquid Fuel (Excited State)",
+                    "lN": "Uranium Based Liquid Fuel (Excited State)"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Uranium Based Liquid Fuel (Depleted)",
+                    "lN": "Uranium Based Liquid Fuel (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkI",
+                    "lN": "Naquadah Based Liquid Fuel MkI"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkI (Depleted)",
+                    "lN": "Naquadah Based Liquid Fuel MkI (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkII",
+                    "lN": "Naquadah Based Liquid Fuel MkII"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkII (Depleted)",
+                    "lN": "Naquadah Based Liquid Fuel MkII (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIII",
+                    "lN": "Naquadah Based Liquid Fuel MkIII"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIII (Depleted)",
+                    "lN": "Naquadah Based Liquid Fuel MkIII (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 160,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkV",
+                    "lN": "Naquadah Based Liquid Fuel MkV"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkV (Depleted)",
+                    "lN": "Naquadah Based Liquid Fuel MkV (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 500,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Thorium Based Liquid Fuel (Excited State)",
+                    "lN": "Thorium Based Liquid Fuel (Excited State)"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Thorium Based Liquid Fuel (Depleted)",
+                    "lN": "Thorium Based Liquid Fuel (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 150,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Plutonium Based Liquid Fuel (Excited State)",
+                    "lN": "Plutonium Based Liquid Fuel (Excited State)"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Plutonium Based Liquid Fuel (Depleted)",
+                    "lN": "Plutonium Based Liquid Fuel (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIV",
+                    "lN": "Naquadah Based Liquid Fuel MkIV"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIV (Depleted)",
+                    "lN": "Naquadah Based Liquid Fuel MkIV (Depleted)"
+                }
+            ]
+        }
+    ]
+}

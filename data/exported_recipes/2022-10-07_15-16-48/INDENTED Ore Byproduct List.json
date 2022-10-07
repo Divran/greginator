@@ -1,0 +1,3515 @@
+{
+    "n": "Ore Byproduct List",
+    "recs": [
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.909",
+                    "lN": "Pentlandite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2022",
+                    "lN": "Sulfur Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2033",
+                    "lN": "Cobalt Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.58",
+                    "lN": "Antimony Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2036",
+                    "lN": "Zinc Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.gcBlockCore.oreSilicon",
+                    "lN": "Silicon Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2837",
+                    "lN": "Silicon Dioxide Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.928",
+                    "lN": "Fullers Earth"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2837",
+                    "lN": "Silicon Dioxide Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.910",
+                    "lN": "Scheelite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2031",
+                    "lN": "Manganese Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2048",
+                    "lN": "Molybdenum Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2026",
+                    "lN": "Calcium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.939",
+                    "lN": "Quartz Sand"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2516",
+                    "lN": "Certus Quartz Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2523",
+                    "lN": "Quartzite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2904",
+                    "lN": "Barite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.933",
+                    "lN": "Glauconite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2017",
+                    "lN": "Sodium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.gemOre.tanzaniteore",
+                    "lN": "Tanzanite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2510",
+                    "lN": "Opal Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.531",
+                    "lN": "Niter Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2836",
+                    "lN": "Saltpeter Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "MetalOre.Cobalt",
+                    "lN": "Cobalt Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2827",
+                    "lN": "Cobaltite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.323",
+                    "lN": "Infused Gold Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2086",
+                    "lN": "Gold Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.821",
+                    "lN": "Andradite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2528",
+                    "lN": "Yellow Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.812",
+                    "lN": "Electrotine Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.redstone",
+                    "lN": "Redstone"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2303",
+                    "lN": "Electrum Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2500",
+                    "lN": "Diamond Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.699",
+                    "lN": "Cryolite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2017",
+                    "lN": "Sodium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.838",
+                    "lN": "Spessartine Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2527",
+                    "lN": "Red Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2031",
+                    "lN": "Manganese Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.519",
+                    "lN": "Forcillium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2067",
+                    "lN": "Neodymium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2891",
+                    "lN": "Rare Earth"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.922",
+                    "lN": "Uraninite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2097",
+                    "lN": "Uranium 235 Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.83",
+                    "lN": "Osmium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2084",
+                    "lN": "Iridium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.607",
+                    "lN": "Pyrochlore Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2530",
+                    "lN": "Apatite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2823",
+                    "lN": "Calcite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2047",
+                    "lN": "Niobium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.504",
+                    "lN": "Green Sapphire Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2503",
+                    "lN": "Sapphire Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.930",
+                    "lN": "Brown Limonite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2871",
+                    "lN": "Malachite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2931",
+                    "lN": "Yellow Limonite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.303",
+                    "lN": "Electrum Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2086",
+                    "lN": "Gold Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2054",
+                    "lN": "Silver Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.asteroidsBlock.oreIlmenite",
+                    "lN": "Ilmenite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2375",
+                    "lN": "Rutile Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.387",
+                    "lN": "Mytryl Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2069",
+                    "lN": "Samarium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2036",
+                    "lN": "Zinc Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.36",
+                    "lN": "Zinc Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2057",
+                    "lN": "Tin Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2037",
+                    "lN": "Gallium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.100",
+                    "lN": "Plutonium 239 Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2089",
+                    "lN": "Lead Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.oreIron",
+                    "lN": "Iron Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2057",
+                    "lN": "Tin Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.946",
+                    "lN": "Asbestos Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2946",
+                    "lN": "Asbestos Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2837",
+                    "lN": "Silicon Dioxide Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.gemOre.topazore",
+                    "lN": "Topaz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2513",
+                    "lN": "Blue Topaz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.84",
+                    "lN": "Iridium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2085",
+                    "lN": "Platinum Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2083",
+                    "lN": "Osmium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.488",
+                    "lN": "Rubracium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2069",
+                    "lN": "Samarium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.513",
+                    "lN": "Blue Topaz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2507",
+                    "lN": "Topaz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.81",
+                    "lN": "Tungsten Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2031",
+                    "lN": "Manganese Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2048",
+                    "lN": "Molybdenum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.834",
+                    "lN": "Pyrite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2022",
+                    "lN": "Sulfur Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2534",
+                    "lN": "Tricalcium Phosphate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.336",
+                    "lN": "Shadow Iron Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.salt",
+                    "lN": "Salt Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2944",
+                    "lN": "Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2941",
+                    "lN": "Borax Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.518",
+                    "lN": "Forcicium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2067",
+                    "lN": "Neodymium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2891",
+                    "lN": "Rare Earth"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.523",
+                    "lN": "Quartzite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2516",
+                    "lN": "Certus Quartz Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2904",
+                    "lN": "Barite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.831",
+                    "lN": "Grossular Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2528",
+                    "lN": "Yellow Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2026",
+                    "lN": "Calcium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.938",
+                    "lN": "Garnet Sand"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2527",
+                    "lN": "Red Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2528",
+                    "lN": "Yellow Garnet Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.921",
+                    "lN": "Tantalite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2031",
+                    "lN": "Manganese Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2047",
+                    "lN": "Niobium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2080",
+                    "lN": "Tantalum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.326",
+                    "lN": "Enriched Naquadah Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.10054",
+                    "lN": "Naquadah Oxide Mixture Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.10072",
+                    "lN": "Naquadria Oxide Mixture Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.307",
+                    "lN": "Pig Iron Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.907",
+                    "lN": "Lepidolite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2006",
+                    "lN": "Lithium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2062",
+                    "lN": "Caesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.908",
+                    "lN": "Magnesite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.949",
+                    "lN": "Glauconite Sand"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2017",
+                    "lN": "Sodium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.942",
+                    "lN": "Molybdenite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2048",
+                    "lN": "Molybdenum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.515",
+                    "lN": "Dilithium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2515",
+                    "lN": "Dilithium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.331",
+                    "lN": "Mithril Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2085",
+                    "lN": "Platinum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.932",
+                    "lN": "Vermiculite"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "ic2.blockOreLead",
+                    "lN": "Lead Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2054",
+                    "lN": "Silver Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2022",
+                    "lN": "Sulfur Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.18",
+                    "lN": "Magnesium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2505",
+                    "lN": "Olivine Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.822",
+                    "lN": "Bauxite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2831",
+                    "lN": "Grossular Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2375",
+                    "lN": "Rutile Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2037",
+                    "lN": "Gallium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.327",
+                    "lN": "Naquadria Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.10072",
+                    "lN": "Naquadria Oxide Mixture Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.912",
+                    "lN": "Chrysotile Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2946",
+                    "lN": "Asbestos Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2837",
+                    "lN": "Silicon Dioxide Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.129",
+                    "lN": "Neutronium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2129",
+                    "lN": "Neutronium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.836",
+                    "lN": "Saltpeter Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2836",
+                    "lN": "Saltpeter Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.505",
+                    "lN": "Olivine Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2835",
+                    "lN": "Pyrope Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.528",
+                    "lN": "Yellow Garnet Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2821",
+                    "lN": "Andradite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2831",
+                    "lN": "Grossular Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2842",
+                    "lN": "Uvarovite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.835",
+                    "lN": "Pyrope Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2527",
+                    "lN": "Red Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.841",
+                    "lN": "Tungstate Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2031",
+                    "lN": "Manganese Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2054",
+                    "lN": "Silver Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2006",
+                    "lN": "Lithium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.509",
+                    "lN": "Amethyst Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2509",
+                    "lN": "Amethyst Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.31",
+                    "lN": "Manganese Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2030",
+                    "lN": "Chrome Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.521",
+                    "lN": "Force Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2521",
+                    "lN": "Force Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.342",
+                    "lN": "Dark Iron Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.870",
+                    "lN": "Magnetite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2086",
+                    "lN": "Gold Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.oreLapis",
+                    "lN": "Lapis Lazuli Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2524",
+                    "lN": "Lazurite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2525",
+                    "lN": "Sodalite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2834",
+                    "lN": "Pyrite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.820",
+                    "lN": "Almandine Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2527",
+                    "lN": "Red Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.525",
+                    "lN": "Sodalite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2524",
+                    "lN": "Lazurite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2526",
+                    "lN": "Lapis Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.829",
+                    "lN": "Deep Iron Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2868",
+                    "lN": "Trinium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.920",
+                    "lN": "Spodumene Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2006",
+                    "lN": "Lithium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.943",
+                    "lN": "Pyrolusite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2031",
+                    "lN": "Manganese Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2921",
+                    "lN": "Tantalite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2047",
+                    "lN": "Niobium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.840",
+                    "lN": "Tetrahedrite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2058",
+                    "lN": "Antimony Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2036",
+                    "lN": "Zinc Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "ic2.blockOreTin",
+                    "lN": "Tin Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2036",
+                    "lN": "Zinc Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.549",
+                    "lN": "Roasted Nickel Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.529",
+                    "lN": "Vinteum Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2529",
+                    "lN": "Vinteum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "ic2.blockOreUran",
+                    "lN": "Uranium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2089",
+                    "lN": "Lead Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2097",
+                    "lN": "Uranium 235 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.865",
+                    "lN": "Graphite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2010",
+                    "lN": "Carbon Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.931",
+                    "lN": "Yellow Limonite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2930",
+                    "lN": "Brown Limonite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2033",
+                    "lN": "Cobalt Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.510",
+                    "lN": "Opal Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2508",
+                    "lN": "Tanzanite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.oreCoal",
+                    "lN": "Coal Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2538",
+                    "lN": "Lignite Coal Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.516",
+                    "lN": "Certus Quartz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2523",
+                    "lN": "Quartzite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2904",
+                    "lN": "Barite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "MetalOre.Aluminum",
+                    "lN": "Aluminum Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2822",
+                    "lN": "Bauxite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.6",
+                    "lN": "Lithium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2006",
+                    "lN": "Lithium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.30",
+                    "lN": "Chrome Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.827",
+                    "lN": "Cobaltite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2033",
+                    "lN": "Cobalt Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.96",
+                    "lN": "Thorium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2089",
+                    "lN": "Lead Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.blockCustomOre.0",
+                    "lN": "Cinnabar Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.redstone",
+                    "lN": "Redstone"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2022",
+                    "lN": "Sulfur Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.yellowDust",
+                    "lN": "Glowstone Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.944",
+                    "lN": "Rock Salt Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2817",
+                    "lN": "Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2941",
+                    "lN": "Borax Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "ic2.blockOreCopper",
+                    "lN": "Copper Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2033",
+                    "lN": "Cobalt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2086",
+                    "lN": "Gold Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.919",
+                    "lN": "Pollucite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2062",
+                    "lN": "Caesium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2043",
+                    "lN": "Rubidium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.534",
+                    "lN": "Tricalcium Phosphate Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2530",
+                    "lN": "Apatite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2833",
+                    "lN": "Phosphate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2607",
+                    "lN": "Pyrochlore Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.833",
+                    "lN": "Phosphate Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2021",
+                    "lN": "Phosphorus Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.905",
+                    "lN": "Bastnasite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2067",
+                    "lN": "Neodymium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2891",
+                    "lN": "Rare Earth"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.34",
+                    "lN": "Nickel Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2033",
+                    "lN": "Cobalt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2085",
+                    "lN": "Platinum Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.54",
+                    "lN": "Silver Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2089",
+                    "lN": "Lead Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2022",
+                    "lN": "Sulfur Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.520",
+                    "lN": "Monazite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2067",
+                    "lN": "Neodymium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2891",
+                    "lN": "Rare Earth"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.8",
+                    "lN": "Beryllium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2501",
+                    "lN": "Emerald Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.839",
+                    "lN": "Sphalerite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2528",
+                    "lN": "Yellow Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2055",
+                    "lN": "Cadmium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2037",
+                    "lN": "Gallium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2036",
+                    "lN": "Zinc Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.828",
+                    "lN": "Sheldonite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2052",
+                    "lN": "Palladium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2084",
+                    "lN": "Iridium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.823",
+                    "lN": "Calcite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2821",
+                    "lN": "Andradite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2871",
+                    "lN": "Malachite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.67",
+                    "lN": "Neodymium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2520",
+                    "lN": "Monazite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2891",
+                    "lN": "Rare Earth"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.gemOre.sapphireore",
+                    "lN": "Sapphire Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2504",
+                    "lN": "Green Sapphire Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.873",
+                    "lN": "Pitchblende"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2089",
+                    "lN": "Lead Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.527",
+                    "lN": "Red Garnet Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2838",
+                    "lN": "Spessartine Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2835",
+                    "lN": "Pyrope Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2820",
+                    "lN": "Almandine Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.oreEmerald",
+                    "lN": "Emerald Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2008",
+                    "lN": "Beryllium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.oreGold",
+                    "lN": "Gold Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2035",
+                    "lN": "Copper Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.gemOre.malachiteore",
+                    "lN": "Malachite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2035",
+                    "lN": "Copper Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2930",
+                    "lN": "Brown Limonite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2823",
+                    "lN": "Calcite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.945",
+                    "lN": "Stibnite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2058",
+                    "lN": "Antimony Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.85",
+                    "lN": "Platinum Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2084",
+                    "lN": "Iridium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.22",
+                    "lN": "Sulfur Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2022",
+                    "lN": "Sulfur Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.948",
+                    "lN": "Diatomite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2917",
+                    "lN": "Banded Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2503",
+                    "lN": "Sapphire Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.824",
+                    "lN": "Cassiterite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2057",
+                    "lN": "Tin Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.830",
+                    "lN": "Galena Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2022",
+                    "lN": "Sulfur Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2054",
+                    "lN": "Silver Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2089",
+                    "lN": "Lead Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.937",
+                    "lN": "Cassiterite Sand"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2057",
+                    "lN": "Tin Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.gemOre.rubyore",
+                    "lN": "Ruby Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2030",
+                    "lN": "Chrome Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2527",
+                    "lN": "Red Garnet Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.538",
+                    "lN": "Lignite Coal Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2535",
+                    "lN": "Coal Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.340",
+                    "lN": "Meteoric Iron Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2084",
+                    "lN": "Iridium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2085",
+                    "lN": "Platinum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.825",
+                    "lN": "Chromite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.842",
+                    "lN": "Uvarovite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2528",
+                    "lN": "Yellow Garnet Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2030",
+                    "lN": "Chrome Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.28",
+                    "lN": "Titanium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2820",
+                    "lN": "Almandine Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.935",
+                    "lN": "Basaltic Mineral Sand"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2844",
+                    "lN": "Basalt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2870",
+                    "lN": "Magnetite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.324",
+                    "lN": "Naquadah Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.10067",
+                    "lN": "Enriched-Naquadah Oxide Mixture Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.906",
+                    "lN": "Garnierite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2034",
+                    "lN": "Nickel Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.netherquartz",
+                    "lN": "Nether Quartz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2807",
+                    "lN": "Netherrack Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.for.resources.0",
+                    "lN": "Apatite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2534",
+                    "lN": "Tricalcium Phosphate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2833",
+                    "lN": "Phosphate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2607",
+                    "lN": "Pyrochlore Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.512",
+                    "lN": "Ruby Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2511",
+                    "lN": "Jasper Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.oreRedstone",
+                    "lN": "Redstone Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2826",
+                    "lN": "Cinnabar Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2891",
+                    "lN": "Rare Earth"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.yellowDust",
+                    "lN": "Glowstone Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.923",
+                    "lN": "Vanadium Magnetite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2870",
+                    "lN": "Magnetite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2029",
+                    "lN": "Vanadium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.blockCustomOre.7",
+                    "lN": "Amber Bearing Stone"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2514",
+                    "lN": "Amber Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.855",
+                    "lN": "Chalcopyrite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2834",
+                    "lN": "Pyrite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2033",
+                    "lN": "Cobalt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2055",
+                    "lN": "Cadmium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2086",
+                    "lN": "Gold Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.927",
+                    "lN": "Bentonite"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2697",
+                    "lN": "Alumina Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2026",
+                    "lN": "Calcium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2018",
+                    "lN": "Magnesium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.936",
+                    "lN": "Granitic Mineral Sand"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2849",
+                    "lN": "Black Granite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2870",
+                    "lN": "Magnetite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.oreDiamond",
+                    "lN": "Diamond Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2865",
+                    "lN": "Graphite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockores.524",
+                    "lN": "Lazurite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2525",
+                    "lN": "Sodalite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2526",
+                    "lN": "Lapis Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        }
+    ]
+}

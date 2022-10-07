@@ -1,0 +1,136 @@
+{
+    "n": "Naquadah Fuel Refine Factory",
+    "recs": [
+        {
+            "en": true,
+            "dur": 160,
+            "eut": 46000000,
+            "iI": [
+                {
+                    "a": 27,
+                    "uN": "gt.bwMetaGenerateddust.10024",
+                    "lN": "Extremely Unstable Naquadah Dust"
+                },
+                {
+                    "a": 64,
+                    "uN": "gt.metaitem.01.2506",
+                    "lN": "Nether Star Dust"
+                },
+                {
+                    "a": 64,
+                    "uN": "gt.metaitem.01.2976",
+                    "lN": "Awakened Draconium Dust"
+                },
+                {
+                    "a": 32,
+                    "uN": "gt.bwMetaGenerateddust.10023",
+                    "lN": "Orundum Dust"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIII",
+                    "lN": "Naquadah Based Liquid Fuel MkIII"
+                },
+                {
+                    "a": 9216,
+                    "uN": "fluid.molten.praseodymium",
+                    "lN": "Molten Praseodymium"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIV",
+                    "lN": "Naquadah Based Liquid Fuel MkIV"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 200,
+            "eut": 100000000,
+            "iI": [
+                {
+                    "a": 16,
+                    "uN": "gt.metaitem.01.2397",
+                    "lN": "Infinity Dust"
+                },
+                {
+                    "a": 32,
+                    "uN": "gt.bwMetaGenerateddust.10022",
+                    "lN": "Atomic Separation Catalyst Dust"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIV",
+                    "lN": "Naquadah Based Liquid Fuel MkIV"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.heavyradox",
+                    "lN": "Heavy Radox"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkV",
+                    "lN": "Naquadah Based Liquid Fuel MkV"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 1100000,
+            "iI": [
+                {
+                    "a": 4,
+                    "uN": "gt.bwMetaGenerateddust.10024",
+                    "lN": "Extremely Unstable Naquadah Dust"
+                },
+                {
+                    "a": 27,
+                    "uN": "gt.bwMetaGenerateddust.89",
+                    "lN": "Tiberium Dust"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.highDensityUranium",
+                    "lN": "High Density Uranium"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.highDensityPlutonium",
+                    "lN": "High Density Plutonium"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 800,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.Naquadah Based Liquid Fuel MkIII",
+                    "lN": "Naquadah Based Liquid Fuel MkIII"
+                }
+            ]
+        }
+    ]
+}

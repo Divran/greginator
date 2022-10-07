@@ -1,0 +1,194 @@
+{
+    "n": "Neutron Activator",
+    "recs": [
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 16,
+                    "uN": "gt.bwMetaGenerateddust.10070",
+                    "lN": "Concentrated Enriched-Naquadah Sludge Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 64,
+                    "uN": "gt.bwMetaGenerateddust.10071",
+                    "lN": "Enriched-Naquadah Sulphate Dust"
+                },
+                {
+                    "a": 64,
+                    "uN": "gt.bwMetaGenerateddust.10071",
+                    "lN": "Enriched-Naquadah Sulphate Dust"
+                },
+                {
+                    "a": 37,
+                    "uN": "gt.bwMetaGenerateddust.10071",
+                    "lN": "Enriched-Naquadah Sulphate Dust"
+                },
+                {
+                    "a": 64,
+                    "uN": "gt.bwMetaGenerateddust.57",
+                    "lN": "Sodium Sulfate Dust"
+                },
+                {
+                    "a": 64,
+                    "uN": "gt.bwMetaGenerateddust.57",
+                    "lN": "Sodium Sulfate Dust"
+                },
+                {
+                    "a": 12,
+                    "uN": "gt.bwMetaGenerateddust.57",
+                    "lN": "Sodium Sulfate Dust"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.bwMetaGenerateddust.10076",
+                    "lN": "Low Quality Naquadria Sulphate Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 0,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 4,
+                    "uN": "gt.bwMetaGenerateddust.10066",
+                    "lN": "Adamantine Dust"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.bwMetaGenerateddust.10054",
+                    "lN": "Naquadah Oxide Mixture Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.10070",
+                    "lN": "Concentrated Enriched-Naquadah Sludge Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 3000,
+                    "uN": "fluid.Naquadah-Adamantium Solution",
+                    "lN": "Naquadah-Adamantium Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.Naquadah-Rich Solution",
+                    "lN": "Naquadah-Rich Solution"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 0,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 44,
+                    "uN": "gt.bwMetaGenerateddust.10078",
+                    "lN": "Naquadria Sulphate Dust"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.bwMetaGenerateddust.10076",
+                    "lN": "Low Quality Naquadria Sulphate Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 9000,
+                    "uN": "fluid.Naquadria-Rich Solution",
+                    "lN": "Naquadria-Rich Solution"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 10000,
+            "eut": 0,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 200,
+                    "uN": "fluid.Thorium Based Liquid Fuel (Excited State)",
+                    "lN": "Thorium Based Liquid Fuel (Excited State)"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 200,
+                    "uN": "fluid.Thorium Based Liquid Fuel (Depleted)",
+                    "lN": "Thorium Based Liquid Fuel (Depleted)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 0,
+                    "uN": "gt.metaitem.01.17329",
+                    "lN": "Tritanium Plate"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 100,
+                    "uN": "fluid.Plutonium Based Liquid Fuel",
+                    "lN": "Plutonium Based Liquid Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.Plutonium Based Liquid Fuel (Excited State)",
+                    "lN": "Plutonium Based Liquid Fuel (Excited State)"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 0,
+                    "uN": "gt.metaitem.01.17081",
+                    "lN": "Tungsten Plate"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 100,
+                    "uN": "fluid.Uranium Based Liquid Fuel",
+                    "lN": "Uranium Based Liquid Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.Uranium Based Liquid Fuel (Excited State)",
+                    "lN": "Uranium Based Liquid Fuel (Excited State)"
+                }
+            ]
+        }
+    ]
+}

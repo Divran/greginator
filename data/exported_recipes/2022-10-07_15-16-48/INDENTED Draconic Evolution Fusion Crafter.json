@@ -1,0 +1,334 @@
+{
+    "n": "Draconic Evolution Fusion Crafter",
+    "recs": [
+        {
+            "en": true,
+            "dur": 4200,
+            "eut": 1966080,
+            "iI": [
+                {
+                    "a": 0,
+                    "uN": "tile.dragonEgg",
+                    "lN": "Dragon Egg"
+                },
+                {
+                    "a": 64,
+                    "uN": "gt.metaitem.01.2976",
+                    "lN": "Awakened Draconium Dust"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 144,
+                    "uN": "fluid.plasma.radon",
+                    "lN": "Radon Plasma"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 288,
+                    "uN": "fluid.molten.dragonblood",
+                    "lN": "Molten Dragonblood"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 3200,
+            "eut": 24000000,
+            "iI": [
+                {
+                    "a": 16,
+                    "uN": "gt.metaitem.01.17976",
+                    "lN": "Awakened Draconium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.17388",
+                    "lN": "Black Plutonium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "item.draconicevolution:awakenedCore",
+                    "lN": "Awakened Core"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.draconicevolution:chaosFragment2",
+                    "lN": "Large Chaos Fragment"
+                },
+                {
+                    "a": 0,
+                    "uN": "item.EMT.chaoticSchematic",
+                    "lN": "Chaotic Core Schematic"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:chaoticCore",
+                    "lN": "Chaotic Core"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1440,
+                    "uN": "fluid.molten.spacetime",
+                    "lN": "Molten SpaceTime"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 3600,
+            "eut": 1966080,
+            "iI": [
+                {
+                    "a": 0,
+                    "uN": "tile.witchery:infinityegg",
+                    "lN": "Infinity Egg"
+                },
+                {
+                    "a": 64,
+                    "uN": "gt.metaitem.01.2976",
+                    "lN": "Awakened Draconium Dust"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 72,
+                    "uN": "fluid.plasma.radon",
+                    "lN": "Radon Plasma"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 432,
+                    "uN": "fluid.molten.dragonblood",
+                    "lN": "Molten Dragonblood"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 7864320,
+            "iI": [
+                {
+                    "a": 12,
+                    "uN": "gt.metaitem.01.17976",
+                    "lN": "Awakened Draconium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.17975",
+                    "lN": "Draconium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "item.draconicevolution:wyvernCore",
+                    "lN": "Wyvern Core"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.Ender-QuantumComponent",
+                    "lN": "Ender-Quantum Component"
+                },
+                {
+                    "a": 0,
+                    "uN": "item.EMT.awakenedSchematic",
+                    "lN": "Awakened Core Schematic"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:awakenedCore",
+                    "lN": "Awakened Core"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1440,
+                    "uN": "fluid.molten.infinity",
+                    "lN": "Molten Infinity"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 1966080,
+            "iI": [
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.17975",
+                    "lN": "Draconium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.17129",
+                    "lN": "Neutronium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "item.draconicevolution:draconicCore",
+                    "lN": "Draconic Core"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.32725",
+                    "lN": "Quantum Star"
+                },
+                {
+                    "a": 0,
+                    "uN": "item.EMT.wyvernSchematic",
+                    "lN": "Wyvern Core Schematic"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:wyvernCore",
+                    "lN": "Wyvern Core"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1440,
+                    "uN": "fluid.molten.neutronium",
+                    "lN": "Molten Neutronium"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1000,
+            "eut": 491520,
+            "iI": [
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.17975",
+                    "lN": "Draconium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.17405",
+                    "lN": "Stellar Alloy Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "itemSunnariumAlloy",
+                    "lN": "Sunnarium Alloy"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:draconicCore",
+                    "lN": "Draconic Core"
+                },
+                {
+                    "a": 0,
+                    "uN": "item.EMT.wyvernSchematic",
+                    "lN": "Wyvern Core Schematic"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:draconiumEnergyCore0",
+                    "lN": "Wyvern Energy Core"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 491520,
+            "iI": [
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.17317",
+                    "lN": "Osmiridium Plate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.17978",
+                    "lN": "Ichorium Plate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.32724",
+                    "lN": "Quantum Eye"
+                },
+                {
+                    "a": 0,
+                    "uN": "item.EMT.draconicSchematic",
+                    "lN": "Draconic Core Schematic"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:draconicCore",
+                    "lN": "Draconic Core"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1440,
+                    "uN": "fluid.molten.sunnarium",
+                    "lN": "Molten Sunnarium"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 2000,
+            "eut": 1966080,
+            "iI": [
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.17976",
+                    "lN": "Awakened Draconium Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "item.draconicevolution:draconiumEnergyCore0",
+                    "lN": "Wyvern Energy Core"
+                },
+                {
+                    "a": 4,
+                    "uN": "itemEnrichedSunnariumAlloy",
+                    "lN": "Enriched Sunnarium Alloy"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:wyvernCore",
+                    "lN": "Wyvern Core"
+                },
+                {
+                    "a": 0,
+                    "uN": "item.EMT.awakenedSchematic",
+                    "lN": "Awakened Core Schematic"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.draconicevolution:draconiumEnergyCore1",
+                    "lN": "Draconic Energy Core"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        }
+    ]
+}

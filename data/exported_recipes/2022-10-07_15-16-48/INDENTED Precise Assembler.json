@@ -1,0 +1,542 @@
+{
+    "n": "Precise Assembler",
+    "recs": [
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 120,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.03.32100",
+                    "lN": "Circuit Board"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.03.32063",
+                    "lN": "Ultra Low Power IC"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.03.32140",
+                    "lN": "Ultra Low Voltage Coil"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.32499",
+                    "lN": "Tantalum Capacitor"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.microHeater",
+                    "lN": "Micro-Heater"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.redalloy",
+                    "lN": "Molten Red Alloy"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.aluminium",
+                    "lN": "Molten Aluminium"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.quartzWafer",
+                    "lN": "Quartz Wafer"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.specialCeramicsPlate",
+                    "lN": "Special Ceramics Plate"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.microHeater",
+                    "lN": "Micro-Heater"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.03.32037",
+                    "lN": "Integrated Logic Circuit"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.quartzCrystalResonator",
+                    "lN": "Quartz Crystal Resonator"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 72,
+                    "uN": "fluid.molten.energeticalloy",
+                    "lN": "Molten Energetic Alloy"
+                },
+                {
+                    "a": 18,
+                    "uN": "fluid.molten.silver",
+                    "lN": "Molten Silver"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 7680,
+            "iI": [
+                {
+                    "a": 2,
+                    "uN": "item.huiCircuit.1",
+                    "lN": "Hi-Computation Station MK-II"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.32683",
+                    "lN": "Emitter (EV)"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.neutronSource",
+                    "lN": "Neutron Source"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.blockmachines.neutronactivator",
+                    "lN": "Neutron Activator"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 576,
+                    "uN": "fluid.molten.stainlesssteel",
+                    "lN": "Molten Stainless Steel"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.tungstencarbide",
+                    "lN": "Molten Tungstencarbide"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 491520,
+            "iI": [
+                {
+                    "a": 2,
+                    "uN": "item.huiCircuit.2",
+                    "lN": "Hi-Computation Station MK-III"
+                },
+                {
+                    "a": 8,
+                    "uN": "item.EngravedEnergyChip",
+                    "lN": "Engraved Energy Chip"
+                },
+                {
+                    "a": 16,
+                    "uN": "gt.metaitem.03.32057",
+                    "lN": "QBit Processing Unit"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.reactorVentGold",
+                    "lN": "Overclocked Heat Vent"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.3",
+                    "lN": "Hi-Computation Station MK-IV Prototype"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1152,
+                    "uN": "fluid.molten.MAR-M200 Steel",
+                    "lN": "Molten MAR-M200 Steel"
+                },
+                {
+                    "a": 576,
+                    "uN": "fluid.molten.Signalium",
+                    "lN": "Molten Signalium"
+                },
+                {
+                    "a": 288,
+                    "uN": "fluid.molten.Lumiium",
+                    "lN": "Molten Lumiium"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.Artherium-Sn",
+                    "lN": "Molten Artherium-Sn"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 122880,
+            "iI": [
+                {
+                    "a": 2,
+                    "uN": "item.huiCircuit.1",
+                    "lN": "Hi-Computation Station MK-II"
+                },
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.32714",
+                    "lN": "Engraved Lapotron Chip"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.03.32068",
+                    "lN": "Raw Advanced Crystal Chip"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.reactorVentDiamond",
+                    "lN": "Advanced Heat Vent"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.2",
+                    "lN": "Hi-Computation Station MK-III"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 576,
+                    "uN": "fluid.molten.Adamantium Alloy",
+                    "lN": "Molten Adamantium Alloy"
+                },
+                {
+                    "a": 288,
+                    "uN": "fluid.molten.Signalium",
+                    "lN": "Molten Signalium"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.Lumiium",
+                    "lN": "Molten Lumiium"
+                },
+                {
+                    "a": 72,
+                    "uN": "fluid.molten.tungstencarbide",
+                    "lN": "Molten Tungstencarbide"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 2000,
+            "eut": 491520,
+            "iI": [
+                {
+                    "a": 3,
+                    "uN": "gtplusplus.blockcasings.3.13",
+                    "lN": "Advanced Fusion Coil"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.4",
+                    "lN": "Hi-Computation Station MK-V Finaltype"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.itemBufferCore4",
+                    "lN": "Energy Core [HV]."
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "compactFusionCoil.3",
+                    "lN": "Compact Fusion Coil MK-II Prototype"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1152,
+                    "uN": "fluid.molten.energycrystal",
+                    "lN": "Molten Energy Crystal"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.laurenium",
+                    "lN": "Molten Laurenium"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 1966080,
+            "iI": [
+                {
+                    "a": 2,
+                    "uN": "item.huiCircuit.3",
+                    "lN": "Hi-Computation Station MK-IV Prototype"
+                },
+                {
+                    "a": 8,
+                    "uN": "item.EngravedManyullynCrystalChip",
+                    "lN": "Engraved Manyullyn Crystal Chip"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.03.32077",
+                    "lN": "Bio Processing Unit"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.reactorVentSpread",
+                    "lN": "Component Heat Vent"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.4",
+                    "lN": "Hi-Computation Station MK-V Finaltype"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1728,
+                    "uN": "fluid.molten.Tanmolyium Beta-C",
+                    "lN": "Molten Tanmolyium Beta-C"
+                },
+                {
+                    "a": 1152,
+                    "uN": "fluid.molten.Signalium",
+                    "lN": "Molten Signalium"
+                },
+                {
+                    "a": 576,
+                    "uN": "fluid.molten.Lumiium",
+                    "lN": "Molten Lumiium"
+                },
+                {
+                    "a": 288,
+                    "uN": "fluid.molten.Dalisenite",
+                    "lN": "Molten Dalisenite"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1200,
+            "eut": 9001,
+            "iI": [
+                {
+                    "a": 3,
+                    "uN": "gt.blockcasings.15",
+                    "lN": "Superconducting Coil Block"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.1",
+                    "lN": "Hi-Computation Station MK-II"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.specialCeramicsPlate",
+                    "lN": "Special Ceramics Plate"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "compactFusionCoil.0",
+                    "lN": "Ameliorated Superconduct Coil"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1152,
+                    "uN": "fluid.molten.MAR-M200 Steel",
+                    "lN": "Molten MAR-M200 Steel"
+                },
+                {
+                    "a": 288,
+                    "uN": "fluid.molten.Zircaloy-4",
+                    "lN": "Molten Zircaloy-4"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 114514,
+            "iI": [
+                {
+                    "a": 3,
+                    "uN": "gt.blockcasings4.7",
+                    "lN": "Fusion Coil Block"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.radiationProtectionPlate",
+                    "lN": "Radiation Proof Plate"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.32725",
+                    "lN": "Quantum Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.3",
+                    "lN": "Hi-Computation Station MK-IV Prototype"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "compactFusionCoil.2",
+                    "lN": "Advanced Compact Fusion Coil"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 576,
+                    "uN": "fluid.molten.Dalisenite",
+                    "lN": "Molten Dalisenite"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.Hikarium",
+                    "lN": "Molten Hikarium"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 14000,
+            "iI": [
+                {
+                    "a": 3,
+                    "uN": "gt.blockcasings4.7",
+                    "lN": "Fusion Coil Block"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.quartzCrystalResonator",
+                    "lN": "Quartz Crystal Resonator"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.2",
+                    "lN": "Hi-Computation Station MK-III"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "compactFusionCoil.1",
+                    "lN": "Compact Fusion Coil"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 576,
+                    "uN": "fluid.molten.Artherium-Sn",
+                    "lN": "Molten Artherium-Sn"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.Tanmolyium Beta-C",
+                    "lN": "Molten Tanmolyium Beta-C"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 30720,
+            "iI": [
+                {
+                    "a": 2,
+                    "uN": "item.huiCircuit.0",
+                    "lN": "Hi-Computation Station MK-I"
+                },
+                {
+                    "a": 8,
+                    "uN": "item.EngravedDiamondCrystalChip",
+                    "lN": "Engraved Diamond Crystal Chip"
+                },
+                {
+                    "a": 16,
+                    "uN": "gt.metaitem.03.32041",
+                    "lN": "NAND Memory Chip"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.reactorVentCore",
+                    "lN": "Reactor Heat Vent"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.huiCircuit.1",
+                    "lN": "Hi-Computation Station MK-II"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 288,
+                    "uN": "fluid.molten.plastic",
+                    "lN": "Molten Polyethylene"
+                },
+                {
+                    "a": 144,
+                    "uN": "fluid.molten.Signalium",
+                    "lN": "Molten Signalium"
+                },
+                {
+                    "a": 72,
+                    "uN": "fluid.molten.Lumiium",
+                    "lN": "Molten Lumiium"
+                },
+                {
+                    "a": 72,
+                    "uN": "fluid.molten.enderium",
+                    "lN": "Molten Enderium"
+                }
+            ],
+            "fO": []
+        }
+    ]
+}

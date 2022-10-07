@@ -16,12 +16,12 @@ body {
 	line-height:1em;
 }
 
-.btn-light {
-	background-color: #e7e8e8 !important;
+.btn.btn-light {
+	background-color: #e7e8e8;
 }
 
-.btn-light.active {
-	box-shadow: 0 0 0 0.2rem rgba(134,142,150,.5) !important;
+.btn.btn-light.active {
+	box-shadow: 0 0 0 0.2rem rgba(134,142,150,.5);
 	z-index:100 !important;
 }
 
@@ -136,4 +136,68 @@ table td small {
 .fix-rounded-corners {
 	border-top-right-radius:  0.25rem !important;
 	border-bottom-right-radius:  0.25rem !important;
+}
+
+.bootstrap-select .dropdown-menu .dropdown-item > .text {
+	width: 100%;
+}
+.bootstrap-select.nopadding .dropdown-menu .dropdown-item {
+	padding: 0;
+}
+
+.table-xs td, .table-xs th {
+	padding: 0.1rem;
+}
+
+/* DARK THEME */
+
+body.dark-theme .btn.btn-light:not([disabled]):not(.disabled) {
+	/* btn-secondary */
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #666e76;
+}
+
+body.dark-theme,
+body.dark-theme .card {
+    background-color: #343a40!important; /* bg-dark */
+}
+
+body.dark-theme .form-control, 
+body.dark-theme .bootstrap-select, 
+body.dark-theme .bootstrap-select .dropdown-menu {
+	background-color: #868e96!important; /* bg-secondary */
+}
+
+body.dark-theme .small {
+	color: #868e96!important; /* text-secondary */
+}
+
+body.dark-theme .card-title,
+body.dark-theme .card-body,
+body.dark-theme .form-control,
+body.dark-theme .table,
+body.dark-theme .label,
+body.dark-theme .bootstrap-select .filter-option,
+body.dark-theme .bootstrap-select .dropdown-menu,
+body.dark-theme .bootstrap-select .dropdown-menu .dropdown-item,
+body.dark-theme .bootstrap-select .dropdown-menu .dropdown-header,
+body.dark-theme .text {
+	color: #f8f9fa!important; /* text-light */
+}
+
+body.dark-theme .bootstrap-select .text-muted {
+	color: #323232 !important;
+}
+
+body.dark-theme .bootstrap-select .dropdown-menu .dropdown-item:hover {
+	background-color: #00000026;
+}
+
+body.dark-theme .bootstrap-select .dropdown-menu .dropdown-item .bg-secondary {
+	background-color: #343a40!important;
+}
+
+body.dark-theme .bg-warning {
+	color: black;
 }

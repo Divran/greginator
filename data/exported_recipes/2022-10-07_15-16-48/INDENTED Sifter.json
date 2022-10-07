@@ -1,0 +1,5354 @@
+{
+    "n": "Sifter",
+    "recs": [
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6922",
+                    "lN": "Purified Uraninite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2922",
+                    "lN": "Uraninite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.98",
+                    "lN": "Tiny Pile of Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.43",
+                    "lN": "Purified BArTiMaEuSNeK Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.43",
+                    "lN": "Exquisite BArTiMaEuSNeK"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.43",
+                    "lN": "Flawless BArTiMaEuSNeK"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.43",
+                    "lN": "BArTiMaEuSNeK"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.43",
+                    "lN": "Flawed BArTiMaEuSNeK"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.43",
+                    "lN": "Chipped BArTiMaEuSNeK"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.43",
+                    "lN": "BArTiMaEuSNeK Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6515",
+                    "lN": "Purified Dilithium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2515",
+                    "lN": "Dilithium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6530",
+                    "lN": "Purified Apatite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2530",
+                    "lN": "Apatite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.83",
+                    "lN": "Rhodium Nitrate Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.85",
+                    "lN": "Rhodium Filter Cake Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Amethyst Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30509",
+                    "lN": "Exquisite Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29509",
+                    "lN": "Flawless Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8509",
+                    "lN": "Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28509",
+                    "lN": "Flawed Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27509",
+                    "lN": "Chipped Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2509",
+                    "lN": "Amethyst Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Firestone Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2347",
+                    "lN": "Firestone Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6520",
+                    "lN": "Purified Monazite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2520",
+                    "lN": "Monazite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Rock Salt Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.22",
+                    "lN": "Exquisite Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.22",
+                    "lN": "Flawless Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.22",
+                    "lN": "Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.22",
+                    "lN": "Flawed Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.22",
+                    "lN": "Chipped Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2944",
+                    "lN": "Rock Salt"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6525",
+                    "lN": "Purified Sodalite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2525",
+                    "lN": "Sodalite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6873",
+                    "lN": "Purified Pitchblende"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2873",
+                    "lN": "Pitchblende"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.89",
+                    "lN": "Tiny Pile of Lead Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6518",
+                    "lN": "Purified Forcicium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2518",
+                    "lN": "Forcicium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.45",
+                    "lN": "Platinum Salt Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.46",
+                    "lN": "Refined Platinum Salt Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6513",
+                    "lN": "Purified Blue Topaz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30513",
+                    "lN": "Exquisite Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29513",
+                    "lN": "Flawless Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8513",
+                    "lN": "Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28513",
+                    "lN": "Flawed Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27513",
+                    "lN": "Chipped Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2513",
+                    "lN": "Blue Topaz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6503",
+                    "lN": "Purified Sapphire Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30503",
+                    "lN": "Exquisite Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29503",
+                    "lN": "Flawless Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8503",
+                    "lN": "Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28503",
+                    "lN": "Flawed Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27503",
+                    "lN": "Chipped Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2503",
+                    "lN": "Sapphire Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6920",
+                    "lN": "Purified Spodumene Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.21",
+                    "lN": "Exquisite Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.21",
+                    "lN": "Flawless Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.21",
+                    "lN": "Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.21",
+                    "lN": "Flawed Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.21",
+                    "lN": "Chipped Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2920",
+                    "lN": "Spodumene Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Jade Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2537",
+                    "lN": "Jade Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6534",
+                    "lN": "Purified Tricalcium Phosphate Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2534",
+                    "lN": "Tricalcium Phosphate Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6502",
+                    "lN": "Purified Ruby Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30502",
+                    "lN": "Exquisite Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29502",
+                    "lN": "Flawless Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8502",
+                    "lN": "Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28502",
+                    "lN": "Flawed Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27502",
+                    "lN": "Chipped Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2502",
+                    "lN": "Ruby Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6524",
+                    "lN": "Purified Lazurite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2524",
+                    "lN": "Lazurite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 7680,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.18",
+                    "lN": "Purified Thorianite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.18",
+                    "lN": "Thorianite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.18",
+                    "lN": "Thorianite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.18",
+                    "lN": "Thorianite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2096",
+                    "lN": "Thorium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.30",
+                    "lN": "Thorium 232 Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.25",
+                    "lN": "Purified Hedenbergite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.25",
+                    "lN": "Exquisite Hedenbergite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.25",
+                    "lN": "Flawless Hedenbergite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.25",
+                    "lN": "Hedenbergite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.25",
+                    "lN": "Flawed Hedenbergite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.25",
+                    "lN": "Chipped Hedenbergite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.25",
+                    "lN": "Hedenbergite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6516",
+                    "lN": "Purified Certus Quartz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2516",
+                    "lN": "Certus Quartz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.1",
+                    "lN": "Purified Bismutite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.1",
+                    "lN": "Exquisite Bismutite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.1",
+                    "lN": "Flawless Bismutite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.1",
+                    "lN": "Bismutite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.1",
+                    "lN": "Flawed Bismutite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.1",
+                    "lN": "Chipped Bismutite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.1",
+                    "lN": "Bismutite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6514",
+                    "lN": "Purified Amber Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30514",
+                    "lN": "Exquisite Amber"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29514",
+                    "lN": "Flawless Amber"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.6",
+                    "lN": "Amber"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28514",
+                    "lN": "Flawed Amber"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27514",
+                    "lN": "Chipped Amber"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2514",
+                    "lN": "Amber Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6510",
+                    "lN": "Purified Opal Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30510",
+                    "lN": "Exquisite Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29510",
+                    "lN": "Flawless Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8510",
+                    "lN": "Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28510",
+                    "lN": "Flawed Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27510",
+                    "lN": "Chipped Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2510",
+                    "lN": "Opal Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1000,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11040",
+                    "lN": "Neutralized Uranium Filtrate Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2097",
+                    "lN": "Uranium 235 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2097",
+                    "lN": "Uranium 235 Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6509",
+                    "lN": "Purified Amethyst Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30509",
+                    "lN": "Exquisite Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29509",
+                    "lN": "Flawless Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8509",
+                    "lN": "Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28509",
+                    "lN": "Flawed Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27509",
+                    "lN": "Chipped Amethyst"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2509",
+                    "lN": "Amethyst Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6944",
+                    "lN": "Purified Rock Salt Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.22",
+                    "lN": "Exquisite Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.22",
+                    "lN": "Flawless Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.22",
+                    "lN": "Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.22",
+                    "lN": "Flawed Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.22",
+                    "lN": "Chipped Rock Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2944",
+                    "lN": "Rock Salt"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6527",
+                    "lN": "Purified Red Garnet Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30527",
+                    "lN": "Exquisite Red Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29527",
+                    "lN": "Flawless Red Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8527",
+                    "lN": "Red Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28527",
+                    "lN": "Flawed Red Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27527",
+                    "lN": "Chipped Red Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2527",
+                    "lN": "Red Garnet Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Salt Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.20",
+                    "lN": "Exquisite Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.20",
+                    "lN": "Flawless Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.20",
+                    "lN": "Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.20",
+                    "lN": "Flawed Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.20",
+                    "lN": "Chipped Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2817",
+                    "lN": "Salt"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Jasper Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30511",
+                    "lN": "Exquisite Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29511",
+                    "lN": "Flawless Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8511",
+                    "lN": "Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28511",
+                    "lN": "Flawed Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27511",
+                    "lN": "Chipped Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2511",
+                    "lN": "Jasper Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Emerald Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30501",
+                    "lN": "Exquisite Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29501",
+                    "lN": "Flawless Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.emerald",
+                    "lN": "Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28501",
+                    "lN": "Flawed Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27501",
+                    "lN": "Chipped Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2501",
+                    "lN": "Emerald Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6508",
+                    "lN": "Purified Tanzanite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30508",
+                    "lN": "Exquisite Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29508",
+                    "lN": "Flawless Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8508",
+                    "lN": "Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28508",
+                    "lN": "Flawed Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27508",
+                    "lN": "Chipped Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2508",
+                    "lN": "Tanzanite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6824",
+                    "lN": "Purified Cassiterite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2824",
+                    "lN": "Cassiterite Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.57",
+                    "lN": "Tiny Pile of Tin Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Quartzite Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2523",
+                    "lN": "Quartzite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Blue Topaz Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30513",
+                    "lN": "Exquisite Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29513",
+                    "lN": "Flawless Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8513",
+                    "lN": "Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28513",
+                    "lN": "Flawed Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27513",
+                    "lN": "Chipped Blue Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2513",
+                    "lN": "Blue Topaz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6523",
+                    "lN": "Purified Quartzite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8523",
+                    "lN": "Quartzite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2523",
+                    "lN": "Quartzite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6535",
+                    "lN": "Purified Coal Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2535",
+                    "lN": "Coal Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Green Sapphire Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30504",
+                    "lN": "Exquisite Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29504",
+                    "lN": "Flawless Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8504",
+                    "lN": "Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28504",
+                    "lN": "Flawed Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27504",
+                    "lN": "Chipped Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2504",
+                    "lN": "Green Sapphire Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6347",
+                    "lN": "Purified Firestone Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.railcraft.firestone.raw",
+                    "lN": "Raw Firestone"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2347",
+                    "lN": "Firestone Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6057",
+                    "lN": "Purified Tin Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2057",
+                    "lN": "Tin Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.36",
+                    "lN": "Tiny Pile of Zinc Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 3200,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Certus Quartz Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.8516",
+                    "lN": "Certus Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.2516",
+                    "lN": "Certus Quartz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 133,
+            "eut": 1920,
+            "iI": [
+                {
+                    "a": 3,
+                    "uN": "gt.bwMetaGenerateddust.11034",
+                    "lN": "Samaric Residue Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.2069",
+                    "lN": "Samarium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2071",
+                    "lN": "Gadolinium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.9",
+                    "lN": "Purified Olenite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.9",
+                    "lN": "Exquisite Olenite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.9",
+                    "lN": "Flawless Olenite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.9",
+                    "lN": "Olenite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.9",
+                    "lN": "Flawed Olenite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.9",
+                    "lN": "Chipped Olenite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.9",
+                    "lN": "Olenite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Ruby Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30502",
+                    "lN": "Exquisite Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29502",
+                    "lN": "Flawless Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8502",
+                    "lN": "Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28502",
+                    "lN": "Flawed Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27502",
+                    "lN": "Chipped Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2502",
+                    "lN": "Ruby Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Tricalcium Phosphate Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8534",
+                    "lN": "Tricalcium Phosphate"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2534",
+                    "lN": "Tricalcium Phosphate Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 3200,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Nether Quartz Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.2522",
+                    "lN": "Nether Quartz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6501",
+                    "lN": "Purified Emerald Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30501",
+                    "lN": "Exquisite Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29501",
+                    "lN": "Flawless Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.emerald",
+                    "lN": "Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28501",
+                    "lN": "Flawed Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27501",
+                    "lN": "Chipped Emerald"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2501",
+                    "lN": "Emerald Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6084",
+                    "lN": "Purified Iridium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemOreIridium",
+                    "lN": "Iridium Ore"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.itemOreIridium",
+                    "lN": "Iridium Ore"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.itemOreIridium",
+                    "lN": "Iridium Ore"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.itemOreIridium",
+                    "lN": "Iridium Ore"
+                },
+                {
+                    "a": 1,
+                    "uN": "ic2.itemOreIridium",
+                    "lN": "Iridium Ore"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.70",
+                    "lN": "Iridium Metal Residue Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Niter Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2531",
+                    "lN": "Niter Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6537",
+                    "lN": "Purified Jade Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8537",
+                    "lN": "Jade"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2537",
+                    "lN": "Jade Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6522",
+                    "lN": "Purified Nether Quartz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2522",
+                    "lN": "Nether Quartz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.24",
+                    "lN": "Purified Forsterite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.24",
+                    "lN": "Exquisite Forsterite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.24",
+                    "lN": "Flawless Forsterite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.24",
+                    "lN": "Forsterite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.24",
+                    "lN": "Flawed Forsterite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.24",
+                    "lN": "Chipped Forsterite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.24",
+                    "lN": "Forsterite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 9600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Sodalite Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8525",
+                    "lN": "Sodalite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.2525",
+                    "lN": "Sodalite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Force Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2521",
+                    "lN": "Force Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 9600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Lapis Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 6,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 6,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 6,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 6,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 6,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.2526",
+                    "lN": "Lapis Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6541",
+                    "lN": "Purified Ignis Crystals"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.1",
+                    "lN": "Fire Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.1",
+                    "lN": "Fire Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.1",
+                    "lN": "Fire Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.1",
+                    "lN": "Fire Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.1",
+                    "lN": "Fire Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2541",
+                    "lN": "Ignis Crystal Powder"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 240,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2837",
+                    "lN": "Silicon Dioxide Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2375",
+                    "lN": "Rutile Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.19",
+                    "lN": "Red Zircon Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2918",
+                    "lN": "Ilmenite Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Diluted Bastnasite Mud",
+                    "lN": "fluid.Diluted Bastnasite Mud"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 400,
+                    "uN": "fluid.Filtered Bastnasite Mud",
+                    "lN": "fluid.Filtered Bastnasite Mud"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6500",
+                    "lN": "Purified Diamond Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30500",
+                    "lN": "Exquisite Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29500",
+                    "lN": "Flawless Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.diamond",
+                    "lN": "Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28500",
+                    "lN": "Flawed Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27500",
+                    "lN": "Chipped Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2500",
+                    "lN": "Diamond Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.19",
+                    "lN": "Purified Red Zircon Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.19",
+                    "lN": "Exquisite Red Zircon"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.19",
+                    "lN": "Flawless Red Zircon"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.19",
+                    "lN": "Red Zircon"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.19",
+                    "lN": "Flawed Red Zircon"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.19",
+                    "lN": "Chipped Red Zircon"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.19",
+                    "lN": "Red Zircon Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "tile.gravel",
+                    "lN": "Gravel"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.flint",
+                    "lN": "Flint"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.flint",
+                    "lN": "Flint"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.flint",
+                    "lN": "Flint"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.flint",
+                    "lN": "Flint"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.flint",
+                    "lN": "Flint"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.flint",
+                    "lN": "Flint"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.55",
+                    "lN": "Palladium Salt Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.53",
+                    "lN": "Palladium Metallic Powder Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6512",
+                    "lN": "Purified Ruby Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30512",
+                    "lN": "Exquisite Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29512",
+                    "lN": "Flawless Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8512",
+                    "lN": "Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28512",
+                    "lN": "Flawed Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27512",
+                    "lN": "Chipped Ruby"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2512",
+                    "lN": "Ruby Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Nether Star Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2506",
+                    "lN": "Nether Star Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.10023",
+                    "lN": "Purified Orundum Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.10023",
+                    "lN": "Exquisite Orundum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.10023",
+                    "lN": "Flawless Orundum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.10023",
+                    "lN": "Orundum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.10023",
+                    "lN": "Flawed Orundum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.10023",
+                    "lN": "Chipped Orundum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.10023",
+                    "lN": "Orundum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1200,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Coal Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.coal",
+                    "lN": "Coal"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.2535",
+                    "lN": "Coal Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6918",
+                    "lN": "Purified Ilmenite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2032",
+                    "lN": "Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.304",
+                    "lN": "Tiny Pile of Wrought Iron Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11007",
+                    "lN": "Zirconium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11000",
+                    "lN": "Hafnium Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11000",
+                    "lN": "Hafnium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.89",
+                    "lN": "Purified Tiberium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.89",
+                    "lN": "Exquisite Tiberium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.89",
+                    "lN": "Flawless Tiberium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.89",
+                    "lN": "Tiberium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.89",
+                    "lN": "Flawed Tiberium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.89",
+                    "lN": "Chipped Tiberium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.89",
+                    "lN": "Tiberium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 3200,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Amber Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.02.30514",
+                    "lN": "Exquisite Amber"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.02.29514",
+                    "lN": "Flawless Amber"
+                },
+                {
+                    "a": 2,
+                    "uN": "item.ItemResource.6",
+                    "lN": "Amber"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.02.28514",
+                    "lN": "Flawed Amber"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.02.27514",
+                    "lN": "Chipped Amber"
+                },
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.2514",
+                    "lN": "Amber Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 256,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11020",
+                    "lN": "Acidic Monazite Powder Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11021",
+                    "lN": "Monazite Rare Earth Filtrate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11037",
+                    "lN": "Thorium-Phosphate Cake Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Quartz Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherquartz",
+                    "lN": "Nether Quartz"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Diamond Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30500",
+                    "lN": "Exquisite Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29500",
+                    "lN": "Flawless Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.diamond",
+                    "lN": "Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28500",
+                    "lN": "Flawed Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27500",
+                    "lN": "Chipped Diamond"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2500",
+                    "lN": "Diamond Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6545",
+                    "lN": "Purified Ordo Crystals"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.4",
+                    "lN": "Order Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.4",
+                    "lN": "Order Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.4",
+                    "lN": "Order Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.4",
+                    "lN": "Order Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.4",
+                    "lN": "Order Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2545",
+                    "lN": "Ordo Crystal Powder"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6507",
+                    "lN": "Purified Topaz Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30507",
+                    "lN": "Exquisite Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29507",
+                    "lN": "Flawless Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8507",
+                    "lN": "Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28507",
+                    "lN": "Flawed Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27507",
+                    "lN": "Chipped Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2507",
+                    "lN": "Topaz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 240,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11025",
+                    "lN": "Cerium Dioxide Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Nitric-Leached Monazite Mixture",
+                    "lN": "fluid.Nitric-Leached Monazite Mixture"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Nitric Monazite Leached Concentrate",
+                    "lN": "fluid.Nitric Monazite Leached Concentrate"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.35",
+                    "lN": "Purified Prasiolite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.35",
+                    "lN": "Exquisite Prasiolite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.35",
+                    "lN": "Flawless Prasiolite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.35",
+                    "lN": "Prasiolite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.35",
+                    "lN": "Flawed Prasiolite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.35",
+                    "lN": "Chipped Prasiolite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.35",
+                    "lN": "Prasiolite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 240,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11019",
+                    "lN": "Monazite Sulfate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2837",
+                    "lN": "Silicon Dioxide Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2375",
+                    "lN": "Rutile Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.19",
+                    "lN": "Red Zircon Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2918",
+                    "lN": "Ilmenite Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Diluted Monazite Rare Earth Mud",
+                    "lN": "fluid.Diluted Monazite Rare Earth Mud"
+                }
+            ],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6544",
+                    "lN": "Purified Perditio Crystals"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.5",
+                    "lN": "Entropy Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.5",
+                    "lN": "Entropy Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.5",
+                    "lN": "Entropy Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.5",
+                    "lN": "Entropy Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.5",
+                    "lN": "Entropy Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2544",
+                    "lN": "Perditio Crystal Powder"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 9600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Lazurite Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.8524",
+                    "lN": "Lazurite"
+                },
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.2524",
+                    "lN": "Lazurite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6871",
+                    "lN": "Purified Malachite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2871",
+                    "lN": "Malachite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6543",
+                    "lN": "Purified Aqua Crystals"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.2",
+                    "lN": "Water Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.2",
+                    "lN": "Water Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.2",
+                    "lN": "Water Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.2",
+                    "lN": "Water Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.2",
+                    "lN": "Water Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2543",
+                    "lN": "Aqua Crystal Powder"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6526",
+                    "lN": "Purified Lapis Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dyePowder.blue",
+                    "lN": "Lapis Lazuli"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2526",
+                    "lN": "Lapis Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6529",
+                    "lN": "Purified Vinteum Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2529",
+                    "lN": "Vinteum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Vinteum Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8529",
+                    "lN": "Vinteum"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2529",
+                    "lN": "Vinteum Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Topaz Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30507",
+                    "lN": "Exquisite Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29507",
+                    "lN": "Flawless Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8507",
+                    "lN": "Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28507",
+                    "lN": "Flawed Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27507",
+                    "lN": "Chipped Topaz"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2507",
+                    "lN": "Topaz Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Sapphire Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30503",
+                    "lN": "Exquisite Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29503",
+                    "lN": "Flawless Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8503",
+                    "lN": "Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28503",
+                    "lN": "Flawed Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27503",
+                    "lN": "Chipped Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2503",
+                    "lN": "Sapphire Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.91",
+                    "lN": "Purified Fluorspar Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.91",
+                    "lN": "Exquisite Fluorspar"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.91",
+                    "lN": "Flawless Fluorspar"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.91",
+                    "lN": "Fluorspar"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.91",
+                    "lN": "Flawed Fluorspar"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.91",
+                    "lN": "Chipped Fluorspar"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.91",
+                    "lN": "Fluorspar Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Tanzanite Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30508",
+                    "lN": "Exquisite Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29508",
+                    "lN": "Flawless Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8508",
+                    "lN": "Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28508",
+                    "lN": "Flawed Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27508",
+                    "lN": "Chipped Tanzanite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2508",
+                    "lN": "Tanzanite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.5",
+                    "lN": "Purified Fluor-Buergerite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.5",
+                    "lN": "Exquisite Fluor-Buergerite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.5",
+                    "lN": "Flawless Fluor-Buergerite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.5",
+                    "lN": "Fluor-Buergerite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.5",
+                    "lN": "Flawed Fluor-Buergerite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.5",
+                    "lN": "Chipped Fluor-Buergerite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.5",
+                    "lN": "Fluor-Buergerite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6505",
+                    "lN": "Purified Olivine Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30505",
+                    "lN": "Exquisite Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29505",
+                    "lN": "Flawless Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8505",
+                    "lN": "Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28505",
+                    "lN": "Flawed Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27505",
+                    "lN": "Chipped Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2505",
+                    "lN": "Olivine Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6506",
+                    "lN": "Purified Nether Star Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.netherStar",
+                    "lN": "Nether Star"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2506",
+                    "lN": "Nether Star Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6519",
+                    "lN": "Purified Forcillium Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2519",
+                    "lN": "Forcillium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6817",
+                    "lN": "Purified Salt Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.20",
+                    "lN": "Exquisite Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.20",
+                    "lN": "Flawless Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.20",
+                    "lN": "Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.20",
+                    "lN": "Flawed Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.20",
+                    "lN": "Chipped Salt"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2817",
+                    "lN": "Salt"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 7200,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6826",
+                    "lN": "Purified Cinnabar Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemResource.3",
+                    "lN": "Quicksilver"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2826",
+                    "lN": "Cinnabar Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6511",
+                    "lN": "Purified Jasper Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30511",
+                    "lN": "Exquisite Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29511",
+                    "lN": "Flawless Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8511",
+                    "lN": "Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28511",
+                    "lN": "Flawed Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27511",
+                    "lN": "Chipped Jasper"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2511",
+                    "lN": "Jasper Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Dilithium Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8515",
+                    "lN": "Dilithium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2515",
+                    "lN": "Dilithium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Malachite Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.gems.malachite",
+                    "lN": "Malachite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2871",
+                    "lN": "Malachite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6538",
+                    "lN": "Purified Lignite Coal Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8538",
+                    "lN": "Lignite Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8538",
+                    "lN": "Lignite Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8538",
+                    "lN": "Lignite Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8538",
+                    "lN": "Lignite Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8538",
+                    "lN": "Lignite Coal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2538",
+                    "lN": "Lignite Coal Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6528",
+                    "lN": "Purified Yellow Garnet Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30528",
+                    "lN": "Exquisite Yellow Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29528",
+                    "lN": "Flawless Yellow Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8528",
+                    "lN": "Yellow Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28528",
+                    "lN": "Flawed Yellow Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27528",
+                    "lN": "Chipped Yellow Garnet"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2528",
+                    "lN": "Yellow Garnet Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Forcicium Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8518",
+                    "lN": "Forcicium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2518",
+                    "lN": "Forcicium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6504",
+                    "lN": "Purified Green Sapphire Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30504",
+                    "lN": "Exquisite Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29504",
+                    "lN": "Flawless Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8504",
+                    "lN": "Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28504",
+                    "lN": "Flawed Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27504",
+                    "lN": "Chipped Green Sapphire"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2504",
+                    "lN": "Green Sapphire Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Olivine Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30505",
+                    "lN": "Exquisite Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29505",
+                    "lN": "Flawless Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8505",
+                    "lN": "Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28505",
+                    "lN": "Flawed Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27505",
+                    "lN": "Chipped Olivine"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2505",
+                    "lN": "Olivine Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Forcillium Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8519",
+                    "lN": "Forcillium"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2519",
+                    "lN": "Forcillium Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11022",
+                    "lN": "Neutralized Monazite Rare Earth Filtrate Dust"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11023",
+                    "lN": "Monazite Rare Earth Hydroxide Concentrate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11039",
+                    "lN": "UraniumFiltrate Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.11039",
+                    "lN": "UraniumFiltrate Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6531",
+                    "lN": "Purified Niter Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8531",
+                    "lN": "Niter"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2531",
+                    "lN": "Niter Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6521",
+                    "lN": "Purified Force Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8521",
+                    "lN": "Force"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2521",
+                    "lN": "Force Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 480,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6098",
+                    "lN": "Purified Uranium 238 Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2098",
+                    "lN": "Uranium 238 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.89",
+                    "lN": "Tiny Pile of Lead Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.dustRadium226",
+                    "lN": "Radium 226 Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.23",
+                    "lN": "Purified Fayalite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.23",
+                    "lN": "Exquisite Fayalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.23",
+                    "lN": "Flawless Fayalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.23",
+                    "lN": "Fayalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.23",
+                    "lN": "Flawed Fayalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.23",
+                    "lN": "Chipped Fayalite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.23",
+                    "lN": "Fayalite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.8",
+                    "lN": "Purified Vanadio-Oxy-Dravite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.8",
+                    "lN": "Exquisite Vanadio-Oxy-Dravite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.8",
+                    "lN": "Flawless Vanadio-Oxy-Dravite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.8",
+                    "lN": "Vanadio-Oxy-Dravite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.8",
+                    "lN": "Flawed Vanadio-Oxy-Dravite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.8",
+                    "lN": "Chipped Vanadio-Oxy-Dravite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.8",
+                    "lN": "Vanadio-Oxy-Dravite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 6400,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Apatite Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.8530",
+                    "lN": "Apatite"
+                },
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.2530",
+                    "lN": "Apatite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Spodumene Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.21",
+                    "lN": "Exquisite Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.21",
+                    "lN": "Flawless Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.21",
+                    "lN": "Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.21",
+                    "lN": "Flawed Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.21",
+                    "lN": "Chipped Spodumene"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2920",
+                    "lN": "Spodumene Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 12800,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Monazite Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.8520",
+                    "lN": "Monazite"
+                },
+                {
+                    "a": 8,
+                    "uN": "gt.metaitem.01.2520",
+                    "lN": "Monazite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6542",
+                    "lN": "Purified Terra Crystals"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.3",
+                    "lN": "Earth Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.3",
+                    "lN": "Earth Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.3",
+                    "lN": "Earth Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.3",
+                    "lN": "Earth Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.3",
+                    "lN": "Earth Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2542",
+                    "lN": "Terra Crystal Powder"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 1600,
+            "eut": 30,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "item.WG_Cluster",
+                    "lN": "Native Opal Cluster"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.30510",
+                    "lN": "Exquisite Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.29510",
+                    "lN": "Flawless Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.8510",
+                    "lN": "Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.28510",
+                    "lN": "Flawed Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.02.27510",
+                    "lN": "Chipped Opal"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2510",
+                    "lN": "Opal Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedcrushedPurified.7",
+                    "lN": "Purified Chromo-Alumino-Povondraite Ore"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemExquisite.7",
+                    "lN": "Exquisite Chromo-Alumino-Povondraite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawless.7",
+                    "lN": "Flawless Chromo-Alumino-Povondraite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgem.7",
+                    "lN": "Chromo-Alumino-Povondraite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemFlawed.7",
+                    "lN": "Flawed Chromo-Alumino-Povondraite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedgemChipped.7",
+                    "lN": "Chipped Chromo-Alumino-Povondraite"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.7",
+                    "lN": "Chromo-Alumino-Povondraite Dust"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 16,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.6540",
+                    "lN": "Purified Aer Crystals"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.0",
+                    "lN": "Air Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.0",
+                    "lN": "Air Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.0",
+                    "lN": "Air Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.0",
+                    "lN": "Air Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "item.ItemShard.0",
+                    "lN": "Air Shard"
+                },
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2540",
+                    "lN": "Aer Crystal Powder"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "n": "Naquadah Reactor MkII",
+    "recs": [
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.23326",
+                    "lN": "Enriched Naquadah Rod"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.23324",
+                    "lN": "Naquadah Rod"
+                }
+            ],
+            "fI": [],
+            "fO": []
+        },
+        {
+            "en": true,
+            "dur": 0,
+            "eut": 0,
+            "iI": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGeneratedstick.89",
+                    "lN": "Tiberium Rod"
+                }
+            ],
+            "iO": [],
+            "fI": [],
+            "fO": []
+        }
+    ]
+}

@@ -1,0 +1,5732 @@
+{
+    "n": "Distillation Tower",
+    "recs": [
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.lightfuel",
+                    "lN": "Lightly Steam-Cracked Light Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 150,
+                    "uN": "fluid.liquid_heavy_fuel",
+                    "lN": "Heavy Fuel"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 40,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 75,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 60,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 192,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.butene",
+                    "lN": "Moderately Steam-Cracked Butene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 200,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 1300,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.naphtha",
+                    "lN": "Moderately Steam-Cracked Naphtha"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 50,
+                    "uN": "fluid.liquid_heavy_fuel",
+                    "lN": "Heavy Fuel"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 65,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 350,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 350,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.gas",
+                    "lN": "Lightly Hydro-Cracked Refinery Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1300,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 32,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "ic2.fluidDistilledWater",
+                    "lN": "Distilled Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.Korn",
+                    "lN": "Korn"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 320,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 680,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.SWhine",
+                    "lN": "Sugar Whine"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 700,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.propene",
+                    "lN": "Lightly Steam-Cracked Propene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 2,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.creosote",
+                    "lN": "Creosote Oil"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.phenol",
+                    "lN": "Phenol"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.1,3dimethylbenzen",
+                    "lN": "1,3-Dimethylbenzen"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 32,
+            "eut": 400,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.1809",
+                    "lN": "Small Pile of Wood Pulp"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.biomass",
+                    "lN": "Biomass"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 600,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 2500,
+            "eut": 1920,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 29,
+                    "uN": "gt.metaitem.01.2796",
+                    "lN": "4,4'-Diphenylmethane Diisocyanate Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.diphenylmethanediisocyanatemixture",
+                    "lN": "Diphenylmethane Diisocyanate Mixture"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 5000,
+                    "uN": "fluid.hydrochloricacid_gt5u",
+                    "lN": "Hydrochloric Acid"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.gas",
+                    "lN": "Severely Steam-Cracked Refinery Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 10,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 700,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.butane",
+                    "lN": "Moderately Steam-Cracked Butane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 125,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 750,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 750,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 438,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 1500,
+            "eut": 480,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.2817",
+                    "lN": "Salt"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 9000,
+                    "uN": "fluid.Hot Ruthenium Tetroxide Solution",
+                    "lN": "Hot Ruthenium Tetroxide Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1800,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 7200,
+                    "uN": "fluid.Ruthenium Tetroxide",
+                    "lN": "Ruthenium Tetroxide"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.ethane",
+                    "lN": "Lightly Hydro-Cracked Ethane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 3,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.lightfuel",
+                    "lN": "Severely Steam-Cracked Light Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 50,
+                    "uN": "fluid.liquid_heavy_fuel",
+                    "lN": "Heavy Fuel"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 65,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.sugar",
+                    "lN": "Sugar"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.rum",
+                    "lN": "Rum"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 580,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 420,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2010",
+                    "lN": "Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.butadiene",
+                    "lN": "Severely Steam-Cracked Butadiene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 125,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 188,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1125,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 225,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.97",
+                    "lN": "Tiny Pile of Uranium 235 Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyCrackedLightNaquadahFuel",
+                    "lN": "Moderately Cracked Light Naquadah Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 98,
+                    "uN": "fluid.Naquadah Asphalt",
+                    "lN": "Naquadah Asphalt"
+                },
+                {
+                    "a": 432,
+                    "uN": "fluid.molten.plutonium",
+                    "lN": "Molten Plutonium 239"
+                },
+                {
+                    "a": 224,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 777,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.Naquadah Gas",
+                    "lN": "Naquadah Gas"
+                },
+                {
+                    "a": 1960,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.piratebrew",
+                    "lN": "Pirate Brew"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 800,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 150,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.324",
+                    "lN": "Tiny Pile of Naquadah Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.heavilyCrackedNaquadahGas",
+                    "lN": "Severely Cracked Naquadah Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 7700,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                },
+                {
+                    "a": 24,
+                    "uN": "fluid.xenon",
+                    "lN": "Xenon"
+                },
+                {
+                    "a": 14,
+                    "uN": "fluid.krypton",
+                    "lN": "Krypton"
+                },
+                {
+                    "a": 116,
+                    "uN": "fluid.argon",
+                    "lN": "Argon Gas"
+                },
+                {
+                    "a": 75,
+                    "uN": "fluid.neon",
+                    "lN": "Neon"
+                },
+                {
+                    "a": 480,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.butane",
+                    "lN": "Moderately Hydro-Cracked Butane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 150,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.324",
+                    "lN": "Tiny Pile of Naquadah Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyCrackedNaquadahGas",
+                    "lN": "Moderately Cracked Naquadah Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 9800,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.xenon",
+                    "lN": "Xenon"
+                },
+                {
+                    "a": 16,
+                    "uN": "fluid.krypton",
+                    "lN": "Krypton"
+                },
+                {
+                    "a": 96,
+                    "uN": "fluid.argon",
+                    "lN": "Argon Gas"
+                },
+                {
+                    "a": 62,
+                    "uN": "fluid.neon",
+                    "lN": "Neon"
+                },
+                {
+                    "a": 420,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 3,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.butadiene",
+                    "lN": "Moderately Steam-Cracked Butadiene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 125,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 1125,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 188,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.butene",
+                    "lN": "Lightly Steam-Cracked Butene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 750,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 200,
+            "eut": 60,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "item.itemHydrogenBlob",
+                    "lN": "Mysterious Hydrogen Blob"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 20000,
+                    "uN": "fluid.Air",
+                    "lN": "Air"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 25,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.ethane",
+                    "lN": "Moderately Steam-Cracked Ethane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 125,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1375,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 4,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1536",
+                    "lN": "Small Pile of Charcoal Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.charcoal_byproducts",
+                    "lN": "Charcoal Byproducts"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.woodvinegar",
+                    "lN": "Wood Vinegar"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.woodgas",
+                    "lN": "Wood Gas"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.dimethylbenzene",
+                    "lN": "1,2-Dimethylbenzen"
+                },
+                {
+                    "a": 60,
+                    "uN": "fluid.1,3dimethylbenzen",
+                    "lN": "1,3-Dimethylbenzen"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.1,4dimethylbenzen",
+                    "lN": "1,4-Dimethylbenzen"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.naphtha",
+                    "lN": "Severely Hydro-Cracked Naphtha"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 125,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.naphtha",
+                    "lN": "Moderately Hydro-Cracked Naphtha"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 200,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 1100,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Antimony Pentachloride Solution",
+                    "lN": "Antimony Pentachloride Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Ether",
+                    "lN": "Ether"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.Antimony Pentachloride",
+                    "lN": "Antimony Pentachloride"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.propene",
+                    "lN": "Moderately Hydro-Cracked Propene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 11,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.butane",
+                    "lN": "Severely Steam-Cracked Butane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 125,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 4000,
+                    "uN": "fluid.Antimony Pentafluoride Solution",
+                    "lN": "fluid.Antimony Pentafluoride Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 4000,
+                    "uN": "fluid.Antimony Pentafluoride",
+                    "lN": "Antimony Pentafluoride"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.Ether",
+                    "lN": "Ether"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.heavyfuel",
+                    "lN": "Moderately Steam-Cracked Heavy Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 200,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 40,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 40,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 25,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 5,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 7,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 75,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 75,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 64,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 40,
+                    "uN": "fluid.potion.vinegar",
+                    "lN": "Vinegar"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 5,
+                    "uN": "fluid.aceticacid",
+                    "lN": "Acetic Acid"
+                },
+                {
+                    "a": 35,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 75,
+            "eut": 180,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFertilizer",
+                    "lN": "Fertilizer"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.fermentedbiomass",
+                    "lN": "Fermented Biomass"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 25,
+                    "uN": "fluid.aceticacid",
+                    "lN": "Acetic Acid"
+                },
+                {
+                    "a": 375,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.methanol",
+                    "lN": "Methanol"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.Ammonia",
+                    "lN": "Ammonia"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.carbondioxide",
+                    "lN": "CO2 Gas"
+                },
+                {
+                    "a": 600,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 180,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.propene",
+                    "lN": "Severely Steam-Cracked Propene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFertilizer",
+                    "lN": "Fertilizer"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.beer",
+                    "lN": "Beer"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 45,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 955,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.butane",
+                    "lN": "Lightly Hydro-Cracked Butane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 667,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 667,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 667,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.woodgas",
+                    "lN": "Wood Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 390,
+                    "uN": "fluid.carbondioxide",
+                    "lN": "CO2 Gas"
+                },
+                {
+                    "a": 120,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 130,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 2340,
+                    "uN": "fluid.carbonmonoxide",
+                    "lN": "Carbon Monoxide"
+                },
+                {
+                    "a": 120,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.propane",
+                    "lN": "Moderately Hydro-Cracked Propane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 3000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 200,
+            "eut": 60,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.sulfurousacid",
+                    "lN": "Sulfurous Acid"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.sulfurdioxide",
+                    "lN": "Sulfur Dioxide"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.heavyfuel",
+                    "lN": "Severely Hydro-Cracked Heavy Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 200,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 175,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 175,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 3000,
+                    "uN": "fluid.dilutedsulfuricacid",
+                    "lN": "Diluted Sulfuric Acid"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.sulfuricacid",
+                    "lN": "Sulfuric Acid"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 250,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.100",
+                    "lN": "Tiny Pile of Plutonium 239 Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyCrackedHeavyNaquadahFuel",
+                    "lN": "Moderately Cracked Heavy Naquadah Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 168,
+                    "uN": "fluid.Naquadah Asphalt",
+                    "lN": "Naquadah Asphalt"
+                },
+                {
+                    "a": 486,
+                    "uN": "fluid.molten.lutetium",
+                    "lN": "Molten Lutetium"
+                },
+                {
+                    "a": 576,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 672,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                },
+                {
+                    "a": 562,
+                    "uN": "fluid.Naquadah Gas",
+                    "lN": "Naquadah Gas"
+                },
+                {
+                    "a": 1400,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.ethylene",
+                    "lN": "Severely Hydro-Cracked Ethylene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 2000,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1536",
+                    "lN": "Small Pile of Charcoal Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.charcoal_byproducts",
+                    "lN": "Charcoal Byproducts"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.woodvinegar",
+                    "lN": "Wood Vinegar"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.woodgas",
+                    "lN": "Wood Gas"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.dimethylbenzene",
+                    "lN": "1,2-Dimethylbenzen"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.ethane",
+                    "lN": "Lightly Steam-Cracked Ethane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1250,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.propane",
+                    "lN": "Lightly Steam-Cracked Propane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 750,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1250,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 4,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.creosote",
+                    "lN": "Creosote Oil"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.phenol",
+                    "lN": "Phenol"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.dimethylbenzene",
+                    "lN": "1,2-Dimethylbenzen"
+                },
+                {
+                    "a": 90,
+                    "uN": "fluid.1,3dimethylbenzen",
+                    "lN": "1,3-Dimethylbenzen"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.1,4dimethylbenzen",
+                    "lN": "1,4-Dimethylbenzen"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 225,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.97",
+                    "lN": "Tiny Pile of Uranium 235 Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyCrackedLightNaquadahFuel",
+                    "lN": "Lightly Cracked Light Naquadah Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 112,
+                    "uN": "fluid.Naquadah Asphalt",
+                    "lN": "Naquadah Asphalt"
+                },
+                {
+                    "a": 489,
+                    "uN": "fluid.molten.plutonium",
+                    "lN": "Molten Plutonium 239"
+                },
+                {
+                    "a": 252,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 712,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 480,
+                    "uN": "fluid.Naquadah Gas",
+                    "lN": "Naquadah Gas"
+                },
+                {
+                    "a": 1750,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 500,
+            "eut": 7680,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.bwMetaGenerateddust.10067",
+                    "lN": "Enriched-Naquadah Oxide Mixture Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 7000,
+                    "uN": "fluid.Low Quality Naquadria Sulphate",
+                    "lN": "Low Quality Naquadria Sulphate"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.P-507",
+                    "lN": "P-507"
+                },
+                {
+                    "a": 5400,
+                    "uN": "fluid.Naquadria-Rich Solution",
+                    "lN": "Naquadria-Rich Solution"
+                },
+                {
+                    "a": 12000,
+                    "uN": "fluid.dilutedsulfuricacid",
+                    "lN": "Diluted Sulfuric Acid"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.lightfuel",
+                    "lN": "Lightly Hydro-Cracked Light Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 800,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.octane",
+                    "lN": "Octane"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 900,
+            "eut": 60,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1200,
+                    "uN": "fluid.fluid.coalTar",
+                    "lN": "Coal Tar"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.fluid.coaltaroil",
+                    "lN": "Coal Tar Oil"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.fluid.ethylbenzene",
+                    "lN": "Ethylbenzene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.fluid.anthracene",
+                    "lN": "Anthracene"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.fluid.kerosene",
+                    "lN": "Kerosene"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.naphtha",
+                    "lN": "Lightly Hydro-Cracked Naphtha"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 800,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 8,
+                    "uN": "item.sugar",
+                    "lN": "Sugar"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.alcopops",
+                    "lN": "Alcopops"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 160,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 840,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.butadiene",
+                    "lN": "Lightly Hydro-Cracked Butadiene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 667,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 667,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 288,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_heavy_oil",
+                    "lN": "Heavy Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 45,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 15,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 60,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.DKorn",
+                    "lN": "Doppelkorn"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 380,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 620,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFertilizer",
+                    "lN": "Fertilizer"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.cider",
+                    "lN": "Cider"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 900,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 100,
+            "eut": 480,
+            "iI": [
+                {
+                    "cfg": 9,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.liquid_heavy_oil",
+                    "lN": "Heavy Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2500,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 450,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.naphthenicacid",
+                    "lN": "Naphthenic Acid"
+                },
+                {
+                    "a": 600,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.GHP",
+                    "lN": "Generic High Proof"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 750,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 7500,
+            "eut": 1920,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 100000000,
+                    "uN": "fluid.LiquidAir",
+                    "lN": "Liquid Air"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 78084000,
+                    "uN": "fluid.nitrogen",
+                    "lN": "Nitrogen Gas"
+                },
+                {
+                    "a": 20946000,
+                    "uN": "fluid.oxygen",
+                    "lN": "Oxygen Gas"
+                },
+                {
+                    "a": 934000,
+                    "uN": "fluid.argon",
+                    "lN": "Argon Gas"
+                },
+                {
+                    "a": 40700,
+                    "uN": "fluid.carbondioxide",
+                    "lN": "CO2 Gas"
+                },
+                {
+                    "a": 1818,
+                    "uN": "fluid.neon",
+                    "lN": "Neon"
+                },
+                {
+                    "a": 524,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                },
+                {
+                    "a": 180,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 114,
+                    "uN": "fluid.krypton",
+                    "lN": "Krypton"
+                },
+                {
+                    "a": 55,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                },
+                {
+                    "a": 9,
+                    "uN": "fluid.xenon",
+                    "lN": "Xenon"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 3,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.creosote",
+                    "lN": "Creosote Oil"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.phenol",
+                    "lN": "Phenol"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.1,4dimethylbenzen",
+                    "lN": "1,4-Dimethylbenzen"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 250,
+            "eut": 480,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFertilizer",
+                    "lN": "Fertilizer"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 3000,
+                    "uN": "ic2.fluidBiomass",
+                    "lN": "Biomass"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 8000,
+                    "uN": "ic2.fluidBiogas",
+                    "lN": "Biogas"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 64,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.dilutedhydrochloricacid_gt5u",
+                    "lN": "Diluted Hydrochloric Acid"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.hydrochloricacid_gt5u",
+                    "lN": "Hydrochloric Acid"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.ethane",
+                    "lN": "Severely Steam-Cracked Ethane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.gas",
+                    "lN": "Moderately Steam-Cracked Refinery Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 10,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 600,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 70,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.gas",
+                    "lN": "Severely Hydro-Cracked Refinery Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 4000,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.327",
+                    "lN": "Tiny Pile of Naquadria Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyCrackedNaquadahAsphalt",
+                    "lN": "Moderately Cracked Naquadah Asphalt"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 245,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 162,
+                    "uN": "fluid.molten.thulium",
+                    "lN": "Molten Thulium"
+                },
+                {
+                    "a": 633,
+                    "uN": "fluid.molten.plutonium",
+                    "lN": "Molten Plutonium 239"
+                },
+                {
+                    "a": 1036,
+                    "uN": "fluid.molten.thorium",
+                    "lN": "Molten Thorium"
+                },
+                {
+                    "a": 1440,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 840,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.lightfuel",
+                    "lN": "Moderately Hydro-Cracked Light Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.octane",
+                    "lN": "Octane"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 1100,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.327",
+                    "lN": "Tiny Pile of Naquadria Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyCrackedNaquadahAsphalt",
+                    "lN": "Lightly Cracked Naquadah Asphalt"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 280,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 183,
+                    "uN": "fluid.molten.thulium",
+                    "lN": "Molten Thulium"
+                },
+                {
+                    "a": 712,
+                    "uN": "fluid.molten.plutonium",
+                    "lN": "Molten Plutonium 239"
+                },
+                {
+                    "a": 950,
+                    "uN": "fluid.molten.thorium",
+                    "lN": "Molten Thorium"
+                },
+                {
+                    "a": 1382,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 750,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 3,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.naphtha",
+                    "lN": "Severely Steam-Cracked Naphtha"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 25,
+                    "uN": "fluid.liquid_heavy_fuel",
+                    "lN": "Heavy Fuel"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 15,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 65,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 491520,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2815",
+                    "lN": "Ashes"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.dilutedxenoxene",
+                    "lN": "Diluted Xenoxene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.xenoxene",
+                    "lN": "Xenoxene"
+                },
+                {
+                    "a": 750,
+                    "uN": "fluid.lightradox",
+                    "lN": "Light Radox"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 240,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.gas_gas",
+                    "lN": "Refinery Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 60,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 70,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 750,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFertilizer",
+                    "lN": "Fertilizer"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.darkbeer",
+                    "lN": "Dark Beer"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 75,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 925,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 32,
+            "eut": 480,
+            "iI": [
+                {
+                    "cfg": 9,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1500,
+                    "uN": "fluid.liquid_light_oil",
+                    "lN": "Light Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 25,
+                    "uN": "fluid.naphthenicacid",
+                    "lN": "Naphthenic Acid"
+                },
+                {
+                    "a": 2400,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 250,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.100",
+                    "lN": "Tiny Pile of Plutonium 239 Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyCrackedHeavyNaquadahFuel",
+                    "lN": "Lightly Cracked Heavy Naquadah Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 192,
+                    "uN": "fluid.Naquadah Asphalt",
+                    "lN": "Naquadah Asphalt"
+                },
+                {
+                    "a": 550,
+                    "uN": "fluid.molten.lutetium",
+                    "lN": "Molten Lutetium"
+                },
+                {
+                    "a": 648,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 616,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                },
+                {
+                    "a": 540,
+                    "uN": "fluid.Naquadah Gas",
+                    "lN": "Naquadah Gas"
+                },
+                {
+                    "a": 1250,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 480,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.2622",
+                    "lN": "Quicklime Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.calciumacetatesolution",
+                    "lN": "Calcium Acetate Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.acetone",
+                    "lN": "Acetone"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.carbondioxide",
+                    "lN": "CO2 Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.propane",
+                    "lN": "Severely Hydro-Cracked Propane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 3000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 2000,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.butane",
+                    "lN": "Lightly Steam-Cracked Butane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 750,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1063,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 900,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 5200,
+                    "uN": "fluid.sulfuricapatite",
+                    "lN": "Sulfuric Apatite Mix"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 3800,
+                    "uN": "fluid.sulfurousacid",
+                    "lN": "Sulfurous Acid"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.hydrogenchloride",
+                    "lN": "Industrial Strength Hydrogen Chloride"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.hydrofluoricacid",
+                    "lN": "Industrial Strength Hydrofluoric Acid"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 96,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_medium_oil",
+                    "lN": "Raw Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 10,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 60,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 7680,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.molten.chloroaceticmixture",
+                    "lN": "Chloroacetic Mixture"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.molten.chloroaceticacid",
+                    "lN": "Chloroacetic Acid"
+                },
+                {
+                    "a": 450,
+                    "uN": "fluid.molten.dichloroaceticacid",
+                    "lN": "Dichloroacetic Acid"
+                },
+                {
+                    "a": 450,
+                    "uN": "fluid.molten.trichloroaceticacid",
+                    "lN": "Trichloroacetic Acid"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.propane",
+                    "lN": "Lightly Hydro-Cracked Propane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.butene",
+                    "lN": "Severely Hydro-Cracked Butene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 96,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 50,
+                    "uN": "fluid.oil",
+                    "lN": "Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 15,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 60,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 150,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.324",
+                    "lN": "Tiny Pile of Naquadah Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyCrackedNaquadahGas",
+                    "lN": "Lightly Cracked Naquadah Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 11200,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                },
+                {
+                    "a": 34,
+                    "uN": "fluid.xenon",
+                    "lN": "Xenon"
+                },
+                {
+                    "a": 18,
+                    "uN": "fluid.krypton",
+                    "lN": "Krypton"
+                },
+                {
+                    "a": 88,
+                    "uN": "fluid.argon",
+                    "lN": "Argon Gas"
+                },
+                {
+                    "a": 60,
+                    "uN": "fluid.neon",
+                    "lN": "Neon"
+                },
+                {
+                    "a": 375,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.naphtha",
+                    "lN": "Lightly Steam-Cracked Naphtha"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 75,
+                    "uN": "fluid.liquid_heavy_fuel",
+                    "lN": "Heavy Fuel"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 40,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 80,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 15,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 35,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 32,
+            "eut": 480,
+            "iI": [
+                {
+                    "cfg": 9,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.liquid_medium_oil",
+                    "lN": "Raw Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 25,
+                    "uN": "fluid.naphthenicacid",
+                    "lN": "Naphthenic Acid"
+                },
+                {
+                    "a": 600,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1200,
+                    "uN": "fluid.fishoil",
+                    "lN": "Fish Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.lubricant",
+                    "lN": "Lubricant"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 1920,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 20,
+                    "uN": "fluid.Naquadah Solution",
+                    "lN": "Naquadah Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2,
+                    "uN": "fluid.Naquadah Asphalt",
+                    "lN": "Naquadah Asphalt"
+                },
+                {
+                    "a": 5,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 60,
+                    "uN": "fluid.Naquadah Gas",
+                    "lN": "Naquadah Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.butane",
+                    "lN": "Severely Hydro-Cracked Butane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.327",
+                    "lN": "Tiny Pile of Naquadria Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.heavilyCrackedNaquadahAsphalt",
+                    "lN": "Severely Cracked Naquadah Asphalt"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 192,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 129,
+                    "uN": "fluid.molten.thulium",
+                    "lN": "Molten Thulium"
+                },
+                {
+                    "a": 554,
+                    "uN": "fluid.molten.plutonium",
+                    "lN": "Molten Plutonium 239"
+                },
+                {
+                    "a": 1252,
+                    "uN": "fluid.molten.thorium",
+                    "lN": "Molten Thorium"
+                },
+                {
+                    "a": 1728,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 960,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 480,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2815",
+                    "lN": "Ashes"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Pollution",
+                    "lN": "Pollution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 150,
+                    "uN": "fluid.sulfuricacid",
+                    "lN": "Sulfuric Acid"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.NitrogenDioxide",
+                    "lN": "Nitrogen Dioxide"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.Mercury",
+                    "lN": "Mercury"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "ic2.itemFertilizer",
+                    "lN": "Fertilizer"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.wine",
+                    "lN": "Wine"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 120,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 880,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.njagi",
+                    "lN": "Fake J\u00e4germeister"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 350,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 650,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 480,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.liquid_heavy_fuel",
+                    "lN": "Heavy Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 400,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.phenol",
+                    "lN": "Phenol"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 20,
+            "eut": 96,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 150,
+                    "uN": "fluid.liquid_light_oil",
+                    "lN": "Light Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 10,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 240,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 9000,
+            "eut": 7680,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.fluid.impurelifbef2",
+                    "lN": "Impure Molten Salt Base"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.molten.stablemoltensaltbase",
+                    "lN": "Stable Molten Salt Base"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 640,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.acetone",
+                    "lN": "Acetone"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.ethenone",
+                    "lN": "Ethenone"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 4,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.propane",
+                    "lN": "Severely Steam-Cracked Propane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1750,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.ethane",
+                    "lN": "Severely Hydro-Cracked Ethane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 4000,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.woodvinegar",
+                    "lN": "Wood Vinegar"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.aceticacid",
+                    "lN": "Acetic Acid"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.methanol",
+                    "lN": "Methanol"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.acetone",
+                    "lN": "Acetone"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.methylacetate",
+                    "lN": "Methyl Acetate"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 6,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.butene",
+                    "lN": "Severely Steam-Cracked Butene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 125,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 313,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.butene",
+                    "lN": "Moderately Hydro-Cracked Butene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 389,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 556,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 334,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1056,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 3,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.heavyfuel",
+                    "lN": "Severely Steam-Cracked Heavy Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 80,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 80,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 15,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 800,
+            "eut": 1966080,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 5,
+                    "uN": "gt.metaitem.01.2815",
+                    "lN": "Ashes"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 5000,
+                    "uN": "fluid.rawradox",
+                    "lN": "Raw Radox"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 600,
+                    "uN": "fluid.liquid_heavy_oil",
+                    "lN": "Heavy Oil"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.oil",
+                    "lN": "Oil"
+                },
+                {
+                    "a": 1000,
+                    "uN": "fluid.creosote",
+                    "lN": "Creosote Oil"
+                },
+                {
+                    "a": 1400,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.FermentedBacterialSludge",
+                    "lN": "Fermented Bacterial Sludge"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.fermentedbiomass",
+                    "lN": "Fermented Biomass"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.superheavyradox",
+                    "lN": "Super Heavy Radox"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.heavyradox",
+                    "lN": "Heavy Radox"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.dilutedxenoxene",
+                    "lN": "Diluted Xenoxene"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.lightradox",
+                    "lN": "Light Radox"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.superlightradox",
+                    "lN": "Super Light Radox"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2010",
+                    "lN": "Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelysteamcracked.ethylene",
+                    "lN": "Severely Steam-Cracked Ethylene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.butene",
+                    "lN": "Lightly Hydro-Cracked Butene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 334,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 334,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 334,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 334,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 334,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 3,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1536",
+                    "lN": "Small Pile of Charcoal Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.charcoal_byproducts",
+                    "lN": "Charcoal Byproducts"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.woodvinegar",
+                    "lN": "Wood Vinegar"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.woodgas",
+                    "lN": "Wood Gas"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.1,4dimethylbenzen",
+                    "lN": "1,4-Dimethylbenzen"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.ethane",
+                    "lN": "Moderately Hydro-Cracked Ethane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 2000,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Ferrocene Waste",
+                    "lN": "Ferrocene Waste"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 400,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                },
+                {
+                    "a": 800,
+                    "uN": "fluid.Diethylamine",
+                    "lN": "Diethylamine"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.Ether",
+                    "lN": "Ether"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.gas",
+                    "lN": "Lightly Steam-Cracked Refinery Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 50,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 10,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 2,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.lightfuel",
+                    "lN": "Moderately Steam-Cracked Light Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_heavy_fuel",
+                    "lN": "Heavy Fuel"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 300,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 90,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 75,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 35,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.propane",
+                    "lN": "Moderately Steam-Cracked Propane"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1400,
+                    "uN": "fluid.seedoil",
+                    "lN": "Seed Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.lubricant",
+                    "lN": "Lubricant"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.propene",
+                    "lN": "Severely Hydro-Cracked Propene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 3000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.lightfuel",
+                    "lN": "Severely Hydro-Cracked Light Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 200,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 20,
+                    "uN": "fluid.octane",
+                    "lN": "Octane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 1500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.bwMetaGenerateddust.10093",
+                    "lN": "Ferrocene Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.Ferrocene Solution",
+                    "lN": "Ferrocene Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Ether",
+                    "lN": "Ether"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.ethylene",
+                    "lN": "Lightly Hydro-Cracked Ethylene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 112,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.severelyhydrocracked.butadiene",
+                    "lN": "Severely Hydro-Cracked Butadiene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 260,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 926,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 389,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 2667,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 180,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 3,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.propene",
+                    "lN": "Moderately Steam-Cracked Propene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 750,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 750,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 150,
+            "eut": 7680,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.Acidic Osmium Solution",
+                    "lN": "Acidic Osmium Solution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.Osmium Solution",
+                    "lN": "Osmium Solution"
+                },
+                {
+                    "a": 900,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 3,
+                    "uN": "gt.metaitem.01.1010",
+                    "lN": "Small Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.butadiene",
+                    "lN": "Lightly Steam-Cracked Butadiene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 750,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 188,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 188,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 400,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.creosote",
+                    "lN": "Creosote Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.lubricant",
+                    "lN": "Lubricant"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.ethylene",
+                    "lN": "Moderately Hydro-Cracked Ethylene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 2000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 240,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 900,
+                    "uN": "fluid.mtbereactionmixture",
+                    "lN": "MTBE Reaction Mixture"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 400,
+                    "uN": "fluid.ethyltertbutylether",
+                    "lN": "Anti-Knock Agent"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.methanol",
+                    "lN": "Methanol"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.gas",
+                    "lN": "Moderately Hydro-Cracked Refinery Gas"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1400,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 3000,
+                    "uN": "fluid.hydrogen",
+                    "lN": "Hydrogen Gas"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.helium",
+                    "lN": "Helium Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 1,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.creosote",
+                    "lN": "Creosote Oil"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.phenol",
+                    "lN": "Phenol"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.dimethylbenzene",
+                    "lN": "1,2-Dimethylbenzen"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 250,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.100",
+                    "lN": "Tiny Pile of Plutonium 239 Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.heavilyCrackedHeavyNaquadahFuel",
+                    "lN": "Severely Cracked Heavy Naquadah Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 132,
+                    "uN": "fluid.Naquadah Asphalt",
+                    "lN": "Naquadah Asphalt"
+                },
+                {
+                    "a": 388,
+                    "uN": "fluid.molten.lutetium",
+                    "lN": "Molten Lutetium"
+                },
+                {
+                    "a": 504,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 812,
+                    "uN": "fluid.Light Naquadah Fuel",
+                    "lN": "Light Naquadah Fuel"
+                },
+                {
+                    "a": 675,
+                    "uN": "fluid.Naquadah Gas",
+                    "lN": "Naquadah Gas"
+                },
+                {
+                    "a": 1600,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 300,
+            "eut": 480,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 3,
+                    "uN": "gt.metaitem.01.2030",
+                    "lN": "Chrome Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 10000,
+                    "uN": "fluid.Waste Liquid",
+                    "lN": "Waste Liquid"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 3000,
+                    "uN": "fluid.saltwater",
+                    "lN": "Salt Water"
+                },
+                {
+                    "a": 2000,
+                    "uN": "fluid.phenol",
+                    "lN": "Phenol"
+                },
+                {
+                    "a": 5000,
+                    "uN": "fluid.hydrochloricacid_gt5u",
+                    "lN": "Hydrochloric Acid"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2010",
+                    "lN": "Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelysteamcracked.ethylene",
+                    "lN": "Moderately Steam-Cracked Ethylene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2010",
+                    "lN": "Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.ethylene",
+                    "lN": "Lightly Steam-Cracked Ethylene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.heavyfuel",
+                    "lN": "Moderately Hydro-Cracked Heavy Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 400,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 150,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.propene",
+                    "lN": "Lightly Hydro-Cracked Propene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 500,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 32,
+            "eut": 480,
+            "iI": [
+                {
+                    "cfg": 9,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 500,
+                    "uN": "fluid.oil",
+                    "lN": "Oil"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 150,
+                    "uN": "fluid.liquid_sulfuricheavy_fuel",
+                    "lN": "Sulfuric Heavy Fuel"
+                },
+                {
+                    "a": 500,
+                    "uN": "fluid.liquid_sufluriclight_fuel",
+                    "lN": "Sulfuric Light Fuel"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.liquid_sulfuricnaphtha",
+                    "lN": "Sulfuric Naphtha"
+                },
+                {
+                    "a": 25,
+                    "uN": "fluid.naphthenicacid",
+                    "lN": "Naphthenic Acid"
+                },
+                {
+                    "a": 600,
+                    "uN": "fluid.gas_sulfuricgas",
+                    "lN": "Sulfuric Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 1920,
+            "iI": [
+                {
+                    "cfg": 2,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 10,
+                    "uN": "gt.metaitem.01.2815",
+                    "lN": "Ashes"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 10000,
+                    "uN": "fluid.Pollution",
+                    "lN": "Pollution"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 3000,
+                    "uN": "fluid.sulfuricacid",
+                    "lN": "Sulfuric Acid"
+                },
+                {
+                    "a": 30000,
+                    "uN": "fluid.NitrogenDioxide",
+                    "lN": "Nitrogen Dioxide"
+                },
+                {
+                    "a": 3000,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                },
+                {
+                    "a": 200,
+                    "uN": "fluid.Mercury",
+                    "lN": "Mercury"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 225,
+            "eut": 1340,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.97",
+                    "lN": "Tiny Pile of Uranium 235 Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.heavilyCrackedLightNaquadahFuel",
+                    "lN": "Severely Cracked Light Naquadah Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 77,
+                    "uN": "fluid.Naquadah Asphalt",
+                    "lN": "Naquadah Asphalt"
+                },
+                {
+                    "a": 345,
+                    "uN": "fluid.molten.plutonium",
+                    "lN": "Molten Plutonium 239"
+                },
+                {
+                    "a": 196,
+                    "uN": "fluid.Heavy Naquadah Fuel",
+                    "lN": "Heavy Naquadah Fuel"
+                },
+                {
+                    "a": 939,
+                    "uN": "fluid.molten.uranium",
+                    "lN": "Molten Uranium 238"
+                },
+                {
+                    "a": 600,
+                    "uN": "fluid.Naquadah Gas",
+                    "lN": "Naquadah Gas"
+                },
+                {
+                    "a": 2240,
+                    "uN": "fluid.Radon",
+                    "lN": "Radon"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.jagi",
+                    "lN": "Real J\u00e4germeister!"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 350,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 650,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 80,
+            "eut": 180,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.potion.vodka",
+                    "lN": "Vodka"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 400,
+                    "uN": "fluid.bioethanol",
+                    "lN": "Ethanol"
+                },
+                {
+                    "a": 600,
+                    "uN": "fluid.tile.water",
+                    "lN": "Water"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.moderatelyhydrocracked.butadiene",
+                    "lN": "Moderately Hydro-Cracked Butadiene"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 223,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 223,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 445,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 223,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.10",
+                    "lN": "Tiny Pile of Carbon Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlysteamcracked.heavyfuel",
+                    "lN": "Lightly Steam-Cracked Heavy Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 300,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 25,
+                    "uN": "fluid.liquid_toluene",
+                    "lN": "Toluene"
+                },
+                {
+                    "a": 125,
+                    "uN": "fluid.benzene",
+                    "lN": "Benzene"
+                },
+                {
+                    "a": 25,
+                    "uN": "fluid.butene",
+                    "lN": "Butene"
+                },
+                {
+                    "a": 15,
+                    "uN": "fluid.butadiene",
+                    "lN": "Butadiene"
+                },
+                {
+                    "a": 3,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 30,
+                    "uN": "fluid.propene",
+                    "lN": "Propene"
+                },
+                {
+                    "a": 5,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.ethylene",
+                    "lN": "Ethylene"
+                },
+                {
+                    "a": 50,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 600,
+            "eut": 491520,
+            "iI": [],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.2815",
+                    "lN": "Ashes"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.crackedradox",
+                    "lN": "Cracked Radox"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 100,
+                    "uN": "fluid.radoxgas",
+                    "lN": "Radox Gas"
+                },
+                {
+                    "a": 900,
+                    "uN": "fluid.lightradox",
+                    "lN": "Light Radox"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 120,
+            "eut": 120,
+            "iI": [],
+            "iO": [],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.lightlyhydrocracked.heavyfuel",
+                    "lN": "Lightly Hydro-Cracked Heavy Fuel"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 600,
+                    "uN": "fluid.liquid_light_fuel",
+                    "lN": "Light Fuel"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.liquid_naphtha",
+                    "lN": "Naphtha"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.butane",
+                    "lN": "Butane"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.propane",
+                    "lN": "Propane"
+                },
+                {
+                    "a": 75,
+                    "uN": "fluid.ethane",
+                    "lN": "Ethane"
+                },
+                {
+                    "a": 75,
+                    "uN": "fluid.methane",
+                    "lN": "Methane Gas"
+                }
+            ]
+        },
+        {
+            "en": true,
+            "dur": 40,
+            "eut": 256,
+            "iI": [
+                {
+                    "cfg": 2,
+                    "a": 0,
+                    "uN": "gt.integrated_circuit",
+                    "lN": "Programmed Circuit"
+                }
+            ],
+            "iO": [
+                {
+                    "a": 1,
+                    "uN": "gt.metaitem.01.1536",
+                    "lN": "Small Pile of Charcoal Dust"
+                }
+            ],
+            "fI": [
+                {
+                    "a": 1000,
+                    "uN": "fluid.charcoal_byproducts",
+                    "lN": "Charcoal Byproducts"
+                }
+            ],
+            "fO": [
+                {
+                    "a": 250,
+                    "uN": "fluid.woodtar",
+                    "lN": "Wood Tar"
+                },
+                {
+                    "a": 400,
+                    "uN": "fluid.woodvinegar",
+                    "lN": "Wood Vinegar"
+                },
+                {
+                    "a": 250,
+                    "uN": "fluid.woodgas",
+                    "lN": "Wood Gas"
+                },
+                {
+                    "a": 100,
+                    "uN": "fluid.1,3dimethylbenzen",
+                    "lN": "1,3-Dimethylbenzen"
+                }
+            ]
+        }
+    ]
+}
