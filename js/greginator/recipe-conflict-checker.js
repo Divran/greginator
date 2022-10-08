@@ -243,7 +243,7 @@ onVersionChanged(function(version) {
 		}
 
 		if (total_conflicts.length > 0) {
-			conflict_results.append("<div class='p-2 mb-2 bg-danger text-center'>Total conflicts <small class='text-muted'>(All inputs conflict)</small></div>").append(total_conflicts);
+			conflict_results.append("<div class='p-2 mb-2 bg-danger text-center'>Total conflicts <small class='text-muted'>(All inputs conflict)</small><br><small></div>").append(total_conflicts);
 		}
 
 		for(let i in added_recipes_list) {
@@ -255,7 +255,13 @@ onVersionChanged(function(version) {
 		}
 
 		if (partial_conflicts.length > 0) {
-			conflict_results.append("<div class='p-2 mb-2 bg-warning text-center'>Partial conflicts <small>(Parts of inputs conflict)</small></div>").append(partial_conflicts);
+			var partial_header = $("<div class='p-2 mb-2 bg-warning text-center link-pointer'>Partial conflicts (" + partial_conflicts.length + "x) <small>"+
+				"(Parts of inputs conflict)</small><br><small>These conflicts usually don't cause any issues</small></div>");
+			var partial_content = $("<div class='collapse'>");
+			partial_header.click(function() {
+				partial_content.collapse("toggle");
+			});
+			conflict_results.append().append([partial_header,partial_content.append(partial_conflicts)]);
 		}
 	}
 
