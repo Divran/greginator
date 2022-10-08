@@ -21,11 +21,16 @@ onVersionChanged(function(version) {
 	var selected_machine = "";
 	var downloaded_machines = {};
 	var downloaded_grouped = {};
+	var current_recipes_list = {};
 
 	var machine_search = $(".machine-search", card);
-	var recipe_search = $(".recipe-search", card);
+	var recipe_search_input = $(".recipe-search-input", card);
+	var recipe_search_output = $(".recipe-search-output", card);
+	var recipe_search_result = $(".recipe-search-result", card);
 	var added_recipes = $(".added-recipes", card);
 	var conflict_results = $(".conflict-results", card);
+	var settings_input = $(".settings-input", card);
+	var loading_settings = false;
 
 	var added_recipes_list = [];
 
@@ -56,18 +61,58 @@ onVersionChanged(function(version) {
 		added_recipes_list = [];
 		added_recipes.empty();
 		downloadMachine(selected_machine);
+		saveSettings();
 	});
 
+	function doSearch() {
+		var inp = recipe_search_input.val().toLowerCase();
+		var out = recipe_search_output.val().toLowerCase();
+		var searched_recipes_list = [];
 
-	recipe_search.off( "changed.bs.select" );
-	var deselecting = false;
-	recipe_search.on( "changed.bs.select", function() {
-		if (deselecting) return;
-		deselecting = true;
-		addRecipe(recipe_search.val());
-		recipe_search.selectpicker('deselectAll');
-		recipe_search.selectpicker('val','-');
-		deselecting = false;
+		if (inp != "" || out != "") {
+			searched_recipes_list = current_recipes_list.filter(r => {
+				var inp_b = inp == "";
+				var out_b = out == "";
+				r.lev = 999999;
+
+				if (inp != "" && r.iNames.indexOf(inp) > -1) {
+					r.lev = Math.min(r.lev, ...r.recipe.iI.concat(r.recipe.fI).map(i => levenshtein(i.lN.toLowerCase(),inp)));
+					inp_b = true;
+				}
+
+				if (out != "" && r.oNames.indexOf(out) > -1) {
+					r.lev = Math.min(r.lev, ...r.recipe.iO.concat(r.recipe.fO).map(i => levenshtein(i.lN.toLowerCase(),inp)));
+					out_b = true;
+				}
+
+				return inp_b && out_b;
+			});
+			searched_recipes_list.sort((a,b) => Math.sign(a.lev - b.lev));
+		} else {
+			searched_recipes_list = [...current_recipes_list];
+			searched_recipes_list.sort((a,b) => Math.sign(a.recipe.idx - b.recipe.idx));
+		}
+
+		recipe_search_result.empty().append(searched_recipes_list.slice(0,500).map(v => {
+			v.pnl.click(() => {
+				addRecipe(v.recipe.idx);
+			})
+			return v.pnl
+		}));
+	}
+
+	var search_tid;
+	recipe_search_input.on("input",function() {
+		if (!selected_machine) return;
+		if (!downloaded_machines[selected_machine]) return;
+		if (search_tid) {clearTimeout(search_tid);}
+		search_tid = setTimeout(doSearch,150);
+	});
+	recipe_search_output.on("input",function() {
+		if (!selected_machine) return;
+		if (!downloaded_machines[selected_machine]) return;
+		if (search_tid) {clearTimeout(search_tid);}
+		search_tid = setTimeout(doSearch,150);
 	});
 
 	function buildTbl(list) {
@@ -101,7 +146,7 @@ onVersionChanged(function(version) {
 	function buildRecipePanel(recipe, removebtn) {
 		let eut = recipe.eut;
 		let dur = recipe.dur;
-		let pnl = $("<div>");
+		let pnl = $("<div class='row p-1 m-0 recipe-item'>").css("border-bottom","1px solid #00000050");
 		let colIn = $("<div class='col px-1'>").css({
 			maxHeight: "200px",
 			overflowY: "auto"
@@ -115,9 +160,10 @@ onVersionChanged(function(version) {
 		colOut.append(buildTbl(recipe.iO.concat(recipe.fO)));
 		colOut.append($("<div class='p-2 my-1 bg-secondary'>").append(eut + " EU/T, " + (dur>20 ? Math.floor(dur/20*1000+0.5)/1000 + "s" : dur + "t")));
 
-		let names = recipe.iI.concat(recipe.fI).concat(recipe.iO).concat(recipe.fO).map(r => r.lN).join(" ");
+		//let names = recipe.iI.concat(recipe.fI).concat(recipe.iO).concat(recipe.fO).map(r => r.lN).join(" ");
 
-		pnl.append($("<div class='row p-1 m-0'>").css("border-bottom","1px solid #00000050").append([colIn,colOut]));
+		pnl.append([colIn,colOut]);
+		pnl.attr("data-recipe-idx",recipe.idx);
 
 		if (removebtn) {
 			pnl.addClass("position-relative");
@@ -126,7 +172,15 @@ onVersionChanged(function(version) {
 						'</button>').click(()=>removeRecipe(recipe.idx, pnl)));
 		}
 
-		return {pnl:pnl,names:names};
+		return pnl; // {pnl:pnl,names:names};
+	}
+
+	function saveSettings() {
+		var settings = {
+			machine: selected_machine,
+			recipeIdx: added_recipes_list.map(i => i.idx)
+		}
+		settings_input.val(JSON.stringify(settings));
 	}
 
 	function addRecipe(recipeIdx) {
@@ -137,11 +191,12 @@ onVersionChanged(function(version) {
 
 		if (added_recipes_list.some(i => i.idx == recipe.idx)) {return;}
 		
-		var obj = buildRecipePanel(recipe, true);
-		obj.pnl.attr("data-recipe-idx",recipe.idx);
-		added_recipes.append(obj.pnl);
+		var pnl = buildRecipePanel(recipe, true);
+		added_recipes.append(pnl);
 		added_recipes_list.push(recipe);
 		calculateConflicts();
+
+		saveSettings();
 	}
 
 	function removeRecipe(recipeIdx, pnl) {
@@ -157,6 +212,8 @@ onVersionChanged(function(version) {
 				break;
 			}
 		}
+
+		saveSettings();
 	}
 
 
@@ -169,11 +226,18 @@ onVersionChanged(function(version) {
 		var total_conflicts = [];
 		var partial_conflicts = [];
 
+		//{"machine":"Mixer.json","recipeIdx":[463,159,77]}
+		//console.log("----------");
+
 		for(let i in recipes) {
 			let otherRecipe = recipes[i];
 
+			/*if (otherRecipe.iO.some(i => i.lN == "Wet Tofu")) {
+				console.log("WET TOFU",allInputs,otherRecipe, allInputsConflict(allInputs, otherRecipe, true));
+			}*/
+
 			if (allInputsConflict(allInputs,otherRecipe)) {
-				var pnl = buildRecipePanel(otherRecipe).pnl;
+				var pnl = buildRecipePanel(otherRecipe);
 				total_conflicts.push(pnl);
 			}
 		}
@@ -185,7 +249,7 @@ onVersionChanged(function(version) {
 		for(let i in added_recipes_list) {
 			let otherRecipe = added_recipes_list[i];
 			if (partialInputsConflict(allInputs, otherRecipe)) {
-				var pnl = buildRecipePanel(otherRecipe).pnl;
+				var pnl = buildRecipePanel(otherRecipe);
 				partial_conflicts.push(pnl);
 			}
 		}
@@ -266,14 +330,16 @@ onVersionChanged(function(version) {
 		return recipe.iI.find(i => i.uN == "gt.integrated_circuit" || i.uN == "item.BioRecipeSelector" || i.uN == "item.T3RecipeSelector");
 	}
 
-	function allInputsConflict(allInputs, otherRecipe) {
+	function allInputsConflict(allInputs, otherRecipe, debug) {
 		if (typeof allInputs.recipeIdx[otherRecipe.idx] != "undefined") {
+			if (debug) console.log("it's already added");
 			return false;
 		}
 
 		var circuit = getCircuitForRecipe(otherRecipe);
 		if (circuit) {
 			if (typeof allInputs.circuits[getCircuitUID(circuit)] == "undefined") {
+			if (debug) console.log("needed circuit doesnt exist");
 				return false;
 			}
 		}
@@ -283,13 +349,10 @@ onVersionChanged(function(version) {
 			if (item.a == 0) continue;
 
 			if (typeof allInputs.items[item.uN] == "undefined") {
-				// missing item
+				if (debug) console.log("needed item ",item.lN," doesnt exist");
+				// missing item = no conflict
 				return false;
-			}
-
-			if (allInputs.items[item.uN].every(i => i == item.a)) {
-				// same amounts = no conflict
-				return false;
+			} else {
 			}
 		}
 
@@ -298,17 +361,36 @@ onVersionChanged(function(version) {
 			if (fluid.a == 0) continue;
 
 			if (typeof allInputs.fluids[fluid.uN] == "undefined") {
-				// missing fluid
+				if (debug) console.log("needed fluid ",fuid.lN," doesnt exist");
+				// missing fluid = no conflict
 				return false;
+			} else {
 			}
+		}
 
-			if (allInputs.fluids[fluid.uN].every(f => f == fluid.a)) {
+		// if it got this far it means all items exist, now check if all amounts match
+
+		for(let i in otherRecipe.iI) {
+			let item = otherRecipe.iI[i];
+			if (item.a == 0) continue;
+			if (!allInputs.items[item.uN].every(i => i == item.a)) {
+				if (debug) console.log("needed item ",item.lN," doesn't have the same amount");
 				// same amounts = no conflict
-				return false;
+				return true;
+			}
+		}
+
+		for(let i in otherRecipe.fI) {
+			let fluid = otherRecipe.fI[i];
+			if (fluid.a == 0) continue;
+			if (!allInputs.fluids[fluid.uN].every(f => f == fluid.a)) {
+				if (debug) console.log("needed fluid ",fluid.lN," doesn't have the same amount");
+				// same amounts = no conflict
+				return true;
 			}
 		}
 		
-		return true;
+		return true; //allAmountsMatch;
 	}
 
 	function partialInputsConflict(allInputs, otherRecipe) {
@@ -411,39 +493,46 @@ onVersionChanged(function(version) {
 	function listRecipes(machine) {
 		if (!downloaded_machines[machine]) return;
 
-		recipe_search.empty();
+		recipe_search_result.empty();
+		current_recipes_list = [];
 
-		recipe_search.append("<option value='-' disabled selected data-content='<div class=\"p-2\">Add Recipe</div>'>Add Recipe</option>");
 		var recipes = downloaded_machines[machine].recs;
 		for(let idx in recipes) {
 			let recipe = recipes[idx];
-			recipe.idx = idx;
-			let obj = buildRecipePanel(recipe)
+			recipe.idx = parseInt(idx);
 
-			recipe_search.append(
-				$("<option>").attr("value",""+idx)
-				.attr("data-content",obj.pnl.html())
-				.text(obj.names)
-			);
+			let pnl = buildRecipePanel(recipe);
+			current_recipes_list.push({
+				recipe: recipe,
+				pnl: pnl,
+				iNames: (recipe.iI.concat(recipe.fI).map(r => r.lN).join(" ")).toLowerCase(),
+				oNames: (recipe.iO.concat(recipe.fO).map(r => r.lN).join(" ")).toLowerCase(),
+			});
 		}
 
-		setTimeout(() => {
-			if (selectpicker_created) {
-				recipe_search.selectpicker("refresh");
-			} else {
-				recipe_search.selectpicker({liveSearch:true,maxOptions:1,virtualScroll:100, sanitizeFn:(i) => i});
-				selectpicker_created = true;
+		recipe_search_result.append(current_recipes_list.slice(0,500).map(v => {
+			v.pnl.click(() => {
+				addRecipe(v.recipe.idx);
+			})
+			return v.pnl
+		}));
 
-				// TESTING
-				/*
-				recipe_search.selectpicker('val','442');
-				recipe_search.selectpicker('val','542');
-				recipe_search.selectpicker('val','672');
-				recipe_search.selectpicker('val','513');
-				recipe_search.selectpicker('val','199');
-				*/
+		if (loading_settings !== false) {
+			for(let i in loading_settings.recipeIdx) {
+				addRecipe(loading_settings.recipeIdx[i]);
 			}
-		}, 10);
+
+			loading_settings = false;
+		}
+
+		// TESTING
+		/*
+		recipe_search.selectpicker('val','442');
+		recipe_search.selectpicker('val','542');
+		recipe_search.selectpicker('val','672');
+		recipe_search.selectpicker('val','513');
+		recipe_search.selectpicker('val','199');
+		*/
 	}
 
 
@@ -453,5 +542,26 @@ onVersionChanged(function(version) {
 	selected_machine = "Large Chemical Reactor.json";
 	downloadMachine(selected_machine);
 	*/
+
+	settings_input.on("input",() => {
+		if (settings_input.val() != "") {
+			var jsonObj = null;
+
+			try {
+				jsonObj = JSON.parse(settings_input.val());
+			} catch (e) {
+				alert("Invalid json object. Error: " + e);
+				return;
+			}
+
+			loading_settings = jsonObj;
+			machine_search.selectpicker("val", jsonObj.machine);
+			collapse.collapse("show");
+		}
+	}).click((e) => {
+		settings_input.select();
+		e.preventDefault();
+		e.stopPropagation();
+	});
 
 });

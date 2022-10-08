@@ -573,19 +573,27 @@
 			<div class="card" id="gt-recipe-conflict-checker">
 				<div class="card-header">
 					<span class="float-right">
-						<small class="text-right text-muted d-inline-block">Data exported using <a href="https://github.com/bigbass1997/RecEx">bigbass1997/RecEx</a><br> at 2022-10-07 with GTNH version 2.2.0.0</small>
+						<small class="text-right text-muted d-inline-block mr-2">Data exported using <a href="https://github.com/bigbass1997/RecEx">bigbass1997/RecEx</a><br> at 2022-10-07 with GTNH version 2.2.0.0</small>
+						<span class="label">Copy/Paste Settings:</span> <input type="text" class="d-inline-block form-control settings-input" style="max-width:100px;" />
 					</span>
 					<h4 class="card-title">Recipe Conflict Checker</h4>
 				</div>
 				<div class="collapse">
 					<div class="card-body">
-						<small class="text-muted">Note: The data exporter does not support bio circuits and breakthrough circuits.<br>
-						Note: The dropdown menu library I'm using seems to have bugs with large amounts of data. Search to narrow down the result instead of scrolling until they fix it.</small>
+						<small class="text-muted">Note: The data exporter does not support bio circuits and breakthrough circuits.</small>
 						<div class="form-group">
 							<select class="machine-search form-control"></select>
 						</div>
 						<div class="form-group">
-							<select class="recipe-search form-control nopadding"></select>
+							<div class="row">
+								<div class="col">
+									<input type="text" class="form-control recipe-search-input" placeholder="Search Inputs" />
+								</div>
+								<div class="col">
+									<input type="text" class="form-control recipe-search-output" placeholder="Search Outputs" />
+								</div>
+							</div>
+							<div class="recipe-search-result my-2" style="max-height:500px; overflow-y:auto;"></div>
 						</div>
 
 						<div class="card card-body">
@@ -599,6 +607,7 @@
 					</div>
 				</div>
 			</div>
+			<script src="js/levenshtein.js"></script>
 			<script src="js/greginator/recipe-conflict-checker.js"></script>
 
 			<!-- IC2 Nuclear simulator -->

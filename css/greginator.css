@@ -149,6 +149,19 @@ table td small {
 	padding: 0.1rem;
 }
 
+.recipe-search-result .row {
+	cursor: pointer;
+}
+
+.recipe-search-result .row:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+
+.bg-danger .text-muted {
+	color: black !important;
+}
+
 /* DARK THEME */
 
 body.dark-theme .btn.btn-light:not([disabled]):not(.disabled) {
@@ -200,4 +213,8 @@ body.dark-theme .bootstrap-select .dropdown-menu .dropdown-item .bg-secondary {
 
 body.dark-theme .bg-warning {
 	color: black;
+}
+
+body.dark-theme input::placeholder {
+	color: white;
 }
