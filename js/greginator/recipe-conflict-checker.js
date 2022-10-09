@@ -675,7 +675,7 @@ onVersionChanged(function(version) {
 				$(".btn-success",cpy).click(() => {
 					if (confirm("Saved settings with that name already exists. Overwrite?")) {
 						saved[i] = {
-							name: name,
+							name: row.name,
 							settings: getSettingsToSave()
 						};
 						save();
