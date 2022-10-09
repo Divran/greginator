@@ -558,9 +558,9 @@ onVersionChanged(function(version) {
 						// match found
 						loading_settings.recipes.splice(i,1);
 						addRecipe(recipe.idx);
-						console.log("found recipe the normal way");
+						//console.log("found recipe the normal way");
 					} else {
-						console.log("match not found, deleting idx to prepare for more comparisons");
+						//console.log("match not found, deleting idx to prepare for more comparisons");
 						// match not found
 						delete recipe.idx;
 					}
@@ -569,7 +569,7 @@ onVersionChanged(function(version) {
 
 			if (loading_settings.recipes.length > 0) {
 				let negative_indexes = 0;
-				console.log("recipes not found:",loading_settings.recipes);
+				//console.log("recipes not found:",loading_settings.recipes);
 				// some recipes weren't found by idx, try to find them through iteration and comparison instead
 				for(let i in recipes) {
 					let cpy = {...recipes[i]};
