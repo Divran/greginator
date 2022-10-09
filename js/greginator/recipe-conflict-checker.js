@@ -18,6 +18,18 @@ onVersionChanged(function(version) {
 		collapse.collapse( "toggle" );
 	});
 
+	function tabChanged(str) {
+		$(".tab-pane",card).hide();
+		$("#recipe-conflict-tabs-" + str, card).show();
+	}
+	$("input[name='recipe-conflict-tabs']",card).change(function() {
+		if ($(this).is(":checked")) {
+			tabChanged($(this).val());
+		}
+	});
+	tabChanged("search");
+
+
 	var selected_machine = "";
 	var downloaded_machines = {};
 	var downloaded_grouped = {};
@@ -175,27 +187,40 @@ onVersionChanged(function(version) {
 		return pnl; // {pnl:pnl,names:names};
 	}
 
-	function saveSettings() {
-		var settings = {
+	function getSettingsToSave() {
+		return {
 			machine: selected_machine,
-			recipeIdx: added_recipes_list.map(i => i.idx)
+			recipes: added_recipes_list
 		}
-		settings_input.val(JSON.stringify(settings));
+	}
+
+	function saveSettings() {
+		settings_input.val(JSON.stringify(getSettingsToSave()));
 	}
 
 	function addRecipe(recipeIdx) {
 		if (recipeIdx == null) return;
 		//console.log("addRecipe",recipeIdx);
 		if (!downloaded_machines[selected_machine]) return;
-		var recipe = downloaded_machines[selected_machine].recs[recipeIdx];
+		var recipe;
+		if (typeof recipeIdx != "number") {
+			// its an object
+			recipe = recipeIdx;
+		} else {
+			recipe = downloaded_machines[selected_machine].recs[recipeIdx];
+		}
 
 		if (added_recipes_list.some(i => i.idx == recipe.idx)) {return;}
 		
 		var pnl = buildRecipePanel(recipe, true);
 		added_recipes.append(pnl);
 		added_recipes_list.push(recipe);
+		if (typeof recipeIdx != "number") {
+			//{"machine":"Mixer.json","recipes":[{"en":true,"dur":200,"eut":7,"iI":[{"a":1,"uN":"gt.metaitem.01.2086","lN":"Gold Dust"},{"a":2,"uN":"gt.metaitem.01.2054","lN":"Silver Dust"},{"cfg":1,"a":0,"uN":"gt.integrated_circuit","lN":"Programmed Circuit"}],"iO":[{"a":2,"uN":"gt.metaitem.01.2303","lN":"Electrum Dust"}],"fI":[],"fO":[],"idx":728}]}
+			//{"machine":"Mixer.json","recipes":[{"en":true,"dur":200,"eut":7,"iI":[{"a":1,"uN":"gt.metaitem.01.2086","lN":"Gold Dust"},{"a":1,"uN":"gt.metaitem.01.2054","lN":"Silver Dust"},{"cfg":1,"a":0,"uN":"gt.integrated_circuit","lN":"Programmed Circuit"}],"iO":[{"a":2,"uN":"gt.metaitem.01.2303","lN":"Electrum Dust"}],"fI":[],"fO":[],"idx":728}]}
+			$($(".col",pnl)[0]).prepend("<small class='text-muted'>This recipe was not found, possibly due to being from a different version, but was added anyway</small>");
+		}
 		calculateConflicts();
-
 		saveSettings();
 	}
 
@@ -524,9 +549,57 @@ onVersionChanged(function(version) {
 		}));
 
 		if (loading_settings !== false) {
-			for(let i in loading_settings.recipeIdx) {
-				addRecipe(loading_settings.recipeIdx[i]);
+			for(let i=loading_settings.recipes.length-1;i>=0;i--) {
+				let recipe = loading_settings.recipes[i];
+				if (typeof recipe.idx != "undefined") {
+					let otherRecipe = recipes[recipe.idx];
+
+					if (JSON.stringify(recipe) == JSON.stringify(otherRecipe)) {
+						// match found
+						loading_settings.recipes.splice(i,1);
+						addRecipe(recipe.idx);
+						console.log("found recipe the normal way");
+					} else {
+						console.log("match not found, deleting idx to prepare for more comparisons");
+						// match not found
+						delete recipe.idx;
+					}
+				}
 			}
+
+			if (loading_settings.recipes.length > 0) {
+				let negative_indexes = 0;
+				console.log("recipes not found:",loading_settings.recipes);
+				// some recipes weren't found by idx, try to find them through iteration and comparison instead
+				for(let i in recipes) {
+					let cpy = {...recipes[i]};
+					delete cpy.idx;
+					let cpyStr = JSON.stringify(cpy);
+
+					for(let ii in loading_settings.recipes) {
+						let recipe = loading_settings.recipes[ii];
+
+						if (JSON.stringify(recipe) == cpyStr) {
+							addRecipe(recipes[i].idx);
+						} else {
+							//alert("Loaded recipe " + JSON.stringify(recipe) + " not found. Adding it anyway, but note that it may be from a different version.");
+							negative_indexes--;
+							recipe.idx = negative_indexes;
+							addRecipe(recipe);
+							loading_settings.recipes.splice(ii,1);
+							break;
+						}
+					}
+				}
+			}
+
+			/*
+			for(let i in loading_settings.recipes) {
+				let recipe = loading_settings[i];
+				let recipeJson
+				addRecipe(loading_settings.recipes[i]);
+			}
+			*/
 
 			loading_settings = false;
 		}
@@ -569,5 +642,90 @@ onVersionChanged(function(version) {
 		e.preventDefault();
 		e.stopPropagation();
 	});
+
+	try {
+		var saved = JSON.parse(localStorage["recipe_conflict_saved"] || "[]");
+		var saveload_list = $(".recipe-conflict-saveload-list",card);
+		var saveload_new = $(".recipe-conflict-save-new",card);
+
+		function save() {
+			localStorage["recipe_conflict_saved"] = JSON.stringify(saved);
+			listSaved();
+		}
+
+		function listSaved() {
+			saveload_list.empty();
+
+			for(let i in saved) {
+				let row = saved[i];
+				
+				var cpy = saveload_new.clone();
+				$(".btn-danger",cpy).click(() => {
+					if (confirm("Are you sure you want to delete this?")) {
+						saved.splice(i,1);
+						save();
+					}
+				}).show();
+
+				$(".btn-primary",cpy).click(() => {
+					loading_settings = row.settings;
+					machine_search.selectpicker("val", row.settings.machine);
+				}).show();
+
+				$(".btn-success",cpy).click(() => {
+					if (confirm("Saved settings with that name already exists. Overwrite?")) {
+						saved[i] = {
+							name: name,
+							settings: getSettingsToSave()
+						};
+						save();
+					}
+				}).show();
+
+				$(".form-control",cpy).hide();
+				$(".newlabel",cpy).hide();
+				$(".namelabel",cpy).show().text(row.name + " (" + (row.settings.recipes ? row.settings.recipes.length : 0) + " recipes)");
+				saveload_list.append(cpy);
+			}
+		}
+		listSaved();
+
+		$(".btn-primary",saveload_new).hide();
+		$(".btn-danger",saveload_new).hide();
+		$(".namelabel",saveload_new).hide()
+		$(".btn-success",saveload_new).click(() => {
+			var name = $(".form-control",saveload_new).val();
+			if (name == "") return;
+
+			$(".form-control",saveload_new).val("");
+
+			for(let i in saved) {
+				let row = saved[i];
+				if (row.name == name) {
+					if (confirm("Saved settings with that name already exists. Overwrite?")) {
+						saved[i] = {
+							name: name,
+							settings: getSettingsToSave()
+						};
+						save();
+					}
+					return;
+				}
+			}
+
+			saved.push({
+				name: name,
+				settings: getSettingsToSave()
+			});
+
+			save();
+		});
+	} catch (e) {
+		alert("Unable to parse saved settings. Error: " + e + ". The json has been dumped to console.");
+		console.log("--- Saved recipes:");
+		console.log(localStorage["recipe_conflict_saved"]);
+		console.log("--- Run the following command in console to delete saved recipes:");
+		console.log("delete localStorage['recipe_conflict_saved'];");
+	}
 
 });
