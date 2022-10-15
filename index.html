@@ -569,74 +569,108 @@
 				</div>
 			</div>
 			<script src="js/greginator/cell-calculator.js"></script>
-
+		</div>
+		
+		<div class="container">
 			<div class="card" id="gt-recipe-conflict-checker">
 				<div class="card-header">
 					<span class="float-right">
 						<small class="text-right text-muted d-inline-block mr-2">Data exported using <a href="https://github.com/bigbass1997/RecEx">bigbass1997/RecEx</a><br> at 2022-10-07 with GTNH version 2.2.0.0</small>
 						<span class="label">Copy/Paste Settings:</span> <input type="text" class="d-inline-block form-control settings-input" style="max-width:100px;" />
 					</span>
-					<h4 class="card-title">Recipe Conflict Checker</h4>
+					<h4 class="card-title mb-0">Recipe Conflict Checker <small class="text-muted" style="font-size:12px;" title="To use, first select a machine in the dropdown list. Next, add all recipes that you have encoded in one AE interface. Or, if fluids are involved at all, select all recipes encoded in any interface on that machine (since GTNH currently does not support bus isolation for fluids). Then, depending on which mode you have selected - list or split - it will tell you which recipes are problematic, or whether or not you need to move some recipes into different machines to avoid conflicts.">(How does this work?)</small></h4>
+					<span class="small autosave-name"></span>
 				</div>
 				<div class="collapse">
 					<div class="card-body">
-						<div class="btn-group btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-light active">
-								<input type="radio" name="recipe-conflict-tabs" value="search"> Search
-							</label>
-							<label class="btn btn-light">
-								<input type="radio" name="recipe-conflict-tabs" value="saveload"> Save/Load
-							</label>
-						</div>
-						<div class="tab-content">
-							<div class="tab-pane" id="recipe-conflict-tabs-search">
-								<small class="text-muted">Note: The data exporter does not support bio circuits and breakthrough circuits.</small>
-								<div class="form-group">
-									<select class="machine-search form-control"></select>
-								</div>
-								<div class="form-group">
-									<div class="row">
-										<div class="col">
-											<input type="text" class="form-control recipe-search-input" placeholder="Search Inputs" />
-										</div>
-										<div class="col">
-											<input type="text" class="form-control recipe-search-output" placeholder="Search Outputs" />
-										</div>
-									</div>
-									<div class="recipe-search-result my-2" style="max-height:500px; overflow-y:auto;"></div>
-								</div>
-							</div>
-							<div class="tab-pane" id="recipe-conflict-tabs-saveload">
-								<div class="recipe-conflict-saveload-list"></div>
-								<div class="card card-body recipe-conflict-save-new">
-									<div class="form-group mb-0">
-										<span class="newlabel">New:</span>
-										<div class="btn btn-success">Save</div>
-										<div class="btn btn-primary">Load</div>
-										<div class="btn btn-danger">Delete</div>
-										<input type="text" placeholder="Name" style="width:200px; vertical-align:middle; display:inline-block;" class="form-control" />
-										<span class="namelabel"></span>
+						<div class="row">
+							<div class="col-12 col-lg-6">
+								<div class="float-right">
+									<div class="btn-group btn-group-toggle" data-toggle="buttons">
+										<label class="btn btn-light active" title="Shows all selected recipes as one-liners with minimal information to save space. Full view is shown in a tooltip on hover.">
+											<input type="radio" name="recipe-conflict-displaymode" value="compact"> Compact
+										</label>
+										<label class="btn btn-light" title="Shows all selected recipes as blocks with all available information visible.">
+											<input type="radio" name="recipe-conflict-displaymode" value="full"> Full
+										</label>
 									</div>
 								</div>
+								<div class="btn-group btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-light active">
+										<input type="radio" name="recipe-conflict-tabs" value="search"> Search
+									</label>
+									<label class="btn btn-light">
+										<input type="radio" name="recipe-conflict-tabs" value="saveload"> Save/Load
+									</label>
+								</div>
+								<div class="tab-content">
+									<div class="tab-pane" id="recipe-conflict-tabs-search">
+										<small class="text-muted">Note: The data exporter does not support bio circuits and breakthrough circuits.</small>
+										<div class="form-group">
+											<select class="machine-search form-control"></select>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col">
+													<input type="text" class="form-control recipe-search-input" placeholder="Search Inputs" />
+												</div>
+												<div class="col">
+													<input type="text" class="form-control recipe-search-output" placeholder="Search Outputs" />
+												</div>
+											</div>
+											<div class="recipe-search-result my-2" style="max-height:350px; overflow-y:auto;"></div>
+										</div>
+									</div>
+									<div class="tab-pane" id="recipe-conflict-tabs-saveload">
+										<div class="recipe-conflict-saveload-list"></div>
+										<div class="card card-body recipe-conflict-save-new">
+											<div class="form-group mb-0">
+												<span class="newlabel">New:</span>
+												<div class="btn btn-success">Save</div>
+												<div class="btn btn-primary">Load</div>
+												<div class="btn btn-danger">Delete</div>
+												<input type="text" placeholder="Name" style="width:200px; vertical-align:middle; display:inline-block;" class="form-control" />
+												<span class="namelabel"></span>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
-
-						<div class="card card-body">
-							<center class="mb-1">Detected Conflicts</center>
-							<div class="conflict-results my-2"></div>
-						</div>
-						<div class="card card-body">
-							<center class="mb-1">Added Recipes</center>
-							<div class="added-recipes"></div>
+							<div class="col-12 col-lg-6">
+								<div class="card card-body">
+									<center class="mb-1">
+										<div class="float-right">
+											<div class="btn-group btn-group-toggle" data-toggle="buttons">
+												<label class="btn btn-light" 
+													title="No additional logic, only lists conflicts while assuming that every single recipe and circuit config has been placed in the same machine and the same input bus.">
+													<input type="radio" name="recipe-conflict-logic" value="list"> List
+												</label>
+												<label class="btn btn-light active" 
+													title="Automatically split recipe conflicts into different lists. If each list is encoded on a completely different machine, conflicts will be avoided. Always splits circuit configs. Significantly more cpu intensive than List.">
+													<input type="radio" name="recipe-conflict-logic" value="split"> Split
+												</label>
+											</div>
+										</div>
+										<span class="detected-conflicts-header">Detected Conflicts</span>
+									</center>
+									<div class="conflict-results my-2"></div>
+								</div>
+								<div class="card card-body">
+									<center class="mb-1">Added Recipes</center>
+									<div class="added-recipes"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<script src="js/levenshtein.js"></script>
 			<script src="js/greginator/recipe-conflict-checker.js"></script>
+		</div>
 
-			<!-- IC2 Nuclear simulator -->
-			<!--
+		<!-- IC2 Nuclear simulator -->
+		<!--
+		<div class="container">
 			<div class="card" id="ic2-nuclear-simulator-card">
 				<div class="card-header">
 					<h4 class="card-title">IC2 Nuclear Simulator</h4>
@@ -663,8 +697,8 @@
 				</div>
 			</div>
 			<script src="js/greginator/ic2-nuclear-simulator.js"></script>
-			-->
 		</div>
+		-->
 
 		<div class="credits">
 			<small>

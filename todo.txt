@@ -1,6 +1,32 @@
+global
+* global save, add save in localstorage to all suitable calculators
+
+recipe conflict checker
+
+* (DONE) check save overwrite bug that might be overwriting the wrong save
+
+* (DONE) widescreen, show side by side
+* (DONE) autosave
+	* on load, keep track of name, re-overwrite after every change
+	* display currently loaded save
+
+* (DONE) add circuit config number to searchable fields
+
+* (DONE) after calculating conflicts, attempt to solve by splitting into different machines for you
+* (SEEMS TO BE FIXED ALREADY) fix issue where some partial conflicts are actually full conflicts (see propene conflict)
+
+* (DONE) more compact display, one-liners
+	* display cropped names for all inputs/outputs OR display selected recipes as output+circuit only
+	* display all info on hover
+	* button to toggle display mode between full and one-liner
+	* more compact search results list too
+
+* export to file
+* import from file
+* rename save button (low priority)
+
+discarded ideas
 * ic2 nuclear
 * bigreactor
 * small single block GT steam turbine calculations
-* railcraft boiler calculations
-* fix possible bug in "left over steam" calculations
 * 

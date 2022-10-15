@@ -18,6 +18,16 @@ onVersionChanged(function(version) {
 		collapse.collapse( "toggle" );
 	});
 
+	collapse.on("show.bs.collapse",function(e) {
+		if (e.target == $("> .collapse",card)[0]) {
+			card.parent().addClass("container-fluid").removeClass("container");
+		}
+	}).on("hide.bs.collapse",function(e) {
+		if (e.target == $("> .collapse",card)[0]) {
+			card.parent().removeClass("container-fluid").addClass("container");
+		}
+	});
+
 	function tabChanged(str) {
 		$(".tab-pane",card).hide();
 		$("#recipe-conflict-tabs-" + str, card).show();
@@ -27,13 +37,53 @@ onVersionChanged(function(version) {
 			tabChanged($(this).val());
 		}
 	});
-	tabChanged("search");
+
+	var displayMode = "compact";
+	function displayModeChanged(str, parent) {
+		if (displayMode == "full") {
+			$(".recipe-item-compact",parent).hide();
+			$(".recipe-item-full",parent).show();
+		} else {
+			$(".recipe-item-compact",parent).show();
+			$(".recipe-item-full",parent).hide();
+		}
+	}
+	$("input[name='recipe-conflict-displaymode']",card).change(function() {
+		if ($(this).is(":checked")) {
+			displayMode = $(this).val();
+			displayModeChanged(displayMode, card);
+		}
+	});
+
+
+	var logicMode = "split";
+	function logicModeChanged(str) {
+		logicMode = str;
+		if (logicMode == "split") {
+			$(".detected-conflicts-header",card).text("List of required machines separated by circuit");
+		} else {
+			$(".detected-conflicts-header",card).text("Detected conflicts");
+		}
+		calculateConflicts();
+	}
+	$("input[name='recipe-conflict-logic']",card).change(function() {
+		if ($(this).is(":checked")) {
+			logicModeChanged($(this).val());
+		}
+	});
+
+	$(".btn-group-toggle label",card).tooltip({trigger:"hover"});
+	$(".card-title .text-muted",card).tooltip({trigger:"hover"});
 
 
 	var selected_machine = "";
 	var downloaded_machines = {};
 	var downloaded_grouped = {};
 	var current_recipes_list = {};
+
+	tabChanged("search");
+	displayModeChanged("compact");
+	logicModeChanged("split");
 
 	var machine_search = $(".machine-search", card);
 	var recipe_search_input = $(".recipe-search-input", card);
@@ -45,6 +95,7 @@ onVersionChanged(function(version) {
 	var loading_settings = false;
 
 	var added_recipes_list = [];
+	var autosave_name = "";
 
 	var folderName = "2022-10-07_15-16-48";
 	var filesList = [
@@ -144,9 +195,9 @@ onVersionChanged(function(version) {
 			if (i.cfg) {name = "<span class='text-muted align-baseline d-inline-block'>["+i.cfg+"]</span> " + name;}
 			if (i.a > 0) {name += "<span class='text-muted ml-1 align-baseline d-inline-block'>x" + i.a + "</span>";}
 			if (i.a == 0) {
-				ret.push("<tr style='background-color:rgba(0,0,0,0.2);'><td>");
+				ret.push("<tr style='background-color:rgba(0,0,0,0.2); white-space:nowrap'><td>");
 			} else {
-				ret.push("<tr><td>");
+				ret.push("<tr><td style='white-space:nowrap;'>");
 			}
 			ret.push(name);
 			ret.push("</td></tr>")
@@ -158,7 +209,43 @@ onVersionChanged(function(version) {
 	function buildRecipePanel(recipe, removebtn) {
 		let eut = recipe.eut;
 		let dur = recipe.dur;
-		let pnl = $("<div class='row p-1 m-0 recipe-item'>").css("border-bottom","1px solid #00000050");
+		let stats = eut + " EU/t, " + (dur>20 ? Math.floor(dur/20*1000+0.5)/1000 + "s" : dur + "t");
+		let pnl = $("<div class='p-1 m-0 recipe-item'>");
+
+
+		//////////////////////////////////
+		// compact display
+		let compact = $("<div class='m-0 recipe-item-compact'>").css({
+			display:"flex",
+			gap:"4px"
+		});
+
+		let compact_list = [];
+		let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
+		if (circuit) {
+			compact_list.push($("<div>").text("C" + circuit.cfg).css({
+				width:"40px",
+				backgroundColor:"rgba(0,0,0,0.2)",
+				textAlign:"center"
+			}));
+		} else {
+			compact_list.push($("<div>").css("width","40px"));
+		}
+
+		let tdCSS = {width: "50%",overflowX: "auto", whiteSpace: "nowrap", wordBreak: "break-all"};
+		let iNames = getItemNames(recipe.iI.filter(i => i.a>0||typeof i.cfg == "undefined"),recipe.fI, "; ");
+		let oNames = getItemNames(recipe.iO,recipe.fO, "; ");
+		compact_list.push($("<div>").text(iNames).css(tdCSS));
+		compact_list.push($("<div>").text(oNames).css(tdCSS).css("width","100%"));
+
+		compact.append(
+			compact_list
+		);
+
+		//////////////////////////////////
+		// full display
+		let full = $("<div class='row recipe-item-full'>");
+
 		let colIn = $("<div class='col px-1'>").css({
 			maxHeight: "200px",
 			overflowY: "auto"
@@ -170,19 +257,27 @@ onVersionChanged(function(version) {
 
 		colIn.append(buildTbl(recipe.iI.concat(recipe.fI)));
 		colOut.append(buildTbl(recipe.iO.concat(recipe.fO)));
-		colOut.append($("<div class='p-2 my-1 bg-secondary'>").append(eut + " EU/T, " + (dur>20 ? Math.floor(dur/20*1000+0.5)/1000 + "s" : dur + "t")));
+		colOut.append($("<div class='p-2 my-1 bg-secondary'>").append(stats));
 
 		//let names = recipe.iI.concat(recipe.fI).concat(recipe.iO).concat(recipe.fO).map(r => r.lN).join(" ");
 
-		pnl.append([colIn,colOut]);
-		pnl.attr("data-recipe-idx",recipe.idx);
+		full.append([colIn,colOut]);
+		full.attr("data-recipe-idx",recipe.idx);
+
+
+		compact.attr("title",$("<div class='row p-2' style='min-width:500px;'>").html(full.html()).prop("outerHTML")).tooltip({
+			html: true
+		});
+		pnl.append([compact,full]);
 
 		if (removebtn) {
 			pnl.addClass("position-relative");
-			pnl.prepend($('<button type="button" class="close link-pointer" style="z-index:10; top:0;" aria-label="Close">'+
+			pnl.prepend($('<button type="button" class="close link-pointer" style="z-index:10; top:0; right:0;" aria-label="Close">'+
 							'<span aria-hidden="true">&times;</span>'+
 						'</button>').click(()=>removeRecipe(recipe.idx, pnl)));
 		}
+
+		displayModeChanged(displayMode,pnl);
 
 		return pnl; // {pnl:pnl,names:names};
 	}
@@ -195,7 +290,17 @@ onVersionChanged(function(version) {
 	}
 
 	function saveSettings() {
-		settings_input.val(JSON.stringify(getSettingsToSave()));
+		var settings = getSettingsToSave();
+		settings_input.val(JSON.stringify(settings));
+		if (autosave_name != "") {
+			for(let i in saved) {
+				if (saved[i].name == autosave_name) {
+					saved[i].settings = settings;
+					save();
+					break;
+				}
+			}
+		}
 	}
 
 	function addRecipe(recipeIdx) {
@@ -242,51 +347,217 @@ onVersionChanged(function(version) {
 	}
 
 
+	/*
+	function checkConflictsInGroup(machine, circuitUID, recipe) {
+		var group = downloaded_grouped[machine][circuitUID];
+		if (!group) {
+			downloaded_grouped[machine][circuitUID] = [[recipe]];
+		} else {
+			let outerConflictDetected = true;
+			for(let gi in group) {
+				let conflictDetected = false;
+				for(let i in group[gi]) {
+					let otherRecipe = group[gi][i];
+
+					if (allInputsConflict(getAllInputsForTwo(recipe), otherRecipe)) {
+						// conflict detected between 2 recipes
+						console.log("conflict detected between 2", recipe, otherRecipe);
+						conflictDetected = true;
+						break;
+					}
+
+					let allInputs = getAllInputsForTwo(recipe, otherRecipe);
+
+					if (group[gi].length > 1) {
+						for(let ii in group[gi]) {
+							let thirdRecipe = group[gi][ii];
+							if (thirdRecipe.idx == otherRecipe.idx) continue;
+
+							if (allInputsConflict(allInputs, thirdRecipe)) {
+								// conflict detected between 3 recipes (2 => 1), add to new group
+								console.log("conflict detected between 3", recipe, otherRecipe, thirdRecipe);
+								conflictDetected = true;
+								break;
+							}
+						}
+					}
+				}
+				if (!conflictDetected) {
+					//console.log("no conflict detected in",circuitUID,"group",gi,"for recipe",recipe);
+					group[gi].push(recipe);
+					outerConflictDetected = false;
+					break;
+				}
+			}
+			if (outerConflictDetected) {
+				console.log("conflicts detected in ",circuitUID, "in all groups, making new group for recipe", recipe);
+				group.push([recipe]);
+			}
+		}
+	}
+
+	function groupRecipes(machine) {
+		if (!downloaded_machines[machine]) return;
+
+		downloaded_grouped[machine] = {};
+		var recipes = downloaded_machines[machine].recs;
+		for(let idx in recipes) {
+			let recipe = recipes[idx];
+
+			let circuitUID = getCircuitUID(getCircuitForRecipe(recipe));
+			checkConflictsInGroup(machine, circuitUID, recipe)
+		}
+
+		console.log("RECIPE GROUPS",downloaded_grouped[machine]);
+	}
+	*/
+
 	function calculateConflicts() {
+		if (!downloaded_machines[selected_machine]) return;
+		if (!downloaded_machines[selected_machine].recs) return;
 		var recipes = downloaded_machines[selected_machine].recs;
 
-		var allInputs = getAllInputs(added_recipes_list);
-		conflict_results.empty();
+		function calculateConflictsSplit() {
+			// add each selected recipe to the list one by one and if adding that causes a recipe conflict, create a new group for that recipe
+			conflict_results.empty();
+			conflict_results.text("Calculating...");
 
-		var total_conflicts = [];
-		var partial_conflicts = [];
+			function checkTotalConflicts(allInputs) {
+				for(let i in recipes) {
+					let otherRecipe = recipes[i];
 
-		//{"machine":"Mixer.json","recipeIdx":[463,159,77]}
-		//console.log("----------");
+					if (allInputsConflict(allInputs, otherRecipe)) {
+						return true;
+					}
+				}
 
-		for(let i in recipes) {
-			let otherRecipe = recipes[i];
-
-			/*if (otherRecipe.iO.some(i => i.lN == "Wet Tofu")) {
-				console.log("WET TOFU",allInputs,otherRecipe, allInputsConflict(allInputs, otherRecipe, true));
-			}*/
-
-			if (allInputsConflict(allInputs,otherRecipe)) {
-				var pnl = buildRecipePanel(otherRecipe);
-				total_conflicts.push(pnl);
+				return false;
 			}
-		}
 
-		if (total_conflicts.length > 0) {
-			conflict_results.append("<div class='p-2 mb-2 bg-danger text-center'>Total conflicts <small class='text-muted'>(All inputs conflict)</small><br><small></div>").append(total_conflicts);
-		}
+			// allInputsGrouped - structure {[circuitNum] = [array of machines]}
+			var allInputsGrouped = {none:[]}
+			for(let i in added_recipes_list) {
+				let recipe = added_recipes_list[i];
 
-		for(let i in added_recipes_list) {
-			let otherRecipe = added_recipes_list[i];
-			if (partialInputsConflict(allInputs, otherRecipe)) {
-				var pnl = buildRecipePanel(otherRecipe);
-				partial_conflicts.push(pnl);
+				let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
+				if (circuit) {
+					if (!allInputsGrouped[circuit.cfg]) {
+						allInputsGrouped[circuit.cfg] = [];
+					}
+				}
+
+				let group = allInputsGrouped[circuit ? circuit.cfg : "none"];
+
+				if (group.length == 0) {
+					// no machines added yet, add current recipe to new machine
+					group.push(getAllInputs([recipe]));
+				} else {
+					let foundMachine = false;
+					let allInputsOne = getAllInputs([recipe]);
+					for(let iG = 0; iG < group.length; iG++) {
+						let allInputs = getAllInputsPlusOne(group[iG], allInputsOne);
+
+						if (!checkTotalConflicts(allInputs)) {
+							// adding this recipe will not cause a conflict, add it to this machine
+							group[iG] = allInputs;
+							foundMachine = true;
+							break;
+						}
+					}
+					if (!foundMachine) {
+						// this recipe couldn't be added to any existing machine, add it to a new machine
+						group.push(allInputsOne);
+					}
+				}
 			}
-		}
 
-		if (partial_conflicts.length > 0) {
-			var partial_header = $("<div class='p-2 mb-2 bg-warning text-center link-pointer'>Partial conflicts (" + partial_conflicts.length + "x) <small>"+
-				"(Parts of inputs conflict)</small><br><small>These conflicts usually don't cause any issues</small></div>");
-			var partial_content = $("<div class='collapse'>");
-			partial_header.click(function() {
-				partial_content.collapse("toggle");
+			// draw each group on screen
+			conflict_results.empty();
+			let machinesList = $("<div>").css({
+				display:"flex",
+				width:"100%",
+				overflowX: "auto",
+				gap: "4px",
 			});
-			conflict_results.append().append([partial_header,partial_content.append(partial_conflicts)]);
+			conflict_results.append(machinesList);
+
+			for(let i in allInputsGrouped) {
+				let group = allInputsGrouped[i];
+				for(let iG in group) {
+					let machine = group[iG];
+
+					let machineCont = $("<div class='card card-body d-inline-block p-1'>").css({
+						width: "600px",
+						height: "400px",
+						flexShrink: 0
+					});
+					let machineTitle = $("<center>").text("Circuit: " + i);
+					let listCont = $("<div class='p-1'>").css({
+						display:"flex",
+						flexDirection: "column",
+						height: "calc(100% - 24px)",
+						overflowY: "auto"
+					});
+					machineCont.append([machineTitle,listCont]);
+					machinesList.append(machineCont);
+
+					let recipeCount = 0;
+					for(let rIdx in machine.recipeIdx) {
+						let recipe = recipes[rIdx];
+						if (recipe) {
+							recipeCount++;
+							listCont.append(buildRecipePanel(recipe));
+						}
+					}
+					machineTitle.html(machineTitle.text() + "<span class='text-muted'>, " + recipeCount + " recipes</span>");
+				}
+			}
+		}
+
+		function calculateConflictsList() {
+			// simply dump all inputs in one list and list the conflicts
+			var allInputs = getAllInputs(added_recipes_list);
+			conflict_results.empty();
+
+			var total_conflicts = [];
+			var partial_conflicts = [];
+
+			for(let i in recipes) {
+				let otherRecipe = recipes[i];
+
+				if (allInputsConflict(allInputs,otherRecipe)) {
+					var pnl = buildRecipePanel(otherRecipe);
+					total_conflicts.push(pnl);
+				}
+			}
+
+			if (total_conflicts.length > 0) {
+				conflict_results.append("<div class='p-2 mb-2 bg-danger text-center'>Total conflicts <small class='text-muted'>(All inputs conflict)</small><br><small></div>").append(total_conflicts);
+			}
+
+			for(let i in added_recipes_list) {
+				let otherRecipe = added_recipes_list[i];
+				if (partialInputsConflict(allInputs, otherRecipe)) {
+					var pnl = buildRecipePanel(otherRecipe);
+					partial_conflicts.push(pnl);
+				}
+			}
+
+			if (partial_conflicts.length > 0) {
+				var partial_header = $("<div class='p-2 mb-2 bg-warning text-center link-pointer'>Partial conflicts (" + partial_conflicts.length + "x) <small>"+
+					"(Parts of inputs conflict)</small><br><small>These conflicts usually don't cause any issues</small></div>");
+				var partial_content = $("<div class='collapse'>");
+				partial_header.click(function() {
+					partial_content.collapse("toggle");
+				});
+				conflict_results.append().append([partial_header,partial_content.append(partial_conflicts)]);
+			}
+		}
+
+		if (logicMode == "list") {
+			calculateConflictsList();
+		} else {
+			calculateConflictsSplit();
 		}
 	}
 
@@ -302,6 +573,16 @@ onVersionChanged(function(version) {
 		}
 	}
 
+	function getAllInputsPlusOne(allInputs, plusOne) {
+		return {
+			items: {...allInputs.items, ...plusOne.items},
+			fluids: {...allInputs.fluids, ...plusOne.fluids},
+			circuits: {...allInputs.circuits, ...plusOne.circuits},
+			recipeIdx: {...allInputs.recipeIdx, ...plusOne.recipeIdx}
+		};
+
+	}
+
 	function getAllInputs(recipes) {
 		var items = {};
 		var fluids = {};
@@ -313,7 +594,7 @@ onVersionChanged(function(version) {
 			recipeIdx[recipe.idx] = true;
 
 			for(let item of recipe.iI) {
-				if (item.a == 0) {
+				if (item.a == 0 && typeof item.cfg != "undefined") {
 					circuits[getCircuitUID(item)] = true;
 				} else {
 					if (items[item.uN]) {
@@ -383,7 +664,6 @@ onVersionChanged(function(version) {
 				if (debug) console.log("needed item ",item.lN," doesnt exist");
 				// missing item = no conflict
 				return false;
-			} else {
 			}
 		}
 
@@ -395,7 +675,6 @@ onVersionChanged(function(version) {
 				if (debug) console.log("needed fluid ",fuid.lN," doesnt exist");
 				// missing fluid = no conflict
 				return false;
-			} else {
 			}
 		}
 
@@ -456,70 +735,9 @@ onVersionChanged(function(version) {
 		return false;
 	}
 
-	/*
-	function checkConflictsInGroup(machine, circuitUID, recipe) {
-		var group = downloaded_grouped[machine][circuitUID];
-		if (!group) {
-			downloaded_grouped[machine][circuitUID] = [[recipe]];
-		} else {
-			let outerConflictDetected = true;
-			for(let gi in group) {
-				let conflictDetected = false;
-				for(let i in group[gi]) {
-					let otherRecipe = group[gi][i];
-
-					if (allInputsConflict(getAllInputsForTwo(recipe), otherRecipe)) {
-						// conflict detected between 2 recipes
-						console.log("conflict detected between 2", recipe, otherRecipe);
-						conflictDetected = true;
-						break;
-					}
-
-					let allInputs = getAllInputsForTwo(recipe, otherRecipe);
-
-					if (group[gi].length > 1) {
-						for(let ii in group[gi]) {
-							let thirdRecipe = group[gi][ii];
-							if (thirdRecipe.idx == otherRecipe.idx) continue;
-
-							if (allInputsConflict(allInputs, thirdRecipe)) {
-								// conflict detected between 3 recipes (2 => 1), add to new group
-								console.log("conflict detected between 3", recipe, otherRecipe, thirdRecipe);
-								conflictDetected = true;
-								break;
-							}
-						}
-					}
-				}
-				if (!conflictDetected) {
-					//console.log("no conflict detected in",circuitUID,"group",gi,"for recipe",recipe);
-					group[gi].push(recipe);
-					outerConflictDetected = false;
-					break;
-				}
-			}
-			if (outerConflictDetected) {
-				console.log("conflicts detected in ",circuitUID, "in all groups, making new group for recipe", recipe);
-				group.push([recipe]);
-			}
-		}
+	function getItemNames(i,f,sep) {
+		return (i.concat(f).map(r => r.lN + (r.cfg ? " " + r.cfg : "")).join(sep || " "));
 	}
-
-	function groupRecipes(machine) {
-		if (!downloaded_machines[machine]) return;
-
-		downloaded_grouped[machine] = {};
-		var recipes = downloaded_machines[machine].recs;
-		for(let idx in recipes) {
-			let recipe = recipes[idx];
-
-			let circuitUID = getCircuitUID(getCircuitForRecipe(recipe));
-			checkConflictsInGroup(machine, circuitUID, recipe)
-		}
-
-		console.log("RECIPE GROUPS",downloaded_grouped[machine]);
-	}
-	//*/
 
 	function listRecipes(machine) {
 		if (!downloaded_machines[machine]) return;
@@ -536,8 +754,8 @@ onVersionChanged(function(version) {
 			current_recipes_list.push({
 				recipe: recipe,
 				pnl: pnl,
-				iNames: (recipe.iI.concat(recipe.fI).map(r => r.lN).join(" ")).toLowerCase(),
-				oNames: (recipe.iO.concat(recipe.fO).map(r => r.lN).join(" ")).toLowerCase(),
+				iNames: getItemNames(recipe.iI,recipe.fI).toLowerCase(),
+				oNames: getItemNames(recipe.iO,recipe.fO).toLowerCase(),
 			});
 		}
 
@@ -643,6 +861,26 @@ onVersionChanged(function(version) {
 		e.stopPropagation();
 	});
 
+	function setAutosave(n) {
+		autosave_name = n;
+		if (autosave_name != "") {
+			var pnl = $(".autosave-name",card);
+			pnl.show().text("Autosaving: " + autosave_name);
+			if ($("button",pnl).length == 0) {
+				pnl.addClass("position-relative");
+				pnl.prepend(
+					$('<button type="button" class="close link-pointer" style="z-index:10; top:-6px; right:-20px;" aria-label="Close">'+
+						'<span aria-hidden="true">&times;</span>'+
+					'</button>')
+					.click((e)=>{setAutosave(""); e.preventDefault(); e.stopPropagation(); return true;})
+					.attr("title","Stop autosaving").tooltip()
+				);
+			}
+		} else {
+			$(".autosave-name",card).hide();
+		}
+	}
+
 	try {
 		var saved = JSON.parse(localStorage["recipe_conflict_saved"] || "[]");
 		var saveload_list = $(".recipe-conflict-saveload-list",card);
@@ -662,18 +900,22 @@ onVersionChanged(function(version) {
 				var cpy = saveload_new.clone();
 				$(".btn-danger",cpy).click(() => {
 					if (confirm("Are you sure you want to delete this?")) {
+						if (row.name == autosave_name) {
+							setAutosave("");
+						}
 						saved.splice(i,1);
 						save();
 					}
 				}).show();
 
 				$(".btn-primary",cpy).click(() => {
-					loading_settings = row.settings;
+					setAutosave(row.name);
+					loading_settings = JSON.parse(JSON.stringify(row.settings)); // clone object
 					machine_search.selectpicker("val", row.settings.machine);
 				}).show();
 
 				$(".btn-success",cpy).click(() => {
-					if (confirm("Saved settings with that name already exists. Overwrite?")) {
+					if (confirm("Are you sure you want to overwrite that save?")) {
 						saved[i] = {
 							name: row.name,
 							settings: getSettingsToSave()
@@ -707,6 +949,7 @@ onVersionChanged(function(version) {
 							name: name,
 							settings: getSettingsToSave()
 						};
+						setAutosave(name);
 						save();
 					}
 					return;
@@ -718,6 +961,7 @@ onVersionChanged(function(version) {
 				settings: getSettingsToSave()
 			});
 
+			setAutosave(name);
 			save();
 		});
 	} catch (e) {
@@ -727,5 +971,4 @@ onVersionChanged(function(version) {
 		console.log("--- Run the following command in console to delete saved recipes:");
 		console.log("delete localStorage['recipe_conflict_saved'];");
 	}
-
 });

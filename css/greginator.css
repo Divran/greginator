@@ -157,9 +157,18 @@ table td small {
 	background-color: rgba(0,0,0,0.1);
 }
 
-
 .bg-danger .text-muted {
 	color: black !important;
+}
+
+.tooltip-inner {
+	max-width: 550px;
+	max-height: 250px;
+}
+
+.recipe-item:nth-child(even) {
+	background-color: rgba(0,0,0,0.08);
+	/*.css("border-bottom","1px solid #00000050")*/
 }
 
 /* DARK THEME */
@@ -217,4 +226,10 @@ body.dark-theme .bg-warning {
 
 body.dark-theme input::placeholder {
 	color: white;
+}
+
+
+body.dark-theme .recipe-item:nth-child(even) {
+	background-color: rgba(255,255,255,0.08);
+	/*.css("border-bottom","1px solid #00000050")*/
 }
