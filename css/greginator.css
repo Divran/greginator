@@ -233,3 +233,8 @@ body.dark-theme .recipe-item:nth-child(even) {
 	background-color: rgba(255,255,255,0.08);
 	/*.css("border-bottom","1px solid #00000050")*/
 }
+
+body.dark-theme .close {
+	color: white;
+	opacity: 0.8;
+}

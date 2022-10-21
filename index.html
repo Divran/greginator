@@ -498,6 +498,7 @@
 					<button type="button" class="close link-pointer" style="z-index:10;" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<center class="cell-name mb-1"></center>
 					<div class="row">
 						<div class="col-md-6">
 							<input type="number" class="form-control mb-2 recipe-amount" placeholder="Recipe Amount (mb)" />
@@ -534,6 +535,19 @@
 
 				<div class="card-header">
 					<span class="float-right">
+						<span class="label">Set all cells:</span> 
+						<div class="d-inline-block" style="max-width:  100px;">
+							<select class="form-control cell-search-set-all" placeholder="Set all cells">
+								<option value="1000" data-subtext="1000 mb">Regular Cell</option>
+								<option value="8000" data-subtext="8000 mb">Steel</option>
+								<option value="32000" data-subtext="32000 mb">Aluminium</option>
+								<option value="64000" data-subtext="64000 mb">Stainless</option>
+								<option value="128000" data-subtext="128000 mb">Titanium</option>
+								<option value="512000" data-subtext="512000 mb">Tungstensteel</option>
+								<option value="144" data-subtext="144 mb">Flask</option>
+								<option value="250" data-subtext="250 mb">Flask</option>
+							</select>
+						</div>
 						<span class="label">Multiplier:</span> <input type="number" class="d-inline-block form-control settings-multiplier" style="max-width:100px;" value='1' />
 						<span class="label">Copy/Paste Settings:</span> <input type="text" class="d-inline-block form-control settings-input" style="max-width:100px;" />
 					</span>

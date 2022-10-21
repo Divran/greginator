@@ -92,6 +92,7 @@ onVersionChanged(function(version) {
 	var added_recipes = $(".added-recipes", card);
 	var conflict_results = $(".conflict-results", card);
 	var settings_input = $(".settings-input", card);
+	var settings_input_written = false;
 	var loading_settings = false;
 
 	var added_recipes_list = [];
@@ -270,12 +271,20 @@ onVersionChanged(function(version) {
 		});
 		pnl.append([compact,full]);
 
+
+		pnl.addClass("position-relative");
+
 		if (removebtn) {
-			pnl.addClass("position-relative");
-			pnl.prepend($('<button type="button" class="close link-pointer" style="z-index:10; top:0; right:0;" aria-label="Close">'+
+			pnl.prepend($('<button type="button" class="close link-pointer" title="Remove" style="z-index:10; top:0; right:0;" aria-label="Close">'+
 							'<span aria-hidden="true">&times;</span>'+
 						'</button>').click(()=>removeRecipe(recipe.idx, pnl)));
 		}
+
+		pnl.prepend(
+			$('<button title="Send to Cell Calculator" type="button" class="btn btn-sm btn-secondary link-pointer position-absolute" '+
+				'style="z-index:10; font-size:12px; padding:0.1rem 0.25rem 0.1rem 0.25rem; top:2px; right: ' + (removebtn ? '20px' : '2px') + ';">C</button>')
+			.click(() => {window.fromConflictCheckerToCellCalculator(recipe);})
+		);
 
 		displayModeChanged(displayMode,pnl);
 
@@ -291,7 +300,9 @@ onVersionChanged(function(version) {
 
 	function saveSettings() {
 		var settings = getSettingsToSave();
+		settings_input_written = true;
 		settings_input.val(JSON.stringify(settings));
+		settings_input_written = false;
 		if (autosave_name != "") {
 			for(let i in saved) {
 				if (saved[i].name == autosave_name) {
@@ -841,7 +852,7 @@ onVersionChanged(function(version) {
 	*/
 
 	settings_input.on("input",() => {
-		if (settings_input.val() != "") {
+		if (settings_input_written == false && settings_input.val() != "") {
 			var jsonObj = null;
 
 			try {

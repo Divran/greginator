@@ -9,8 +9,10 @@ onVersionChanged(function(version) {
 	var collapse = $( ".collapse", card );
 
 	header.off("click");
-	header.on("click",function() {
-		collapse.collapse( "toggle" );
+	header.on("click",function(e) {
+		if (e.target == header[0] || e.target == $("> h4",header)[0] || $(e.target).hasClass("label")) {
+			collapse.collapse( "toggle" );
+		}
 	});
 
 	var inputs = $(".inputs",card);
@@ -21,6 +23,26 @@ onVersionChanged(function(version) {
 	var new_item = $(".new-item", card);
 	var settings_input = $(".settings-input", card);
 	var settings_multiplier = $(".settings-multiplier", card);
+	var searchAll = $(".cell-search-set-all",card);
+	searchAll.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true});
+	var dontUpdate = false;
+
+	searchAll.on("changed.bs.select",() => {
+		dontUpdate = true;
+		var newVal = searchAll.val();
+		function fEach(that) {
+			var val = $("select.cell-search", that).val();
+			if (val != "item" && val != "144" && val != "250") {
+				$("select.cell-search", that).val(newVal);
+				$("select.cell-search", that).selectpicker("refresh");
+			}
+		}
+
+		inputs.children().each((k,v) => fEach(v));
+		outputs.children().each((k,v) => fEach(v));
+		dontUpdate = false;
+		doMath();
+	});
 
 	// https://stackoverflow.com/a/49722579
 	var gcd = (a, b) => {return a ? gcd(b % a, a) : b;}
@@ -29,6 +51,7 @@ onVersionChanged(function(version) {
 
 
 	function doMath() {
+		if (dontUpdate) {return;}
 		var settings = {
 			inputs:[],
 			outputs:[],
@@ -277,7 +300,7 @@ onVersionChanged(function(version) {
 		doMath();
 	});
 
-	settings_input.on("input",() => {
+	function onSettingsInput() {
 		if (settings_input.val() != "") {
 			var jsonObj = null;
 
@@ -302,6 +325,12 @@ onVersionChanged(function(version) {
 				}
 
 				$(".recipe-amount", clone).val(v.amount);
+				// name
+				if (v.name) {
+					$(".cell-name",clone).text(v.name).show();
+				} else {
+					$(".cell-name",clone).hide();
+				}
 			}
 
 			inputs.empty();
@@ -318,16 +347,52 @@ onVersionChanged(function(version) {
 			doMath();
 			collapse.collapse("show");
 		}
-	}).click((e) => {
+	}
+
+	settings_input.on("input",onSettingsInput)
+	.click((e) => {
 		settings_input.select();
-		e.preventDefault();
-		e.stopPropagation();
 	});
 
 	settings_multiplier.on("input",() => doMath())
 	.click((e) => {
 		settings_multiplier.select();
-		e.preventDefault();
-		e.stopPropagation();
 	});
+
+
+	window.fromConflictCheckerToCellCalculator = function(recipe) {
+		var cellSettings = {};
+
+		function noA0(i) {
+			return i.a > 0;
+		}
+
+		var cellSize = searchAll.val();
+		if (cellSize == "") cellSize = "1000";
+		var multiplier = settings_multiplier.val();
+		if (multiplier == "") multiplier = "1";
+
+		function convert(i) {
+			return {
+				amount: i.a,
+				name: i.lN,
+				cell_size: cellSize
+			};
+		}
+		function convertItem(i) {
+			return {
+				amount: i.a,
+				name: i.lN,
+				cell_size: "item"
+			};
+		}
+
+
+		cellSettings.inputs = [...recipe.fI.filter(noA0).map(convert),...recipe.iI.filter(noA0).map(convertItem)];
+		cellSettings.outputs = [...recipe.fO.filter(noA0).map(convert),...recipe.iO.filter(noA0).map(convertItem)];
+		cellSettings.multiplier = multiplier;
+
+		settings_input.val(JSON.stringify(cellSettings));
+		onSettingsInput();
+	}
 });
