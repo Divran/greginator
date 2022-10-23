@@ -91,11 +91,12 @@ Materials(
 ]]
 
 local skipInt = "[%s%d]+"
-local skipText = "[%s%w%._\"]+"
+local skipText = "[%s%w%._\"%(%)]+"
+local skipTextureSet = "%s*new TextureSet%(\"[%s%w]+\", %w+%)"
 local skipFloat = "[%s%d%.F]+"
 local skipFlag = "[%s%d|]+"
 local parseFloat = "%s*([%d%.F?]+)%s*"
-local parseInt = "%s*(%d+)%s*"
+local parseInt = "%s*([%*%d%s]+)%s*"
 local parseString = "%s*\"([^\"]+)\"%s*"
 local getRemainder = ".*"
 
@@ -114,63 +115,101 @@ local parser = "public static Materials (%w+)%s*= new Materials%(" .. string.for
 	parseString, -- String aDefaultLocalName,
 	getRemainder
 ) .. "%);$"
+local parseTextureSet = "public static Materials (%w+)%s*= new Materials%(" .. string.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s",--
+	skipInt, -- int aMetaItemSubID,
+	skipTextureSet, -- TextureSet aIconSet,
+	parseFloat, -- float aToolSpeed,
+	parseInt, -- int aDurability,
+	parseInt, -- int aToolQuality,
+	skipFlag, -- int aTypes,
+	skipInt, -- int aR,
+	skipInt, -- int aG,
+	skipInt, -- int aB,
+	skipInt, -- int aA,
+	skipText, -- String aName,
+	parseString, -- String aDefaultLocalName,
+	getRemainder
+) .. "%);$"
 local parseTurbineMultipliers = ".setTurbineMultipliers%("..parseInt..","..parseInt..","..parseInt.."%)"
 
-print("parser",parser)
+local parsers = {
+	parser, parseTextureSet
+}
 
---local str = [==[public static Materials Americium = new Materials(             103,             TextureSet.SET_METALLIC,             1.0F,             0,             3,             1 | 2 | 8 | 32,             200,             200,             200,             0,             "Americium",             "Americium",             0,             0,             1449,             0,             false,             false,             3,             1,             1,             Dyes.dyeLightGray,             Element.Am,             Arrays.asList(new TC_AspectStack(TC_Aspects.METALLUM, 2), new TC_AspectStack(TC_Aspects.RADIO, 1)));]==]
---print(string.match(str,parser))
+local function parseMath(str)
+	if str:match("[^%d]") then
+		return loadstring("return " .. str)()
+	else
+		return tonumber(str)
+	end
+end
 
---if true then return end
+--[[
+local str = [==[public static Materials SpaceTime = new Materials(             588,             new TextureSet("spacetime", true),             320.0F,             4 * 2621440,             25,             1 | 2 | 64 | 128,             255,             255,             255,             0,             "SpaceTime",             "SpaceTime",             -1,             -1,             0,             0,             false,             true,             2,             1,             1,             Dyes._NULL,             Collections.singletonList(new TC_AspectStack(TC_Aspects.AQUA, 1)));]==]
+print("parser",parseTextureSet)
+print("line",str)
+print(string.match(str,parseTextureSet))
+local a,b,c = string.match(str,parseTextureSet)
+print("parseMath",parseMath(c))
+
+if true then return end
+]]
 
 local output = {}
 local tempstr = {}
+
+
+local function doThing(line, matName, toolSpeed, toolDurability, toolQuality, displayName)
+	if toolSpeed and toolDurability and toolQuality then
+		toolSpeed = string.gsub(toolSpeed,"F","")
+		toolSpeed = tonumber(toolSpeed)
+		toolDurability = parseMath(toolDurability)
+		toolQuality = tonumber(toolQuality)
+		if toolSpeed > 0 and toolDurability > 0 then
+			local item = {
+				material = displayName,
+				speed = toolSpeed,
+				durability = toolDurability,
+				tier = toolQuality,
+			}
+
+			local steamM, gasM, plasmaM = string.match(line, parseTurbineMultipliers)
+			if steamM and gasM and plasmaM then
+				steamM = tonumber(steamM)
+				gasM = tonumber(gasM)
+				plasmaM = tonumber(plasmaM)
+				if steamM and gasM and plasmaM then
+					item.turbine_multipliers = {
+						steam = steamM,
+						gas = gasM,
+						plasma = plasmaM
+					}
+				end
+			end
+
+			output[#output+1] = item
+		end
+	end
+end
+
 for line in f:lines() do
 	if line:find(";") then
 		tempstr[#tempstr+1] = line
 		line = table.concat(tempstr," ")
 		tempstr = {}
-		local matName, toolSpeed, toolDurability, toolQuality, displayName = 
-			string.match(line,parser)
-		--print(line)
-		--print(matName,toolSpeed,toolDurability,toolQuality,displayName)
-		--print("---")
-		
-		if matName then
-			if toolSpeed and toolDurability and toolQuality then
-				toolSpeed = string.gsub(toolSpeed,"F","")
-				toolSpeed = tonumber(toolSpeed)
-				toolDurability = tonumber(toolDurability)
-				toolQuality = tonumber(toolQuality)
-				if toolSpeed > 0 and toolDurability > 0 then
-
-
-					local item = {
-						material = displayName,
-						speed = toolSpeed,
-						durability = toolDurability,
-						tier = toolQuality,
-						
-					}
-
-					local steamM, gasM, plasmaM = string.match(line, parseTurbineMultipliers)
-					if steamM and gasM and plasmaM then
-						steamM = tonumber(steamM)
-						gasM = tonumber(gasM)
-						plasmaM = tonumber(plasmaM)
-						if steamM and gasM and plasmaM then
-							item.turbine_multipliers = {
-								steam = steamM,
-								gas = gasM,
-								plasma = plasmaM
-							}
-						end
-					end
-
-					output[#output+1] = item
-				end
+		local parsed = false
+		for i=1,#parsers do
+			local matName, toolSpeed, toolDurability, toolQuality, displayName = string.match(line,parsers[i])
+			--print(line)
+			--print(matName,toolSpeed,toolDurability,toolQuality,displayName)
+			--print("---")
+			
+			if matName then
+				doThing(line, matName, toolSpeed, toolDurability, toolQuality, displayName)
+				parsed = true
 			end
-		else
+		end
+		if parsed == false then	
 			if string.match(line,"public static Materials %w+ = new Materials%(") then
 				print("unable to parse material line")
 				print(line)
@@ -181,6 +220,13 @@ for line in f:lines() do
 		tempstr[#tempstr+1] = line
 	end
 end
+
+output[#output+1] = {
+	speed = 225,
+	material = "Extremely Unsable Naquadah",
+	durability = 31500,
+	tier = 25
+}
 
 f:close()
 local f = io.open("output.json","w")

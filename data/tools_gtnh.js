@@ -1219,6 +1219,12 @@ data.add("tools","gtnh",[
 	"tier":10
 },
 {
+	"speed":256,
+	"material":"Infinity",
+	"durability":2621440,
+	"tier":17
+},
+{
 	"speed":128,
 	"material":"Trinium",
 	"durability":51200,
@@ -1242,9 +1248,21 @@ data.add("tools","gtnh",[
 	"tier":12
 },
 {
+	"speed":320,
+	"material":"SpaceTime",
+	"durability":10485760,
+	"tier":25
+},
+{
+	"speed":290,
+	"material":"Transcendent Metal",
+	"durability":7864320,
+	"tier":22
+},
+{
 	"speed":225,
 	"material":"Extremely Unsable Naquadah",
 	"durability":31500,
-	"tier": 25
+	"tier":25
 }
 ]);
