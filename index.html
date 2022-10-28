@@ -659,9 +659,13 @@
 													title="No additional logic, only lists conflicts while assuming that every single recipe and circuit config has been placed in the same machine and the same input bus.">
 													<input type="radio" name="recipe-conflict-logic" value="list"> List
 												</label>
-												<label class="btn btn-light active" 
+												<label class="btn btn-light" 
 													title="Automatically split recipe conflicts into different lists. If each list is encoded on a completely different machine, conflicts will be avoided. Always splits circuit configs. Significantly more cpu intensive than List.">
 													<input type="radio" name="recipe-conflict-logic" value="split"> Split
+												</label>
+												<label class="btn btn-light active" 
+													title="Similar to split mode, but also takes item bus isolation into account. Splits recipes by item bus and machine. Always splits circuit configs. Significantly more cpu intensive than List.">
+													<input type="radio" name="recipe-conflict-logic" value="bus-isolation"> Item Bus Isolation
 												</label>
 											</div>
 										</div>

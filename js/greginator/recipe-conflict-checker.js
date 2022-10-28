@@ -56,10 +56,12 @@ onVersionChanged(function(version) {
 	});
 
 
-	var logicMode = "split";
+	var logicMode = "bus-isolation";
 	function logicModeChanged(str) {
 		logicMode = str;
-		if (logicMode == "split") {
+		if (logicMode == "bus-isolation") {
+			$(".detected-conflicts-header", card).text("List of required machines separated by input bus and circuit");
+		} else if (logicMode == "split") {
 			$(".detected-conflicts-header",card).text("List of required machines separated by circuit");
 		} else {
 			$(".detected-conflicts-header",card).text("Detected conflicts");
@@ -83,7 +85,7 @@ onVersionChanged(function(version) {
 
 	tabChanged("search");
 	displayModeChanged("compact");
-	logicModeChanged("split");
+	logicModeChanged("bus-isolation");
 
 	var machine_search = $(".machine-search", card);
 	var recipe_search_input = $(".recipe-search-input", card);
@@ -366,7 +368,7 @@ onVersionChanged(function(version) {
 		if (!downloaded_machines[selected_machine].recs) return;
 		var recipes = downloaded_machines[selected_machine].recs;
 
-		function calculateConflictsSplit() {
+		function calculateConflictsBusIsolation() {
 			// add each selected recipe to the list one by one and if adding that causes a recipe conflict, create a new group for that recipe
 			conflict_results.empty();
 			conflict_results.text("Calculating...");
@@ -528,7 +530,8 @@ onVersionChanged(function(version) {
 					display: "flex",
 					flexDirection: "row",
 					height: "calc(100% - 20px)",
-					flexShrink: 0
+					flexShrink: 0,
+					gap: "4px"
 				})
 				machineCard.append(machineTitle);
 				machineCard.append(machineCont);
@@ -538,7 +541,7 @@ onVersionChanged(function(version) {
 				for(let circuitUID in machine.circuits) {
 					let mCircuits = machine.circuits[circuitUID];
 
-					let busesCont = $("<div class='buses-container p-1'>").css({
+					let busesCont = $("<div class='buses-container'>").css({
 						display: "flex",
 						flexDirection: "row",
 						//height: "600px",
@@ -550,8 +553,8 @@ onVersionChanged(function(version) {
 						let bus = mCircuits.buses[iB];
 
 						let busTitle = $("<center>").text("Item Input Bus " + (1+parseInt(iB)) + ", Circuit: " + mCircuits.circuitName);
-						let busCont = $("<div class='bus-container card card-body d-inline-block p-1 m-1 ml-2'>").css({
-							width: "400px",
+						let busCont = $("<div class='bus-container card card-body d-inline-block p-1'>").css({
+							width: "450px",
 							//display:"flex",
 							//flexDirection: "column",
 							height: "calc(100% - 32px)",
@@ -572,6 +575,105 @@ onVersionChanged(function(version) {
 					}
 				}
 				machineTitle.html(machineTitle.text() + "<span class='text-muted'>, " + machineRecipeCount + " recipes</span>");
+			}
+		}
+
+		function calculateConflictsSplit() {
+			// add each selected recipe to the list one by one and if adding that causes a recipe conflict, create a new group for that recipe
+			conflict_results.empty();
+			conflict_results.text("Calculating...");
+
+			function checkTotalConflicts(allInputs) {
+				for(let i in recipes) {
+					let otherRecipe = recipes[i];
+
+					if (allInputsConflict(allInputs, otherRecipe)) {
+						return true;
+					}
+				}
+
+				return false;
+			}
+
+			// allInputsGrouped - structure {[circuitNum] = [array of machines]}
+			var allInputsGrouped = {none:[]}
+			for(let i in added_recipes_list) {
+				let recipe = added_recipes_list[i];
+
+				let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
+				if (circuit) {
+					if (!allInputsGrouped[circuit.cfg]) {
+						allInputsGrouped[circuit.cfg] = [];
+					}
+				}
+
+				let group = allInputsGrouped[circuit ? circuit.cfg : "none"];
+
+				if (group.length == 0) {
+					// no machines added yet, add current recipe to new machine
+					group.push(getAllInputs([recipe]));
+				} else {
+					let foundMachine = false;
+					let allInputsOne = getAllInputs([recipe]);
+					for(let iG = 0; iG < group.length; iG++) {
+						let allInputs = getAllInputsPlusOne(group[iG], allInputsOne);
+
+						if (!checkTotalConflicts(allInputs)) {
+							// adding this recipe will not cause a conflict, add it to this machine
+							group[iG] = allInputs;
+							foundMachine = true;
+							break;
+						}
+					}
+					if (!foundMachine) {
+						// this recipe couldn't be added to any existing machine, add it to a new machine
+						group.push(allInputsOne);
+					}
+				}
+			}
+
+			// draw each group on screen
+			conflict_results.empty();
+			let machinesList = $("<div>").css({
+				display:"flex",
+				width:"100%",
+				overflowX: "auto",
+				gap: "4px",
+			});
+			conflict_results.append(machinesList);
+
+			let idx = 0;
+			for(let i in allInputsGrouped) {
+				let group = allInputsGrouped[i];
+				for(let iG in group) {
+					idx++;
+					let machine = group[iG];
+
+					let machineCont = $("<div class='card card-body d-inline-block p-1'>").css({
+						width: "450px",
+						height: "600px",
+						flexShrink: 0
+					});
+					let machineTitle = $("<center>").text("Machine " + idx + ", Circuit: " + i);
+					let listCont = $("<div class='p-1'>").css({
+						display:"flex",
+						flexDirection: "column",
+						height: "calc(100% - 24px)",
+						overflowY: "auto"
+					});
+					machineCont.append([machineTitle,listCont]);
+					machinesList.append(machineCont);
+
+					let recipeCount = 0;
+					for(let rIdx in machine.recipeIdx) {
+						let recipe = recipes[rIdx];
+						if (recipe) {
+							recipeCount++;
+							listCont.append(buildRecipePanel(recipe));
+						}
+					}
+					machineTitle.html(machineTitle.text() + "<span class='text-muted'>, " + recipeCount + " recipes</span>");
+				}
 			}
 		}
 
@@ -615,7 +717,9 @@ onVersionChanged(function(version) {
 			}
 		}
 
-		if (logicMode == "list") {
+		if (logicMode == "bus-isolation") {
+			calculateConflictsBusIsolation();
+		} else if (logicMode == "list") {
 			calculateConflictsList();
 		} else {
 			calculateConflictsSplit();
@@ -823,7 +927,7 @@ onVersionChanged(function(version) {
 		recipe_search_result.append(current_recipes_list.slice(0,500).map(v => {
 			v.pnl.click(() => {
 				addRecipe(v.recipe.idx);
-			})
+			}).addClass("link-pointer");
 			return v.pnl
 		}));
 
