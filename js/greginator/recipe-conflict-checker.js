@@ -301,9 +301,10 @@ onVersionChanged(function(version) {
 	function saveSettings() {
 		var settings = getSettingsToSave();
 		settings_input_written = true;
-		settings_input.val(JSON.stringify(settings));
+		var settings_str = JSON.stringify(settings);
+		settings_input.val(settings_str);
 		settings_input_written = false;
-		if (autosave_name != "") {
+		if (autosave_name != "" && settings_str.length > 0) {
 			for(let i in saved) {
 				if (saved[i].name == autosave_name) {
 					saved[i].settings = settings;
@@ -336,8 +337,11 @@ onVersionChanged(function(version) {
 			//{"machine":"Mixer.json","recipes":[{"en":true,"dur":200,"eut":7,"iI":[{"a":1,"uN":"gt.metaitem.01.2086","lN":"Gold Dust"},{"a":1,"uN":"gt.metaitem.01.2054","lN":"Silver Dust"},{"cfg":1,"a":0,"uN":"gt.integrated_circuit","lN":"Programmed Circuit"}],"iO":[{"a":2,"uN":"gt.metaitem.01.2303","lN":"Electrum Dust"}],"fI":[],"fO":[],"idx":728}]}
 			$($(".col",pnl)[0]).prepend("<small class='text-muted'>This recipe was not found, possibly due to being from a different version, but was added anyway</small>");
 		}
-		calculateConflicts();
-		saveSettings();
+
+		if (loading_settings == false) {
+			calculateConflicts();
+			saveSettings();
+		}
 	}
 
 	function removeRecipe(recipeIdx, pnl) {
@@ -356,72 +360,6 @@ onVersionChanged(function(version) {
 
 		saveSettings();
 	}
-
-
-	/*
-	function checkConflictsInGroup(machine, circuitUID, recipe) {
-		var group = downloaded_grouped[machine][circuitUID];
-		if (!group) {
-			downloaded_grouped[machine][circuitUID] = [[recipe]];
-		} else {
-			let outerConflictDetected = true;
-			for(let gi in group) {
-				let conflictDetected = false;
-				for(let i in group[gi]) {
-					let otherRecipe = group[gi][i];
-
-					if (allInputsConflict(getAllInputsForTwo(recipe), otherRecipe)) {
-						// conflict detected between 2 recipes
-						console.log("conflict detected between 2", recipe, otherRecipe);
-						conflictDetected = true;
-						break;
-					}
-
-					let allInputs = getAllInputsForTwo(recipe, otherRecipe);
-
-					if (group[gi].length > 1) {
-						for(let ii in group[gi]) {
-							let thirdRecipe = group[gi][ii];
-							if (thirdRecipe.idx == otherRecipe.idx) continue;
-
-							if (allInputsConflict(allInputs, thirdRecipe)) {
-								// conflict detected between 3 recipes (2 => 1), add to new group
-								console.log("conflict detected between 3", recipe, otherRecipe, thirdRecipe);
-								conflictDetected = true;
-								break;
-							}
-						}
-					}
-				}
-				if (!conflictDetected) {
-					//console.log("no conflict detected in",circuitUID,"group",gi,"for recipe",recipe);
-					group[gi].push(recipe);
-					outerConflictDetected = false;
-					break;
-				}
-			}
-			if (outerConflictDetected) {
-				console.log("conflicts detected in ",circuitUID, "in all groups, making new group for recipe", recipe);
-				group.push([recipe]);
-			}
-		}
-	}
-
-	function groupRecipes(machine) {
-		if (!downloaded_machines[machine]) return;
-
-		downloaded_grouped[machine] = {};
-		var recipes = downloaded_machines[machine].recs;
-		for(let idx in recipes) {
-			let recipe = recipes[idx];
-
-			let circuitUID = getCircuitUID(getCircuitForRecipe(recipe));
-			checkConflictsInGroup(machine, circuitUID, recipe)
-		}
-
-		console.log("RECIPE GROUPS",downloaded_grouped[machine]);
-	}
-	*/
 
 	function calculateConflicts() {
 		if (!downloaded_machines[selected_machine]) return;
@@ -445,83 +383,195 @@ onVersionChanged(function(version) {
 				return false;
 			}
 
-			// allInputsGrouped - structure {[circuitNum] = [array of machines]}
-			var allInputsGrouped = {none:[]}
-			for(let i in added_recipes_list) {
-				let recipe = added_recipes_list[i];
 
-				let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
-				if (circuit) {
-					if (!allInputsGrouped[circuit.cfg]) {
-						allInputsGrouped[circuit.cfg] = [];
-					}
-				}
-
-				let group = allInputsGrouped[circuit ? circuit.cfg : "none"];
-
-				if (group.length == 0) {
-					// no machines added yet, add current recipe to new machine
-					group.push(getAllInputs([recipe]));
-				} else {
-					let foundMachine = false;
-					let allInputsOne = getAllInputs([recipe]);
-					for(let iG = 0; iG < group.length; iG++) {
-						let allInputs = getAllInputsPlusOne(group[iG], allInputsOne);
-
-						if (!checkTotalConflicts(allInputs)) {
-							// adding this recipe will not cause a conflict, add it to this machine
-							group[iG] = allInputs;
-							foundMachine = true;
-							break;
-						}
-					}
-					if (!foundMachine) {
-						// this recipe couldn't be added to any existing machine, add it to a new machine
-						group.push(allInputsOne);
-					}
+			function getAllInputsForBus(fluids, bus, circuitUID) {
+				return {
+					items: bus.allItems,
+					fluids: fluids,
+					circuits: {[circuitUID]: true},
+					recipeIdx: bus.allRecipeIdx
 				}
 			}
+
+			/* 
+				allInputsGrouped
+				structure [
+					{
+						allFluids: {} // all fluids in this machine
+						circuits: {
+							[circuitUID]: {
+								circuitName: "",
+								buses: [
+									{
+										allItems: {},
+										allRecipeIdx: {}
+										recipes: []
+									}
+								]
+							}
+						}
+					}
+				]
+
+			*/
+
+			added_recipes_list.sort((a,b) => a.recipeIdx - b.recipeIdx);
+
+			var allInputsGrouped = [{allFluids:{},circuits:{}}]
+			for(let i in added_recipes_list) {
+				let recipe = added_recipes_list[i];
+				//console.log("------- CHECKING RECIPE",recipe);
+
+				let allInputsOne = getAllInputs([recipe]);
+				let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
+				let circuitUID = getCircuitUID(circuit);
+
+				let foundMachine = false;
+				for(let machineIdx in allInputsGrouped) {
+					let machine = allInputsGrouped[machineIdx];
+					let allInputsFluids = machine.allFluids;
+
+					if (!machine.circuits[circuitUID]) {
+						machine.circuits[circuitUID] = {
+							circuitName: circuit ? circuit.cfg : "none",
+							buses: []
+						};
+					}
+
+					let mCircuits = machine.circuits[circuitUID];
+
+					if (mCircuits.buses.length > 0) {
+						for(let iB in mCircuits.buses) {
+							let allInputsBus = getAllInputsForBus(allInputsFluids, mCircuits.buses[iB], circuitUID);
+
+							//console.log("checking machine",machineIdx,"bus",iB,"allInputsBus:", allInputsBus);
+							//if (!checkTotalConflicts(allInputsBus)) {
+							if (!allInputsConflict(allInputsBus, recipe)) {
+								//console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[${iB}]`);
+								// adding this recipe will not cause a conflict, add it to this machine
+								machine.allFluids = allInputsBus.fluids;
+								mCircuits.buses[iB].allItems = {...allInputsOne.items, ...allInputsBus.items};
+								mCircuits.buses[iB].allRecipeIdx = {[recipe.recipeIdx]: true, ...allInputsBus.recipeIdx};
+								mCircuits.buses[iB].recipes.push(recipe);
+								foundMachine = true;
+								break;
+							}
+						}
+					}
+
+					if (mCircuits.buses.length == 0 || !foundMachine) {
+						if (!foundMachine) {
+							// this recipe couldn't be added to any existing input bus, check if there is a conflict with just fluids
+							let allInputsBus = getAllInputsForBus(allInputsFluids, {allItems: {}, allRecipeIdx: {}}, circuitUID);
+
+							//if (checkTotalConflicts(allInputsBus)) {
+							if (allInputsConflict(allInputsBus, recipe)) {
+								// if there was a conflict, exit loop now so the recipe gets added to a new machine below
+								break;
+							}
+						}
+
+						//console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[<new>]`);
+						// adding this recipe to any existing item bus will cause a conflict, 
+						// but using a new item bus will fix it, add it to a new item bus
+						mCircuits.buses.push({
+							allItems: {...allInputsOne.items},
+							allRecipeIdx: {...allInputsOne.recipeIdx},
+							recipes: [recipe]
+						});
+						foundMachine = true;
+						break;
+					}
+				}
+				if (!foundMachine) {
+					// this recipe couldn't be added to any existing machine, there's probably a fluid conflict. add it to a new machine
+					//console.log("recipe",recipe,`added to allInputsGrouped[<new>]`);
+					allInputsGrouped.push({
+						allFluids: {...allInputsOne.fluids},
+						circuits: {
+							[circuitUID]: {
+								circuitName: circuit ? circuit.cfg : "none",
+								buses: [{
+									allItems: {...allInputsOne.items},
+									allRecipeIdx: {...allInputsOne.recipeIdx},
+									recipes: [recipe]
+								}]
+							}
+						}
+					});
+				}
+			}
+
+			//console.log("allInputsGrouped",allInputsGrouped);
 
 			// draw each group on screen
 			conflict_results.empty();
 			let machinesList = $("<div>").css({
 				display:"flex",
+				flexDirection: "column",
 				width:"100%",
 				overflowX: "auto",
 				gap: "4px",
 			});
 			conflict_results.append(machinesList);
 
+
 			for(let i in allInputsGrouped) {
-				let group = allInputsGrouped[i];
-				for(let iG in group) {
-					let machine = group[iG];
+				let machine = allInputsGrouped[i];
 
-					let machineCont = $("<div class='card card-body d-inline-block p-1'>").css({
-						width: "600px",
-						height: "400px",
-						flexShrink: 0
-					});
-					let machineTitle = $("<center>").text("Circuit: " + i);
-					let listCont = $("<div class='p-1'>").css({
-						display:"flex",
-						flexDirection: "column",
-						height: "calc(100% - 24px)",
-						overflowY: "auto"
-					});
-					machineCont.append([machineTitle,listCont]);
-					machinesList.append(machineCont);
+				let machineTitle = $("<div class='p-2'>").text("Machine " + (1+parseInt(i)));
+				let machineCard = $("<div class='machine-card card card-body d-inline-block p-1'>").css({
+					height: "600px",
+					flexShrink: 0
+				});
+				let machineCont = $("<div class='machine-container'>").css({
+					display: "flex",
+					flexDirection: "row",
+					height: "calc(100% - 20px)",
+					flexShrink: 0
+				})
+				machineCard.append(machineTitle);
+				machineCard.append(machineCont);
+				machinesList.append(machineCard);
 
-					let recipeCount = 0;
-					for(let rIdx in machine.recipeIdx) {
-						let recipe = recipes[rIdx];
-						if (recipe) {
-							recipeCount++;
-							listCont.append(buildRecipePanel(recipe));
+				let machineRecipeCount = 0;
+				for(let circuitUID in machine.circuits) {
+					let mCircuits = machine.circuits[circuitUID];
+
+					let busesCont = $("<div class='buses-container p-1'>").css({
+						display: "flex",
+						flexDirection: "row",
+						//height: "600px",
+						flexShrink: 0,
+					});
+					machineCont.append(busesCont);
+
+					for (let iB in mCircuits.buses) {
+						let bus = mCircuits.buses[iB];
+
+						let busTitle = $("<center>").text("Item Input Bus " + (1+parseInt(iB)) + ", Circuit: " + mCircuits.circuitName);
+						let busCont = $("<div class='bus-container card card-body d-inline-block p-1 m-1 ml-2'>").css({
+							width: "400px",
+							//display:"flex",
+							//flexDirection: "column",
+							height: "calc(100% - 32px)",
+							overflowY: "auto",
+							flexShrink: 0,
+							flexGrow: 0
+						});
+						busCont.append(busTitle);
+						busesCont.append(busCont);
+
+						for(let rIdx in bus.recipes) {
+							let recipe = bus.recipes[rIdx];
+							if (recipe) {
+								machineRecipeCount++;
+								busCont.append(buildRecipePanel(recipe));
+							}
 						}
 					}
-					machineTitle.html(machineTitle.text() + "<span class='text-muted'>, " + recipeCount + " recipes</span>");
 				}
+				machineTitle.html(machineTitle.text() + "<span class='text-muted'>, " + machineRecipeCount + " recipes</span>");
 			}
 		}
 
@@ -831,6 +881,8 @@ onVersionChanged(function(version) {
 			*/
 
 			loading_settings = false;
+			calculateConflicts();
+			saveSettings();
 		}
 
 		// TESTING
