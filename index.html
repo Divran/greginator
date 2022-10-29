@@ -598,7 +598,7 @@
 				<div class="collapse">
 					<div class="card-body">
 						<div class="row">
-							<div class="col-12 col-lg-6">
+							<div class="col-12 col-md-6 col-lg-4">
 								<div class="float-right">
 									<div class="btn-group btn-group-toggle" data-toggle="buttons">
 										<label class="btn btn-light active" title="Shows all selected recipes as one-liners with minimal information to save space. Full view is shown in a tooltip on hover.">
@@ -642,6 +642,7 @@
 												<span class="newlabel">New:</span>
 												<div class="btn btn-success">Save</div>
 												<div class="btn btn-primary">Load</div>
+												<div class="btn btn-secondary" title="Load and add (instead of load and replace). Disables autosave.">+</div>
 												<div class="btn btn-danger">Delete</div>
 												<input type="text" placeholder="Name" style="width:200px; vertical-align:middle; display:inline-block;" class="form-control" />
 												<span class="namelabel"></span>
@@ -650,7 +651,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-12 col-lg-6">
+							<div class="col-12 col-md-6 col-lg-8">
 								<div class="card card-body">
 									<center class="mb-1">
 										<div class="float-right">
@@ -659,11 +660,11 @@
 													title="No additional logic, only lists conflicts while assuming that every single recipe and circuit config has been placed in the same machine and the same input bus.">
 													<input type="radio" name="recipe-conflict-logic" value="list"> List
 												</label>
-												<label class="btn btn-light" 
+												<label class="btn btn-light active" 
 													title="Automatically split recipe conflicts into different lists. If each resulting list is encoded on a completely different machine, conflicts will be avoided. Always separates circuit configs to at most one circuit per bus. Significantly more cpu intensive than List.">
 													<input type="radio" name="recipe-conflict-logic" value="split"> Split
 												</label>
-												<label class="btn btn-light active" 
+												<label class="btn btn-light" 
 													title="Similar to split mode, but also takes item bus isolation into account. Splits recipes by item bus and machine. Does not split fluids on the same machine since fluid hatches do not support isolation. Always separates circuit configs to at most one circuit per bus.">
 													<input type="radio" name="recipe-conflict-logic" value="bus-isolation"> Item Bus Isolation
 												</label>

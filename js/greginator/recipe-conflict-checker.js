@@ -56,11 +56,12 @@ onVersionChanged(function(version) {
 	});
 
 
-	var logicMode = "bus-isolation";
+	var logicMode = "split";
 	function logicModeChanged(str) {
 		logicMode = str;
 		if (logicMode == "bus-isolation") {
-			$(".detected-conflicts-header", card).text("List of required machines separated by input bus and circuit");
+			$(".detected-conflicts-header", card).html("List of required machines separated by input bus and circuit<br>"+
+				"<strong>NOTE: CURRENTLY SEEMS TO HAVE ISSUES. If you notice an excessive number of different machines in this mode, switch to split mode instead, which is much more stable.</strong>");
 		} else if (logicMode == "split") {
 			$(".detected-conflicts-header",card).text("List of required machines separated by circuit");
 		} else {
@@ -85,7 +86,7 @@ onVersionChanged(function(version) {
 
 	tabChanged("search");
 	displayModeChanged("compact");
-	logicModeChanged("bus-isolation");
+	logicModeChanged("split");
 
 	var machine_search = $(".machine-search", card);
 	var recipe_search_input = $(".recipe-search-input", card);
@@ -96,6 +97,7 @@ onVersionChanged(function(version) {
 	var settings_input = $(".settings-input", card);
 	var settings_input_written = false;
 	var loading_settings = false;
+	var loading_add = false;
 
 	var added_recipes_list = [];
 	var autosave_name = "";
@@ -209,7 +211,7 @@ onVersionChanged(function(version) {
 		return ret.join("");
 	}
 
-	function buildRecipePanel(recipe, removebtn) {
+	function buildRecipePanel(recipe, removebtn, conflictsWith) {
 		let eut = recipe.eut;
 		let dur = recipe.dur;
 		let stats = eut + " EU/t, " + (dur>20 ? Math.floor(dur/20*1000+0.5)/1000 + "s" : dur + "t");
@@ -268,7 +270,23 @@ onVersionChanged(function(version) {
 		full.attr("data-recipe-idx",recipe.idx);
 
 
-		compact.attr("title",$("<div class='row p-2' style='min-width:500px;'>").html(full.html()).prop("outerHTML")).tooltip({
+		var compactTitle = $("<div class='d-flex' style='flex-direction:column'>");
+		compactTitle.append($("<div class='w-100'>").append(full));
+		if (conflictsWith) {
+			compactTitle.append($("<div class='w-100'>").append("<p>Conflicts with:</p>"));
+			var recipes = downloaded_machines[selected_machine].recs;
+			for(let idx in conflictsWith) {
+				let otherRecipe = recipes[idx];
+				if (otherRecipe) {
+					let otherPnl = buildRecipePanel(otherRecipe, false);
+					$(".recipe-item-compact", otherPnl).remove();
+					$(".recipe-item-full", otherPnl).removeClass(".recipe-item-full").show();
+					compactTitle.append($("<div class='w-100'>").append(otherPnl));
+				}
+			}
+		}
+
+		compact.attr("title",$("<div class='row p-2' style='min-width:500px;'>").html(compactTitle.html()).prop("outerHTML")).tooltip({
 			html: true
 		});
 		pnl.append([compact,full]);
@@ -285,7 +303,7 @@ onVersionChanged(function(version) {
 		pnl.prepend(
 			$('<button title="Send to Cell Calculator" type="button" class="btn btn-sm btn-secondary link-pointer position-absolute" '+
 				'style="z-index:10; font-size:12px; padding:0.1rem 0.25rem 0.1rem 0.25rem; top:2px; right: ' + (removebtn ? '20px' : '2px') + ';">C</button>')
-			.click(() => {window.fromConflictCheckerToCellCalculator(recipe);})
+			.click(() => {window.fromConflictCheckerToCellCalculator(recipe);}).tooltip()
 		);
 
 		displayModeChanged(displayMode,pnl);
@@ -368,20 +386,28 @@ onVersionChanged(function(version) {
 		if (!downloaded_machines[selected_machine].recs) return;
 		var recipes = downloaded_machines[selected_machine].recs;
 
+		added_recipes_list.sort((a,b) => a.idx - b.idx);
+
 		function calculateConflictsBusIsolation() {
 			// add each selected recipe to the list one by one and if adding that causes a recipe conflict, create a new group for that recipe
 			conflict_results.empty();
 			conflict_results.text("Calculating...");
+			var conflictsWith = {};
 
-			function checkTotalConflicts(allInputs) {
+			function checkTotalConflicts(allInputs, mRecipe) {
+				//var found = false;
+				//console.log("checkTotalConflicts",allInputs, mRecipe);
 				for(let i in recipes) {
 					let otherRecipe = recipes[i];
 
 					if (allInputsConflict(allInputs, otherRecipe)) {
+						//conflictsWith[mRecipe.idx][otherRecipe.idx] = true;
+						//found = true;
 						return true;
 					}
 				}
 
+				//return found;
 				return false;
 			}
 
@@ -417,16 +443,15 @@ onVersionChanged(function(version) {
 
 			*/
 
-			added_recipes_list.sort((a,b) => a.recipeIdx - b.recipeIdx);
-
 			var allInputsGrouped = [{allFluids:{},circuits:{}}]
 			for(let i in added_recipes_list) {
 				let recipe = added_recipes_list[i];
+				conflictsWith[recipe.idx] = {};
 				//console.log("------- CHECKING RECIPE",recipe);
 
-				let allInputsOne = getAllInputs([recipe]);
 				let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
 				let circuitUID = getCircuitUID(circuit);
+				let allInputsOne = getAllInputs([recipe]);
 
 				let foundMachine = false;
 				for(let machineIdx in allInputsGrouped) {
@@ -444,16 +469,16 @@ onVersionChanged(function(version) {
 
 					if (mCircuits.buses.length > 0) {
 						for(let iB in mCircuits.buses) {
-							let allInputsBus = getAllInputsForBus(allInputsFluids, mCircuits.buses[iB], circuitUID);
+							let allInputsBus = getAllInputsPlusOne(getAllInputsForBus(allInputsFluids, mCircuits.buses[iB], circuitUID), allInputsOne);
 
 							//console.log("checking machine",machineIdx,"bus",iB,"allInputsBus:", allInputsBus);
-							//if (!checkTotalConflicts(allInputsBus)) {
-							if (!allInputsConflict(allInputsBus, recipe)) {
-								//console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[${iB}]`);
+							//if (!allInputsConflict(allInputsBus, recipe)) {
+							if (!checkTotalConflicts(allInputsBus, recipe)) {
+								console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[${iB}]`);
 								// adding this recipe will not cause a conflict, add it to this machine
 								machine.allFluids = allInputsBus.fluids;
-								mCircuits.buses[iB].allItems = {...allInputsOne.items, ...allInputsBus.items};
-								mCircuits.buses[iB].allRecipeIdx = {[recipe.recipeIdx]: true, ...allInputsBus.recipeIdx};
+								mCircuits.buses[iB].allItems = {...allInputsBus.items};
+								mCircuits.buses[iB].allRecipeIdx = {...allInputsBus.recipeIdx};
 								mCircuits.buses[iB].recipes.push(recipe);
 								foundMachine = true;
 								break;
@@ -464,16 +489,16 @@ onVersionChanged(function(version) {
 					if (mCircuits.buses.length == 0 || !foundMachine) {
 						if (!foundMachine) {
 							// this recipe couldn't be added to any existing input bus, check if there is a conflict with just fluids
-							let allInputsBus = getAllInputsForBus(allInputsFluids, {allItems: {}, allRecipeIdx: {}}, circuitUID);
+							let allInputsBus = getAllInputsPlusOne(getAllInputsForBus(allInputsFluids, {allItems: {}, allRecipeIdx: {}}, circuitUID), allInputsOne);
 
 							//if (checkTotalConflicts(allInputsBus)) {
-							if (allInputsConflict(allInputsBus, recipe)) {
+							if (checkTotalConflicts(allInputsBus, recipe)) {
 								// if there was a conflict, exit loop now so the recipe gets added to a new machine below
 								break;
 							}
 						}
 
-						//console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[<new>]`);
+						console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[<new>]`);
 						// adding this recipe to any existing item bus will cause a conflict, 
 						// but using a new item bus will fix it, add it to a new item bus
 						mCircuits.buses.push({
@@ -487,7 +512,7 @@ onVersionChanged(function(version) {
 				}
 				if (!foundMachine) {
 					// this recipe couldn't be added to any existing machine, there's probably a fluid conflict. add it to a new machine
-					//console.log("recipe",recipe,`added to allInputsGrouped[<new>]`);
+					console.log("recipe",recipe,`added to allInputsGrouped[<new>]`);
 					allInputsGrouped.push({
 						allFluids: {...allInputsOne.fluids},
 						circuits: {
@@ -505,6 +530,8 @@ onVersionChanged(function(version) {
 			}
 
 			//console.log("allInputsGrouped",allInputsGrouped);
+			//console.log("allConflicts",conflictsWith);
+			//console.log("recipes",recipes);
 
 			// draw each group on screen
 			conflict_results.empty();
@@ -523,13 +550,13 @@ onVersionChanged(function(version) {
 
 				let machineTitle = $("<div class='p-2'>").text("Machine " + (1+parseInt(i)));
 				let machineCard = $("<div class='machine-card card card-body d-inline-block p-1'>").css({
-					height: "600px",
+					//height: "600px",
 					flexShrink: 0
 				});
 				let machineCont = $("<div class='machine-container'>").css({
 					display: "flex",
 					flexDirection: "row",
-					height: "calc(100% - 20px)",
+					height: "100%", //"calc(100% - 20px)",
 					flexShrink: 0,
 					gap: "4px"
 				})
@@ -557,7 +584,7 @@ onVersionChanged(function(version) {
 							width: "450px",
 							//display:"flex",
 							//flexDirection: "column",
-							height: "calc(100% - 32px)",
+							height: "100%", //"calc(100% - 32px)",
 							overflowY: "auto",
 							flexShrink: 0,
 							flexGrow: 0
@@ -569,7 +596,7 @@ onVersionChanged(function(version) {
 							let recipe = bus.recipes[rIdx];
 							if (recipe) {
 								machineRecipeCount++;
-								busCont.append(buildRecipePanel(recipe));
+								busCont.append(buildRecipePanel(recipe, false /*, conflictsWith[recipe.idx]*/));
 							}
 						}
 					}
@@ -745,7 +772,6 @@ onVersionChanged(function(version) {
 			circuits: {...allInputs.circuits, ...plusOne.circuits},
 			recipeIdx: {...allInputs.recipeIdx, ...plusOne.recipeIdx}
 		};
-
 	}
 
 	function getAllInputs(recipes) {
@@ -904,33 +930,7 @@ onVersionChanged(function(version) {
 		return (i.concat(f).map(r => r.lN + (r.cfg ? " " + r.cfg : "")).join(sep || " "));
 	}
 
-	function listRecipes(machine) {
-		if (!downloaded_machines[machine]) return;
-
-		recipe_search_result.empty();
-		current_recipes_list = [];
-
-		var recipes = downloaded_machines[machine].recs;
-		for(let idx in recipes) {
-			let recipe = recipes[idx];
-			recipe.idx = parseInt(idx);
-
-			let pnl = buildRecipePanel(recipe);
-			current_recipes_list.push({
-				recipe: recipe,
-				pnl: pnl,
-				iNames: getItemNames(recipe.iI,recipe.fI).toLowerCase(),
-				oNames: getItemNames(recipe.iO,recipe.fO).toLowerCase(),
-			});
-		}
-
-		recipe_search_result.append(current_recipes_list.slice(0,500).map(v => {
-			v.pnl.click(() => {
-				addRecipe(v.recipe.idx);
-			}).addClass("link-pointer");
-			return v.pnl
-		}));
-
+	function addLoadingSettings(recipes) {
 		if (loading_settings !== false) {
 			for(let i=loading_settings.recipes.length-1;i>=0;i--) {
 				let recipe = loading_settings.recipes[i];
@@ -975,19 +975,42 @@ onVersionChanged(function(version) {
 					}
 				}
 			}
-
-			/*
-			for(let i in loading_settings.recipes) {
-				let recipe = loading_settings[i];
-				let recipeJson
-				addRecipe(loading_settings.recipes[i]);
-			}
-			*/
-
 			loading_settings = false;
+			loading_add = false;
+
 			calculateConflicts();
 			saveSettings();
 		}
+	}
+
+	function listRecipes(machine) {
+		if (!downloaded_machines[machine]) return;
+
+		recipe_search_result.empty();
+		current_recipes_list = [];
+
+		var recipes = downloaded_machines[machine].recs;
+		for(let idx in recipes) {
+			let recipe = recipes[idx];
+			recipe.idx = parseInt(idx);
+
+			let pnl = buildRecipePanel(recipe);
+			current_recipes_list.push({
+				recipe: recipe,
+				pnl: pnl,
+				iNames: getItemNames(recipe.iI,recipe.fI).toLowerCase(),
+				oNames: getItemNames(recipe.iO,recipe.fO).toLowerCase(),
+			});
+		}
+
+		recipe_search_result.append(current_recipes_list.slice(0,500).map(v => {
+			v.pnl.click(() => {
+				addRecipe(v.recipe.idx);
+			}).addClass("link-pointer");
+			return v.pnl
+		}));
+
+		addLoadingSettings(recipes);
 
 		// TESTING
 		/*
@@ -1080,6 +1103,18 @@ onVersionChanged(function(version) {
 					loading_settings = JSON.parse(JSON.stringify(row.settings)); // clone object
 					machine_search.selectpicker("val", row.settings.machine);
 				}).show();
+
+				$(".btn-secondary",cpy).click(() => {
+					if (row.settings.machine != machine_search.val()) {
+						alert("Different machine, can't add.");
+						return;
+					} else {
+						setAutosave("");
+						loading_add = true;
+						loading_settings = JSON.parse(JSON.stringify(row.settings));
+						addLoadingSettings(downloaded_machines[machine_search.val()].recs);
+					}
+				}).show().tooltip();
 
 				$(".btn-success",cpy).click(() => {
 					if (confirm("Are you sure you want to overwrite that save?")) {
