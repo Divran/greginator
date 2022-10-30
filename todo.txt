@@ -23,6 +23,7 @@ recipe conflict checker
 
 * export to file
 * import from file
+* drag and drop mode
 * rename save button (low priority)
 
 discarded ideas

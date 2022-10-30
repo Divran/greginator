@@ -8,7 +8,7 @@ onVersionChanged(function(version) {
 		card.show();
 	}
 
-	var header = $( ".card-header", card );
+	var header = $( "> .card-header", card );
 	header.addClass( "link-pointer" );
 	var collapse = $( ".collapse", card );
 
@@ -23,14 +23,24 @@ onVersionChanged(function(version) {
 	var amps_buttons = $("[name='gt-overclock-amps']",card);
 	var results_elem = $("#gt-overclock-results",card);
 	var time_elem = $("#gt-overclock-time",card);
+	var time_check = $("#gt-overclock-time-flip",card);
 	var results = $("#gt-overclock-results",card);
 	var wanted_elem = $("#gt-overclock-wanted",card);
 	var wanted_check = $("#gt-overclock-wanted-flip",card);
+
+	// gt++
+	var time_bonus = $("#gt-overclock-faster",card);
+	var energy_bonus = $("#gt-overclock-eureduction",card);
+	var parallels = $("#gt-overclock-parallels",card);
 
 	function getTier(voltage) {
 		if (voltage <= 8) {return 1;}
 		var logn = Math.log(voltage)/Math.log(4)-1.5;
 		return Math.ceil(logn);
+	}
+
+	function getVoltageOfTier(tier) {
+		return 32 * Math.pow(4,tier - 1);
 	}
 
 
@@ -61,6 +71,10 @@ onVersionChanged(function(version) {
 			return;
 		}
 
+		if (time_check.is(":checked")) {
+			time = time / 20;
+		}
+
 		var overclocks = target_tier - tier;
 		energy = energy * Math.pow(4,overclocks);
 		var speed = Math.pow(2,overclocks);
@@ -80,7 +94,7 @@ onVersionChanged(function(version) {
 		var txt = [];
 		txt.push("Overclocked: <strong>" + overclocks + "</strong> times.");
 		txt.push("Energy consumption: <strong>" + energy + "</strong> eu/t" + amps_txt+".");
-		txt.push("Production: <strong>" + output + "</strong> every <strong>" + time + "</strong> seconds " + 
+		txt.push("Production: <strong>" + output + "</strong> every <strong>" + (time >= 1 ? time + " sec" : (time*20) + " ticks") + "</strong> " + 
 			"for a total of <strong>" + round3(output_per_sec) + "</strong> per second." );
 		txt.push("Consumption: <strong>" + round3(input_per_sec) + "</strong> per second.");
 
@@ -131,10 +145,85 @@ onVersionChanged(function(version) {
 			wanted_str = "<p>"+wanted_str+"</p>";
 		}
 
-		results.html("<h5>Results</h5><p>"+txt.join("<br>")+"</p>"+processing_array+wanted_str);
+		// GT++
+		var gtplusplus = "";
+		var time_bonus_int = parseInt(time_bonus.val());
+		var energy_bonus_int = parseInt(energy_bonus.val());
+		var parallels_int = parseInt(parallels.val());
+		if (!isNaN(time_bonus_int) && !isNaN(energy_bonus_int) && !isNaN(parallels_int)) {
+			// Source:
+			// https://github.com/GTNewHorizons/GTplusplus/blob/b5c2946f55ee5e44a341f545ce7565203803d74a/src/main/java/gtPlusPlus/xmod/gregtech/api/metatileentity/implementations/base/GregtechMeta_MultiBlockBase.java#L1023
+
+			parallels_int = parallels_int * target_tier;
+
+			time = parseFloat(time_elem.val());
+			if (time_check.is(":checked")) {
+				time = time / 20;
+			}
+			energy = parseInt(energy_elem.val()) * energy_bonus_int / 100;
+			var totalEnergy = energy;
+			var parallelRecipes = 0;
+			while(parallelRecipes < parallels_int && totalEnergy < (target - energy)) {
+				parallelRecipes++;
+				totalEnergy += energy;
+			}
+
+			if (time_bonus.val() != "") {
+				var time_bonus_int = parseInt(time_bonus);
+				if (!isNaN(time_bonus_int)) {
+					time_bonus_int = Math.max(-99,time_bonus_int);
+					var timeFactor = 100 / (100 + time_bonus_int);
+					time = Math.floor(time * timeFactor);
+				}
+
+				time = Math.max(1/20,time / speed);
+			}
+
+			totalEnergy = Math.ceil(totalEnergy);
+			var overclocks = 0;
+            while (totalEnergy <= getVoltageOfTier(target_tier - 1)) {
+            	totalEnergy *= 4;
+            	overclocks++;
+            }
+
+			var output_per_sec = (output*parallelRecipes)/time;
+			var input_per_sec = (input*parallelRecipes)/time;
+
+			gtplusplus = "<p>"+([
+				"Overclocked: <strong>" + overclocks + "</strong> times.",
+				"Energy consumption: <strong>" + totalEnergy + "</strong> eu/t",
+				"Parallels: <strong>" + parallelRecipes + "</strong>",
+				"Production: <strong>" + (output*parallelRecipes) + "</strong> every <strong>" + (time >= 1 ? time + " sec" : (time*20) + " ticks") + "</strong> " + 
+					"for a total of <strong>" + round3(output_per_sec) + "</strong> per second.",
+				"Consumption: <strong>" + round3(input_per_sec) + "</strong> per second."
+			]).join("<br>")+"</p>";
+		} else if (time_bonus.val() != "" || energy_bonus.val() != "" || parallels.val() != "") {
+			gtplusplus = "Please fill in all GT++ related fields."
+		}
+
+		function buildResults(r) {
+			var list = [];
+
+			for(let idx in r) {
+				list.push("<div class='col-lg-4 col-md-6'><div class='card card-body'>" + r[idx] + "</div></div>");
+			}
+
+			return $("<div class='row'>").append(list);
+		}
+
+		results.empty();
+		results.append(buildResults([
+			"<strong>Generic Results</strong><br>" + "<p>" + txt.join("<br>") + "</p>",
+			"<strong>Processing Array Stats</strong><br>" + processing_array + wanted_str,
+			"<strong>GT++ Stats</strong><br>" + gtplusplus
+		]));
 	}
 
-	$([energy_elem[0],amps_elem[0],output_elem[0],input_elem[0],time_elem[0],wanted_elem[0],wanted_check[0]]).off("click.oc_calculator").on("click.oc_calculator",function() {
+	$([
+		energy_elem[0],amps_elem[0],output_elem[0],input_elem[0],
+		time_elem[0],time_check[0],wanted_elem[0],wanted_check[0],
+		time_bonus[0],energy_bonus[0],parallels[0]
+	]).off("click.oc_calculator").on("click.oc_calculator",function() {
 		$(this).select();
 	}).on("input",doCalc);
 	amps_buttons.off("click.oc_calculator").on("click.oc_calculator",function() {
@@ -163,6 +252,11 @@ onVersionChanged(function(version) {
 		that.parent().tooltip();
 		last = that;
 	}).change(doCalc);
+	if (version != "gtnh") {
+		$(".oc-gtnh",card).hide();
+	} else {
+		$(".oc-gtnh",card).show();
+	}
 
 	doCalc();
 });
