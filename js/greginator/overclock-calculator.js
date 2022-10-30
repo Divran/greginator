@@ -71,17 +71,17 @@ onVersionChanged(function(version) {
 			return;
 		}
 
-		if (time_check.is(":checked")) {
-			time = time / 20;
+		if (!time_check.is(":checked")) {
+			time = time * 20;
 		}
 
 		var overclocks = target_tier - tier;
 		energy = energy * Math.pow(4,overclocks);
 		var speed = Math.pow(2,overclocks);
-		time = Math.max(1/20,time / speed);
+		time = Math.max(1,Math.floor((time/speed) + 0.5));
 
-		var output_per_sec = output/time;
-		var input_per_sec = input/time;
+		var output_per_sec = output/(time/20);
+		var input_per_sec = input/(time/20);
 
 		function round3(n) {return Math.round(n*1000)/1000;}
 		function round6(n) {return Math.round(n*1000000)/1000000;}
@@ -94,7 +94,7 @@ onVersionChanged(function(version) {
 		var txt = [];
 		txt.push("Overclocked: <strong>" + overclocks + "</strong> times.");
 		txt.push("Energy consumption: <strong>" + energy + "</strong> eu/t" + amps_txt+".");
-		txt.push("Production: <strong>" + output + "</strong> every <strong>" + (time >= 1 ? time + " sec" : (time*20) + " ticks") + "</strong> " + 
+		txt.push("Production: <strong>" + output + "</strong> every <strong>" + (time >= 20 ? round3(time/20) + " sec" : time + " ticks") + "</strong> " + 
 			"for a total of <strong>" + round3(output_per_sec) + "</strong> per second." );
 		txt.push("Consumption: <strong>" + round3(input_per_sec) + "</strong> per second.");
 
@@ -157,8 +157,8 @@ onVersionChanged(function(version) {
 			parallels_int = parallels_int * target_tier;
 
 			time = parseFloat(time_elem.val());
-			if (time_check.is(":checked")) {
-				time = time / 20;
+			if (!time_check.is(":checked")) {
+				time = time * 20;
 			}
 			energy = parseInt(energy_elem.val()) * energy_bonus_int / 100;
 			var totalEnergy = energy;
@@ -173,10 +173,10 @@ onVersionChanged(function(version) {
 				if (!isNaN(time_bonus_int)) {
 					time_bonus_int = Math.max(-99,time_bonus_int);
 					var timeFactor = 100 / (100 + time_bonus_int);
-					time = Math.floor(time * timeFactor);
+					time = time * timeFactor;
 				}
 
-				time = Math.max(1/20,time / speed);
+				time = Math.max(1,Math.floor((time/speed) + 0.5));
 			}
 
 			totalEnergy = Math.ceil(totalEnergy);
@@ -186,14 +186,14 @@ onVersionChanged(function(version) {
             	overclocks++;
             }
 
-			var output_per_sec = (output*parallelRecipes)/time;
-			var input_per_sec = (input*parallelRecipes)/time;
+			var output_per_sec = (output*parallelRecipes)/(time/20);
+			var input_per_sec = (input*parallelRecipes)/(time/20);
 
 			gtplusplus = "<p>"+([
 				"Overclocked: <strong>" + overclocks + "</strong> times.",
 				"Energy consumption: <strong>" + totalEnergy + "</strong> eu/t",
 				"Parallels: <strong>" + parallelRecipes + "</strong>",
-				"Production: <strong>" + (output*parallelRecipes) + "</strong> every <strong>" + (time >= 1 ? time + " sec" : (time*20) + " ticks") + "</strong> " + 
+				"Production: <strong>" + (output*parallelRecipes) + "</strong> every <strong>" + (time >= 20 ? round3(time/20) + " sec" : time + " ticks") + "</strong> " + 
 					"for a total of <strong>" + round3(output_per_sec) + "</strong> per second.",
 				"Consumption: <strong>" + round3(input_per_sec) + "</strong> per second."
 			]).join("<br>")+"</p>";
