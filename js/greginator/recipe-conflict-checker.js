@@ -164,7 +164,10 @@ onVersionChanged(function(version) {
 		recipe_search_result.empty().append(searched_recipes_list.slice(0,500).map(v => {
 			v.pnl.click(() => {
 				addRecipe(v.recipe.idx);
-			})
+			});
+			$("[data-original-title]",v.pnl).each(()=>{
+				$(this).attr("title",$(this).attr("data-original-title"));
+			}).tooltip({html:true, trigger:"hover"});
 			return v.pnl
 		}));
 	}
@@ -262,7 +265,7 @@ onVersionChanged(function(version) {
 
 		colIn.append(buildTbl(recipe.iI.concat(recipe.fI)));
 		colOut.append(buildTbl(recipe.iO.concat(recipe.fO)));
-		colOut.append($("<div class='p-2 my-1 bg-secondary'>").append(stats));
+		colOut.append($("<div class='p-1 my-1 bg-secondary'>").append(stats));
 
 		//let names = recipe.iI.concat(recipe.fI).concat(recipe.iO).concat(recipe.fO).map(r => r.lN).join(" ");
 
@@ -286,7 +289,7 @@ onVersionChanged(function(version) {
 			}
 		}
 
-		compact.attr("title",$("<div class='row p-2' style='min-width:500px;'>").html(compactTitle.html()).prop("outerHTML")).tooltip({
+		compact.attr("title",$("<div class='row p-2 align-left' style='min-width:500px;'>").html(compactTitle.html()).prop("outerHTML")).tooltip({
 			html: true
 		});
 		pnl.append([compact,full]);
