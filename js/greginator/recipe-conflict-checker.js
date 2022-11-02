@@ -165,6 +165,7 @@ onVersionChanged(function(version) {
 			v.pnl.click(() => {
 				addRecipe(v.recipe.idx);
 			});
+			$(".cell-calculator-btn",v.pnl).click((e) => {window.fromConflictCheckerToCellCalculator(v.recipe); e.preventDefault(); e.stopPropagation();});
 			$("[data-original-title]",v.pnl).each(()=>{
 				$(this).attr("title",$(this).attr("data-original-title"));
 			}).tooltip({html:true, trigger:"hover"});
@@ -304,9 +305,9 @@ onVersionChanged(function(version) {
 		}
 
 		pnl.prepend(
-			$('<button title="Send to Cell Calculator" type="button" class="btn btn-sm btn-secondary link-pointer position-absolute" '+
+			$('<button title="Send to Cell Calculator" type="button" class="btn btn-sm btn-secondary cell-calculator-btn link-pointer position-absolute" '+
 				'style="z-index:10; font-size:12px; padding:0.1rem 0.25rem 0.1rem 0.25rem; top:2px; right: ' + (removebtn ? '20px' : '2px') + ';">C</button>')
-			.click(() => {window.fromConflictCheckerToCellCalculator(recipe);}).tooltip()
+			.click((e) => {window.fromConflictCheckerToCellCalculator(recipe); e.preventDefault(); e.stopPropagation();}).tooltip()
 		);
 
 		displayModeChanged(displayMode,pnl);
