@@ -18,6 +18,7 @@ onVersionChanged(function(version) {
 	var energy_elem = $("#gt-overclock-energy",card);
 	var amps_elem = $("#gt-overclock-amps",card);
 	var target_buttons = $("[name='gt-overclock-target']",card);
+	var poc_buttons = $("[name='gt-overclock-perfectoc']",card);
 	var output_elem = $("#gt-overclock-output",card);
 	var input_elem = $("#gt-overclock-input",card);
 	var amps_buttons = $("[name='gt-overclock-amps']",card);
@@ -52,6 +53,7 @@ onVersionChanged(function(version) {
 		var energy = parseInt(energy_elem.val());
 		var amps = parseInt(amps_elem.val());
 		var target_elem = $("[name='gt-overclock-target']:checked",card);
+		var poc = $("[name='gt-overclock-perfectoc']:checked",card).val();
 		var target = parseInt(target_elem.val());
 		var output = parseFloat(output_elem.val());
 		var time = parseFloat(time_elem.val());
@@ -75,9 +77,20 @@ onVersionChanged(function(version) {
 			time = time * 20;
 		}
 
+		// perfect oc
+		var ENERGY_PER_TIER = 4;
+		var SPEED_PER_TIER = 2;
+		if (poc == "semi") {
+			ENERGY_PER_TIER = 2;
+			SPEED_PER_TIER = 2;
+		} else if (poc == "perfect") {
+			ENERGY_PER_TIER = 4;
+			SPEED_PER_TIER = 4;
+		}
+
 		var overclocks = target_tier - tier;
-		energy = energy * Math.pow(4,overclocks);
-		var speed = Math.pow(2,overclocks);
+		energy = energy * Math.pow(ENERGY_PER_TIER,overclocks);
+		var speed = Math.pow(SPEED_PER_TIER,overclocks);
 		time = Math.max(1,Math.floor((time/speed) + 0.5));
 
 		var output_per_sec = output/(time/20);
@@ -150,11 +163,11 @@ onVersionChanged(function(version) {
 		var time_bonus_int = parseInt(time_bonus.val());
 		var energy_bonus_int = parseInt(energy_bonus.val());
 		var parallels_int = parseInt(parallels.val());
-		if (!isNaN(time_bonus_int) && !isNaN(energy_bonus_int) && !isNaN(parallels_int)) {
+		if (!isNaN(time_bonus_int) && !isNaN(energy_bonus_int) && energy_bonus_int != 0 && !isNaN(parallels_int)) {
 			// Source:
 			// https://github.com/GTNewHorizons/GTplusplus/blob/b5c2946f55ee5e44a341f545ce7565203803d74a/src/main/java/gtPlusPlus/xmod/gregtech/api/metatileentity/implementations/base/GregtechMeta_MultiBlockBase.java#L1023
 
-			parallels_int = parallels_int * target_tier;
+			parallels_int = Math.max(1,parallels_int * target_tier);
 
 			time = parseFloat(time_elem.val());
 			if (!time_check.is(":checked")) {
@@ -182,7 +195,7 @@ onVersionChanged(function(version) {
 			totalEnergy = Math.ceil(totalEnergy);
 			var overclocks = 0;
             while (totalEnergy <= getVoltageOfTier(target_tier - 1)) {
-            	totalEnergy *= 4;
+            	totalEnergy *= ENERGY_PER_TIER;
             	overclocks++;
             }
 
@@ -252,6 +265,16 @@ onVersionChanged(function(version) {
 		that.parent().tooltip();
 		last = that;
 	}).change(doCalc);
+
+	poc_buttons.each(function() {
+		var that = $(this);
+		if (that.attr("checked")) {
+			that.click();
+		}
+
+		that.parent().tooltip();
+	}).change(doCalc);
+
 	if (version != "gtnh") {
 		$(".oc-gtnh",card).hide();
 	} else {
