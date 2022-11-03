@@ -85,6 +85,9 @@ Materials(
 	List<TC_Aspects.TC_AspectStack> aAspects
 );
 
+file: 
+https://github.com/GTNewHorizons/GT5-Unofficial/blob/master/src/main/java/gregtech/api/enums/Materials.java
+
 -- parse old 3qf data
 			--string.match(line,"^%s*public static Materials (%w+)%s*= new Materials%([%s%d]+,[%s%w%._]+,%s*([%d%.F?]+)%s*,%s*(%d+)%s*,%s*(%d+)%s*,[^\"]+\"[^\"]+\"%s*,%s*\"([^\"]+)\"%s*,")
 
