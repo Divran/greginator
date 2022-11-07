@@ -502,7 +502,7 @@ onVersionChanged(function(version) {
 							}
 						}
 
-						console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[<new>]`);
+						//console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[<new>]`);
 						// adding this recipe to any existing item bus will cause a conflict, 
 						// but using a new item bus will fix it, add it to a new item bus
 						mCircuits.buses.push({
@@ -516,7 +516,7 @@ onVersionChanged(function(version) {
 				}
 				if (!foundMachine) {
 					// this recipe couldn't be added to any existing machine, there's probably a fluid conflict. add it to a new machine
-					console.log("recipe",recipe,`added to allInputsGrouped[<new>]`);
+					//console.log("recipe",recipe,`added to allInputsGrouped[<new>]`);
 					allInputsGrouped.push({
 						allFluids: {...allInputsOne.fluids},
 						circuits: {
