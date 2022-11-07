@@ -25,6 +25,7 @@ recipe conflict checker
 * import from file
 * drag and drop mode
 * rename save button (low priority)
+* highlight conflict sources when highlighting an item in list mode (maybe in other modes too?)
 
 discarded ideas
 * ic2 nuclear
