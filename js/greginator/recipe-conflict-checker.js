@@ -874,7 +874,8 @@ onVersionChanged(function(version) {
 		}
 
 		// if it got this far it means all items exist, now check if all amounts match
-
+		// EDIT: amounts do not matter
+		/*
 		for(let i in otherRecipe.iI) {
 			let item = otherRecipe.iI[i];
 			if (item.a == 0) continue;
@@ -894,8 +895,9 @@ onVersionChanged(function(version) {
 				return true;
 			}
 		}
+		*/
 		
-		return true; //allAmountsMatch;
+		return true;
 	}
 
 	function partialInputsConflict(allInputs, otherRecipe) {
