@@ -8,12 +8,9 @@ body {
 }
 
 .credits {
-	position:fixed;
-	bottom:0;
-	right:0;
 	padding:8px;
 	text-align:right;
-	line-height:1em;
+	line-height:1.2em;
 }
 
 .btn.btn-light {
