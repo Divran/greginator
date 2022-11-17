@@ -478,7 +478,7 @@ onVersionChanged(function(version) {
 							//console.log("checking machine",machineIdx,"bus",iB,"allInputsBus:", allInputsBus);
 							//if (!allInputsConflict(allInputsBus, recipe)) {
 							if (!checkTotalConflicts(allInputsBus, recipe)) {
-								console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[${iB}]`);
+								//console.log("recipe",recipe,`added to allInputsGrouped[${machineIdx}].circuits[${circuitUID}].buses[${iB}]`);
 								// adding this recipe will not cause a conflict, add it to this machine
 								machine.allFluids = allInputsBus.fluids;
 								mCircuits.buses[iB].allItems = {...allInputsBus.items};
