@@ -173,33 +173,56 @@ onVersionChanged(function(version) {
 				time = time * 20;
 			}
 			energy = parseInt(energy_elem.val()) * energy_bonus_int / 100;
-			var totalEnergy = energy;
+			var totalEnergy = energy*amps;
 			var parallelRecipes = 0;
 			while(parallelRecipes < parallels_int && totalEnergy < (target - energy)) {
 				parallelRecipes++;
 				totalEnergy += energy;
 			}
 
-			if (time_bonus.val() != "") {
-				var time_bonus_int = parseInt(time_bonus);
-				if (!isNaN(time_bonus_int)) {
-					time_bonus_int = Math.max(-99,time_bonus_int);
-					var timeFactor = 100 / (100 + time_bonus_int);
-					time = time * timeFactor;
-				}
-
-				time = Math.max(1,Math.floor((time/speed) + 0.5));
+			var time_bonus_int = parseInt(time_bonus);
+			if (!isNaN(time_bonus_int) && time_bonus_int != 0) {
+				time_bonus_int = Math.max(-99,time_bonus_int);
+				var timeFactor = 100 / (100 + time_bonus_int);
+				time = time * timeFactor;
 			}
 
 			totalEnergy = Math.ceil(totalEnergy);
 			var overclocks = 0;
+			var speed = 0;
             while (totalEnergy <= getVoltageOfTier(target_tier - 1)) {
             	totalEnergy *= ENERGY_PER_TIER;
+            	speed += SPEED_PER_TIER;
             	overclocks++;
             }
 
+            if (speed != 0) {
+				time = Math.max(1,Math.floor((time/speed) + 0.5));
+			}
+
 			var output_per_sec = (output*parallelRecipes)/(time/20);
 			var input_per_sec = (input*parallelRecipes)/(time/20);
+
+			var gtpp_wanted_str = "";
+			if (!isNaN(wanted)) {
+				if (wanted < output_per_sec) {
+					gtpp_wanted_str += "A single machine is enough to keep up with " + wanted + "/s.";
+				} else {
+					var wanted_machines = wanted/output_per_sec;
+					gtpp_wanted_str += "To produce <strong>" + round6(wanted) + "</strong> items/s, ";
+					gtpp_wanted_str += "you need <strong>" + Math.ceil(wanted_machines) + "</strong>";
+
+					if (round3(wanted_machines) != Math.ceil(wanted_machines)) {
+						gtpp_wanted_str += " <small>(" + round3(wanted_machines) + ")</small>";
+					}
+
+					gtpp_wanted_str += " <strong>" + target_elem.attr("data-voltage") + "</strong> machines to keep up";
+
+					gtpp_wanted_str += "<br>These will consume <strong>" + round3(totalEnergy*wanted_machines) + "</strong> eu/t and <strong>"+
+								 round3(input_per_sec*wanted_machines)+"</strong> items/s.";
+				}
+				gtpp_wanted_str = "<hr /><p>" + gtpp_wanted_str + "</p>";
+			}
 
 			gtplusplus = "<p>"+([
 				"Overclocked: <strong>" + overclocks + "</strong> times.",
@@ -209,6 +232,9 @@ onVersionChanged(function(version) {
 					"for a total of <strong>" + round3(output_per_sec) + "</strong> per second.",
 				"Consumption: <strong>" + round3(input_per_sec) + "</strong> per second."
 			]).join("<br>")+"</p>";
+
+			gtplusplus += gtpp_wanted_str;
+
 		} else if (time_bonus.val() != "" || energy_bonus.val() != "" || parallels.val() != "") {
 			gtplusplus = "Please fill in all GT++ related fields."
 		}
