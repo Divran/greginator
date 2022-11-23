@@ -120,7 +120,6 @@ onVersionChanged(function(version) {
 				wanted = 1/wanted;
 			}
 
-			wanted_str += "<hr>";
 			if (wanted < output_per_sec) {
 				wanted_str += "A single machine is enough to keep up with " + wanted + "/s.";
 			} else {
@@ -155,7 +154,7 @@ onVersionChanged(function(version) {
 				}
 			}
 
-			wanted_str = "<p>"+wanted_str+"</p>";
+			wanted_str = "<hr /><p>"+wanted_str+"</p>";
 		}
 
 		// GT++
