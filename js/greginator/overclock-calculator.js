@@ -102,8 +102,6 @@ onVersionChanged(function(version) {
 				paTime *= 128;
 				paAmount = 128;
 			}
-			console.log("tmp1",_target_tier, _tier, _energy, _time);
-			console.log("tmp2",overclocks, _energy * Math.pow(ENERGY_PER_TIER,overclocks), Math.max(1,Math.floor(time + 0.5)));
 			return {
 				overclocks: overclocks,
 				energy: _energy * Math.pow(ENERGY_PER_TIER,overclocks),
@@ -156,7 +154,6 @@ onVersionChanged(function(version) {
 
 			if ((energy_prev_tier*amps*PA_amount) <= getVoltageOfTier(target_tier)) {
 				var tmp = calcOC(prev_tier_current, tier, original_energy, original_time);
-				console.log("tmp3",tmp);
 				processing_array += "<p>To fully use a(n) " + tier_names[target_tier] + " energy hatch, put " + PA_amount + "x " + tier_names[prev_tier_current] + " machines in a processing array. " +
 					"These will use <strong>" + round3(energy_prev_tier*amps*PA_amount) + "</strong> eu/t, produce <strong>" + round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s, and consume <strong>" + round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s.";
 			}
