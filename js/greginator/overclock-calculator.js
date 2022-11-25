@@ -46,26 +46,30 @@ onVersionChanged(function(version) {
 
 
 	var PA_amount = (version == "gtnh" ? 64 : 16);
+	var tier_names = {};
+	$("input[name='gt-overclock-target']").each((idx,val) => {
+		tier_names[getTier($(val).val())] = $(val).attr("data-voltage");
+	});
 
 	function doCalc() {
 		results.empty();
 
-		var energy = parseInt(energy_elem.val());
+		var original_energy = parseInt(energy_elem.val());
 		var amps = parseInt(amps_elem.val());
 		var target_elem = $("[name='gt-overclock-target']:checked",card);
 		var poc = $("[name='gt-overclock-perfectoc']:checked",card).val();
 		var target = parseInt(target_elem.val());
 		var output = parseFloat(output_elem.val());
-		var time = parseFloat(time_elem.val());
+		var original_time = parseFloat(time_elem.val());
 		var input = parseFloat(input_elem.val());
 		var wanted = parseFloat(wanted_elem.val());
 
-		if (isNaN(energy) || isNaN(amps) || isNaN(target) || isNaN(output) || isNaN(time) || isNaN(input)) {
+		if (isNaN(original_energy) || isNaN(amps) || isNaN(target) || isNaN(output) || isNaN(original_time) || isNaN(input)) {
 			results.text("One or more of your inputs is an invalid number.");
 			return;
 		}
 
-		var tier = getTier(energy);
+		var tier = getTier(original_energy);
 		var target_tier = getTier(target);
 
 		if (target_tier < tier) {
@@ -74,7 +78,7 @@ onVersionChanged(function(version) {
 		}
 
 		if (!time_check.is(":checked")) {
-			time = time * 20;
+			original_time = original_time * 20;
 		}
 
 		// perfect oc
@@ -88,10 +92,32 @@ onVersionChanged(function(version) {
 			SPEED_PER_TIER = 4;
 		}
 
-		var overclocks = target_tier - tier;
-		energy = energy * Math.pow(ENERGY_PER_TIER,overclocks);
-		var speed = Math.pow(SPEED_PER_TIER,overclocks);
-		time = Math.max(1,Math.floor((time/speed) + 0.5));
+		function calcOC(_target_tier, _tier, _energy, _time) {
+			var overclocks = _target_tier - _tier;
+			var speed = Math.pow(SPEED_PER_TIER,overclocks);
+			var time = _time/speed;
+			var paTime = time;
+			var paAmount = 1;
+			if (time < 1) {
+				paTime *= 128;
+				paAmount = 128;
+			}
+			console.log("tmp1",_target_tier, _tier, _energy, _time);
+			console.log("tmp2",overclocks, _energy * Math.pow(ENERGY_PER_TIER,overclocks), Math.max(1,Math.floor(time + 0.5)));
+			return {
+				overclocks: overclocks,
+				energy: _energy * Math.pow(ENERGY_PER_TIER,overclocks),
+				time: Math.max(1,Math.floor(time + 0.5)),
+
+				paTime: Math.max(1,Math.floor(paTime + 0.5)),
+				paAmount: paAmount
+			};
+		}
+
+		var tmp = calcOC(target_tier, tier, original_energy, original_time);
+		var overclocks = tmp.overclocks; 
+		var energy = tmp.energy; 
+		var time = tmp.time;
 
 		var output_per_sec = output/(time/20);
 		var input_per_sec = input/(time/20);
@@ -103,7 +129,6 @@ onVersionChanged(function(version) {
 		if (amps > 1) {
 			amps_txt = " at " + amps + " amps for a total of <strong>" + (energy * amps) + "</strong> eu/t";
 		}
-
 		var txt = [];
 		txt.push("Overclocked: <strong>" + overclocks + "</strong> times.");
 		txt.push("Energy consumption: <strong>" + energy + "</strong> eu/t" + amps_txt+".");
@@ -111,10 +136,35 @@ onVersionChanged(function(version) {
 			"for a total of <strong>" + round3(output_per_sec) + "</strong> per second." );
 		txt.push("Consumption: <strong>" + round3(input_per_sec) + "</strong> per second.");
 
-		var processing_array = "<p>In a processing array, uses <strong>" + round3(energy*amps*PA_amount) + "</strong> eu/t, produces <strong>" + round3(output_per_sec*PA_amount) + "</strong> items/s, "+
-				" and consumes <strong>" + round3(input_per_sec*PA_amount) + "</strong> items/s.</p>";
+		var processing_array = "";
+
+		if (tmp.paAmount > 1) {
+			processing_array = "<span class='text-muted mb-2'>1-ticking detected! Enable batch mode on your PA to match the numbers below!</span>";
+		}
+
+		processing_array += "<p>If you put " + PA_amount + "x " + tier_names[target_tier] + " machines in a processing array, they use <strong>" + round3(energy*amps*PA_amount) + "</strong> eu/t, produce <strong>" + round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s, "+
+				" and consume <strong>" + round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s.</p>";
+
+		// check how many can fit in PA
+		if (target_tier > tier + 1) {
+			var prev_tier_current = target_tier;
+			var energy_prev_tier = energy;
+			while((energy_prev_tier*amps*PA_amount) > getVoltageOfTier(target_tier) && prev_tier_current > tier) {
+				prev_tier_current--;
+				energy_prev_tier = energy_prev_tier/ENERGY_PER_TIER;
+			}
+
+			if ((energy_prev_tier*amps*PA_amount) <= getVoltageOfTier(target_tier)) {
+				var tmp = calcOC(prev_tier_current, tier, original_energy, original_time);
+				console.log("tmp3",tmp);
+				processing_array += "<p>To fully use a(n) " + tier_names[target_tier] + " energy hatch, put " + PA_amount + "x " + tier_names[prev_tier_current] + " machines in a processing array. " +
+					"These will use <strong>" + round3(energy_prev_tier*amps*PA_amount) + "</strong> eu/t, produce <strong>" + round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s, and consume <strong>" + round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s.";
+			}
+		}
+
 
 		var wanted_str = "";
+		var wanted_str_arrays = "";
 		if (!isNaN(wanted)) {
 			if (wanted_check.is(":checked")) {
 				wanted = 1/wanted;
@@ -135,21 +185,20 @@ onVersionChanged(function(version) {
 
 				var wanted_arrays = wanted_machines < PA_amount ? 0 : Math.ceil(wanted_machines/PA_amount);
 				if (wanted_arrays > 0) {
-					wanted_str += ", or <strong>" + Math.ceil(wanted_machines/PA_amount) + "</strong>";
+					wanted_str_arrays += "To produce <strong>" + round6(wanted) + "</strong> items/s, you will need " + Math.ceil(wanted_machines/PA_amount) + "</strong>";
 					if (round3(wanted_machines/PA_amount) != Math.ceil(wanted_machines/PA_amount)) {
 						wanted_str += " <small>("+round3(wanted_machines/PA_amount)+")</small>";
 					}
-					wanted_str += " processing arrays."
+					wanted_str_arrays += " processing arrays."
 				} else {
-					wanted_str += ".";
+					wanted_str_arrays += ".";
 				}
 
-				wanted_str += "<br>These will consume <strong>" + round3(energy*amps*wanted_machines) + "</strong> eu/t and <strong>"+
+				wanted_str_arrays += "<br>These will consume <strong>" + round3(energy*amps*wanted_machines) + "</strong> eu/t and <strong>"+
 							 round3(input_per_sec*wanted_machines)+"</strong> items/s.";
 
 				if (wanted_arrays > 0) {
-					var wanted_arrays = 
-					wanted_str += " In processing arrays, consumes <strong>"+round3(energy*amps*wanted_arrays*PA_amount)+"</strong> eu/t"+
+					wanted_str_arrays += " In processing arrays, consumes <strong>"+round3(energy*amps*wanted_arrays*PA_amount)+"</strong> eu/t"+
 									" and <strong>"+round3(input_per_sec*wanted_arrays*PA_amount)+"</strong> items/s.";
 				}
 			}
@@ -162,17 +211,17 @@ onVersionChanged(function(version) {
 		var time_bonus_int = parseInt(time_bonus.val());
 		var energy_bonus_int = parseInt(energy_bonus.val());
 		var parallels_int = parseInt(parallels.val());
-		if (!isNaN(time_bonus_int) && !isNaN(energy_bonus_int) && energy_bonus_int != 0 && !isNaN(parallels_int)) {
+		if (!isNaN(time_bonus_int) && !isNaN(energy_bonus_int) && !isNaN(parallels_int)) {
 			// Source:
 			// https://github.com/GTNewHorizons/GTplusplus/blob/b5c2946f55ee5e44a341f545ce7565203803d74a/src/main/java/gtPlusPlus/xmod/gregtech/api/metatileentity/implementations/base/GregtechMeta_MultiBlockBase.java#L1023
 
 			parallels_int = Math.max(1,parallels_int * target_tier);
 
-			time = parseFloat(time_elem.val());
-			if (!time_check.is(":checked")) {
-				time = time * 20;
-			}
-			energy = parseInt(energy_elem.val()) * energy_bonus_int / 100;
+			time = original_time;
+			energy = original_energy;
+
+			if (energy_bonus_int != 0) {energy *= energy_bonus_int / 100;}
+
 			var totalEnergy = energy*amps;
 			var parallelRecipes = 0;
 			while(parallelRecipes < parallels_int && totalEnergy < (target - energy)) {
@@ -251,8 +300,8 @@ onVersionChanged(function(version) {
 
 		results.empty();
 		results.append(buildResults([
-			"<strong>Generic Results</strong><br>" + "<p>" + txt.join("<br>") + "</p>",
-			"<strong>Processing Array Stats</strong><br>" + processing_array + wanted_str,
+			"<strong>Generic Results</strong><br>" + "<p>" + txt.join("<br>") + "</p>" + wanted_str,
+			"<strong>Processing Array Stats</strong><br>" + processing_array + wanted_str_arrays,
 			"<strong>GT++ Stats</strong><br>" + gtplusplus
 		]));
 	}
