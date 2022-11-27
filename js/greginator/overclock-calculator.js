@@ -36,8 +36,7 @@ onVersionChanged(function(version) {
 
 	function getTier(voltage) {
 		if (voltage <= 8) {return 1;}
-		var logn = Math.log(voltage)/Math.log(4)-1.5;
-		return Math.ceil(logn);
+		return Math.ceil((Math.log2(voltage)/2)-1.5);
 	}
 
 	function getVoltageOfTier(tier) {
@@ -95,19 +94,21 @@ onVersionChanged(function(version) {
 		function calcOC(_target_tier, _tier, _energy, _time) {
 			var overclocks = _target_tier - _tier;
 			var speed = Math.pow(SPEED_PER_TIER,overclocks);
-			var time = _time/speed;
+			var time = _time / speed;
 			var paTime = time;
 			var paAmount = 1;
 			if (time < 1) {
 				paTime *= 128;
 				paAmount = 128;
 			}
+			time = Math.floor(time);
+			paTime = Math.floor(paTime);
 			return {
 				overclocks: overclocks,
 				energy: _energy * Math.pow(ENERGY_PER_TIER,overclocks),
-				time: Math.max(1,Math.floor(time + 0.5)),
+				time: Math.max(1,time),
 
-				paTime: Math.max(1,Math.floor(paTime + 0.5)),
+				paTime: Math.max(1,paTime),
 				paAmount: paAmount
 			};
 		}
