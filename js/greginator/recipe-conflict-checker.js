@@ -161,15 +161,16 @@ onVersionChanged(function(version) {
 			searched_recipes_list.sort((a,b) => Math.sign(a.recipe.idx - b.recipe.idx));
 		}
 
-		recipe_search_result.empty().append(searched_recipes_list.slice(0,500).map(v => {
-			v.pnl.click(() => {
+		recipe_search_result.empty().append(searched_recipes_list.slice(0,200).map(v => {
+			let pnl = buildRecipePanel(v.recipe);
+			pnl.click(() => {
 				addRecipe(v.recipe.idx);
 			});
-			$(".cell-calculator-btn",v.pnl).click((e) => {window.fromConflictCheckerToCellCalculator(v.recipe); e.preventDefault(); e.stopPropagation();});
-			$("[data-original-title]",v.pnl).each(()=>{
+			$(".cell-calculator-btn",pnl).click((e) => {window.fromConflictCheckerToCellCalculator(v.recipe); e.preventDefault(); e.stopPropagation();});
+			$("[data-original-title]",pnl).each(()=>{
 				$(this).attr("title",$(this).attr("data-original-title"));
 			}).tooltip({html:true, trigger:"hover"});
-			return v.pnl
+			return pnl
 		}));
 	}
 
@@ -995,25 +996,105 @@ onVersionChanged(function(version) {
 		recipe_search_result.empty();
 		current_recipes_list = [];
 
+		var recipes_conflict_lookup = {};
+		var conflictless = {};
+
+		function getUID(thing) {
+			if ((thing.uN == "gt.integrated_circuit" || i.uN == "item.BioRecipeSelector" || i.uN == "item.T3RecipeSelector")
+				&& thing.a == 0) {
+				return thing.uN + "[" + thing.cfg + "]";
+			}
+
+			return thing.uN;
+		}
+
 		var recipes = downloaded_machines[machine].recs;
 		for(let idx in recipes) {
 			let recipe = recipes[idx];
 			recipe.idx = parseInt(idx);
 
-			let pnl = buildRecipePanel(recipe);
 			current_recipes_list.push({
 				recipe: recipe,
-				pnl: pnl,
 				iNames: getItemNames(recipe.iI,recipe.fI).toLowerCase(),
 				oNames: getItemNames(recipe.iO,recipe.fO).toLowerCase(),
 			});
+
+			// build lookups
+			let iILookup = {};
+			let fILookup = {};
+			for(let i in recipe.iI) {
+				let item = recipe.iI[i];
+				iILookup[getUID(item)] = item;
+			}
+			for(let i in recipe.fI) {
+				let fluid = recipe.fI[i];
+				fILookup[getUID(fluid)] = fluid;
+			}
+			recipes_conflict_lookup[recipe.idx] = {
+				idx: recipe.idx,
+				itemConflicts: {},
+				fluidConflicts: {},
+				alreadyConflictedWith: {},
+				iILookup: iILookup,
+				fILookup: fILookup
+			}
 		}
 
-		recipe_search_result.append(current_recipes_list.slice(0,500).map(v => {
-			v.pnl.click(() => {
+		function findRecipesWithInput(self, conflictsKey, tblOuterKey, tblInnerKey) {
+			let anyFound = false;
+			for(let idx in recipes_conflict_lookup) {
+				if (idx == self.idx) {continue;}
+				let lookups = recipes_conflict_lookup[idx];
+				if (typeof lookups[tblOuterKey] != "undefined") {
+					if (typeof lookups[tblOuterKey][tblInnerKey] != "undefined") {
+						if (typeof self[conflictsKey][tblInnerKey] == "undefined") {
+							self[conflictsKey][tblInnerKey] = {};
+						}
+						self[conflictsKey][tblInnerKey][idx] = true;
+						anyFound = true;
+					}
+				}
+			}
+			return anyFound;
+		}
+
+		// create conflict lookups
+		for(let idx in recipes_conflict_lookup) {
+			let lookups = recipes_conflict_lookup[idx];
+			let amountFound = 0;
+			let amountInputs = 0;
+			for(let tblInnerKey in lookups.iILookup) {
+				amountInputs++;
+				if (findRecipesWithInput(lookups, "itemConflicts", "iILookup", tblInnerKey)) {
+					amountFound++;
+				}
+			}
+			for(let tblInnerKey in lookups.fILookup) {
+				amountInputs++;
+				if (findRecipesWithInput(lookups, "fluidConflicts", "fILookup", tblInnerKey)) {
+					amountFound++;
+				}
+			}
+
+			if (amountFound < amountInputs) {
+				delete recipes_conflict_lookup[idx];
+				conflictless[idx] = {recipe:recipes[idx], lookups:lookups};
+			}
+		}
+
+		/*
+		console.log("RECIPES_CONFLICT_LOOKUP",recipes_conflict_lookup);
+		console.log("CONFLICTLESS",conflictless);
+		console.log("CONFLICT AMOUNT",Object.keys(recipes_conflict_lookup).length);
+		console.log("CONFLICTLESS AMOUNT",Object.keys(conflictless).length);
+		*/
+
+		recipe_search_result.append(current_recipes_list.slice(0,200).map(v => {
+			let pnl = buildRecipePanel(v.recipe);
+			pnl.click(() => {
 				addRecipe(v.recipe.idx);
 			}).addClass("link-pointer");
-			return v.pnl
+			return pnl
 		}));
 
 		addLoadingSettings(recipes);

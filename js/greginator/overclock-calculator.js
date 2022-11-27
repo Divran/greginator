@@ -220,31 +220,32 @@ onVersionChanged(function(version) {
 			if (energy_bonus_int != 0) {energy *= energy_bonus_int / 100;}
 
 			var totalEnergy = energy*amps;
-			var parallelRecipes = 0;
+			var parallelRecipes = 1;
 			while(parallelRecipes < parallels_int && totalEnergy < (target - energy)) {
 				parallelRecipes++;
 				totalEnergy += energy;
 			}
 
-			var time_bonus_int = parseInt(time_bonus);
+
+			var time_bonus_int = parseInt(time_bonus_int);
 			if (!isNaN(time_bonus_int) && time_bonus_int != 0) {
 				time_bonus_int = Math.max(-99,time_bonus_int);
 				var timeFactor = 100 / (100 + time_bonus_int);
-				time = time * timeFactor;
+				time = Math.floor(time * timeFactor);
 			}
+
 
 			totalEnergy = Math.ceil(totalEnergy);
 			var overclocks = 0;
 			var speed = 0;
             while (totalEnergy <= getVoltageOfTier(target_tier - 1)) {
             	totalEnergy *= ENERGY_PER_TIER;
-            	speed += SPEED_PER_TIER;
+            	//speed += SPEED_PER_TIER;
+            	time = Math.floor(time / SPEED_PER_TIER);
             	overclocks++;
             }
 
-            if (speed != 0) {
-				time = Math.max(1,Math.floor((time/speed) + 0.5));
-			}
+			time = Math.max(1,time);
 
 			var output_per_sec = (output*parallelRecipes)/(time/20);
 			var input_per_sec = (input*parallelRecipes)/(time/20);
