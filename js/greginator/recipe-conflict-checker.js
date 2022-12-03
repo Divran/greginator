@@ -55,9 +55,9 @@ onVersionChanged(function(version) {
 		}
 	});
 
-
 	var logicMode = "split";
 	function logicModeChanged(str) {
+		var oldLogicMode = logicMode;
 		logicMode = str;
 		if (logicMode == "bus-isolation") {
 			$(".detected-conflicts-header", card).html("List of required machines separated by input bus and circuit<br>"+
@@ -70,6 +70,10 @@ onVersionChanged(function(version) {
 			$(".detected-conflicts-header",card).text("Detected conflicts");
 		}
 		calculateConflicts();
+
+		if (oldLogicMode == "browse" || logicMode == "browse") {
+			search();
+		}
 	}
 	$("input[name='recipe-conflict-logic']",card).change(function() {
 		if ($(this).is(":checked")) {
@@ -158,6 +162,10 @@ onVersionChanged(function(version) {
 
 		if (inp != "" || out != "") {
 			searched_recipes_list = current_recipes_list.filter(r => {
+				if (logicMode == "browse" && typeof recipes_conflict_lookup[r.recipe.idx] == "undefined") {
+					return false;
+				}
+
 				var inp_b = inp == "";
 				var out_b = out == "";
 				r.lev = 999999;
@@ -176,7 +184,12 @@ onVersionChanged(function(version) {
 			});
 			searched_recipes_list.sort((a,b) => Math.sign(a.lev - b.lev));
 		} else {
-			searched_recipes_list = [...current_recipes_list];
+			searched_recipes_list = ([...current_recipes_list]);
+			if (logicMode == "browse") {
+				searched_recipes_list = searched_recipes_list.filter(r => {
+					return typeof recipes_conflict_lookup[r.recipe.idx] != "undefined";
+				});
+			}
 			searched_recipes_list.sort((a,b) => Math.sign(a.recipe.idx - b.recipe.idx));
 		}
 
@@ -195,17 +208,19 @@ onVersionChanged(function(version) {
 	}
 
 	var search_tid;
+	function search() {
+		if (search_tid) {clearTimeout(search_tid);}
+		search_tid = setTimeout(doSearch,150);
+	}
 	recipe_search_input.on("input",function() {
 		if (!selected_machine) return;
 		if (!downloaded_machines[selected_machine]) return;
-		if (search_tid) {clearTimeout(search_tid);}
-		search_tid = setTimeout(doSearch,150);
+		search();
 	});
 	recipe_search_output.on("input",function() {
 		if (!selected_machine) return;
 		if (!downloaded_machines[selected_machine]) return;
-		if (search_tid) {clearTimeout(search_tid);}
-		search_tid = setTimeout(doSearch,150);
+		search();
 	});
 
 	function buildTbl(list) {
@@ -447,6 +462,7 @@ onVersionChanged(function(version) {
 			} else {
 				calculateBrowse();
 			}
+			search();
 		});
 		var hideDifferentCircuits = $(`<label>
 											<input type="checkbox"> Hide recipes with different circuit config
@@ -461,6 +477,7 @@ onVersionChanged(function(version) {
 			} else {
 				calculateBrowse();
 			}
+			search();
 		});
 
 		var optPnl = $("<div class='d-flex flex-row'>").css("gap","16px").append(["Filters:",hideIdenticalOutputs,hideDifferentCircuits]);
@@ -1392,14 +1409,7 @@ onVersionChanged(function(version) {
 		}
 
 		buildConflictLookup(recipes);
-
-		recipe_search_result.append(current_recipes_list.slice(0,200).map(v => {
-			let pnl = buildRecipePanel(v.recipe);
-			pnl.click(() => {
-				addRecipe(v.recipe.idx);
-			}).addClass("link-pointer");
-			return pnl
-		}));
+		doSearch();
 
 		addLoadingSettings(recipes);
 
