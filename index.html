@@ -729,6 +729,10 @@
 													title="Similar to split mode, but also takes item bus isolation into account. Splits recipes by item bus and machine. Does not split fluids on the same machine since fluid hatches do not support isolation. Always separates circuit configs to at most one circuit per bus.">
 													<input type="radio" name="recipe-conflict-logic" value="bus-isolation"> Item Bus Isolation
 												</label>
+												<label class="btn btn-light" 
+													title="Does not perform any conflict solving, instead allows you to select one recipe at a time and it will list all conflicts with that recipe.">
+													<input type="radio" name="recipe-conflict-logic" value="browse"> Browse
+												</label>
 											</div>
 										</div>
 										<span class="detected-conflicts-header">Detected Conflicts</span>
