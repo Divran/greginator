@@ -240,3 +240,7 @@ body.dark-theme .close {
 	color: white;
 	opacity: 0.8;
 }
+
+body.dark-theme .table .table {
+	background-color:transparent;
+}
