@@ -182,6 +182,7 @@ onVersionChanged(function(version) {
 
 		recipe_search_result.empty().append(searched_recipes_list.slice(0,200).map(v => {
 			let pnl = buildRecipePanel(v.recipe);
+			pnl.addClass("link-pointer");
 			pnl.click(() => {
 				addRecipe(v.recipe.idx);
 			});
@@ -377,10 +378,13 @@ onVersionChanged(function(version) {
 
 		if (logicMode == "browse") {
 			var keys = Object.keys(recipes_conflict_lookup);
+			selected_recipe_browse_number = -1;
+			selected_recipe_browse_conflict = null;
 			for(var i=0;i<keys.length;i++) {
 				if (parseInt(keys[i]) == recipe.idx) {
 					selected_recipe_browse_number = i;
 					selected_recipe_browse_conflict = recipes_conflict_lookup[keys[i]];
+					browse_firstTime = false;
 					break;
 				}
 			}
@@ -422,16 +426,47 @@ onVersionChanged(function(version) {
 		saveSettings();
 	}
 
+	var browse_firstTime = true;
+	var browse_hideIdenticalOutputs = true;
+	var browse_hideDifferentCircuits = true;
 	function calculateBrowse() {
 		added_recipes.hide();
 		conflict_results.empty();
 
-		if (selected_recipe_browse == null) {
-			conflict_results.append("<strong>Search for and select a recipe to the left, or begin browsing by using the next/prev buttons below</strong>");
-		}
+		// options
+		var hideIdenticalOutputs = $(`<label>
+											<input type="checkbox"> Hide recipes with identical outputs
+										</label>`);
+		var hideIdenticalOutputs_Checkbox = $("input",hideIdenticalOutputs);
+		hideIdenticalOutputs_Checkbox.prop("checked",browse_hideIdenticalOutputs);
+		hideIdenticalOutputs_Checkbox.change(function() {
+			browse_hideIdenticalOutputs = hideIdenticalOutputs_Checkbox.is(":checked");
+			buildConflictLookup(downloaded_machines[selected_machine].recs);
+			if (selected_recipe_browse) {
+				addRecipe(selected_recipe_browse.idx);
+			} else {
+				calculateBrowse();
+			}
+		});
+		var hideDifferentCircuits = $(`<label>
+											<input type="checkbox"> Hide recipes with different circuit config
+										</label>`);
+		var hideDifferentCircuits_Checkbox = $("input",hideDifferentCircuits);
+		hideDifferentCircuits_Checkbox.prop("checked",browse_hideDifferentCircuits);
+		hideDifferentCircuits_Checkbox.change(function() {
+			browse_hideDifferentCircuits = hideDifferentCircuits_Checkbox.is(":checked");
+			buildConflictLookup(downloaded_machines[selected_machine].recs);
+			if (selected_recipe_browse) {
+				addRecipe(selected_recipe_browse.idx);
+			} else {
+				calculateBrowse();
+			}
+		});
+
+		var optPnl = $("<div class='d-flex flex-row'>").css("gap","16px").append(["Filters:",hideIdenticalOutputs,hideDifferentCircuits]);
+		conflict_results.append(optPnl);
 
 		// next/prev buttons
-
 		function getAdjacent(num) {
 			var keys = Object.keys(recipes_conflict_lookup);
 
@@ -460,8 +495,21 @@ onVersionChanged(function(version) {
 		var prevNextContainer = $("<div class='d-flex flex-row' style='justify-content:space-between; align-items:center;'>").append([prevBtn,currentViewing,nextBtn]);
 		conflict_results.append(prevNextContainer);
 
+		if (browse_firstTime && selected_recipe_browse_number == -1) {
+			conflict_results.append("<div class='text-muted mb-2'>Search for a recipe to the left, or use the next/prev buttons below.</div>");
+		} else if (selected_recipe_browse_number == -1) {
+			conflict_results.append("<div class='mb-2'><strong>The recipe you selected doesn't have any conflicts.</strong> "+
+				"<span class='text-muted'>Search for and select a recipe to the left, or use the next/prev buttons below.</span></div>");
+		}
+
+		var recipe = selected_recipe_browse;
+		if (recipe) {
+			var pnl = buildRecipePanel(recipe,false);
+			conflict_results.append(["Selected recipe:",pnl,"<br />"]);	
+		}
+
+		// display results
 		if (selected_recipe_browse_conflict != null) {
-			var recipe = selected_recipe_browse;
 			var conflict = selected_recipe_browse_conflict;
 
 			var trInputs = [];
@@ -481,11 +529,12 @@ onVersionChanged(function(version) {
 
 			var amountInputs = 0;
 			var maxAmountConflicts = 0;
+			var myCircuit = getCircuitForRecipe(recipe);
 
 			function appendRecipeConflict(uid, list, what) {
 				amountInputs++;
 				let tr = $("<tr>");
-				list = list.filter(i => i != recipe.idx);
+				//list = list.filter(i => recipeFilter(i, what));
 				let amount = list.length
 				maxAmountConflicts = Math.max(maxAmountConflicts,Math.min(amount,41));
 				let flex = $("<div class='d-flex flex-row'>")
@@ -505,7 +554,8 @@ onVersionChanged(function(version) {
 				lbl.css({
 					"max-width":"150px",
 					"overflow-x":"hidden",
-					"text-overflow":"ellipsis"
+					"text-overflow":"ellipsis",
+					"min-width":"50px"
 				})
 				trInputs.push($("<tr>").append(lbl));
 				trConflicts.push(tr);
@@ -544,8 +594,6 @@ onVersionChanged(function(version) {
 			$(trInputs[0]).append(tdRight);
 
 			tbl.append(trInputs);
-			var pnl = buildRecipePanel(recipe,false);
-			conflict_results.append(["Selected recipe:",pnl,"<br />"]);
 			conflict_results.append(tbl);
 		}
 	}
@@ -1154,30 +1202,19 @@ onVersionChanged(function(version) {
 
 			calculateConflicts();
 			saveSettings();
+		} else {
+			if (logicMode == "browse") {calculateConflicts();}
 		}
 	}
 
-	function listRecipes(machine) {
-		if (!downloaded_machines[machine]) return;
-
-		recipe_search_result.empty();
-		current_recipes_list = [];
-
+	function buildConflictLookup(recipes) {
 		var item_recipe_lookup = {};
 		var fluid_recipe_lookup = {};
 		recipes_conflict_lookup = {};
 		var conflictless = {};
 
-		var recipes = downloaded_machines[machine].recs;
 		for(let idx in recipes) {
 			let recipe = recipes[idx];
-			recipe.idx = parseInt(idx);
-
-			current_recipes_list.push({
-				recipe: recipe,
-				iNames: getItemNames(recipe.iI,recipe.fI).toLowerCase(),
-				oNames: getItemNames(recipe.iO,recipe.fO).toLowerCase(),
-			});
 
 			// build lookups
 			let itemConflicts = {};
@@ -1258,6 +1295,48 @@ onVersionChanged(function(version) {
 		}
 		*/
 
+		function recipeFilter(recipe, otherRecipeIdx) {
+			if (otherRecipeIdx == recipe.idx) {
+				return false;
+			}
+
+			var otherRecipe = null;
+
+			if (browse_hideIdenticalOutputs) {
+				otherRecipe = getRecipeFromIdx(otherRecipeIdx);
+				var outputsIdentical = true;
+				for(let item of otherRecipe.iO) {
+					if (!recipe.iO.some(itm => itm.uN == item.uN && itm.cfg == item.cfg)) {
+						outputsIdentical = false;
+						break;
+					}
+				}
+				for(let fluid of otherRecipe.fO) {
+					if (!recipe.fO.some(fl => fl.uN == fluid.uN && fl.cfg == fluid.cfg)) {
+						outputsIdentical = false;
+						break;
+					}
+				}
+				if (outputsIdentical) {
+					return false;
+				}
+			}
+
+			if (browse_hideDifferentCircuits) {
+				if (otherRecipe == null) {otherRecipe = getRecipeFromIdx(otherRecipeIdx);}
+
+				var circuit = getCircuitForRecipe(otherRecipe);
+				if (circuit) {
+					var myCircuit = getCircuitForRecipe(recipe);
+					if (myCircuit && circuit.cfg != myCircuit.cfg) {
+						return false;
+					}
+				}
+			}
+			
+			return true;
+		}
+
 		for(let idx in recipes_conflict_lookup) {
 			let conflict = recipes_conflict_lookup[idx];
 			let amountFound = 0;
@@ -1265,14 +1344,16 @@ onVersionChanged(function(version) {
 
 			for(let uid in conflict.itemConflicts) {
 				amountInputs++;
-				if (conflict.itemConflicts[uid].some(i => i != idx)) {
+				conflict.itemConflicts[uid] = ([...conflict.itemConflicts[uid]]).filter(i => recipeFilter(conflict.recipe,i));
+				if (conflict.itemConflicts[uid].length > 0) {
 					amountFound++;
 				}
 			}
 
 			for(let uid in conflict.fluidConflicts) {
 				amountInputs++;
-				if (conflict.fluidConflicts[uid].some(i => i != idx)) {
+				conflict.fluidConflicts[uid] = ([...conflict.fluidConflicts[uid]]).filter(i => recipeFilter(conflict.recipe,i));
+				if (conflict.fluidConflicts[uid].length > 0) {
 					amountFound++;
 				}
 			}
@@ -1284,10 +1365,33 @@ onVersionChanged(function(version) {
 		}
 
 		recipes_conflict_amount = Object.keys(recipes_conflict_lookup).length;
-		/*console.log("RECIPES_CONFLICT_LOOKUP",recipes_conflict_lookup);
+		/*
+		console.log("RECIPES_CONFLICT_LOOKUP",recipes_conflict_lookup);
 		console.log("CONFLICTLESS",conflictless);
 		console.log("CONFLICT AMOUNT",Object.keys(recipes_conflict_lookup).length);
-		console.log("CONFLICTLESS AMOUNT",Object.keys(conflictless).length);*/
+		console.log("CONFLICTLESS AMOUNT",Object.keys(conflictless).length);
+		//*/
+	}
+
+	function listRecipes(machine) {
+		if (!downloaded_machines[machine]) return;
+
+		recipe_search_result.empty();
+		current_recipes_list = [];
+
+		var recipes = downloaded_machines[machine].recs;
+		for(let idx in recipes) {
+			let recipe = recipes[idx];
+			recipe.idx = parseInt(idx);
+
+			current_recipes_list.push({
+				recipe: recipe,
+				iNames: getItemNames(recipe.iI,recipe.fI).toLowerCase(),
+				oNames: getItemNames(recipe.iO,recipe.fO).toLowerCase(),
+			});
+		}
+
+		buildConflictLookup(recipes);
 
 		recipe_search_result.append(current_recipes_list.slice(0,200).map(v => {
 			let pnl = buildRecipePanel(v.recipe);
