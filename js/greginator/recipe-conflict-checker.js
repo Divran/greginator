@@ -525,12 +525,14 @@ onVersionChanged(function(version) {
 			conflict_results.append(["Selected recipe:",pnl,"<br />"]);	
 		}
 
+		var VIEW_DIRECTION = "VERTICAL";
+
 		// display results
 		if (selected_recipe_browse_conflict != null) {
 			var conflict = selected_recipe_browse_conflict;
 
 			var trInputs = [];
-			var trConflicts = [];
+			var flexConflicts = [];
 
 			function getInputLabel(uid, what) {
 				for(let item of recipe[what]) {
@@ -549,12 +551,17 @@ onVersionChanged(function(version) {
 			var myCircuit = getCircuitForRecipe(recipe);
 
 			function appendRecipeConflict(uid, list, what) {
+				if (myCircuit && getUID(myCircuit) == uid) {return;}
+
 				amountInputs++;
-				let tr = $("<tr>");
-				//list = list.filter(i => recipeFilter(i, what));
+				let flex = $("<div class='d-flex flex-row'>");
 				let amount = list.length
 				maxAmountConflicts = Math.max(maxAmountConflicts,Math.min(amount,41));
-				let flex = $("<div class='d-flex flex-row'>")
+
+				if (VIEW_DIRECTION == "VERTICAL") {
+					flex = $("<div class='d-flex flex-row flex-wrap'>");
+				}
+
 				for(let idx=0;idx<Math.min(amount,40);idx++) {
 					let otherRecipe = getRecipeFromIdx(list[idx]);
 					let pnl = buildRecipePanel(otherRecipe,false).css({
@@ -566,7 +573,7 @@ onVersionChanged(function(version) {
 				if (amount > 40) {
 					flex.append("<div class='text-nowrap'>+" + (amount-40) + " other recipes</div>");
 				}
-				tr.append(flex);
+
 				let lbl = $("<td class='text-nowrap'>").text(getInputLabel(uid,what));
 				lbl.css({
 					"max-width":"150px",
@@ -575,7 +582,7 @@ onVersionChanged(function(version) {
 					"min-width":"50px"
 				})
 				trInputs.push($("<tr>").append(lbl));
-				trConflicts.push(tr);
+				flexConflicts.push(flex);
 			}
 
 			for(let uid in conflict.itemConflicts) {
@@ -597,18 +604,27 @@ onVersionChanged(function(version) {
 			var tdRight = $("<td rowspan='" + (amountInputs+1) + "'>").append($("<div class='adjustWidth'>").css({
 				"width":"100%",
 				"overflow-x":"auto",
-			}).append(trConflicts));
+			}).append(flexConflicts));
 
-			function doAdjustWidth() {
-				var width = conflict_results.width() - 150;
-				$(".adjustWidth",tdRight).css("width",width+"px");
+			$(window).off("resize");
+			if (VIEW_DIRECTION == "HORIZONTAL") {
+				function doAdjustWidth() {
+					var width = conflict_results.width() - 150;
+					$(".adjustWidth",tdRight).css("width",width+"px");
+				}
+				$(window).off("resize").on("resize",doAdjustWidth);
+				doAdjustWidth();
 			}
-			$(window).off("resize").on("resize",doAdjustWidth);
-			doAdjustWidth();
 
 			tbl.append(trHead);
 
-			$(trInputs[0]).append(tdRight);
+			if (VIEW_DIRECTION == "HORIZONTAL") {
+				$(trInputs[0]).append(tdRight);
+			} else {
+				for(var i=0;i<flexConflicts.length;i++) {
+					$(trInputs[i]).append($("<td>").append(flexConflicts[i]));
+				}
+			}
 
 			tbl.append(trInputs);
 			conflict_results.append(tbl);
