@@ -1091,6 +1091,10 @@ onVersionChanged(function(version) {
 	}
 
 	function allInputsConflict(allInputs, otherRecipe, debug) {
+		if (otherRecipe.iO.length == 0 && otherRecipe.fO.length == 0) {
+			return false;
+		}
+
 		if (typeof allInputs.recipeIdx[otherRecipe.idx] != "undefined") {
 			if (debug) console.log("it's already added");
 			return false;
