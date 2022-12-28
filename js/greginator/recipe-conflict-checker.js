@@ -101,6 +101,7 @@ onVersionChanged(function(version) {
 	var added_recipes = $(".added-recipes", card);
 	var conflict_results = $(".conflict-results", card);
 	var settings_input = $(".settings-input", card);
+	var version_input = $(".version-select",card);
 	var settings_input_written = false;
 	var loading_settings = false;
 	var loading_add = false;
@@ -113,23 +114,26 @@ onVersionChanged(function(version) {
 	var added_recipes_list = [];
 	var autosave_name = "";
 
-	var folderName = "2022-10-07_15-16-48";
-	var filesList = [
-	    "Ore Washing Plant.json","Thermal Centrifuge.json","Compressor.json","Extractor.json","Disassembler.json","Scanner.json","Rock Breaker.json","Ore Byproduct List.json","Replicator.json","Assemblyline Process.json",
-	    "Plasma Arc Furnace.json","Arc Furnace.json","Printer.json","Sifter.json","Forming Press.json","Precision Laser Engraver.json","Mixer.json","Autoclave.json","Electromagnetic Separator.json","Electromagnetic Polarizer.json",
-	    "Pulverization.json","Chemical Bath.json","Fluid Canning Machine.json","Brewing Machine.json","Fluid Heater.json","Distillery.json","Fermenter.json","Fluid Solidifier.json","Fluid Extractor.json","Packager.json",
-	    "Unpackager.json","Fusion Reactor.json","Centrifuge.json","Electrolyzer.json","Blast Furnace.json","DTPF.json","Primitive Blast Furnace.json","Implosion Compressor.json","Vacuum Freezer.json","Chemical Reactor.json",
-	    "Large Chemical Reactor.json","Distillation Tower.json","Oil Cracker.json","Pyrolyse Oven.json","Wiremill.json","Bending Machine.json","Alloy Smelter.json","Assembler.json","Circuit Assembler.json","Canning Machine.json",
-	    "Lathe.json","Cutting Machine.json","Slicing Machine.json","Extruder.json","Forge Hammer.json","Amplifabricator.json","Mass Fabrication.json","Combustion Generator Fuels.json","Extreme Diesel Engine Fuel.json",
-	    "Gas Turbine Fuel.json","Thermal Generator Fuels.json","Semifluid Boiler Fuels.json","Plasma Generator Fuels.json","Magic Energy Absorber Fuels.json","Naquadah Reactor MkI.json","Naquadah Reactor MkII.json",
-	    "Naquadah Reactor MkIII.json","Naquadah Reactor MkIV.json","Naquadah Reactor MkV.json","Fluid Naquadah Reactor.json","Large Boiler.json","Rocket Engine Fuel.json","RTG.json","Semifluid Generator Fuels.json",
-	    "Bio Lab.json","Bacterial Vat.json","Acid Generator.json","Circuit Assembly Line.json","Radio Hatch Material List.json","High Temperature Gas-cooled Reactor.json","Draconic Evolution Fusion Crafter.json",
-	    "Large Naquadah Reactor.json","Naquadah Fuel Refine Factory.json","Neutron Activator.json","Extreme Heat Exchanger.json","Precise Assembler.json","Research station.json","Digester.json","Dissolution Tank.json",
-	    "Electric Implosion Compressor.json"
-	];
-	filesList.sort();
-	machine_search.append("<option value='-' disabled selected>Select Machine</option>");
-	machine_search.append(filesList.map(i => `<option value='${i}'>${i.replace(/\.json$/,"")}</option>`));
+	var folderName = "2022-12-24_18-24-13";
+	var filesList = null;
+	function resetMachineList() {
+		machine_search.empty();
+		machine_search.append("<option value='-' disabled selected>Select Machine</option>");
+
+		$.get("data/exported_recipes/" + folderName + "/list of files.json", function(data) {
+			filesList = data;
+			filesList.sort();
+			machine_search.append(filesList.map(i => `<option value='${i}'>${i.replace(/\.json$/,"")}</option>`));
+			machine_search.selectpicker("refresh");
+			setTimeout(() => {
+				machine_search.selectpicker("refresh");
+			},10);
+			recipe_search_result.empty();
+			downloaded_machines = {};
+		});
+	}
+	resetMachineList();
+	
 	machine_search.selectpicker({liveSearch:true,maxOptions:1});
 	var selectpicker_created = false;
 
@@ -1468,6 +1472,15 @@ onVersionChanged(function(version) {
 		e.stopPropagation();
 	});
 
+	version_input.change(() => {
+		if (folderName != version_input.val()) {
+			folderName = version_input.val();
+			resetMachineList();
+		}
+	}).click((e) => {
+		e.stopPropagation();
+	});
+
 	function setAutosave(n) {
 		autosave_name = n;
 		if (autosave_name != "") {
@@ -1552,6 +1565,7 @@ onVersionChanged(function(version) {
 		listSaved();
 
 		$(".btn-primary",saveload_new).hide();
+		$(".btn-secondary",saveload_new).hide();
 		$(".btn-danger",saveload_new).hide();
 		$(".namelabel",saveload_new).hide()
 		$(".btn-success",saveload_new).click(() => {

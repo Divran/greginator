@@ -243,9 +243,11 @@ onVersionChanged(function(version) {
 		opt.attr("data-subtext",val + " mb");
 		$("select.cell-search", parent).append(opt);
 		elem.val(val);
-		elem.selectpicker("refresh");
 		elem.selectpicker("toggle");
-		window.applyThemeToBootstrapSelect($("div.cell-search",parent));
+		elem.selectpicker("refresh");
+		setTimeout(()=>{
+			elem.selectpicker("refresh");
+		},10);
 	}
 
 	function makeClone() {
@@ -257,8 +259,6 @@ onVersionChanged(function(version) {
 		var search = $(".cell-search",clone);
 		search.selectpicker({liveSearch:true,maxOptions:1,showSubtext:true});
 		var searchContainer = $("div.cell-search",clone);
-
-		window.applyThemeToBootstrapSelect(searchContainer);
 
 		search.on("show.bs.select",() => {
 			$(".custom",clone).remove();
