@@ -29,6 +29,15 @@ onVersionChanged(function(version) {
 	var wanted_elem = $("#gt-overclock-wanted",card);
 	var wanted_check = $("#gt-overclock-wanted-flip",card);
 
+	$("#gt-overclock-target-eut",card).click(() => {
+		var that = $("#gt-overclock-target-eut",card)
+		navigator.clipboard.writeText(that.text());
+		that.removeClass("badge-secondary").addClass("badge-success");
+		setTimeout(() => {
+			that.addClass("badge-secondary").removeClass("badge-success");
+		},1000);
+	}).tooltip();
+
 	// gt++
 	var time_bonus = $("#gt-overclock-faster",card);
 	var energy_bonus = $("#gt-overclock-eureduction",card);
@@ -62,6 +71,8 @@ onVersionChanged(function(version) {
 		var original_time = parseFloat(time_elem.val());
 		var input = parseFloat(input_elem.val());
 		var wanted = parseFloat(wanted_elem.val());
+
+		$("#gt-overclock-target-eut",card).text(target);		
 
 		if (isNaN(original_energy) || isNaN(amps) || isNaN(target) || isNaN(output) || isNaN(original_time) || isNaN(input)) {
 			results.text("One or more of your inputs is an invalid number.");
