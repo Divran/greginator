@@ -355,4 +355,31 @@ onVersionChanged(function(version) {
 	}
 
 	doCalc();
+
+	window.fromConflictCheckerToOverclockCalculator = function(recipe) {
+		function noA0(i) {
+			return i.a > 0;
+		}
+
+		energy_elem.val(recipe.eut);
+		time_elem.val(recipe.dur);
+		time_check.prop("checked",true);
+
+		var inputs = [...recipe.fI.filter(noA0),...recipe.iI.filter(noA0)];
+		var outputs = [...recipe.fO.filter(noA0),...recipe.iO.filter(noA0)];
+
+		if (inputs.length >= 1) {
+			input_elem.val(inputs[0].a);
+		} else {
+			input_elem.val("1");
+		}
+		if (outputs.length >= 1) {
+			output_elem.val(outputs[0].a);
+		} else {
+			output_elem.val("1");
+		}
+
+		collapse.collapse("show");
+		doCalc();
+	}
 });

@@ -351,6 +351,12 @@ onVersionChanged(function(version) {
 		}
 
 		pnl.prepend(
+			$('<button title="Send to Overclock Calculator" type="button" class="btn btn-sm btn-secondary cell-calculator-btn link-pointer position-absolute" '+
+				'style="z-index:10; font-size:12px; padding:0.1rem 0.25rem 0.1rem 0.25rem; top:2px; right: ' + (removebtn ? '42px' : '22px') + ';">O</button>')
+			.click((e) => {window.fromConflictCheckerToOverclockCalculator(recipe); e.preventDefault(); e.stopPropagation();}).tooltip()
+		);
+
+		pnl.prepend(
 			$('<button title="Send to Cell Calculator" type="button" class="btn btn-sm btn-secondary cell-calculator-btn link-pointer position-absolute" '+
 				'style="z-index:10; font-size:12px; padding:0.1rem 0.25rem 0.1rem 0.25rem; top:2px; right: ' + (removebtn ? '20px' : '2px') + ';">C</button>')
 			.click((e) => {window.fromConflictCheckerToCellCalculator(recipe); e.preventDefault(); e.stopPropagation();}).tooltip()
