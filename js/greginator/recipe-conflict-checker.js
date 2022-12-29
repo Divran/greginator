@@ -261,6 +261,9 @@ onVersionChanged(function(version) {
 		let stats = eut + " EU/t, " + (dur>20 ? Math.floor(dur/20*1000+0.5)/1000 + "s" : dur + "t");
 		let pnl = $("<div class='p-1 m-0 recipe-item'>");
 
+		if (recipe.idx < 0) {
+			pnl.addClass("bg-danger");
+		}
 
 		//////////////////////////////////
 		// compact display
@@ -312,6 +315,9 @@ onVersionChanged(function(version) {
 
 		full.append([colIn,colOut]);
 		full.attr("data-recipe-idx",recipe.idx);
+		if (recipe.idx < 0) {
+			full.append("<div class='alert alert-danger mx-2 mb-0'>Recipe not found, but added anyway. This is likely due to GTNH changing this recipe after you created this recipe list. To fix, either re-add the newer verison of this recipe, or switch to an older version using the GTNH Version dropdown above.</div>");
+		}
 
 
 		var compactTitle = $("<div class='d-flex' style='flex-direction:column'>");
@@ -380,7 +386,10 @@ onVersionChanged(function(version) {
 	}
 
 	function getRecipeFromIdx(recipeIdx) {
-		return downloaded_machines[selected_machine].recs[recipeIdx]
+		if (recipeIdx < 0) {
+			return added_recipes_list.find(i => i.idx == recipeIdx);
+		}
+		return downloaded_machines[selected_machine].recs[recipeIdx];
 	}
 
 	function addRecipe(recipeIdx) {
@@ -415,11 +424,6 @@ onVersionChanged(function(version) {
 			var pnl = buildRecipePanel(recipe, true);
 			added_recipes.append(pnl);
 			added_recipes_list.push(recipe);
-			if (typeof recipeIdx != "number") {
-				//{"machine":"Mixer.json","recipes":[{"en":true,"dur":200,"eut":7,"iI":[{"a":1,"uN":"gt.metaitem.01.2086","lN":"Gold Dust"},{"a":2,"uN":"gt.metaitem.01.2054","lN":"Silver Dust"},{"cfg":1,"a":0,"uN":"gt.integrated_circuit","lN":"Programmed Circuit"}],"iO":[{"a":2,"uN":"gt.metaitem.01.2303","lN":"Electrum Dust"}],"fI":[],"fO":[],"idx":728}]}
-				//{"machine":"Mixer.json","recipes":[{"en":true,"dur":200,"eut":7,"iI":[{"a":1,"uN":"gt.metaitem.01.2086","lN":"Gold Dust"},{"a":1,"uN":"gt.metaitem.01.2054","lN":"Silver Dust"},{"cfg":1,"a":0,"uN":"gt.integrated_circuit","lN":"Programmed Circuit"}],"iO":[{"a":2,"uN":"gt.metaitem.01.2303","lN":"Electrum Dust"}],"fI":[],"fO":[],"idx":728}]}
-				$($(".col",pnl)[0]).prepend("<small class='text-muted'>This recipe was not found, possibly due to being from a different version, but was added anyway</small>");
-			}
 
 			if (loading_settings == false) {
 				calculateConflicts();
@@ -948,7 +952,7 @@ onVersionChanged(function(version) {
 
 					let recipeCount = 0;
 					for(let rIdx in machine.recipeIdx) {
-						let recipe = recipes[rIdx];
+						let recipe = getRecipeFromIdx(rIdx);
 						if (recipe) {
 							recipeCount++;
 							listCont.append(buildRecipePanel(recipe));
@@ -1217,24 +1221,28 @@ onVersionChanged(function(version) {
 				let negative_indexes = 0;
 				//console.log("recipes not found:",loading_settings.recipes);
 				// some recipes weren't found by idx, try to find them through iteration and comparison instead
-				for(let i in recipes) {
-					let cpy = {...recipes[i]};
-					delete cpy.idx;
-					let cpyStr = JSON.stringify(cpy);
 
-					for(let ii in loading_settings.recipes) {
-						let recipe = loading_settings.recipes[ii];
+				for(let ii = loading_settings.recipes.length-1; ii >= 0; ii--) {
+					let recipe = loading_settings.recipes[ii];
+					let found = false;
+					for(let i in recipes) {
+						let cpy = {...recipes[i]};
+						delete cpy.idx;
+						let cpyStr = JSON.stringify(cpy);
 
 						if (JSON.stringify(recipe) == cpyStr) {
 							addRecipe(recipes[i].idx);
-						} else {
-							//alert("Loaded recipe " + JSON.stringify(recipe) + " not found. Adding it anyway, but note that it may be from a different version.");
-							negative_indexes--;
-							recipe.idx = negative_indexes;
-							addRecipe(recipe);
-							loading_settings.recipes.splice(ii,1);
+							found = true;
 							break;
 						}
+					}
+
+					if (!found) {
+						//console.log("Loaded recipe " + JSON.stringify(recipe) + " not found. Adding it anyway, but note that it may be from a different version.");
+						negative_indexes--;
+						recipe.idx = negative_indexes;
+						addRecipe(recipe);
+						loading_settings.recipes.splice(ii,1);
 					}
 				}
 			}
