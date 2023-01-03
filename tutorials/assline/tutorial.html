@@ -75,19 +75,21 @@
 		<div>
 			<h4>Step 5</h4>
 			<p>Configure the filters on your storage buses.</p>
-			<p>They need to be configured to only accept fluid packets and everything except fluid packets, respectively.</p>
-			<p>To do this, search for <strong>'packet'</strong> in NEI, and you will find an <em>'invalid fluid packet'</em> item. Drag this into the storage buses, then add a muffler card and an inverter card as the images to the right show.</p>
+			<ul>
+				<li>They need to be configured to only accept fluid packets and everything except fluid packets, respectively.</li>
+				<li>To do this, search for <strong>'packet'</strong> in NEI, and you will find an <em>'invalid fluid packet'</em> item. Drag this into the storage buses, then add a fuzzy card and an inverter card as the images to the right show.</li>
+			</ul>
 		</div>
 		<div class="noshrink">
-			<a href="tutorials/assline/7.jpg" target="_blank">
-				<img src="tutorials/assline/7.jpg" class="tutorial-img tutorial-img-medium" />
-			</a>
-			<br /> Fluid storage bus
-			<hr />
 			<a href="tutorials/assline/8.jpg" target="_blank">
 				<img src="tutorials/assline/8.jpg" class="tutorial-img tutorial-img-medium" />
 			</a>
-			<br /> Item storage bus
+			<br />Storage bus pointing at packet decoder
+			<hr />
+			<a href="tutorials/assline/7.jpg" target="_blank">
+				<img src="tutorials/assline/7.jpg" class="tutorial-img tutorial-img-medium" />
+			</a>
+			<br />Storage bus pointing at input buses
 		</div>
 	</div>
 	<hr />
@@ -96,18 +98,20 @@
 			<a href="tutorials/assline/9.jpg" target="_blank">
 				<img src="tutorials/assline/9.jpg" class="tutorial-img-medium" />
 			</a>
+			<br />Storage buses pointing at packet decoders
 			<hr />
 
 			<a href="tutorials/assline/10.jpg" target="_blank">
 				<img src="tutorials/assline/10.jpg" class="tutorial-img-medium" />
 			</a>
+			<br />Storage buses pointing at input buses
 		</div>
 		<div style="flex-grow:1">
 			<h4>Step 6</h4>
 			<p>Set storage bus priority.</p>
 			<ul>
 				<li>Set the priority of each storage bus in decreasing order.</li>
-				<li>The fluid storage buses should have the highest priority (20, 19, 18, 17), and the item storage buses should follow after that (with priorities 16-1 or 15-0)</li>
+				<li>The storage buses pointing at a packet decoder should have the highest priority (20, 19, 18, 17), and the storage buses which are pointing at where the input buses will go should follow after that (with priorities 16-1 or 15-0)</li>
 			</ul>
 		</div>
 	</div>
