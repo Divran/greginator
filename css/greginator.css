@@ -173,6 +173,34 @@ table td small {
 	margin-right: 0;
 }
 
+.pagination > .page-item {
+	cursor:pointer;
+}
+.pagination > .page-item.disabled {
+	pointer-events:none;
+}
+img.tutorial-img {
+	max-width:100%;
+	max-height:500px;
+}
+
+img.tutorial-img-medium {
+	max-width:400px;
+	max-height:400px;
+}
+
+img.tutorial-img-small {
+	max-width:200px;
+	max-height:200px;
+}
+
+.tutorial-page > .justify-content-between {
+	gap:2em;
+}
+.tutorial-page > .d-flex > .noshrink {
+	flex-shrink: 0;
+}
+
 /* DARK THEME */
 
 body.dark-theme .btn.btn-light:not([disabled]):not(.disabled) {
@@ -243,4 +271,15 @@ body.dark-theme .close {
 
 body.dark-theme .table .table {
 	background-color:transparent;
+}
+
+
+/* pagination dark theme */
+body.dark-theme .pagination > .page-item > .page-link {
+	background-color: #6c757d;
+	color: #f8f9fa;
+}
+
+body.dark-theme .pagination > .page-item.active > .page-link {
+	box-shadow: 0 0 0 0.2rem rgb(248 249 250 / 50%);
 }

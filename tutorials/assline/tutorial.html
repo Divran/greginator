@@ -1,0 +1,204 @@
+<div class="tutorial-page">
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 1</h4>
+			<p>Build the ME cable skeleton.</p>
+			<p>This requires an ME controller to have enough channels. I also recommend using alternating colors of cables so they don't connect to each other.</p>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline/1.jpg" target="_blank">
+				<img src="tutorials/assline/1.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="noshrink">
+			<a href="tutorials/assline/2.jpg" target="_blank">
+				<img src="tutorials/assline/2.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 2</h4>
+			<p>
+				Add storage busses for input and an interface at the back for output.
+			</p>
+
+			<div class="card card-body m-1 p-1 d-inline-block">
+				<a href="tutorials/assline/3.jpg" target="_blank">
+					<img src="tutorials/assline/3.jpg" class="tutorial-img tutorial-img-small" />
+				</a>
+				<br />Close-up of the interface used for output.
+				<br />The red ME cable connects back to your main network.
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 3</h4>
+			<p>Add fluid packet decoders.</p>
+			<p>Do not place them so close to each other that they touch, since that would place them in the same subnetwork, which wouldn't work.</p>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline/4.jpg" target="_blank">
+				<img src="tutorials/assline/4.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="noshrink">
+			<a href="tutorials/assline/5.jpg" target="_blank">
+				<img src="tutorials/assline/5.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 4</h4>
+			<p>Add storage buses to your fluid packet decoders.</p>
+			<p>The storage buses pointing at the packet decoders are <strong>item</strong> storage buses, while the storage buses pointing up away from the packet decoders are <strong>fluid</strong> storage buses.</p>
+
+			<div class="card card-body m-1 p-1 d-inline-block">
+				<a href="tutorials/assline/6.jpg" target="_blank">
+					<img src="tutorials/assline/6.jpg" class="tutorial-img tutorial-img-small" />
+				</a>
+				<br />Close-up of the packet decoders.
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 5</h4>
+			<p>Configure the filters on your storage buses.</p>
+			<p>They need to be configured to only accept fluid packets and everything except fluid packets, respectively.</p>
+			<p>To do this, search for <strong>'packet'</strong> in NEI, and you will find an <em>'invalid fluid packet'</em> item. Drag this into the storage buses, then add a muffler card and an inverter card as the images to the right show.</p>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline/7.jpg" target="_blank">
+				<img src="tutorials/assline/7.jpg" class="tutorial-img tutorial-img-medium" />
+			</a>
+			<br /> Fluid storage bus
+			<hr />
+			<a href="tutorials/assline/8.jpg" target="_blank">
+				<img src="tutorials/assline/8.jpg" class="tutorial-img tutorial-img-medium" />
+			</a>
+			<br /> Item storage bus
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="noshrink">
+			<a href="tutorials/assline/9.jpg" target="_blank">
+				<img src="tutorials/assline/9.jpg" class="tutorial-img-medium" />
+			</a>
+			<hr />
+
+			<a href="tutorials/assline/10.jpg" target="_blank">
+				<img src="tutorials/assline/10.jpg" class="tutorial-img-medium" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 6</h4>
+			<p>Set storage bus priority.</p>
+			<ul>
+				<li>Set the priority of each storage bus in decreasing order.</li>
+				<li>The fluid storage buses should have the highest priority (20, 19, 18, 17), and the item storage buses should follow after that (with priorities 16-1 or 15-0)</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="noshrink">
+			<a href="tutorials/assline/11.jpg" target="_blank">
+				<img src="tutorials/assline/11.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 7</h4>
+			<p>Add an item p2p to the front of the assembly line.</p>
+			<ul>
+				<li>This is the most important part of the setup, as it allows the <em>blocking mode</em> setting to work in your interface, which is required to be able to encode more than one recipe in a single assembly line.</li>
+				<li>You will notice that the topmost item p2p appears to be pointing at the 'wrong' side of the first input bus. This is intentional. We know the item p2p will not be able to put any items into the input bus from this side, but it can still see into it, and that is enough for blocking mode to work. As long as the interface sees that an item is already inside, it won't try to push the next requested craft in.</li>
+				<li>I recommend you use an interface p2p rather than a normal interface to allow multiple assembly lines to easily reuse the same recipes.</li>
+			</ul>
+
+			<div class="card card-body m-1 p-1 d-inline-block">
+				<a href="tutorials/assline/12.jpg" target="_blank">
+					<img src="tutorials/assline/12.jpg" class="tutorial-img tutorial-img-small" />
+				</a>
+				<br />Close-up of the item p2p subnetwork.
+				<br />The interface at the bottom of the cyan cable is where you will later place your recipes.
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 8</h4>
+			<p>Place input buses, input hatches, and an output bus.</p>
+			<ul>
+				<li>All the input buses <strong>MUST</strong> be ULV, so that they have only a single input slot.</li>
+				<li>All of them should be rotated down into the storage buses.</li>
+			</ul>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline/13.jpg" target="_blank">
+				<img src="tutorials/assline/13.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div style="flex-grow:1">
+			<h4>Step 9</h4>
+			<p>Finish up the assembling line multiblock.</p>
+			<ul>
+				<li>I recommend you do this using the auto-build feature of a Multiblock Hologram Structure Projector. Grab 15 of them in a stack, then grab all required materials, minus the buses and hatches which you already placed. Then temporarily put any wireless ME terminal which you may have in your inventory into a backpack or a chest. This way, the holo projector won't use any buses or hatches you may have in your ME storage. Then shift-right click to complete the multiblock.</li>
+			</ul>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 10</h4>
+			<p>How do you get more recipe slots, 36 isn't enough!</p>
+			<ul>
+				<li>The interface p2ps in this picture is where you will place your recipes.</li>
+				<li>I recommend a quick research trip into thaumcraft to unlock transvector interfaces. Then place them near the item p2p as shown in this picture, and link them all to the item p2p input.</li>
+				<li>As previously mentioned, I also strongy recommend you to use interface p2p instead of a normal interface, to easily allow you to hook up any number of assembling lines.</li>
+				<li>The rest ME cable in this picture should be connected to your main ME network.</li>
+			</ul>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline/14.jpg" target="_blank">
+				<img src="tutorials/assline/14.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 11</h4>
+			<p>One assembly line isn't anywhere near fast enough. You should be looking forward to setting up something similar to this, eventually.</p>
+			<ul>
+				<li>Be careful when building many assembly lines in the same chunk. Too many will overload the chunk and minecraft will no longer be able to save that chunk, causing rollbacks. I believe I myself is very close to hitting that limit in the picture to the right, so I <strong>don't</strong> recommend building your assembling lines on two floors. Stick to one floor.</li>
+			</ul>
+
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline/15.jpg" target="_blank">
+				<img src="tutorials/assline/15.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+</div>
