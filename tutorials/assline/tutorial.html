@@ -29,7 +29,7 @@
 					<img src="tutorials/assline/3.jpg" class="tutorial-img tutorial-img-small" />
 				</a>
 				<br />Close-up of the interface used for output.
-				<br />The red ME cable connects back to your main network.
+				<br /><small>The red ME cable connects back to your main network.</small>
 			</div>
 		</div>
 	</div>
@@ -124,7 +124,7 @@
 			<h4>Step 7</h4>
 			<p>Add an item p2p to the front of the assembly line.</p>
 			<ul>
-				<li>This is the most important part of the setup, as it allows the <em>blocking mode</em> setting to work in your interface, which is required to be able to encode more than one recipe in a single assembly line.</li>
+				<li><div class="alert alert-info">This is the most important part of the setup, as it allows the <em>blocking mode</em> setting to work in your interface, which is required to be able to encode more than one recipe in a single assembly line.</div></li>
 				<li>You will notice that the topmost item p2p appears to be pointing at the 'wrong' side of the first input bus. This is intentional. We know the item p2p will not be able to put any items into the input bus from this side, but it can still see into it, and that is enough for blocking mode to work. As long as the interface sees that an item is already inside, it won't try to push the next requested craft in.</li>
 				<li>I recommend you use an interface p2p rather than a normal interface to allow multiple assembly lines to easily reuse the same recipes.</li>
 			</ul>
@@ -133,8 +133,8 @@
 				<a href="tutorials/assline/12.jpg" target="_blank">
 					<img src="tutorials/assline/12.jpg" class="tutorial-img tutorial-img-small" />
 				</a>
-				<br />Close-up of the item p2p subnetwork.
-				<br />The interface at the bottom of the cyan cable is where you will later place your recipes.
+				<br />Close-up of the item p2p.
+				<br /><small class="d-inline-block" style="width:200px; word-break:break-all;">The interface at the bottom of the cyan cable is where you will later place your recipes.</small>
 			</div>
 		</div>
 	</div>
@@ -171,13 +171,18 @@
 	<div class="d-flex w-100 justify-content-between">
 		<div>
 			<h4>Step 10</h4>
-			<p>How do you get more recipe slots, 36 isn't enough!</p>
+			<p>Placing recipes</p>
 			<ul>
 				<li>The interface p2ps in this picture is where you will place your recipes.</li>
-				<li>I recommend a quick research trip into thaumcraft to unlock transvector interfaces. Then place them near the item p2p as shown in this picture, and link them all to the item p2p input.</li>
+				<li><div class="alert alert-info"><strong>Make absolutely sure you enable blocking mode in every single interface and/or interface p2p!</strong></div></li>
 				<li>As previously mentioned, I also strongy recommend you to use interface p2p instead of a normal interface, to easily allow you to hook up any number of assembling lines.</li>
 				<li>The rest ME cable in this picture should be connected to your main ME network.</li>
 			</ul>
+
+			<p>
+				<strong>36 recipe slots isn't enough! How do you get more?</strong>
+				<br/> I recommend a quick research trip into thaumcraft to unlock transvector interfaces. Then place them near the item p2p as shown in this picture, and link them all to the item p2p input.
+			</p>
 		</div>
 		<div class="noshrink">
 			<a href="tutorials/assline/14.jpg" target="_blank">
@@ -187,18 +192,18 @@
 	</div>
 	<hr />
 	<div class="d-flex w-100 justify-content-between">
-		<div>
-			<h4>Step 11</h4>
-			<p>One assembly line isn't anywhere near fast enough. You should be looking forward to setting up something similar to this, eventually.</p>
-			<ul>
-				<li>Be careful when building many assembly lines in the same chunk. Too many will overload the chunk and minecraft will no longer be able to save that chunk, causing rollbacks. I believe I myself is very close to hitting that limit in the picture to the right, so I <strong>don't</strong> recommend building your assembling lines on two floors. Stick to one floor.</li>
-			</ul>
-
-		</div>
 		<div class="noshrink">
 			<a href="tutorials/assline/15.jpg" target="_blank">
 				<img src="tutorials/assline/15.jpg" class="tutorial-img" />
 			</a>
+		</div>
+		<div>
+			<h4>Step 11</h4>
+			<p>One assembly line isn't anywhere near fast enough. You should be looking forward to setting up something similar to this, eventually.</p>
+			<ul>
+				<li>Be careful when building many assembly lines in the same chunk. Too many will overload the chunk and minecraft will no longer be able to save that chunk, causing rollbacks. I believe I myself is very close to hitting that limit in the picture to the left, so I <strong>don't</strong> recommend building your assembling lines on two floors. Stick to one floor.</li>
+			</ul>
+
 		</div>
 	</div>
 </div>
