@@ -34,7 +34,7 @@ onVersionChanged(function(version) {
 		tutorialSelectorBody.hide();
 
 		$.get("tutorials/" + selectedTutorial + "/tutorial.html",function(content) {
-			tutorialBody.append(content).show();
+			tutorialBody.html(content).show();
 		});
 	});
 
