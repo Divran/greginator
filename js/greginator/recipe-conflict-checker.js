@@ -1381,8 +1381,13 @@ onVersionChanged(function(version) {
 				if (otherRecipe == null) {otherRecipe = getRecipeFromIdx(otherRecipeIdx);}
 
 				var circuit = getCircuitForRecipe(otherRecipe);
+				var myCircuit = getCircuitForRecipe(recipe);
+
+				if ((typeof circuit) != (typeof myCircuit)) {
+					return false;
+				}
+
 				if (circuit) {
-					var myCircuit = getCircuitForRecipe(recipe);
 					if (myCircuit && circuit.cfg != myCircuit.cfg) {
 						return false;
 					}
