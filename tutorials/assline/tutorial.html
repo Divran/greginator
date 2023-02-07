@@ -128,6 +128,7 @@
 			<h4>Step 7</h4>
 			<p>Add an item p2p to the front of the assembly line.</p>
 			<ul>
+				<li>The item p2p at the <strong>bottom</strong> of the cyan cable in the close-up picture below is the <strong>input</strong>. You want to link from the bottom p2p to both of the other ones.</li>
 				<li><div class="alert alert-info">This is the most important part of the setup, as it allows the <em>blocking mode</em> setting to work in your interface, which is required to be able to encode more than one recipe in a single assembly line.</div></li>
 				<li>You will notice that the topmost item p2p appears to be pointing at the 'wrong' side of the first input bus. This is intentional. We know the item p2p will not be able to put any items into the input bus from this side, but it can still see into it, and that is enough for blocking mode to work. As long as the interface sees that an item is already inside, it won't try to push the next requested craft in.</li>
 				<li>I recommend you use an interface p2p rather than a normal interface to allow multiple assembly lines to easily reuse the same recipes.</li>
