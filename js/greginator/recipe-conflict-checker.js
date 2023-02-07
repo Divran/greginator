@@ -880,7 +880,7 @@ onVersionChanged(function(version) {
 					let otherRecipe = recipes[i];
 
 					if (allInputsConflict(allInputs, otherRecipe, {[ignoreRecipe.idx]:true}, true)) {
-						console.log({[ignoreRecipe.idx]:true},"CONFLICTS WITH", otherRecipe);
+						//console.log({[ignoreRecipe.idx]:true},"CONFLICTS WITH", otherRecipe);
 						return true;
 					}
 				}
@@ -908,12 +908,12 @@ onVersionChanged(function(version) {
 				} else {
 					let foundMachine = false;
 					let allInputsOne = getAllInputs([recipe]);
-					console.log("-------------- CHECKING",recipe);
+					//console.log("-------------- CHECKING",recipe);
 					for(let iG = 0; iG < group.length; iG++) {
 						let allInputs = getAllInputsPlusOne(group[iG], allInputsOne);
 
 						if (!checkTotalConflicts(allInputs, recipe)) {
-							console.log("ADDED TO GROUP",iG);
+							//console.log("ADDED TO GROUP",iG);
 							// adding this recipe will not cause a conflict, add it to this machine
 							group[iG] = allInputs;
 							foundMachine = true;
@@ -921,7 +921,7 @@ onVersionChanged(function(version) {
 						}
 					}
 					if (!foundMachine) {
-						console.log("ADDED TO NEW GROUP");
+						//console.log("ADDED TO NEW GROUP");
 						// this recipe couldn't be added to any existing machine, add it to a new machine
 						group.push(allInputsOne);
 					}
@@ -1109,13 +1109,13 @@ onVersionChanged(function(version) {
 			return false;
 		}
 
-		//*
+		/*
 		if (ignoreIdx && typeof ignoreIdx[otherRecipe.idx] != "undefined") {
 			if (debug) console.log("it's already added");
 			return false;
 		}
 		//*/
-		/*
+		//*
 		if (typeof allInputs.recipeIdx[otherRecipe.idx] != "undefined") {
 			if (debug) console.log("it's already added");
 			return false;
