@@ -875,11 +875,12 @@ onVersionChanged(function(version) {
 			conflict_results.empty();
 			conflict_results.text("Calculating...");
 
-			function checkTotalConflicts(allInputs) {
+			function checkTotalConflicts(allInputs, ignoreRecipe) {
 				for(let i in recipes) {
 					let otherRecipe = recipes[i];
 
-					if (allInputsConflict(allInputs, otherRecipe)) {
+					if (allInputsConflict(allInputs, otherRecipe, {[ignoreRecipe.idx]:true}, true)) {
+						console.log({[ignoreRecipe.idx]:true},"CONFLICTS WITH", otherRecipe);
 						return true;
 					}
 				}
@@ -907,10 +908,12 @@ onVersionChanged(function(version) {
 				} else {
 					let foundMachine = false;
 					let allInputsOne = getAllInputs([recipe]);
+					console.log("-------------- CHECKING",recipe);
 					for(let iG = 0; iG < group.length; iG++) {
 						let allInputs = getAllInputsPlusOne(group[iG], allInputsOne);
 
-						if (!checkTotalConflicts(allInputs)) {
+						if (!checkTotalConflicts(allInputs, recipe)) {
+							console.log("ADDED TO GROUP",iG);
 							// adding this recipe will not cause a conflict, add it to this machine
 							group[iG] = allInputs;
 							foundMachine = true;
@@ -918,6 +921,7 @@ onVersionChanged(function(version) {
 						}
 					}
 					if (!foundMachine) {
+						console.log("ADDED TO NEW GROUP");
 						// this recipe couldn't be added to any existing machine, add it to a new machine
 						group.push(allInputsOne);
 					}
@@ -1100,20 +1104,28 @@ onVersionChanged(function(version) {
 		return recipe.iI.find(i => i.uN == "gt.integrated_circuit" || i.uN == "item.BioRecipeSelector" || i.uN == "item.T3RecipeSelector");
 	}
 
-	function allInputsConflict(allInputs, otherRecipe, debug) {
+	function allInputsConflict(allInputs, otherRecipe, ignoreIdx, debug) {
 		if (otherRecipe.iO.length == 0 && otherRecipe.fO.length == 0) {
 			return false;
 		}
 
+		//*
+		if (ignoreIdx && typeof ignoreIdx[otherRecipe.idx] != "undefined") {
+			if (debug) console.log("it's already added");
+			return false;
+		}
+		//*/
+		/*
 		if (typeof allInputs.recipeIdx[otherRecipe.idx] != "undefined") {
 			if (debug) console.log("it's already added");
 			return false;
 		}
+		//*/
 
 		var circuit = getCircuitForRecipe(otherRecipe);
 		if (circuit) {
 			if (typeof allInputs.circuits[getCircuitUID(circuit)] == "undefined") {
-			if (debug) console.log("needed circuit doesnt exist");
+				if (debug) console.log("needed circuit doesnt exist");
 				return false;
 			}
 		}
@@ -1134,7 +1146,7 @@ onVersionChanged(function(version) {
 			if (fluid.a == 0) continue;
 
 			if (typeof allInputs.fluids[fluid.uN] == "undefined") {
-				if (debug) console.log("needed fluid ",fuid.lN," doesnt exist");
+				if (debug) console.log("needed fluid ",fluid.lN," doesnt exist");
 				// missing fluid = no conflict
 				return false;
 			}
