@@ -28,6 +28,8 @@ onVersionChanged(function(version) {
 	var results = $("#gt-overclock-results",card);
 	var wanted_elem = $("#gt-overclock-wanted",card);
 	var wanted_check = $("#gt-overclock-wanted-flip",card);
+	var batch_mode = true;
+	var uev_simulate = true;
 
 	$("#gt-overclock-target-eut",card).click(() => {
 		var that = $("#gt-overclock-target-eut",card)
@@ -106,21 +108,36 @@ onVersionChanged(function(version) {
 			var overclocks = _target_tier - _tier;
 			var speed = Math.pow(SPEED_PER_TIER,overclocks);
 			var time = _time / speed;
+
 			var paTime = time;
 			var paAmount = 1;
-			if (time < 1) {
-				paTime *= 128;
-				paAmount = 128;
+			var paOverclocks = overclocks;
+			var paSpeed = speed;
+
+			if (uev_simulate && _target_tier > 9) {
+				paAmount *= 4;
+				paOverclocks = (_target_tier-1) - _tier;
+				paSpeed = Math.pow(SPEED_PER_TIER, paOverclocks);
+				paTime = _time / paSpeed;
 			}
-			time = Math.floor(time);
-			paTime = Math.floor(paTime);
+
+			var paEnergy = _energy * Math.pow(ENERGY_PER_TIER, paOverclocks);
+
+			if (batch_mode) {
+				paTime *= 128;
+				paAmount *= 128;
+			}
+
 			return {
 				overclocks: overclocks,
 				energy: _energy * Math.pow(ENERGY_PER_TIER,overclocks),
-				time: Math.max(1,time),
+				time: Math.max(1,Math.floor(time)),
 
-				paTime: Math.max(1,paTime),
-				paAmount: paAmount
+				paOverclocks: paOverclocks,
+				paTime: Math.max(1,Math.floor(paTime)),
+				paEnergy: paEnergy,
+				paAmount: paAmount,
+				oneticking: time < 1
 			};
 		}
 
@@ -148,12 +165,16 @@ onVersionChanged(function(version) {
 
 		var processing_array = "";
 
-		if (tmp.paAmount > 1) {
-			processing_array = "<span class='text-muted mb-2'>1-ticking detected! Enable batch mode on your PA to match the numbers below!</span>";
+		if (tmp.oneticking) {
+			processing_array = "<span class='text-muted mb-2'>1-ticking detected! Enable batch mode!</span>";
 		}
-
-		processing_array += "<p>If you put " + PA_amount + "x " + tier_names[target_tier] + " machines in a processing array, they use <strong>" + round3(energy*amps*PA_amount) + "</strong> eu/t, produce <strong>" + round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s, "+
-				" and consume <strong>" + round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s.</p>";
+		processing_array = 
+		`<p>
+			${PA_amount}x <strong>${tier_names[target_tier]}</strong> machines in one PA</strong><br />
+			Energy consumption: <strong>${round3(energy*amps*PA_amount)}</strong><br />
+			Production: <strong>${output*PA_amount*tmp.paAmount}</strong> every <strong>${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}</strong>, <strong>${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.<br />
+			Consumption: <strong>${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.
+		</p>`;
 
 		// check how many can fit in PA
 		if (target_tier > tier + 1) {
@@ -166,8 +187,13 @@ onVersionChanged(function(version) {
 
 			if ((energy_prev_tier*amps*PA_amount) <= getVoltageOfTier(target_tier)) {
 				var tmp = calcOC(prev_tier_current, tier, original_energy, original_time);
-				processing_array += "<p>To fully use a(n) " + tier_names[target_tier] + " energy hatch, put " + PA_amount + "x " + tier_names[prev_tier_current] + " machines in a processing array. " +
-					"These will use <strong>" + round3(energy_prev_tier*amps*PA_amount) + "</strong> eu/t, produce <strong>" + round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s, and consume <strong>" + round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount) + "</strong> items/s.";
+				processing_array += 
+				`<p>
+					To fully use a(n) <strong>${tier_names[target_tier]}</strong> energy hatch, use ${PA_amount}x <strong>${tier_names[prev_tier_current]}</strong>.<br />
+					Energy consumption: <strong>${round3(energy_prev_tier*amps*PA_amount)}</strong><br />
+					Production: <strong>${output*PA_amount*tmp.paAmount}</strong> every <strong>${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}</strong>, <strong>${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.<br />
+					Consumption: <strong>${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.
+				</p>`;
 			}
 		}
 
@@ -199,14 +225,10 @@ onVersionChanged(function(version) {
 						wanted_str += " <small>("+round3(wanted_machines/PA_amount)+")</small>";
 					}
 					wanted_str_arrays += " processing arrays."
-				} else {
-					wanted_str_arrays += ".";
-				}
 
-				wanted_str_arrays += "<br>These will consume <strong>" + round3(energy*amps*wanted_machines) + "</strong> eu/t and <strong>"+
+					wanted_str_arrays += "<br>These will consume <strong>" + round3(energy*amps*wanted_machines) + "</strong> eu/t and <strong>"+
 							 round3(input_per_sec*wanted_machines)+"</strong> items/s.";
 
-				if (wanted_arrays > 0) {
 					wanted_str_arrays += " In processing arrays, consumes <strong>"+round3(energy*amps*wanted_arrays*PA_amount)+"</strong> eu/t"+
 									" and <strong>"+round3(input_per_sec*wanted_arrays*PA_amount)+"</strong> items/s.";
 				}
@@ -302,16 +324,38 @@ onVersionChanged(function(version) {
 			var list = [];
 
 			for(let idx in r) {
-				list.push("<div class='col-lg-4 col-md-6'><div class='card card-body'>" + r[idx] + "</div></div>");
+				list.push($("<div class='col-lg-4 col-md-6'>").append(
+					$("<div class='card card-body'>").append(r[idx])
+				));
 			}
 
 			return $("<div class='row'>").append(list);
 		}
 
+		var chk1 = $("<div>").append([
+				$("<input type='checkbox' id='gt-overclock-batch' value='1'>").attr("checked",batch_mode).change(() => {
+					batch_mode = $("#gt-overclock-batch").is(":checked");
+					doCalc();
+				}),
+				"<label class='mb-0 ml-2' for='gt-overclock-batch'>Batch mode</label>"
+			]);
+		var chk2 = $("<div>").append([
+				$("<input type='checkbox' id='gt-overclock-uev-simulate' value='1'>").attr("checked",uev_simulate).change(() => {
+					uev_simulate = $("#gt-overclock-uev-simulate").is(":checked");
+					doCalc();
+				}),
+				"<label class='mb-0 ml-2' for='gt-overclock-uev-simulate'>Downtier UEV+ and 4x parallel</label>"
+			]);
+			
+
 		results.empty();
 		results.append(buildResults([
 			"<strong>Generic Results</strong><br>" + "<p>" + txt.join("<br>") + "</p>" + wanted_str,
-			"<strong>Processing Array Stats</strong><br>" + processing_array + wanted_str_arrays,
+			[
+				chk1, chk2,
+				"<strong>Processing Array Stats</strong><br>" + processing_array + wanted_str_arrays
+			],
+
 			"<strong>GT++ Stats</strong><br>" + gtplusplus
 		]));
 	}
