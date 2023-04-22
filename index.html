@@ -97,7 +97,7 @@
 		<div class="container">
 			<div class="card">
 				<div class="card-body">
-					<span class='version-title'>Version:</span>
+					<span class='version-title'>Modpack:</span>
 					<div class="btn-group btn-group-toggle" data-toggle="buttons">
 						<label class="btn btn-light active">
 							<input type="radio" name="version-selector" id="version-selector-it2" value="it2"> InfiTech 2
@@ -447,7 +447,11 @@
 										<label class="btn btn-light oc-gtnh" title="2 147 483 648 EU/t">
 											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-13" value="2147483648" data-voltage="MAX">MAX
 										</label>
+										<label class="btn btn-light" title="Custom...">
+											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-x" value="custom" data-voltage="custom">Custom (EU/t)
+										</label>
 									</div>
+									<input type="text" id="gt-overclock-target-custom" class="form-control align-top" value="512" style="width:120px; display:none;" />
 								</div>
 							</div>
 						</div>
@@ -474,9 +478,30 @@
 						</div>
 						<div class="card oc-gtnh">
 							<div class="card-header">
-								<center>GT++ Multiblock Settings</center>
+								<center>GT++ Multiblock Settings (Optional)</center>
 							</div>
 							<div class="card-body">
+								<div class="form-group">
+									<label for="gt-overclock-gtppmachine">Select GT++ Machine<br><small class="text-muted">Or fill in the fields below manually.<br>NOTE: Not all machines are listed. Unfortunately, some machines use weird parallel calculations which my code currently can't handle. For those, you'll need to do the math yourself, or try to trick my site by entering a weird parallel number manually.</small></label>
+									<select class="form-control" id="gt-overclock-gtppmachine">
+										<option disabled selected value="200,100,2">...</option>
+										<option value="250,90,6">[Centrifuge] Industrial Centrifuge (S: 250%, E: 90%, P: 6)</option>
+										<option value="500,100,4">[Bender] Industrial Material Press (S: 500%, E: 100%, P: 4)</option>
+										<option value="180,90,2">[Electrolyzer] Industrial Electrolyzer (S: 180%, E: 90%, P: 2)</option>
+										<option value="60,100,8">[Macerator] Maceration Stack (S: 60%, E: 100%, P: 8)</option>
+										<option value="200,75,4">[Wiremill] Wire Factory (S: 200%, E: 75%, P: 4)</option>
+										<option value="250,100,8">[Mixer] Industrial Mixing Machine (S: 250%, E: 100%, P: 8)</option>
+										<option value="400,75,4">[Sifter] Large Sifter (S: 400%, E: 75%, P: 4)</option>
+										<option value="150,80,8">[Thermal Centrifuge] Large Thermal Refinery (S: 150%, E: 80%, P: 8)</option>
+										<option value="400,100,4">[Washer] Ore Washing Plant (S: 400%, E: 100%, P: 4)</option>
+										<option value="250,100,4">[Extruder] Industrial Extrusion Machine (S: 250%, E: 100%, P: 4)</option>
+										<option value="250,80,2">[Multiple] Large Processing Factory (S: 250%, E: 80%, P: 2)</option>
+										<option value="200,100,2">[Assembler] Large Scale Auto-Assembler v1.01 (S: 200%, E: 100%, P: 2)</option>
+										<option value="500,75,16">[Packager] Amazon Warehousing Depot. (S: 500%, E: 75%, P: 16)</option>
+										<option value="200,75,4">[Cutter] Cutting Factory (S: 200%, E: 75%, P: 4)</option>
+										<option value="120,90,8">[Fluid Heater] Thermic Heating Device (S: 120%, E: 90%, P: 8)</option>
+									</select>
+								</div>
 								<div class="row">
 									<div class="form-group col-lg-4 col-md-6">
 										<label for="gt-overclock-faster">Percent faster<br><small class="text-muted">Enter the value exactly as the tooltip shows</small></label>

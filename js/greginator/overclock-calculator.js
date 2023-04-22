@@ -61,6 +61,28 @@ onVersionChanged(function(version) {
 		tier_names[getTier($(val).val())] = $(val).attr("data-voltage");
 	});
 
+	function getNameFromTier(tier) {
+		if (typeof tier_names[tier] == "undefined") {
+			return "*custom*";
+		}
+		return tier_names[tier];
+	}
+	
+	var custom_target_tid = null;
+	$("#gt-overclock-target-custom").on("input", function() {
+		if (custom_target_tid) {clearTimeout(custom_target_tid);}
+		custom_target_tid = setTimeout(function() {
+			doCalc();
+		},500);
+	});
+
+	$("#gt-overclock-gtppmachine").change(function() {
+		var values = $(this).val().split(",");
+		$("#gt-overclock-faster").val(values[0]);
+		$("#gt-overclock-eureduction").val(values[1]);
+		$("#gt-overclock-parallels").val(values[2]);
+	});
+
 	function doCalc() {
 		results.empty();
 
@@ -68,12 +90,28 @@ onVersionChanged(function(version) {
 		var amps = parseInt(amps_elem.val());
 		var target_elem = $("[name='gt-overclock-target']:checked",card);
 		var poc = $("[name='gt-overclock-perfectoc']:checked",card).val();
-		var target = parseInt(target_elem.val());
 		var output = parseFloat(output_elem.val());
 		var original_time = parseFloat(time_elem.val());
 		var input = parseFloat(input_elem.val());
 		var wanted = parseFloat(wanted_elem.val());
 
+		var target;
+		var target_voltage;
+		var custom_elem = $("#gt-overclock-target-custom");
+		custom_elem.removeClass("border-danger");
+		if (target_elem.val() == "custom") {
+			custom_elem.addClass("d-inline-block");
+			target = parseInt(custom_elem.val());
+			if (isNaN(target)) {
+				custom_elem.addClass("border-danger");
+				return false;
+			}
+			target_voltage = "*custom*";
+		} else {
+			custom_elem.removeClass("d-inline-block");
+			target = parseInt(target_elem.val());
+			target_voltage = target_elem.attr("data-voltage");
+		}
 		$("#gt-overclock-target-eut",card).text(target);		
 
 		if (isNaN(original_energy) || isNaN(amps) || isNaN(target) || isNaN(output) || isNaN(original_time) || isNaN(input)) {
@@ -170,7 +208,7 @@ onVersionChanged(function(version) {
 		}
 		processing_array = 
 		`<p>
-			${PA_amount}x <strong>${tier_names[target_tier]}</strong> machines in one PA</strong><br />
+			${PA_amount}x <strong>${getNameFromTier(target_tier)}</strong> machines in one PA</strong><br />
 			Energy consumption: <strong>${round3(energy*amps*PA_amount)}</strong><br />
 			Production: <strong>${output*PA_amount*tmp.paAmount}</strong> every <strong>${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}</strong>, <strong>${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.<br />
 			Consumption: <strong>${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.
@@ -189,7 +227,7 @@ onVersionChanged(function(version) {
 				var tmp = calcOC(prev_tier_current, tier, original_energy, original_time);
 				processing_array += 
 				`<p>
-					To fully use a(n) <strong>${tier_names[target_tier]}</strong> energy hatch, use ${PA_amount}x <strong>${tier_names[prev_tier_current]}</strong>.<br />
+					To fully use a(n) <strong>${getNameFromTier(target_tier)}</strong> energy hatch, use ${PA_amount}x <strong>${getNameFromTier(prev_tier_current)}</strong>.<br />
 					Energy consumption: <strong>${round3(energy_prev_tier*amps*PA_amount)}</strong><br />
 					Production: <strong>${output*PA_amount*tmp.paAmount}</strong> every <strong>${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}</strong>, <strong>${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.<br />
 					Consumption: <strong>${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.
@@ -216,7 +254,7 @@ onVersionChanged(function(version) {
 					wanted_str += " <small>(" + round3(wanted_machines) + ")</small>";
 				}
 
-				wanted_str += " <strong>" + target_elem.attr("data-voltage") + "</strong> machines to keep up";
+				wanted_str += " <strong>" + target_voltage + "</strong> machines to keep up";
 
 				var wanted_arrays = wanted_machines < PA_amount ? 0 : Math.ceil(wanted_machines/PA_amount);
 				if (wanted_arrays > 0) {
@@ -297,7 +335,7 @@ onVersionChanged(function(version) {
 						gtpp_wanted_str += " <small>(" + round3(wanted_machines) + ")</small>";
 					}
 
-					gtpp_wanted_str += " <strong>" + target_elem.attr("data-voltage") + "</strong> machines to keep up";
+					gtpp_wanted_str += " <strong>" + target_voltage + "</strong> machines to keep up";
 
 					gtpp_wanted_str += "<br>These will consume <strong>" + round3(totalEnergy*wanted_machines) + "</strong> eu/t and <strong>"+
 								 round3(input_per_sec*wanted_machines)+"</strong> items/s.";
