@@ -1,0 +1,1 @@
+{"n":"Mass Fabrication","recs":[{"en":true,"dur":3215,"eut":256,"iI":[],"iO":[],"fI":[],"fO":[{"a":1,"uN":"ic2.fluidUuMatter","lN":"UU-Matter"}]},{"en":true,"dur":803,"eut":256,"iI":[{"cfg":1,"a":0,"uN":"gt.integrated_circuit","lN":"Programmed Circuit"}],"iO":[],"fI":[{"a":1,"uN":"fluid.uuamplifier","lN":"UU Amplifier"}],"fO":[{"a":1,"uN":"ic2.fluidUuMatter","lN":"UU-Matter"}]}]}
