@@ -1510,6 +1510,11 @@ onVersionChanged(function(version) {
 	version_input.change(() => {
 		if (folderName != version_input.val()) {
 			folderName = version_input.val();
+			if (folderName == "2023-04-29_23-00-56") {
+				$(".warning-for-2-3-1").show();
+			} else {
+				$(".warning-for-2-3-1").hide();
+			}
 			resetMachineList();
 		}
 	}).click((e) => {
