@@ -3,6 +3,10 @@ global
 
 recipe conflict checker
 
+* make improved algorithm check conflicts that are not present in input buses (currently only checks actually selected recipes)
+	this is done by looping backwards through entire recipe list (unfortunately)
+	current checks could possibly be replaced by just one such backwards loop
+
 * (DONE) check save overwrite bug that might be overwriting the wrong save
 
 * (DONE) widescreen, show side by side
