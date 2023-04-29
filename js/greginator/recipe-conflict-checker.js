@@ -107,7 +107,8 @@ onVersionChanged(function(version) {
 	var loading_add = false;
 
 	var recipes_conflict_lookup = {};
-	var recipes_conflict_amount = 0;
+	var recipes_conflict_lookup_browse = {};
+	var recipes_conflict_browse_amount = 0;
 	var selected_recipe_browse = null;
 	var selected_recipe_browse_number = -1;
 	var selected_recipe_browse_conflict = null;
@@ -166,7 +167,7 @@ onVersionChanged(function(version) {
 
 		if (inp != "" || out != "") {
 			searched_recipes_list = current_recipes_list.filter(r => {
-				if (logicMode == "browse" && typeof recipes_conflict_lookup[r.recipe.idx] == "undefined") {
+				if (logicMode == "browse" && typeof recipes_conflict_lookup_browse[r.recipe.idx] == "undefined") {
 					return false;
 				}
 
@@ -191,7 +192,7 @@ onVersionChanged(function(version) {
 			searched_recipes_list = ([...current_recipes_list]);
 			if (logicMode == "browse") {
 				searched_recipes_list = searched_recipes_list.filter(r => {
-					return typeof recipes_conflict_lookup[r.recipe.idx] != "undefined";
+					return typeof recipes_conflict_lookup_browse[r.recipe.idx] != "undefined";
 				});
 			}
 			searched_recipes_list.sort((a,b) => Math.sign(a.recipe.idx - b.recipe.idx));
@@ -350,6 +351,9 @@ onVersionChanged(function(version) {
 						'</button>').click(()=>removeRecipe(recipe.idx, pnl)));
 		}
 
+		// DEBUG
+		pnl.prepend("<span class='position-absolute' style='z-index:10; font-size:12px; top:2px; right: 62px'>" + recipe.idx + "</span>");
+
 		pnl.prepend(
 			$('<button title="Send to Overclock Calculator" type="button" class="btn btn-sm btn-secondary cell-calculator-btn link-pointer position-absolute" '+
 				'style="z-index:10; font-size:12px; padding:0.1rem 0.25rem 0.1rem 0.25rem; top:2px; right: ' + (removebtn ? '42px' : '22px') + ';">O</button>')
@@ -392,6 +396,7 @@ onVersionChanged(function(version) {
 	}
 
 	function getRecipeFromIdx(recipeIdx) {
+		if (typeof recipeIdx == "string") {recipeIdx = parseInt(recipeIdx);}
 		if (recipeIdx < 0) {
 			return added_recipes_list.find(i => i.idx == recipeIdx);
 		}
@@ -411,13 +416,13 @@ onVersionChanged(function(version) {
 		}
 
 		if (logicMode == "browse") {
-			var keys = Object.keys(recipes_conflict_lookup);
+			var keys = Object.keys(recipes_conflict_lookup_browse);
 			selected_recipe_browse_number = -1;
 			selected_recipe_browse_conflict = null;
 			for(var i=0;i<keys.length;i++) {
 				if (parseInt(keys[i]) == recipe.idx) {
 					selected_recipe_browse_number = i;
-					selected_recipe_browse_conflict = recipes_conflict_lookup[keys[i]];
+					selected_recipe_browse_conflict = recipes_conflict_lookup_browse[keys[i]];
 					browse_firstTime = false;
 					break;
 				}
@@ -499,7 +504,7 @@ onVersionChanged(function(version) {
 
 		// next/prev buttons
 		function getAdjacent(num) {
-			var keys = Object.keys(recipes_conflict_lookup);
+			var keys = Object.keys(recipes_conflict_lookup_browse);
 
 			var prev = keys[num-1];
 			var next = keys[num+1];
@@ -522,7 +527,7 @@ onVersionChanged(function(version) {
 		}
 		var prevBtn = $("<div class='btn btn-light'>&lt; Prev</div>").click(prev);
 		var nextBtn = $("<div class='btn btn-light'>Next &gt;</div>").click(next);
-		var currentViewing = $("<span>").text("Viewing conflict: " + (selected_recipe_browse_number != -1 ? (selected_recipe_browse_number+1) : "-") + "/" + recipes_conflict_amount);
+		var currentViewing = $("<span>").text("Viewing conflict: " + (selected_recipe_browse_number != -1 ? (selected_recipe_browse_number+1) : "-") + "/" + recipes_conflict_browse_amount);
 		var prevNextContainer = $("<div class='d-flex flex-row' style='justify-content:space-between; align-items:center;'>").append([prevBtn,currentViewing,nextBtn]);
 		conflict_results.append(prevNextContainer);
 
@@ -687,18 +692,19 @@ onVersionChanged(function(version) {
 			}
 
 			/* 
-				allInputsGrouped
-				structure [
+				machines
+				structure:
+				[
 					{
-						allFluids: {} // all fluids in this machine
+						allRecipes: { // all recipes in this machine
+							[recipeIdx]: true
+						},
 						circuits: {
 							[circuitUID]: {
 								circuitName: "",
 								buses: [
 									{
-										allItems: {},
-										allRecipeIdx: {}
-										recipes: []
+										[recipeIdx]: true
 									}
 								]
 							}
@@ -708,7 +714,142 @@ onVersionChanged(function(version) {
 
 			*/
 
-			var allInputsGrouped = [{allFluids:{},circuits:{}}]
+			function createMachine() {
+				return {
+					allRecipes: {},
+					circuits: {}
+				};
+			}
+
+			function createCircuit(circuitName) {
+				return {
+					circuitName: circuitName,
+					buses: []
+				};
+			}
+
+			function putInNewCircuit(machine, recipe) {
+				let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
+				let circuitUID = getCircuitUID(circuit);
+
+				let c = createCircuit(circuit ? circuit.cfg : "none");
+				c.buses.push({[recipe.idx]: true});
+				machine.circuits[circuitUID] = c;
+			}
+
+			function putInNewMachine(recipe) {
+				let machine = createMachine();
+				machine.allRecipes[recipe.idx] = true;
+
+				putInNewCircuit(machine, recipe);
+
+				machines.push(machine);
+			}
+
+			var machines = [];
+
+			for(let i in added_recipes_list) {
+				let recipe = added_recipes_list[i];
+				let addedToMachine = false;
+				let circuit = recipe.iI.find(i => i.a == 0 && typeof i.cfg != "undefined");
+				let circuitUID = getCircuitUID(circuit);
+
+				let lookup = recipes_conflict_lookup[recipe.idx];
+				if (lookup) {
+
+					let addedToBus = false;
+					for(let m in machines) {
+						let machine = machines[m];
+
+						if (!Object.keys(machine.allRecipes).some(v => lookup.subConflicts[v] == true)) {
+							let allRecipes = machine.allRecipes;
+							let machineCircuit = machine.circuits[circuitUID];
+
+							if (machineCircuit) {
+								for(let b in machineCircuit.buses) {
+									let bus = machineCircuit.buses[b];
+
+									let conflicts = true;
+
+									if (!Object.keys(bus).some(v => lookup.subConflicts[v] == true)) {
+										for(let x in recipe.iI) {
+											let uid = getUID(recipe.iI[x]);
+											let conflictList = lookup.itemConflicts[uid];
+
+											if (!conflictList.some(v => bus[v])) {
+												conflicts = false;
+												break;
+											}
+										}
+
+										if (conflicts) {
+											for(let x in recipe.fI) {
+												let uid = getUID(recipe.fI[x]);
+												let conflictList = lookup.fluidConflicts[uid];
+
+												if (!conflictList.some(v => allRecipes[v])) {
+													conflicts = false;
+													break;
+												}
+											}
+										}
+									}
+
+									if (!conflicts) {
+										bus[recipe.idx] = true;
+										allRecipes[recipe.idx] = true;
+										addedToMachine = true;
+										addedToBus = true;
+										break;
+									}
+								}
+							} else {
+								// machine doesn't have a bus with that circuit, create it
+								let conflicts = true;
+								for(let x in recipe.fI) {
+									let uid = getUID(recipe.fI[x]);
+									let conflictList = lookup.fluidConflicts[uid];
+
+									if (!conflictList.some(v => allRecipes[v])) {
+										conflicts = false;
+										break;
+									}
+								}
+								if (!conflicts) {
+									putInNewCircuit(machine, recipe);
+									addedToMachine = true;
+									break;
+								}
+							}
+						} else {
+							// it can't be placed in the same machine, add it to new machine
+							addedToBus = false;
+							addedToMachine = true;
+							putInNewMachine(recipe);
+							break;
+						}
+
+						if (addedToBus || addedToMachine) {
+							break;
+						}
+					}
+				} else {
+					// has no conflicts, add it to the first available machine
+					if (machines.length > 0) {
+						if (machines[0].circuits[circuitUID]) {
+							machines[0].circuits[circuitUID][recipe.idx] = true;
+							machines[0].allRecipes[recipe.idx] = true;
+							addedToMachine = true;
+						}
+					}
+				}
+
+				if (!addedToMachine) {
+					putInNewMachine(recipe);
+				}
+			}
+
+			/*
 			for(let i in added_recipes_list) {
 				let recipe = added_recipes_list[i];
 				conflictsWith[recipe.idx] = {};
@@ -793,8 +934,9 @@ onVersionChanged(function(version) {
 					});
 				}
 			}
+			*/
 
-			//console.log("allInputsGrouped",allInputsGrouped);
+			//console.log("machines",machines);
 			//console.log("allConflicts",conflictsWith);
 			//console.log("recipes",recipes);
 
@@ -810,8 +952,8 @@ onVersionChanged(function(version) {
 			conflict_results.append(machinesList);
 
 
-			for(let i in allInputsGrouped) {
-				let machine = allInputsGrouped[i];
+			for(let i in machines) {
+				let machine = machines[i];
 
 				let machineTitle = $("<div class='p-2'>").text("Machine " + (1+parseInt(i)));
 				let machineCard = $("<div class='machine-card card card-body d-inline-block p-1'>").css({
@@ -857,8 +999,8 @@ onVersionChanged(function(version) {
 						busCont.append(busTitle);
 						busesCont.append(busCont);
 
-						for(let rIdx in bus.recipes) {
-							let recipe = bus.recipes[rIdx];
+						for(let rIdx in bus) {
+							let recipe = getRecipeFromIdx(rIdx);
 							if (recipe) {
 								machineRecipeCount++;
 								busCont.append(buildRecipePanel(recipe, false /*, conflictsWith[recipe.idx]*/));
@@ -875,21 +1017,9 @@ onVersionChanged(function(version) {
 			conflict_results.empty();
 			conflict_results.text("Calculating...");
 
-			function checkTotalConflicts(allInputs, ignoreRecipe) {
-				for(let i in recipes) {
-					let otherRecipe = recipes[i];
-
-					if (allInputsConflict(allInputs, otherRecipe, {[ignoreRecipe.idx]:true}, true)) {
-						//console.log({[ignoreRecipe.idx]:true},"CONFLICTS WITH", otherRecipe);
-						return true;
-					}
-				}
-
-				return false;
-			}
-
-			// allInputsGrouped - structure {[circuitNum] = [array of machines]}
-			var allInputsGrouped = {none:[]}
+			var allInputsGrouped = {none:[]};
+			console.log("added_recipes_list",added_recipes_list);
+			console.log("recipes_conflict_lookup",recipes_conflict_lookup);
 			for(let i in added_recipes_list) {
 				let recipe = added_recipes_list[i];
 
@@ -904,26 +1034,60 @@ onVersionChanged(function(version) {
 
 				if (group.length == 0) {
 					// no machines added yet, add current recipe to new machine
-					group.push(getAllInputs([recipe]));
+					group.push({
+						[recipe.idx]: true
+					});
 				} else {
-					let foundMachine = false;
-					let allInputsOne = getAllInputs([recipe]);
-					//console.log("-------------- CHECKING",recipe);
-					for(let iG = 0; iG < group.length; iG++) {
-						let allInputs = getAllInputsPlusOne(group[iG], allInputsOne);
+					let lookup = recipes_conflict_lookup[recipe.idx];
+					let added = false;
 
-						if (!checkTotalConflicts(allInputs, recipe)) {
-							//console.log("ADDED TO GROUP",iG);
-							// adding this recipe will not cause a conflict, add it to this machine
-							group[iG] = allInputs;
-							foundMachine = true;
-							break;
+					if (!lookup) {
+						// this recipe doesn't have conflicts at all, add it to the first machine
+						group[0][recipe.idx] = true;
+						added = true;
+					} else {
+						for(let m in group) {
+							let machine = group[m];
+							let conflicts = true;
+
+							if (!Object.keys(machine).some(v => lookup.subConflicts[v] == true)) {
+								for(let x in recipe.iI) {
+									let uid = getUID(recipe.iI[x]);
+									let conflictList = lookup.itemConflicts[uid];
+
+									if (!conflictList.some(v => machine[v])) {
+										conflicts = false;
+										break;
+									}
+								}
+
+								if (conflicts) {
+									for(let x in recipe.fI) {
+										let uid = getUID(recipe.fI[x]);
+										let conflictList = lookup.fluidConflicts[uid];
+
+										if (!conflictList.some(v => machine[v])) {
+											conflicts = false;
+											break;
+										}
+									}
+								}
+							}
+
+							if (!conflicts) {
+								// adding this recipe will not cause a conflict, add it to this machine
+								machine[recipe.idx] = true;
+								added = true;
+								break;
+							}
 						}
 					}
-					if (!foundMachine) {
-						//console.log("ADDED TO NEW GROUP");
-						// this recipe couldn't be added to any existing machine, add it to a new machine
-						group.push(allInputsOne);
+
+					if (!added) {
+						// this recipe couldn't be added to any existing group, add it to a new group
+						group.push({
+							[recipe.idx]: true
+						});
 					}
 				}
 			}
@@ -961,7 +1125,7 @@ onVersionChanged(function(version) {
 					machinesList.append(machineCont);
 
 					let recipeCount = 0;
-					for(let rIdx in machine.recipeIdx) {
+					for(let rIdx in machine) {
 						let recipe = getRecipeFromIdx(rIdx);
 						if (recipe) {
 							recipeCount++;
@@ -1286,6 +1450,7 @@ onVersionChanged(function(version) {
 			// build lookups
 			let itemConflicts = {};
 			let fluidConflicts = {};
+			let allConflicts = {};
 			for(let i in recipe.iI) {
 				let item = recipe.iI[i];
 				let uid = getUID(item);
@@ -1297,6 +1462,7 @@ onVersionChanged(function(version) {
 				}
 
 				itemConflicts[uid] = item_recipe_lookup[uid];
+				allConflicts[uid] = item_recipe_lookup[uid];
 			}
 			for(let i in recipe.fI) {
 				let fluid = recipe.fI[i];
@@ -1309,58 +1475,15 @@ onVersionChanged(function(version) {
 				}
 				
 				fluidConflicts[uid] = fluid_recipe_lookup[uid];
+				allConflicts[uid] = fluid_recipe_lookup[uid];
 			}
 			recipes_conflict_lookup[recipe.idx] = {
 				recipe: recipe,
 				itemConflicts: itemConflicts,
 				fluidConflicts: fluidConflicts,
+				allConflicts: allConflicts
 			}
 		}
-
-		/*
-		OTHER METHOD
-		function findRecipesWithInput(self, conflictsKey, tblOuterKey, tblInnerKey) {
-			let anyFound = false;
-			for(let idx in recipes_conflict_lookup) {
-				if (idx == self.idx) {continue;}
-				let lookups = recipes_conflict_lookup[idx];
-				if (typeof lookups[tblOuterKey] != "undefined") {
-					if (typeof lookups[tblOuterKey][tblInnerKey] != "undefined") {
-						if (typeof self[conflictsKey][tblInnerKey] == "undefined") {
-							self[conflictsKey][tblInnerKey] = {};
-						}
-						self[conflictsKey][tblInnerKey][idx] = true;
-						anyFound = true;
-					}
-				}
-			}
-			return anyFound;
-		}
-
-		// create conflict lookups
-		for(let idx in recipes_conflict_lookup) {
-			let lookups = recipes_conflict_lookup[idx];
-			let amountFound = 0;
-			let amountInputs = 0;
-			for(let tblInnerKey in lookups.iILookup) {
-				amountInputs++;
-				if (findRecipesWithInput(lookups, "itemConflicts", "iILookup", tblInnerKey)) {
-					amountFound++;
-				}
-			}
-			for(let tblInnerKey in lookups.fILookup) {
-				amountInputs++;
-				if (findRecipesWithInput(lookups, "fluidConflicts", "fILookup", tblInnerKey)) {
-					amountFound++;
-				}
-			}
-
-			if (amountFound < amountInputs) {
-				delete recipes_conflict_lookup[idx];
-				conflictless[idx] = {recipe:recipes[idx], lookups:lookups};
-			}
-		}
-		*/
 
 		function recipeFilter(recipe, otherRecipeIdx) {
 			if (otherRecipeIdx == recipe.idx) {
@@ -1409,38 +1532,80 @@ onVersionChanged(function(version) {
 			return true;
 		}
 
+		recipes_conflict_lookup_browse = {};
 		for(let idx in recipes_conflict_lookup) {
-			let conflict = recipes_conflict_lookup[idx];
+			let conflictOld = recipes_conflict_lookup[idx];
+			let conflict = {
+				itemConflicts: {},
+				fluidConflicts: {},
+				recipe: conflictOld.recipe
+			};
+
 			let amountFound = 0;
 			let amountInputs = 0;
 
-			for(let uid in conflict.itemConflicts) {
+			// detect if every fluid/item of another recipe is in this recipe
+			let subConflicts = {};
+			function initSubconflict(what,rIdx) {
+				if (!subConflicts[rIdx]) {subConflicts[rIdx] = {items:0,fluids:0};}
+			}
+
+			for(let uid in conflictOld.itemConflicts) {
 				amountInputs++;
-				conflict.itemConflicts[uid] = ([...conflict.itemConflicts[uid]]).filter(i => recipeFilter(conflict.recipe,i));
+				conflictOld.itemConflicts[uid] = ([...conflictOld.itemConflicts[uid]]).filter(i => conflict.recipe.idx != i);
+				conflict.itemConflicts[uid] = ([...conflictOld.itemConflicts[uid]]).filter(i => recipeFilter(conflict.recipe,i));
 				if (conflict.itemConflicts[uid].length > 0) {
 					amountFound++;
 				}
-			}
 
-			for(let uid in conflict.fluidConflicts) {
-				amountInputs++;
-				conflict.fluidConflicts[uid] = ([...conflict.fluidConflicts[uid]]).filter(i => recipeFilter(conflict.recipe,i));
-				if (conflict.fluidConflicts[uid].length > 0) {
-					amountFound++;
+				for(let ii in conflictOld.itemConflicts[uid]) {
+					let rIdx = conflictOld.itemConflicts[uid][ii];
+					let otherRecipe = getRecipeFromIdx(rIdx);
+					if (otherRecipe.iI.find(v => getUID(v) == uid && v.a > 0)) {
+						initSubconflict("items",rIdx);
+						subConflicts[rIdx].items++;
+					}
 				}
 			}
 
+			for(let uid in conflictOld.fluidConflicts) {
+				amountInputs++;
+				conflictOld.fluidConflicts[uid] = ([...conflictOld.fluidConflicts[uid]]).filter(i => conflict.recipe.idx != i);
+				conflict.fluidConflicts[uid] = ([...conflictOld.fluidConflicts[uid]]).filter(i => recipeFilter(conflict.recipe,i));
+				if (conflict.fluidConflicts[uid].length > 0) {
+					amountFound++;
+				}
+
+				for(let ii in conflictOld.fluidConflicts[uid]) {
+					let rIdx = conflictOld.fluidConflicts[uid][ii];
+					initSubconflict("fluids",rIdx);
+					subConflicts[rIdx].fluids++;
+				}
+			}
+
+			// detect if every fluid/item of another recipe is in this recipe
+			for(let rIdx in subConflicts) {
+				let otherRecipe = getRecipeFromIdx(rIdx);
+				if (subConflicts[rIdx].items == otherRecipe.iI.filter(v => v.a>0).length && subConflicts[rIdx].fluids == otherRecipe.fI.length) {
+					subConflicts[rIdx] = true;
+				} else {
+					delete subConflicts[rIdx];
+				}
+			}
+
+			conflictOld.subConflicts = subConflicts;
+
 			if (amountFound < amountInputs) {
 				conflictless[idx] = conflict;
-				delete recipes_conflict_lookup[idx];
+				recipes_conflict_lookup_browse[idx] = conflict;
 			}
 		}
 
-		recipes_conflict_amount = Object.keys(recipes_conflict_lookup).length;
+		recipes_conflict_browse_amount = Object.keys(recipes_conflict_lookup_browse).length;
 		/*
 		console.log("RECIPES_CONFLICT_LOOKUP",recipes_conflict_lookup);
 		console.log("CONFLICTLESS",conflictless);
-		console.log("CONFLICT AMOUNT",Object.keys(recipes_conflict_lookup).length);
+		console.log("CONFLICT AMOUNT",Object.keys(recipes_conflict_lookup_browse).length);
 		console.log("CONFLICTLESS AMOUNT",Object.keys(conflictless).length);
 		//*/
 	}
