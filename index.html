@@ -455,23 +455,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card oc-io">
 							<div class="card-header">
 								<center>Inputs/Outputs <small>(Optional)</small></center>
 							</div>
-							<div class="card-body">
-								<div class="row">
-									<div class="form-group col-lg-4 col-md-6">
-										<label for="gt-overclock-output">Amount of items/fluids produced:</label>
-										<input type="number" value="1" id="gt-overclock-output" class="form-control">
-									</div>
-									<div class="form-group col-lg-4 col-md-6">
-										<label for="gt-overclock-input">Amount of items/fluids consumed:</label>
-										<input type="number" value="1" id="gt-overclock-input" class="form-control">
-									</div>
-									<div class="form-group col-lg-4 col-md-6">
-										<label for="gt-overclock-wanted">Want X/sec:</label> <span style="float:right;"><input type="checkbox" id="gt-overclock-wanted-flip"> <label for="gt-overclock-wanted-flip"> 1/X sec</label></span>
-										<input type="number" value="" id="gt-overclock-wanted" class="form-control">
+							<div class="collapse">
+								<div class="card-body">
+									<div class="row">
+										<div class="form-group col-lg-4 col-md-6">
+											<label for="gt-overclock-output">Amount of items/fluids produced:</label>
+											<input type="number" value="1" id="gt-overclock-output" class="form-control">
+										</div>
+										<div class="form-group col-lg-4 col-md-6">
+											<label for="gt-overclock-input">Amount of items/fluids consumed:</label>
+											<input type="number" value="1" id="gt-overclock-input" class="form-control">
+										</div>
+										<div class="form-group col-lg-4 col-md-6">
+											<label for="gt-overclock-wanted">Want X/sec:</label> <span style="float:right;"><input type="checkbox" id="gt-overclock-wanted-flip"> <label for="gt-overclock-wanted-flip"> 1/X sec</label></span>
+											<input type="number" value="" id="gt-overclock-wanted" class="form-control">
+										</div>
 									</div>
 								</div>
 							</div>
@@ -480,48 +482,74 @@
 							<div class="card-header">
 								<center>GT++ Multiblock Settings (Optional)</center>
 							</div>
-							<div class="card-body">
-								<div class="form-group">
-									<label for="gt-overclock-gtppmachine">Select GT++ Machine<br><small class="text-muted">Or fill in the fields below manually.<br>NOTE: Not all machines are listed. Unfortunately, some machines use weird parallel calculations which my code currently can't handle. For those, you'll need to do the math yourself, or try to trick my site by entering a weird parallel number manually.</small></label>
-									<select class="form-control" id="gt-overclock-gtppmachine">
-										<option disabled selected value="200,100,2">...</option>
-										<option value="250,90,6">[Centrifuge] Industrial Centrifuge (S: 250%, E: 90%, P: 6)</option>
-										<option value="500,100,4">[Bender] Industrial Material Press (S: 500%, E: 100%, P: 4)</option>
-										<option value="180,90,2">[Electrolyzer] Industrial Electrolyzer (S: 180%, E: 90%, P: 2)</option>
-										<option value="60,100,8">[Macerator] Maceration Stack (S: 60%, E: 100%, P: 8)</option>
-										<option value="200,75,4">[Wiremill] Wire Factory (S: 200%, E: 75%, P: 4)</option>
-										<option value="250,100,8">[Mixer] Industrial Mixing Machine (S: 250%, E: 100%, P: 8)</option>
-										<option value="400,75,4">[Sifter] Large Sifter (S: 400%, E: 75%, P: 4)</option>
-										<option value="150,80,8">[Thermal Centrifuge] Large Thermal Refinery (S: 150%, E: 80%, P: 8)</option>
-										<option value="400,100,4">[Washer] Ore Washing Plant (S: 400%, E: 100%, P: 4)</option>
-										<option value="250,100,4">[Extruder] Industrial Extrusion Machine (S: 250%, E: 100%, P: 4)</option>
-										<option value="250,80,2">[Multiple] Large Processing Factory (S: 250%, E: 80%, P: 2)</option>
-										<option value="200,100,2">[Assembler] Large Scale Auto-Assembler v1.01 (S: 200%, E: 100%, P: 2)</option>
-										<option value="500,75,16">[Packager] Amazon Warehousing Depot. (S: 500%, E: 75%, P: 16)</option>
-										<option value="200,75,4">[Cutter] Cutting Factory (S: 200%, E: 75%, P: 4)</option>
-										<option value="120,90,8">[Fluid Heater] Thermic Heating Device (S: 120%, E: 90%, P: 8)</option>
-									</select>
-								</div>
-								<div class="row">
-									<div class="form-group col-lg-4 col-md-6">
-										<label for="gt-overclock-faster">Percent faster<br><small class="text-muted">Enter the value exactly as the tooltip shows</small></label>
-										<input type="number" value="" id="gt-overclock-faster" class="form-control">
+							<div class="collapse">
+								<div class="card-body">
+									<div class="form-group">
+										<label for="gt-overclock-gtppmachine">Select GT++ Machine<br><small class="text-muted">Or fill in the fields below manually.<br>NOTE: Not all machines are listed. Unfortunately, some machines use weird parallel calculations which my code currently can't handle. For those, you'll need to do the math yourself, or try to trick my site by entering a weird parallel number manually.</small></label>
+										<select class="form-control" id="gt-overclock-gtppmachine">
+											<option disabled selected value="200,100,2">...</option>
+											<option value="250,90,6">[Centrifuge] Industrial Centrifuge (S: 250%, E: 90%, P: 6)</option>
+											<option value="500,100,4">[Bender] Industrial Material Press (S: 500%, E: 100%, P: 4)</option>
+											<option value="180,90,2">[Electrolyzer] Industrial Electrolyzer (S: 180%, E: 90%, P: 2)</option>
+											<option value="60,100,8">[Macerator] Maceration Stack (S: 60%, E: 100%, P: 8)</option>
+											<option value="200,75,4">[Wiremill] Wire Factory (S: 200%, E: 75%, P: 4)</option>
+											<option value="250,100,8">[Mixer] Industrial Mixing Machine (S: 250%, E: 100%, P: 8)</option>
+											<option value="400,75,4">[Sifter] Large Sifter (S: 400%, E: 75%, P: 4)</option>
+											<option value="150,80,8">[Thermal Centrifuge] Large Thermal Refinery (S: 150%, E: 80%, P: 8)</option>
+											<option value="400,100,4">[Washer] Ore Washing Plant (S: 400%, E: 100%, P: 4)</option>
+											<option value="250,100,4">[Extruder] Industrial Extrusion Machine (S: 250%, E: 100%, P: 4)</option>
+											<option value="250,80,2">[Multiple] Large Processing Factory (S: 250%, E: 80%, P: 2)</option>
+											<option value="200,100,2">[Assembler] Large Scale Auto-Assembler v1.01 (S: 200%, E: 100%, P: 2)</option>
+											<option value="500,75,16">[Packager] Amazon Warehousing Depot. (S: 500%, E: 75%, P: 16)</option>
+											<option value="200,75,4">[Cutter] Cutting Factory (S: 200%, E: 75%, P: 4)</option>
+											<option value="120,90,8">[Fluid Heater] Thermic Heating Device (S: 120%, E: 90%, P: 8)</option>
+										</select>
 									</div>
-									<div class="form-group col-lg-4 col-md-6">
-										<label for="gt-overclock-eureduction">EU cost reduction<br><small class="text-muted">Enter the value exactly as the tooltip shows</small></label>
-										<input type="number" value="" id="gt-overclock-eureduction" class="form-control">
-									</div>
-									<div class="form-group col-lg-4 col-md-6">
-										<label for="gt-overclock-parallels">Nr of parallels per tier<br><br></label>
-										<input type="number" value="" id="gt-overclock-parallels" class="form-control">
+									<div class="row">
+										<div class="form-group col-lg-4 col-md-6">
+											<label for="gt-overclock-faster">Percent faster<br><small class="text-muted">Enter the value exactly as the tooltip shows</small></label>
+											<input type="number" value="" id="gt-overclock-faster" class="form-control">
+										</div>
+										<div class="form-group col-lg-4 col-md-6">
+											<label for="gt-overclock-eureduction">EU cost reduction<br><small class="text-muted">Enter the value exactly as the tooltip shows</small></label>
+											<input type="number" value="" id="gt-overclock-eureduction" class="form-control">
+										</div>
+										<div class="form-group col-lg-4 col-md-6">
+											<label for="gt-overclock-parallels">Nr of parallels per tier<br><br></label>
+											<input type="number" value="" id="gt-overclock-parallels" class="form-control">
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<p><small>Note: All processing array calculations assume they always contain the max number of machines (16 for infitech, 64 for gtnh).</small></p>
 						<div class="card">
 							<div class="card-header"><center>Results</center></div>
-							<div id="gt-overclock-results" class="card-body"></div>
+							<div class="card-body mb-0 pb-0">
+								<small>Note: All processing array calculations assume they always contain the max number of machines (16 for infitech, 64 for gtnh).</small>
+								<div>
+									<input type='checkbox' id='gt-overclock-batch' value='1' checked />
+									<label class='mb-0 ml-2' for='gt-overclock-batch'>Batch mode</label>
+								</div>
+								<div>
+									<input type='checkbox' id='gt-overclock-uev-simulate' value='1' checked />
+									<label class='mb-0 ml-2' for='gt-overclock-uev-simulate'>Downtier UEV+ and 4x parallel</label>
+								</div>
+								<div id="gt-overclock-info"></div>
+							</div>
+							<table id="gt-overclock-results" class="table table-borderless table-striped">
+								<thead>
+									<tr>
+										<th>Machine</th>
+										<th>Nr of OC</th>
+										<th>EU/t</th>
+										<th>Parallels</th>
+										<th>Production</th>
+										<th>Consumption</th>
+										<th id="gt-overclock-wanted-th" style="display:none;">Machines needed</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
 						</div>
 					</div>
 				</div>

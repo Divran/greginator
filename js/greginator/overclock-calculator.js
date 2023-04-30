@@ -8,12 +8,18 @@ onVersionChanged(function(version) {
 		card.show();
 	}
 
-	var header = $( "> .card-header", card );
-	header.addClass( "link-pointer" );
-	var collapse = $( ".collapse", card );
+	function addClickToHeader(crd) {
+		var header = $( "> .card-header", crd );
+		header.addClass( "link-pointer" );
+		var collapse = $( "> .collapse", crd );
 
-	header.off("click");
-	header.on("click",function() {collapse.collapse("toggle");});
+		header.off("click");
+		header.on("click",function() {collapse.collapse("toggle");});
+	}
+
+	addClickToHeader(card);
+	addClickToHeader($(".oc-gtnh", card));
+	addClickToHeader($(".oc-io", card));
 
 	var energy_elem = $("#gt-overclock-energy",card);
 	var amps_elem = $("#gt-overclock-amps",card);
@@ -22,14 +28,22 @@ onVersionChanged(function(version) {
 	var output_elem = $("#gt-overclock-output",card);
 	var input_elem = $("#gt-overclock-input",card);
 	var amps_buttons = $("[name='gt-overclock-amps']",card);
-	var results_elem = $("#gt-overclock-results",card);
 	var time_elem = $("#gt-overclock-time",card);
 	var time_check = $("#gt-overclock-time-flip",card);
-	var results = $("#gt-overclock-results",card);
+	var results = $("#gt-overclock-results > tbody",card);
 	var wanted_elem = $("#gt-overclock-wanted",card);
 	var wanted_check = $("#gt-overclock-wanted-flip",card);
 	var batch_mode = true;
 	var uev_simulate = true;
+
+	$("#gt-overclock-batch").change(() => {
+		batch_mode = $("#gt-overclock-batch").is(":checked");
+		doCalc();
+	});
+	$("#gt-overclock-uev-simulate").change(() => {
+		uev_simulate = $("#gt-overclock-uev-simulate").is(":checked");
+		doCalc();
+	});
 
 	$("#gt-overclock-target-eut",card).click(() => {
 		var that = $("#gt-overclock-target-eut",card)
@@ -81,10 +95,38 @@ onVersionChanged(function(version) {
 		$("#gt-overclock-faster").val(values[0]);
 		$("#gt-overclock-eureduction").val(values[1]);
 		$("#gt-overclock-parallels").val(values[2]);
+		doCalc();
 	});
 
 	function doCalc() {
-		results.empty();
+		$("#gt-overclock-info").empty();
+
+		var results_list = [];
+		function drawResults() {
+			var columns = $("#gt-overclock-results > thead > tr > th").filter((i,v) => $(v).css("display") != "none").length;
+			var tr_list = [];
+
+			for(let row=0;row<results_list.length;row++) {
+				let cols = results_list[row];
+
+				if (cols.length > 0) {
+					let tr = $("<tr>");
+					tr_list.push(tr);
+
+					for(let col=0;col<Math.min(cols.length,columns);col++) {
+						let text = cols[col];
+						let td = $("<td>").append(text);
+						if (col == cols.length && col.length < columns) {
+							td.attr("colspan", columns - col);
+						}
+						tr.append(td);
+					}
+				}
+			}
+
+			results.empty();
+			results.append(tr_list);
+		}
 
 		var original_energy = parseInt(energy_elem.val());
 		var amps = parseInt(amps_elem.val());
@@ -115,7 +157,8 @@ onVersionChanged(function(version) {
 		$("#gt-overclock-target-eut",card).text(target);		
 
 		if (isNaN(original_energy) || isNaN(amps) || isNaN(target) || isNaN(output) || isNaN(original_time) || isNaN(input)) {
-			results.text("One or more of your inputs is an invalid number.");
+			results_list.push(["One or more of your inputs is an invalid number."]);
+			drawResults();
 			return;
 		}
 
@@ -123,7 +166,8 @@ onVersionChanged(function(version) {
 		var target_tier = getTier(target);
 
 		if (target_tier < tier) {
-			results.text("Your target tier is too low.");
+			results_list.push(["Your target tier is too low."]);
+			drawResults();
 			return;
 		}
 
@@ -190,29 +234,44 @@ onVersionChanged(function(version) {
 		function round3(n) {return Math.round(n*1000)/1000;}
 		function round6(n) {return Math.round(n*1000000)/1000000;}
 
-		var amps_txt = "";
-		if (amps > 1) {
-			amps_txt = " at " + amps + " amps for a total of <strong>" + (energy * amps) + "</strong> eu/t";
-		}
-		var txt = [];
-		txt.push("Overclocked: <strong>" + overclocks + "</strong> times.");
-		txt.push("Energy consumption: <strong>" + energy + "</strong> eu/t" + amps_txt+".");
-		txt.push("Production: <strong>" + output + "</strong> every <strong>" + (time >= 20 ? round3(time/20) + " sec" : time + " ticks") + "</strong> " + 
-			"for a total of <strong>" + round3(output_per_sec) + "</strong> per second." );
-		txt.push("Consumption: <strong>" + round3(input_per_sec) + "</strong> per second.");
 
-		var processing_array = "";
+		var wanted_singles = 1;
+		var wanted_arrays = 1;
+		if (!isNaN(wanted)) {
+			$("#gt-overclock-wanted-th").show();
+			if (wanted_check.is(":checked")) {
+				wanted = 1/wanted;
+			}
+
+			wanted_singles = wanted/output_per_sec;
+			wanted_arrays = wanted_singles < PA_amount ? 0 : Math.ceil(wanted_singles/PA_amount);
+		} else {
+			$("#gt-overclock-wanted-th").hide();
+		}
+
+		results_list.push([
+			"Singleblock",
+			""+overclocks,
+			(energy * amps).toLocaleString() + " eu/t",
+			1,
+			`${output} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec)}/s`,
+			`${round3(input_per_sec)}/s`,
+			Math.ceil(wanted_singles) + " <small>(" + round3(wanted_singles) + ")</small>"
+		]);
 
 		if (tmp.oneticking) {
-			processing_array = "<span class='text-muted mb-2'>1-ticking detected! Enable batch mode!</span>";
+			$("#gt-overclock-info").append("<span class='text-muted mb-2'>1-ticking detected! Enable batch mode!</span>");
 		}
-		processing_array = 
-		`<p>
-			${PA_amount}x <strong>${getNameFromTier(target_tier)}</strong> machines in one PA</strong><br />
-			Energy consumption: <strong>${round3(energy*amps*PA_amount)}</strong><br />
-			Production: <strong>${output*PA_amount*tmp.paAmount}</strong> every <strong>${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}</strong>, <strong>${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.<br />
-			Consumption: <strong>${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.
-		</p>`;
+
+		results_list.push([
+		 	`${PA_amount}x ${getNameFromTier(target_tier)} PA`,
+			""+tmp.paOverclocks,
+			round3(energy*amps*PA_amount).toLocaleString() + " eu/t",
+			PA_amount*tmp.paAmount,
+			`${output*PA_amount*tmp.paAmount} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
+			`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
+			Math.ceil(wanted_arrays) + " <small>(" + round3(wanted_arrays) + ")</small>"
+		]);
 
 		// check how many can fit in PA
 		if (target_tier > tier + 1) {
@@ -225,54 +284,19 @@ onVersionChanged(function(version) {
 
 			if ((energy_prev_tier*amps*PA_amount) <= getVoltageOfTier(target_tier)) {
 				var tmp = calcOC(prev_tier_current, tier, original_energy, original_time);
-				processing_array += 
-				`<p>
-					To fully use a(n) <strong>${getNameFromTier(target_tier)}</strong> energy hatch, use ${PA_amount}x <strong>${getNameFromTier(prev_tier_current)}</strong>.<br />
-					Energy consumption: <strong>${round3(energy_prev_tier*amps*PA_amount)}</strong><br />
-					Production: <strong>${output*PA_amount*tmp.paAmount}</strong> every <strong>${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}</strong>, <strong>${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.<br />
-					Consumption: <strong>${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}</strong>/s.
-				</p>`;
+
+				var wanted_arrays2 = wanted/(((input/(tmp.paTime/20))*PA_amount*tmp.paAmount));
+
+				results_list.push([
+					`${PA_amount}x ${getNameFromTier(prev_tier_current)} PA`,
+					""+tmp.paOverclocks,
+					round3(energy_prev_tier*amps*PA_amount).toLocaleString() + " eu/t",
+					PA_amount*tmp.paAmount,
+					`${output*PA_amount*tmp.paAmount} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
+					`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
+					wanted_arrays2
+				]);
 			}
-		}
-
-
-		var wanted_str = "";
-		var wanted_str_arrays = "";
-		if (!isNaN(wanted)) {
-			if (wanted_check.is(":checked")) {
-				wanted = 1/wanted;
-			}
-
-			if (wanted < output_per_sec) {
-				wanted_str += "A single machine is enough to keep up with " + wanted + "/s.";
-			} else {
-				var wanted_machines = wanted/output_per_sec;
-				wanted_str += "To produce <strong>" + round6(wanted) + "</strong> items/s, ";
-				wanted_str += "you need <strong>" + Math.ceil(wanted_machines) + "</strong>";
-
-				if (round3(wanted_machines) != Math.ceil(wanted_machines)) {
-					wanted_str += " <small>(" + round3(wanted_machines) + ")</small>";
-				}
-
-				wanted_str += " <strong>" + target_voltage + "</strong> machines to keep up";
-
-				var wanted_arrays = wanted_machines < PA_amount ? 0 : Math.ceil(wanted_machines/PA_amount);
-				if (wanted_arrays > 0) {
-					wanted_str_arrays += "To produce <strong>" + round6(wanted) + "</strong> items/s, you will need " + Math.ceil(wanted_machines/PA_amount) + "</strong>";
-					if (round3(wanted_machines/PA_amount) != Math.ceil(wanted_machines/PA_amount)) {
-						wanted_str += " <small>("+round3(wanted_machines/PA_amount)+")</small>";
-					}
-					wanted_str_arrays += " processing arrays."
-
-					wanted_str_arrays += "<br>These will consume <strong>" + round3(energy*amps*wanted_machines) + "</strong> eu/t and <strong>"+
-							 round3(input_per_sec*wanted_machines)+"</strong> items/s.";
-
-					wanted_str_arrays += " In processing arrays, consumes <strong>"+round3(energy*amps*wanted_arrays*PA_amount)+"</strong> eu/t"+
-									" and <strong>"+round3(input_per_sec*wanted_arrays*PA_amount)+"</strong> items/s.";
-				}
-			}
-
-			wanted_str = "<hr /><p>"+wanted_str+"</p>";
 		}
 
 		// GT++
@@ -298,7 +322,6 @@ onVersionChanged(function(version) {
 				totalEnergy += energy;
 			}
 
-
 			var time_bonus_int = parseInt(time_bonus_int);
 			if (!isNaN(time_bonus_int) && time_bonus_int != 0) {
 				time_bonus_int = Math.max(-99,time_bonus_int);
@@ -322,80 +345,30 @@ onVersionChanged(function(version) {
 			var output_per_sec = (output*parallelRecipes)/(time/20);
 			var input_per_sec = (input*parallelRecipes)/(time/20);
 
-			var gtpp_wanted_str = "";
+			var wanted_gtpp = 1;
 			if (!isNaN(wanted)) {
-				if (wanted < output_per_sec) {
-					gtpp_wanted_str += "A single machine is enough to keep up with " + wanted + "/s.";
-				} else {
-					var wanted_machines = wanted/output_per_sec;
-					gtpp_wanted_str += "To produce <strong>" + round6(wanted) + "</strong> items/s, ";
-					gtpp_wanted_str += "you need <strong>" + Math.ceil(wanted_machines) + "</strong>";
-
-					if (round3(wanted_machines) != Math.ceil(wanted_machines)) {
-						gtpp_wanted_str += " <small>(" + round3(wanted_machines) + ")</small>";
-					}
-
-					gtpp_wanted_str += " <strong>" + target_voltage + "</strong> machines to keep up";
-
-					gtpp_wanted_str += "<br>These will consume <strong>" + round3(totalEnergy*wanted_machines) + "</strong> eu/t and <strong>"+
-								 round3(input_per_sec*wanted_machines)+"</strong> items/s.";
-				}
-				gtpp_wanted_str = "<hr /><p>" + gtpp_wanted_str + "</p>";
+				wanted_gtpp = wanted/output_per_sec;
 			}
 
-			gtplusplus = "<p>"+([
-				"Overclocked: <strong>" + overclocks + "</strong> times.",
-				"Energy consumption: <strong>" + totalEnergy + "</strong> eu/t",
-				"Parallels: <strong>" + parallelRecipes + "</strong>",
-				"Production: <strong>" + (output*parallelRecipes) + "</strong> every <strong>" + (time >= 20 ? round3(time/20) + " sec" : time + " ticks") + "</strong> " + 
-					"for a total of <strong>" + round3(output_per_sec) + "</strong> per second.",
-				"Consumption: <strong>" + round3(input_per_sec) + "</strong> per second."
-			]).join("<br>")+"</p>";
+			if (batch_mode) {
+				parallelRecipes *= 128;
+				time *= 128;
+			}
 
-			gtplusplus += gtpp_wanted_str;
-
+			results_list.push([
+				getNameFromTier(target_tier) + " GT++",
+				""+overclocks,
+				round3(totalEnergy).toLocaleString() + " eu/t",
+				parallelRecipes,
+				`${output*parallelRecipes} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec)}/s`,
+				`${round3(input_per_sec)}/s`,
+				1
+			]);
 		} else if (time_bonus.val() != "" || energy_bonus.val() != "" || parallels.val() != "") {
-			gtplusplus = "Please fill in all GT++ related fields."
+			results_list.push(["Unable to calculate GT++, please fill in all GT++ related fields"]);
 		}
 
-		function buildResults(r) {
-			var list = [];
-
-			for(let idx in r) {
-				list.push($("<div class='col-lg-4 col-md-6'>").append(
-					$("<div class='card card-body'>").append(r[idx])
-				));
-			}
-
-			return $("<div class='row'>").append(list);
-		}
-
-		var chk1 = $("<div>").append([
-				$("<input type='checkbox' id='gt-overclock-batch' value='1'>").attr("checked",batch_mode).change(() => {
-					batch_mode = $("#gt-overclock-batch").is(":checked");
-					doCalc();
-				}),
-				"<label class='mb-0 ml-2' for='gt-overclock-batch'>Batch mode</label>"
-			]);
-		var chk2 = $("<div>").append([
-				$("<input type='checkbox' id='gt-overclock-uev-simulate' value='1'>").attr("checked",uev_simulate).change(() => {
-					uev_simulate = $("#gt-overclock-uev-simulate").is(":checked");
-					doCalc();
-				}),
-				"<label class='mb-0 ml-2' for='gt-overclock-uev-simulate'>Downtier UEV+ and 4x parallel</label>"
-			]);
-			
-
-		results.empty();
-		results.append(buildResults([
-			"<strong>Generic Results</strong><br>" + "<p>" + txt.join("<br>") + "</p>" + wanted_str,
-			[
-				chk1, chk2,
-				"<strong>Processing Array Stats</strong><br>" + processing_array + wanted_str_arrays
-			],
-
-			"<strong>GT++ Stats</strong><br>" + gtplusplus
-		]));
+		drawResults();
 	}
 
 	$([
