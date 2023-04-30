@@ -251,12 +251,12 @@ onVersionChanged(function(version) {
 
 		results_list.push([
 			"Singleblock",
-			""+overclocks,
+			overclocks,
 			(energy * amps).toLocaleString() + " eu/t",
 			1,
-			`${output} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec)}/s`,
-			`${round3(input_per_sec)}/s`,
-			Math.ceil(wanted_singles) + " <small>(" + round3(wanted_singles) + ")</small>"
+			`${output} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec).toLocaleString()}/s`,
+			`${round3(input_per_sec).toLocaleString()}/s`,
+			Math.ceil(wanted_singles) + ((Math.ceil(wanted_singles) != wanted_singles) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_singles) + ")</small>" : "")
 		]);
 
 		if (tmp.oneticking) {
@@ -265,12 +265,12 @@ onVersionChanged(function(version) {
 
 		results_list.push([
 		 	`${PA_amount}x ${getNameFromTier(target_tier)} PA`,
-			""+tmp.paOverclocks,
+			tmp.paOverclocks,
 			round3(energy*amps*PA_amount).toLocaleString() + " eu/t",
-			PA_amount*tmp.paAmount,
-			`${output*PA_amount*tmp.paAmount} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
-			`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
-			Math.ceil(wanted_arrays) + " <small>(" + round3(wanted_arrays) + ")</small>"
+			(PA_amount*tmp.paAmount).toLocaleString(),
+			`${(output*PA_amount*tmp.paAmount).toLocaleString()} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
+			`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
+			Math.ceil(wanted_arrays) + ((Math.ceil(wanted_arrays) != wanted_arrays) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_arrays) + ")</small>" : "")
 		]);
 
 		// check how many can fit in PA
@@ -289,12 +289,12 @@ onVersionChanged(function(version) {
 
 				results_list.push([
 					`${PA_amount}x ${getNameFromTier(prev_tier_current)} PA`,
-					""+tmp.paOverclocks,
+					""+tmp.paOverclocks.toLocaleString(),
 					round3(energy_prev_tier*amps*PA_amount).toLocaleString() + " eu/t",
-					PA_amount*tmp.paAmount,
-					`${output*PA_amount*tmp.paAmount} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
-					`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount)}/s`,
-					wanted_arrays2
+					(PA_amount*tmp.paAmount).toLocaleString(),
+					`${(output*PA_amount*tmp.paAmount).toLocaleString()} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
+					`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
+					Math.ceil(wanted_arrays2) + ((Math.ceil(wanted_arrays2) != wanted_arrays2) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_arrays2) + ")</small>": "")
 				]);
 			}
 		}
@@ -359,10 +359,10 @@ onVersionChanged(function(version) {
 				getNameFromTier(target_tier) + " GT++",
 				""+overclocks,
 				round3(totalEnergy).toLocaleString() + " eu/t",
-				parallelRecipes,
-				`${output*parallelRecipes} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec)}/s`,
-				`${round3(input_per_sec)}/s`,
-				1
+				parallelRecipes.toLocaleString(),
+				`${(output*parallelRecipes).toLocaleString()} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec).toLocaleString()}/s`,
+				`${round3(input_per_sec).toLocaleString()}/s`,
+				Math.ceil(wanted_gtpp) + ((Math.ceil(wanted_gtpp) != wanted_gtpp) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_gtpp) + ")</small>" : "")
 			]);
 		} else if (time_bonus.val() != "" || energy_bonus.val() != "" || parallels.val() != "") {
 			results_list.push(["Unable to calculate GT++, please fill in all GT++ related fields"]);
