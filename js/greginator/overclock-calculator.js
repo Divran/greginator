@@ -189,10 +189,10 @@ onVersionChanged(function(version) {
 		function calcOC(_target_tier, _tier, _energy, _time) {
 			var overclocks = _target_tier - _tier;
 			var speed = Math.pow(SPEED_PER_TIER,overclocks);
-			var time = _time / speed;
+			var time = Math.floor(_time / speed);
 
 			var paTime = time;
-			var paAmount = 1;
+			var paAmount = PA_amount;
 			var paOverclocks = overclocks;
 			var paSpeed = speed;
 
@@ -200,7 +200,7 @@ onVersionChanged(function(version) {
 				paAmount *= 4;
 				paOverclocks = (_target_tier-1) - _tier;
 				paSpeed = Math.pow(SPEED_PER_TIER, paOverclocks);
-				paTime = _time / paSpeed;
+				paTime = Math.floor(_time / paSpeed);
 			}
 
 			var paEnergy = _energy * Math.pow(ENERGY_PER_TIER, paOverclocks);
@@ -213,10 +213,10 @@ onVersionChanged(function(version) {
 			return {
 				overclocks: overclocks,
 				energy: _energy * Math.pow(ENERGY_PER_TIER,overclocks),
-				time: Math.max(1,Math.floor(time)),
+				time: Math.max(1,time),
 
 				paOverclocks: paOverclocks,
-				paTime: Math.max(1,Math.floor(paTime)),
+				paTime: Math.max(1,paTime),
 				paEnergy: paEnergy,
 				paAmount: paAmount,
 				oneticking: time < 1
@@ -267,9 +267,9 @@ onVersionChanged(function(version) {
 		 	`${PA_amount}x ${getNameFromTier(target_tier)} PA`,
 			tmp.paOverclocks,
 			round3(energy*amps*PA_amount).toLocaleString() + " eu/t",
-			(PA_amount*tmp.paAmount).toLocaleString(),
-			`${(output*PA_amount*tmp.paAmount).toLocaleString()} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
-			`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
+			(tmp.paAmount).toLocaleString(),
+			`${(output*tmp.paAmount).toLocaleString()} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : tmp.paTime + " ticks")}, ${round3((output/(tmp.paTime/20))*tmp.paAmount).toLocaleString()}/s`,
+			`${round3((input/(tmp.paTime/20))*tmp.paAmount).toLocaleString()}/s`,
 			Math.ceil(wanted_arrays) + ((Math.ceil(wanted_arrays) != wanted_arrays) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_arrays) + ")</small>" : "")
 		]);
 
@@ -283,17 +283,17 @@ onVersionChanged(function(version) {
 			}
 
 			if ((energy_prev_tier*amps*PA_amount) <= getVoltageOfTier(target_tier)) {
-				var tmp = calcOC(prev_tier_current, tier, original_energy, original_time);
+				var tmp2 = calcOC(prev_tier_current, tier, original_energy, original_time);
 
-				var wanted_arrays2 = wanted/(((input/(tmp.paTime/20))*PA_amount*tmp.paAmount));
+				var wanted_arrays2 = wanted/(((input/(tmp2.paTime/20))*tmp2.paAmount));
 
 				results_list.push([
 					`${PA_amount}x ${getNameFromTier(prev_tier_current)} PA`,
-					""+tmp.paOverclocks.toLocaleString(),
+					""+tmp2.paOverclocks.toLocaleString(),
 					round3(energy_prev_tier*amps*PA_amount).toLocaleString() + " eu/t",
-					(PA_amount*tmp.paAmount).toLocaleString(),
-					`${(output*PA_amount*tmp.paAmount).toLocaleString()} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : time + " ticks")}, ${round3((output/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
-					`${round3((input/(tmp.paTime/20))*PA_amount*tmp.paAmount).toLocaleString()}/s`,
+					(tmp2.paAmount).toLocaleString(),
+					`${(output*tmp2.paAmount).toLocaleString()} per ${(tmp2.paTime >= 20 ? round3(tmp2.paTime/20) + " sec" : tmp2.paTime + " ticks")}, ${round3((output/(tmp2.paTime/20))*tmp2.paAmount).toLocaleString()}/s`,
+					`${round3((input/(tmp2.paTime/20))*tmp2.paAmount).toLocaleString()}/s`,
 					Math.ceil(wanted_arrays2) + ((Math.ceil(wanted_arrays2) != wanted_arrays2) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_arrays2) + ")</small>": "")
 				]);
 			}
