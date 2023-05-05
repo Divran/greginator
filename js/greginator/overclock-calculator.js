@@ -189,7 +189,7 @@ onVersionChanged(function(version) {
 		function calcOC(_target_tier, _tier, _energy, _time) {
 			var overclocks = _target_tier - _tier;
 			var speed = Math.pow(SPEED_PER_TIER,overclocks);
-			var time = Math.floor(_time / speed);
+			var time = _time / speed;
 
 			var paTime = time;
 			var paAmount = PA_amount;
@@ -200,7 +200,7 @@ onVersionChanged(function(version) {
 				paAmount *= 4;
 				paOverclocks = (_target_tier-1) - _tier;
 				paSpeed = Math.pow(SPEED_PER_TIER, paOverclocks);
-				paTime = Math.floor(_time / paSpeed);
+				paTime = _time / paSpeed;
 			}
 
 			var paEnergy = _energy * Math.pow(ENERGY_PER_TIER, paOverclocks);
@@ -213,10 +213,10 @@ onVersionChanged(function(version) {
 			return {
 				overclocks: overclocks,
 				energy: _energy * Math.pow(ENERGY_PER_TIER,overclocks),
-				time: Math.max(1,time),
+				time: Math.max(1,Math.floor(time)),
 
 				paOverclocks: paOverclocks,
-				paTime: Math.max(1,paTime),
+				paTime: Math.max(1,Math.floor(paTime)),
 				paEnergy: paEnergy,
 				paAmount: paAmount,
 				oneticking: time < 1
