@@ -33,8 +33,8 @@ onVersionChanged(function(version) {
 	var results = $("#gt-overclock-results > tbody",card);
 	var wanted_elem = $("#gt-overclock-wanted",card);
 	var wanted_check = $("#gt-overclock-wanted-flip",card);
-	var batch_mode = true;
-	var uev_simulate = true;
+	var batch_mode = $("#gt-overclock-batch").is(":checked");
+	var uev_simulate = $("#gt-overclock-uev-simulate").is(":checked");
 
 	$("#gt-overclock-batch").change(() => {
 		batch_mode = $("#gt-overclock-batch").is(":checked");
@@ -333,7 +333,7 @@ onVersionChanged(function(version) {
 			totalEnergy = Math.ceil(totalEnergy);
 			var overclocks = 0;
 			var speed = 0;
-            while (totalEnergy <= getVoltageOfTier(target_tier - 1)) {
+            while (totalEnergy < getVoltageOfTier(target_tier - 1)) {
             	totalEnergy *= ENERGY_PER_TIER;
             	//speed += SPEED_PER_TIER;
             	time = Math.floor(time / SPEED_PER_TIER);
