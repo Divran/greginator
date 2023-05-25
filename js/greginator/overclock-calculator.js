@@ -109,7 +109,7 @@ onVersionChanged(function(version) {
 			doVoltAmpCalc();
 		},500);
 	});
-	$("#gt-overclock-target-amps-2",card).change(doVoltAmpCalc);
+	$("#gt-overclock-target-amps-2",card).on("input",doVoltAmpCalc);
 
 	// end of voltage/amp calc
 
