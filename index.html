@@ -357,6 +357,33 @@
 				</div>
 				<div class="collapse">
 					<div class="card-body">
+						<div class="card oc-converter">
+							<div class="card-header">
+								<center>Voltage/Amp Converter</center>
+							</div>
+							<div class="collapse">
+								<div class="card-body">
+
+									<label class="d-block">How many amps of: <small class="badge badge-secondary link-pointer" title="Click to copy" id="gt-overclock-target-calc-1-eut"></small></label>
+									<div class="btn-group btn-group-toggle flex-wrap voltage-buttons" data-id="gt-overclock-target-calc-1" data-toggle="buttons">
+									</div>
+									<input type="text" id="gt-overclock-target-custom-1" class="form-control align-top" value="512" style="width:120px; display:none;" />
+
+									<label class="d-block">is <input type="number" class="form-control d-inline-block" style="max-width:100px; height:26px;" value="1" id="gt-overclock-target-amps-2" /> amps of: 
+										<small class="badge badge-secondary link-pointer" title="Click to copy" id="gt-overclock-target-calc-2-eut"></small></label>
+									<div class="btn-group btn-group-toggle flex-wrap voltage-buttons" data-id="gt-overclock-target-calc-2" data-toggle="buttons">
+									</div>
+									<input type="text" id="gt-overclock-target-custom-2" class="form-control align-top" value="512" style="width:120px; display:none;" />
+
+									<p>
+										Result:<br />
+										<span id="gt-overclock-target-calc-result">
+
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
 						<div class="card">
 							<div class="card-header">
 								<center>EU Settings</center>
@@ -404,52 +431,7 @@
 								</div>
 								<div class="form-group">
 									<label class="d-block">Energy tier of machine: <small class="badge badge-secondary link-pointer" title="Click to copy" id="gt-overclock-target-eut"></small></label>
-									<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
-										<label class="btn btn-light" title="32 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-0" value="32" data-voltage="LV">LV
-										</label>
-										<label class="btn btn-light" title="128 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-1" value="128" data-voltage="MV">MV
-										</label>
-										<label class="btn btn-light" title="512 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-2" value="512" data-voltage="HV" checked>HV
-										</label>
-										<label class="btn btn-light" title="2048 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-3" value="2048" data-voltage="EV">EV
-										</label>
-										<label class="btn btn-light" title="8192 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-4" value="8192" data-voltage="IV">IV
-										</label>
-										<label class="btn btn-light" title="32 768 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-5" value="32768" data-voltage="LuV">LuV
-										</label>
-										<label class="btn btn-light" title="131 072 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-6" value="131072" data-voltage="ZPM">ZPM
-										</label>
-										<label class="btn btn-light" title="524 288 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-7" value="524288" data-voltage="UV">UV
-										</label>
-										<label class="btn btn-light oc-gtnh" title="2 097 152 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-8" value="2097152" data-voltage="UHV">UHV
-										</label>
-										<label class="btn btn-light oc-gtnh" title="8 388 608 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-9" value="8388608" data-voltage="UEV">UEV
-										</label>
-										<label class="btn btn-light oc-gtnh" title="33 554 432 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-10" value="33554432" data-voltage="UIV">UIV
-										</label>
-										<label class="btn btn-light oc-gtnh" title="134 217 728 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-11" value="134217728" data-voltage="UMV">UMV
-										</label>
-										<label class="btn btn-light oc-gtnh" title="536 870 912 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-12" value="536870912" data-voltage="UXV">UXV
-										</label>
-										<label class="btn btn-light oc-gtnh" title="2 147 483 648 EU/t">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-13" value="2147483648" data-voltage="MAX">MAX
-										</label>
-										<label class="btn btn-light" title="Custom...">
-											<input type="radio" name="gt-overclock-target" id="gt-overclock-target-x" value="custom" data-voltage="custom">Custom (EU/t)
-										</label>
+									<div class="btn-group btn-group-toggle flex-wrap voltage-buttons" data-id="gt-overclock-target" data-toggle="buttons">
 									</div>
 									<input type="text" id="gt-overclock-target-custom" class="form-control align-top" value="512" style="width:120px; display:none;" />
 								</div>

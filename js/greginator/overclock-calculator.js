@@ -20,10 +20,10 @@ onVersionChanged(function(version) {
 	addClickToHeader(card);
 	addClickToHeader($(".oc-gtnh", card));
 	addClickToHeader($(".oc-io", card));
+	addClickToHeader($(".oc-converter", card));
 
 	var energy_elem = $("#gt-overclock-energy",card);
 	var amps_elem = $("#gt-overclock-amps",card);
-	var target_buttons = $("[name='gt-overclock-target']",card);
 	var poc_buttons = $("[name='gt-overclock-perfectoc']",card);
 	var output_elem = $("#gt-overclock-output",card);
 	var input_elem = $("#gt-overclock-input",card);
@@ -36,6 +36,109 @@ onVersionChanged(function(version) {
 	var batch_mode = $("#gt-overclock-batch").is(":checked");
 	var uev_simulate = $("#gt-overclock-uev-simulate").is(":checked");
 
+	// fill in voltage buttons
+	var tier_names_list = ["LV","MV","HV","EV","IV","LuV","ZPM","UV","UHV","UEV","UIV","UMV","UXV","MAX", "Custom..."];
+	var tier_names = {};
+	var voltage_buttons = $(".voltage-buttons");
+	for(let i=0;i<tier_names_list.length;i++) {
+		let tier_name = tier_names_list[i];
+		let voltage = (tier_name == "Custom...") ? "custom" : getVoltageOfTier(i+1);
+
+		voltage_buttons.each(function() {
+			let that = $(this);
+			let id = that.attr("data-id");
+			let btn = $("<label>").addClass("btn btn-light").attr("title",(voltage == "custom" ? "Custom" : voltage) + " EU/t");
+			btn.text(tier_name);
+			let inp = $("<input>").attr("type","radio").attr("name",id).attr("id",id+"-"+i).val(voltage).attr("data-voltage",tier_name);
+			if (tier_name == "MV") {inp.attr("checked","true");}
+			btn.prepend(inp);
+			that.append(btn);
+		});
+
+	}
+
+	// voltage/amp calc
+
+	function doVoltAmpCalc() {
+		function getValue(target_elem, custom_elem, label) {
+			var target = 0;
+			custom_elem.removeClass("border-danger");
+			if (target_elem.val() == "custom") {
+				custom_elem.addClass("d-inline-block");
+				small = parseInt(custom_elem.val());
+				if (isNaN(target)) {
+					custom_elem.addClass("border-danger");
+					return 1;
+				}
+			} else {
+				custom_elem.removeClass("d-inline-block");
+				target = parseInt(target_elem.val());
+			}
+			label.text(target);
+			return target;
+		}
+
+		var lower = getValue($("[name='gt-overclock-target-calc-1']:checked",card), $("#gt-overclock-target-custom-1",card), $("#gt-overclock-target-calc-1-eut",card));
+
+		var upper = getValue($("[name='gt-overclock-target-calc-2']:checked",card), $("#gt-overclock-target-custom-2",card), $("#gt-overclock-target-calc-2-eut",card));
+
+		var amps_elem = $("#gt-overclock-target-amps-2",card);
+		amps_elem.removeClass("border-danger");
+		var amps = parseInt(amps_elem.val());
+		if (isNaN(amps)) {
+			amps = 1;
+			amps_elem.addClass("border-danger");
+		}
+
+		var n = (upper*amps)/lower;
+
+		$("#gt-overclock-target-calc-result").html(`(${upper} * ${amps}) / ${lower} = ${n}`);
+	}
+
+	var custom_target_tid_2;
+	$("#gt-overclock-target-custom-1").on("input", function() {
+		if (custom_target_tid_2) {clearTimeout(custom_target_tid_2);}
+		custom_target_tid_2 = setTimeout(function() {
+			doVoltAmpCalc();
+		},500);
+	});
+	var custom_target_tid_3;
+	$("#gt-overclock-target-custom-2").on("input", function() {
+		if (custom_target_tid_3) {clearTimeout(custom_target_tid_3);}
+		custom_target_tid_3 = setTimeout(function() {
+			doVoltAmpCalc();
+		},500);
+	});
+	$("#gt-overclock-target-amps-2",card).change(doVoltAmpCalc);
+
+	// end of voltage/amp calc
+
+	function applyOCTargetButtons(btns, onChange) {
+		var last
+		btns.each(function() {
+			var that = $(this);
+			if (that.attr("checked")) {
+				that.click();
+			}
+
+			if (that.parent().hasClass("oc-gtnh") && version != "gtnh") {
+				if (last) {
+					last.parent().addClass("fix-rounded-corners");
+				}
+				that.parent().hide();
+			} else {
+				that.parent().show();
+			}
+
+			that.parent().tooltip();
+			last = that;
+		}).change(onChange);
+	}
+
+	applyOCTargetButtons($("[name='gt-overclock-target']",card), doCalc);
+	applyOCTargetButtons($("[name='gt-overclock-target-calc-1']",card), doVoltAmpCalc);
+	applyOCTargetButtons($("[name='gt-overclock-target-calc-2']",card), doVoltAmpCalc);
+
 	$("#gt-overclock-batch").change(() => {
 		batch_mode = $("#gt-overclock-batch").is(":checked");
 		doCalc();
@@ -45,14 +148,19 @@ onVersionChanged(function(version) {
 		doCalc();
 	});
 
-	$("#gt-overclock-target-eut",card).click(() => {
-		var that = $("#gt-overclock-target-eut",card)
-		navigator.clipboard.writeText(that.text());
-		that.removeClass("badge-secondary").addClass("badge-success");
-		setTimeout(() => {
-			that.addClass("badge-secondary").removeClass("badge-success");
-		},1000);
-	}).tooltip();
+	function applyCopyBtn(that) {
+		that.click(() => {
+			navigator.clipboard.writeText(that.text());
+			that.removeClass("badge-secondary").addClass("badge-success");
+			setTimeout(() => {
+				that.addClass("badge-secondary").removeClass("badge-success");
+			},1000);
+		}).tooltip();
+	}
+	applyCopyBtn($("#gt-overclock-target-eut",card));
+	applyCopyBtn($("#gt-overclock-target-calc-1-eut",card));
+	applyCopyBtn($("#gt-overclock-target-calc-2-eut",card));
+	
 
 	// gt++
 	var time_bonus = $("#gt-overclock-faster",card);
@@ -70,10 +178,6 @@ onVersionChanged(function(version) {
 
 
 	var PA_amount = (version == "gtnh" ? 64 : 16);
-	var tier_names = {};
-	$("input[name='gt-overclock-target']").each((idx,val) => {
-		tier_names[getTier($(val).val())] = $(val).attr("data-voltage");
-	});
 
 	function getNameFromTier(tier) {
 		if (typeof tier_names[tier] == "undefined") {
@@ -154,7 +258,7 @@ onVersionChanged(function(version) {
 			target = parseInt(target_elem.val());
 			target_voltage = target_elem.attr("data-voltage");
 		}
-		$("#gt-overclock-target-eut",card).text(target);		
+		$("#gt-overclock-target-eut",card).text(target);
 
 		if (isNaN(original_energy) || isNaN(amps) || isNaN(target) || isNaN(output) || isNaN(original_time) || isNaN(input)) {
 			results_list.push(["One or more of your inputs is an invalid number."]);
@@ -230,9 +334,6 @@ onVersionChanged(function(version) {
 
 		var output_per_sec = output/(time/20);
 		var input_per_sec = input/(time/20);
-
-		function round3(n) {return Math.round(n*1000)/1000;}
-		function round6(n) {return Math.round(n*1000000)/1000000;}
 
 
 		var wanted_singles = 1;
@@ -385,26 +486,6 @@ onVersionChanged(function(version) {
 
 	$(".fix-rounded-corners",card).removeClass("fix-rounded-corners");
 
-	var last
-	target_buttons.each(function() {
-		var that = $(this);
-		if (that.attr("checked")) {
-			that.click();
-		}
-
-		if (that.parent().hasClass("oc-gtnh") && version != "gtnh") {
-			if (last) {
-				last.parent().addClass("fix-rounded-corners");
-			}
-			that.parent().hide();
-		} else {
-			that.parent().show();
-		}
-
-		that.parent().tooltip();
-		last = that;
-	}).change(doCalc);
-
 	poc_buttons.each(function() {
 		var that = $(this);
 		if (that.attr("checked")) {
@@ -420,7 +501,11 @@ onVersionChanged(function(version) {
 		$(".oc-gtnh",card).show();
 	}
 
+	function round3(n) {return Math.round(n*1000)/1000;}
+	function round6(n) {return Math.round(n*1000000)/1000000;}
+
 	doCalc();
+	doVoltAmpCalc();
 
 	window.fromConflictCheckerToOverclockCalculator = function(recipe) {
 		function noA0(i) {
