@@ -35,14 +35,20 @@ onVersionChanged(function(version) {
 	var wanted_check = $("#gt-overclock-wanted-flip",card);
 	var batch_mode = $("#gt-overclock-batch").is(":checked");
 	var uev_simulate = $("#gt-overclock-uev-simulate").is(":checked");
+	var settings_input = $(".settings-input", card);
 
 	// fill in voltage buttons
-	var tier_names_list = ["LV","MV","HV","EV","IV","LuV","ZPM","UV","UHV","UEV","UIV","UMV","UXV","MAX", "Custom..."];
+	var tier_names_list = [null,"LV","MV","HV","EV","IV","LuV","ZPM","UV","UHV","UEV","UIV","UMV","UXV","MAX", "Custom..."];
 	var tier_names = {};
+	var voltage_tiers = {};
 	var voltage_buttons = $(".voltage-buttons");
-	for(let i=0;i<tier_names_list.length;i++) {
+	for(let i=1;i<tier_names_list.length;i++) {
 		let tier_name = tier_names_list[i];
-		let voltage = (tier_name == "Custom...") ? "custom" : getVoltageOfTier(i+1);
+		let voltage = (tier_name == "Custom...") ? "custom" : getVoltageOfTier(i);
+		if (voltage != "custom") {
+			tier_names[i] = tier_name;
+			voltage_tiers[voltage] = i;
+		}
 
 		voltage_buttons.each(function() {
 			let that = $(this);
@@ -65,7 +71,7 @@ onVersionChanged(function(version) {
 			custom_elem.removeClass("border-danger");
 			if (target_elem.val() == "custom") {
 				custom_elem.addClass("d-inline-block");
-				small = parseInt(custom_elem.val());
+				target = parseInt(custom_elem.val());
 				if (isNaN(target)) {
 					custom_elem.addClass("border-danger");
 					return 1;
@@ -95,20 +101,8 @@ onVersionChanged(function(version) {
 		$("#gt-overclock-target-calc-result").html(`(${upper} * ${amps}) / ${lower} = ${n}`);
 	}
 
-	var custom_target_tid_2;
-	$("#gt-overclock-target-custom-1").on("input", function() {
-		if (custom_target_tid_2) {clearTimeout(custom_target_tid_2);}
-		custom_target_tid_2 = setTimeout(function() {
-			doVoltAmpCalc();
-		},500);
-	});
-	var custom_target_tid_3;
-	$("#gt-overclock-target-custom-2").on("input", function() {
-		if (custom_target_tid_3) {clearTimeout(custom_target_tid_3);}
-		custom_target_tid_3 = setTimeout(function() {
-			doVoltAmpCalc();
-		},500);
-	});
+	$("#gt-overclock-target-custom-1").on("input", doVoltAmpCalc);
+	$("#gt-overclock-target-custom-2").on("input", doVoltAmpCalc);
 	$("#gt-overclock-target-amps-2",card).on("input",doVoltAmpCalc);
 
 	// end of voltage/amp calc
@@ -202,7 +196,16 @@ onVersionChanged(function(version) {
 		doCalc();
 	});
 
+	var docalc_timer;
 	function doCalc() {
+		if (docalc_timer) {
+			clearTimeout(docalc_timer);
+		}
+
+		docalc_timer = setTimeout(doCalc_inner,1);
+	}
+
+	function doCalc_inner() {
 		$("#gt-overclock-info").empty();
 
 		var results_list = [];
@@ -242,7 +245,6 @@ onVersionChanged(function(version) {
 		var wanted = parseFloat(wanted_elem.val());
 
 		var target;
-		var target_voltage;
 		var custom_elem = $("#gt-overclock-target-custom");
 		custom_elem.removeClass("border-danger");
 		if (target_elem.val() == "custom") {
@@ -252,11 +254,9 @@ onVersionChanged(function(version) {
 				custom_elem.addClass("border-danger");
 				return false;
 			}
-			target_voltage = "*custom*";
 		} else {
 			custom_elem.removeClass("d-inline-block");
 			target = parseInt(target_elem.val());
-			target_voltage = target_elem.attr("data-voltage");
 		}
 		$("#gt-overclock-target-eut",card).text(target);
 
@@ -323,7 +323,7 @@ onVersionChanged(function(version) {
 				paTime: Math.max(1,Math.floor(paTime)),
 				paEnergy: paEnergy,
 				paAmount: paAmount,
-				oneticking: time < 1
+				oneticking: Math.floor(time) <= 1
 			};
 		}
 
@@ -409,7 +409,7 @@ onVersionChanged(function(version) {
 			// Source:
 			// https://github.com/GTNewHorizons/GTplusplus/blob/b5c2946f55ee5e44a341f545ce7565203803d74a/src/main/java/gtPlusPlus/xmod/gregtech/api/metatileentity/implementations/base/GregtechMeta_MultiBlockBase.java#L1023
 
-			parallels_int = Math.max(1,parallels_int * target_tier);
+			var parallels_temp = Math.max(1,parallels_int * target_tier);
 
 			time = original_time;
 			energy = original_energy;
@@ -418,15 +418,15 @@ onVersionChanged(function(version) {
 
 			var totalEnergy = energy*amps;
 			var parallelRecipes = 1;
-			while(parallelRecipes < parallels_int && totalEnergy < (target - energy)) {
+			while(parallelRecipes < parallels_temp && totalEnergy < (target - energy)) {
 				parallelRecipes++;
 				totalEnergy += energy;
 			}
 
-			var time_bonus_int = parseInt(time_bonus_int);
-			if (!isNaN(time_bonus_int) && time_bonus_int != 0) {
-				time_bonus_int = Math.max(-99,time_bonus_int);
-				var timeFactor = 100 / (100 + time_bonus_int);
+			var time_bonus_temp = time_bonus_int;
+			if (!isNaN(time_bonus_temp) && time_bonus_temp != 0) {
+				time_bonus_temp = Math.max(-99,time_bonus_temp);
+				var timeFactor = 100 / (100 + time_bonus_temp);
 				time = Math.floor(time * timeFactor);
 			}
 
@@ -469,6 +469,25 @@ onVersionChanged(function(version) {
 			results_list.push(["Unable to calculate GT++, please fill in all GT++ related fields"]);
 		}
 
+		var json = {
+			energy: parseInt(energy_elem.val()),
+			amps: parseInt(amps_elem.val()),
+			target: target,
+			poc: $("[name='gt-overclock-perfectoc']:checked",card).val(),
+			output: parseFloat(output_elem.val()),
+			time: parseFloat(time_elem.val()),
+			in_ticks: time_check.is(":checked"),
+			input: parseFloat(input_elem.val()),
+			wanted: parseFloat(wanted_elem.val()),
+			wanted_1OX: wanted_check.is(":checked"),
+			gtpp_machine: $("#gt-overclock-gtppmachine").val(),
+			time_bonus: time_bonus_int,
+			energy_bonus: energy_bonus_int,
+			parallels_per_tier: parallels_int,
+			batch_mode: batch_mode,
+			downtier_uev: uev_simulate
+		};
+		settings_input.val(JSON.stringify(json));
 		drawResults();
 	}
 
@@ -533,4 +552,58 @@ onVersionChanged(function(version) {
 		collapse.collapse("show");
 		doCalc();
 	}
+
+	function onSettingsInput() {
+		if (settings_input.val() != "") {
+			var jsonObj = null;
+
+			try {
+				jsonObj = JSON.parse(settings_input.val());
+			} catch (e) {
+				alert("Invalid json object. Error: " + e);
+				return;
+			}
+
+			energy_elem.val(jsonObj.energy);
+			amps_elem.val(jsonObj.amps);
+
+			var target = jsonObj.target;
+			if (typeof voltage_tiers[target] != "undefined") {
+				$(".voltage-buttons[data-id='gt-overclock-target'] input[value="+target+"]",card).click();
+			} else {
+				$(".voltage-buttons[data-id='gt-overclock-target'] input[value='custom']",card).click();
+				$("#gt-overclock-target-custom",card).val(target);
+			}
+
+			var poc = jsonObj.poc;
+			if (poc == "no") {$("#gt-overclock-perfectoc-0",card).click();}
+			else if (poc == "semi") {$("#gt-overclock-perfectoc-1",card).click();}
+			else if (poc == "perfect") {$("#gt-overclock-perfectoc-2",card).click();}
+
+			output_elem.val(jsonObj.output);
+			time_elem.val(jsonObj.time);
+			time_check.attr("checked", jsonObj.in_ticks);
+			input_elem.val(jsonObj.input);
+			wanted_elem.val(jsonObj.wanted);
+			wanted_check.attr("checked",jsonObj.wanted_1OX);
+
+			$("#gt-overclock-gtppmachine",card).val(jsonObj.gtpp_machine);
+			time_bonus.val(jsonObj.time_bonus);
+			energy_bonus.val(jsonObj.energy_bonus);
+			parallels.val(jsonObj.parallels_per_tier);
+
+			batch_mode = jsonObj.batch_mode;
+			$("#gt-overclock-batch",card).attr("checked",batch_mode);
+			uev_simulate = jsonObj.downtier_uev;
+			$("#gt-overclock-uev-simulate",card).attr("checked",uev_simulate);
+
+			$("> .collapse", card).collapse("show");
+		}
+	}
+
+	settings_input.on("input",onSettingsInput)
+	.click((e) => {
+		settings_input.select();
+		e.stopPropagation();
+	});
 });
