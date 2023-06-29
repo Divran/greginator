@@ -370,13 +370,23 @@
 								<div class="card-body">
 									<p><small>(This is a separate tab and doesn't have anything to do with the rest of the overclock calculator below)</small></p>
 
-									<label class="d-block">How many amps of: <small class="badge badge-secondary link-pointer" title="Click to copy" id="gt-overclock-target-calc-1-eut"></small></label>
+									<div class="my-3">
+										Available laser hatch amps (click to copy)
+										<div class="btn-group" id="laser-hatch-sizes"></div>
+									</div>
+
+									<label class="d-block">
+										<input type="number" class="form-control d-inline-block" style="max-width:100px; height:26px;" value="1" id="gt-overclock-target-amps-1" />
+										amps of <small class="badge badge-secondary link-pointer" title="Click to copy" id="gt-overclock-target-calc-1-eut"></small>
+									</label>
 									<div class="btn-group btn-group-toggle flex-wrap voltage-buttons" data-id="gt-overclock-target-calc-1" data-toggle="buttons">
 									</div>
 									<input type="text" id="gt-overclock-target-custom-1" class="form-control align-top" value="512" style="width:120px; display:none;" />
 
-									<label class="d-block">is <input type="number" class="form-control d-inline-block" style="max-width:100px; height:26px;" value="1" id="gt-overclock-target-amps-2" /> amps of: 
-										<small class="badge badge-secondary link-pointer" title="Click to copy" id="gt-overclock-target-calc-2-eut"></small></label>
+									<label class="d-block">
+										divided by <input type="number" class="form-control d-inline-block" style="max-width:100px; height:26px;" value="1" id="gt-overclock-target-amps-2" /> 
+										amps of: <small class="badge badge-secondary link-pointer" title="Click to copy" id="gt-overclock-target-calc-2-eut"></small>
+									</label>
 									<div class="btn-group btn-group-toggle flex-wrap voltage-buttons" data-id="gt-overclock-target-calc-2" data-toggle="buttons">
 									</div>
 									<input type="text" id="gt-overclock-target-custom-2" class="form-control align-top" value="512" style="width:120px; display:none;" />

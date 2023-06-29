@@ -84,26 +84,59 @@ onVersionChanged(function(version) {
 			return target;
 		}
 
-		var lower = getValue($("[name='gt-overclock-target-calc-1']:checked",card), $("#gt-overclock-target-custom-1",card), $("#gt-overclock-target-calc-1-eut",card));
 
-		var upper = getValue($("[name='gt-overclock-target-calc-2']:checked",card), $("#gt-overclock-target-custom-2",card), $("#gt-overclock-target-calc-2-eut",card));
-
-		var amps_elem = $("#gt-overclock-target-amps-2",card);
-		amps_elem.removeClass("border-danger");
-		var amps = parseInt(amps_elem.val());
-		if (isNaN(amps)) {
-			amps = 1;
-			amps_elem.addClass("border-danger");
+		var upper = getValue($("[name='gt-overclock-target-calc-1']:checked",card), $("#gt-overclock-target-custom-1",card), $("#gt-overclock-target-calc-1-eut",card));
+		var amps_upper_elem = $("#gt-overclock-target-amps-1",card);
+		amps_upper_elem.removeClass("border-danger");
+		var amps_upper = parseInt(amps_upper_elem.val());
+		if (isNaN(amps_upper)) {
+			amps_upper = 1;
+			amps_upper_elem.addClass("border-danger");
 		}
 
-		var n = (upper*amps)/lower;
+		var lower = getValue($("[name='gt-overclock-target-calc-2']:checked",card), $("#gt-overclock-target-custom-2",card), $("#gt-overclock-target-calc-2-eut",card));
+		var amps_lower_elem = $("#gt-overclock-target-amps-2",card);
+		amps_lower_elem.removeClass("border-danger");
+		var amps_lower = parseInt(amps_lower_elem.val());
+		if (isNaN(amps_lower)) {
+			amps_lower = 1;
+			amps_lower_elem.addClass("border-danger");
+		}
 
-		$("#gt-overclock-target-calc-result").html(`(${upper} * ${amps}) / ${lower} = ${n}`);
+		var n = (upper*amps_upper)/(lower*amps_lower);
+
+		$("#gt-overclock-target-calc-result").html(`(${upper} * ${amps_upper}) / (${lower} * ${amps_lower}) = ${n}`);
 	}
 
-	$("#gt-overclock-target-custom-1").on("input", doVoltAmpCalc);
-	$("#gt-overclock-target-custom-2").on("input", doVoltAmpCalc);
-	$("#gt-overclock-target-amps-2",card).on("input",doVoltAmpCalc);
+	$("#gt-overclock-target-custom-1").on("input", doVoltAmpCalc).click(function() {$(this).select();});
+	$("#gt-overclock-target-custom-2").on("input", doVoltAmpCalc).click(function() {$(this).select();});
+	$("#gt-overclock-target-amps-1",card).on("input",doVoltAmpCalc).click(function() {$(this).select();});
+	$("#gt-overclock-target-amps-2",card).on("input",doVoltAmpCalc).click(function() {$(this).select();});
+
+	// laser hatch sizes
+	(function() {
+		var lasers = [
+			{label:"256", amps: 256},
+			{label:"1024", amps: 1024},
+			{label:"4096", amps: 4096},
+			{label:"16384", amps: 16384},
+			{label:"65k", amps: 65536},
+			{label:"262k", amps: 262144},
+			{label:"1M", amps: 1048576},
+		];
+		for(let i=0;i<lasers.length;i++) {
+			let row = lasers[i];
+			lasers[i] = $("<div class='btn btn-light btn-sm'>").text(row.label).click(function() {
+				navigator.clipboard.writeText(row.amps);
+				var that = $(this);
+				that.removeClass("btn-light").addClass("btn-success");
+				setTimeout(() => {
+					that.addClass("btn-light").removeClass("btn-success");
+				},1000);
+			});
+		}
+		$("#laser-hatch-sizes").append(lasers);
+	})();
 
 	// end of voltage/amp calc
 
