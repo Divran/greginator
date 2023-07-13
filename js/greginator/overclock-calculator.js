@@ -248,6 +248,7 @@ onVersionChanged(function(version) {
 			// open custom
 			$(".voltage-buttons[data-id='" + id + "'] input[value='custom']",card).click();
 			cust.val(newVolt);
+			doCalc();
 		} else {
 			var tier = getTier(newVolt);
 			$("#" + id + "-" + tier,card).click();
