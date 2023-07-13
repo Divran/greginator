@@ -229,6 +229,31 @@ onVersionChanged(function(version) {
 		doCalc();
 	});
 
+	// double button
+	$(".gt-overclock-double-eut").click(function() {
+		var id = $(this).attr("data-id");
+		var custid = $(this).attr("data-custid");
+		var cust = $("#" + custid,card);
+
+		var volt = 0;
+		if (cust.is(":visible")) {
+			volt = cust.val();
+		} else {
+			volt = $("[name='" + id + "']:checked",card).val();
+		}
+
+		var newVolt = volt * 4;
+
+		if (newVolt > getVoltageOfTier(14)) {
+			// open custom
+			$(".voltage-buttons[data-id='" + id + "'] input[value='custom']",card).click();
+			cust.val(newVolt);
+		} else {
+			var tier = getTier(newVolt);
+			$("#" + id + "-" + tier,card).click();
+		}
+	});
+
 	var docalc_timer;
 	function doCalc() {
 		if (docalc_timer) {
