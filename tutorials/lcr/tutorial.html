@@ -1,0 +1,129 @@
+<div class="tutorial-page">
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 1</h4>
+			<p>
+				Build the LCR.
+			</p>
+			<p>
+				<strong>Note:</strong> While this tutorial focuses on the LCR / MCR, this setup will work for any machine that has recipes containing fluids.
+			</p>
+			<p>
+				<strong>Note:</strong> The reason this tutorial only works for GTNH version 2.3.0+ is because that is when blocking mode was fixed for fluid recipes. Prior to this version, blocking mode would be completely ignored when the recipe contained fluids.
+			</p>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/lcr/1.jpg" target="_blank">
+				<img src="tutorials/lcr/1.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="noshrink max-50">
+			<a href="tutorials/lcr/2.jpg" target="_blank">
+				<img src="tutorials/lcr/2.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div>
+			<h4>Step 2</h4>
+			<p>
+				Add a block form dual interface for the input.
+				<br /><strong>NOTE:</strong>
+				<ul>
+					<li>The input <strong>must</strong> use a block interface.</li>
+					<li>You can optionally use an ME output hatch instead of multiple normal hatches.</li>
+					<li>Also put an output bus or ME output bus anywhere (not pictured).</li>
+					<li>I recommend placing the input bus in one of the edge casings, and not the center, because otherwise the block dual interface will block it from view and prevent you from accessing it</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div style="flex-grow:1">
+			<h4>Step 3</h4>
+			<ul>
+				<li>Add fluid p2ps to each input hatch.</li>
+				<li>Each input hatch must be connected to its own separate fluid p2p linking a different face of the dual interface.</li>
+				<li>If a recipe requires more than four fluids, replace one of the input hatches with a quadruple input hatch.</li>
+			</ul>
+
+			<div class="card card-body m-1 p-1 d-inline-block">
+				<a href="tutorials/lcr/4.jpg" target="_blank">
+					<img src="tutorials/lcr/4.jpg" class="tutorial-img tutorial-img-small" />
+				</a>
+				<br />Image showing the p2p connections
+			</div>
+		</div>
+		<div class="noshrink max-50">
+			<a href="tutorials/lcr/3.jpg" target="_blank">
+				<img src="tutorials/lcr/3.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="noshrink">
+			<a href="tutorials/lcr/5.jpg" target="_blank">
+				<img src="tutorials/lcr/5.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 4</h4>
+			<p>Be sure to remember to enable blocking mode</p>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 5</h4>
+			<p>How do you scale this to lategame? Below are a few pictures from the setups I use for MCRs. It's essentially the same setup, just made for recipes multipled more.</p>
+			<strong>NOTE:</strong> To make these setups fast, follow all the steps below:
+			<ul>
+				<li>Blocking mode is enabled in each of these setups to completely avoid all recipe conflicts.</li>
+				<li>Due to blocking mode being enabled, there is a chance the MCR will stop running for 5s when AE isn't able to insert items fast enough. To prevent this, make each recipe a multiple of 256 (the parallel of MCR). This works for any other machine, too, except you'd need to adjust the multiple by whatever that machine's parallel is.</li>
+				<li>If you run out of recipe slots, you can try making another set of buses and hatches on the other side of the MCR, but to avoid recipe conflicts it's safer to make a new MCR</li>
+			</ul>
+
+			<div class="row">
+				<div class="col-12 col-md">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/lcr/6.jpg" target="_blank">
+							<img src="tutorials/lcr/6.jpg" class="tutorial-img" />
+						</a>
+						<br />Midgame MCR. Dual interface pointing directly at super bus.
+					</div>
+				</div>
+				<div class="col-12 col-md">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/lcr/7.jpg" target="_blank">
+							<img src="tutorials/lcr/7.jpg" class="tutorial-img" />
+						</a>
+						<br />Lategame fast MCR setup. Dual interface pointing at infinity chest.
+					</div>
+				</div>
+				<div class="col-12 col-md">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/lcr/8.jpg" target="_blank">
+							<img src="tutorials/lcr/8.jpg" class="tutorial-img" />
+						</a>
+						<br />Lategame fast MCR setup, manually configured stocking buses. Auto-stock isn't fast enough.
+					</div>
+				</div>
+				<div class="col-12 col-md">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/lcr/9.jpg" target="_blank">
+							<img src="tutorials/lcr/9.jpg" class="tutorial-img" />
+						</a>
+						<br />Lategame fast MCR setup, each recipe is a multiple of 256.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

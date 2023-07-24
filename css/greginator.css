@@ -184,6 +184,10 @@ img.tutorial-img {
 	max-height:500px;
 }
 
+.max-50 {
+	max-width:50%;
+}
+
 img.tutorial-img-medium {
 	max-width:400px;
 	max-height:400px;
