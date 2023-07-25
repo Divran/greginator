@@ -1,0 +1,138 @@
+<div class="tutorial-page">
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 1</h4>
+			<p>
+				Credits to Phineasor on GTNH Discord for the original idea
+			</p>
+			<p>
+				<ol>
+					<li>
+						Build an ME chest and put an item storage cell in it. <br />
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/1.jpg" target="_blank">
+								<img src="tutorials/configswitcher/1.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+
+					<li>
+						Place a storage bus both on the front face (the one with the light) and on any other face.
+					</li>
+					<li>
+						Place a level emitter on the cable which is attached to the front face pointing at an inverted toggle bus (see image below). <br />
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/1b.jpg" target="_blank">
+								<img src="tutorials/configswitcher/1b.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+					<li>
+						Configure the level emitter according to the image below. Set the item to an empty storage cell matching the one you placed in the ME chest, the mode to "above or equal", and the amount to 1. <br />
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/1c.jpg" target="_blank">
+								<img src="tutorials/configswitcher/1c.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+				</ol>
+			</p>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 2</h4>
+			<p>
+				<ol>
+					<li>
+						Build a second ME chest according to the image below. Connect the level emitters via a one-way connection using a storage bus and interface. <br />
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/2.jpg" target="_blank">
+								<img src="tutorials/configswitcher/2.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+					<li>
+						Configure the bottom level emitter similarly to the first in step 1, except increment the amount to 2. <br />
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/2b.jpg" target="_blank">
+								<img src="tutorials/configswitcher/2b.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+					<li>
+						Configure the top level emitter inversely, setting its mode to "below" and its amount to 1. <br />
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/2c.jpg" target="_blank">
+								<img src="tutorials/configswitcher/2c.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+				</ol>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div style="flex-grow:1">
+			<h4>Step 3</h4>
+			<p>
+				<ol>
+					<li>
+						Extend this as far as you want, incrementing the amount in the level emitters by 1 each time you do. <br />
+						The amounts are shown in the image. The mode of each level emitter is described in step 2.
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/3.jpg" target="_blank">
+								<img src="tutorials/configswitcher/3.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+					<li>
+						Add chests with any lenses, circuits, extruder shapes, etcm that your machines need. <br />
+						<div class="card card-body m-1 p-1 d-inline-block">
+							<a href="tutorials/configswitcher/3b.jpg" target="_blank">
+								<img src="tutorials/configswitcher/3b.jpg" class="tutorial-img tutorial-img-small" />
+							</a>
+						</div>
+					</li>
+				</ol>
+			</p>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div style="flex-grow:1">
+			<h4>Step 4</h4>
+			<p>
+				You are now done.
+			</p>
+			<p>
+				<strong>Explanation:</strong>
+				<ol>
+					<li>The 1st level emitter you placed will simply turn on the toggle bus when it detects any items in its adjacent inventory, due to the fact that once the storage cell is no longer empty, the level emitter sees that you have zero empty storage cells</li>
+					<li>The 2nd and 3rd level emitters you placed work together to tell the next toggle bus in the chain to <strong>only</strong> activate if all of the ME chests to the left are empty <strong>and</strong> this specific ME chest isn't empty.</li>
+					<li>This setup is then repeated as far as you want, and the result is that only a single ME chest's toggle bus can be active at any given time, with priority going to the leftmost ME chest.</li>
+				</ol>
+
+				<div class="d-flex justify-content-start">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/configswitcher/4.jpg" target="_blank">
+							<img src="tutorials/configswitcher/4.jpg" class="tutorial-img" />
+						</a>
+						<br />Items placed in 2nd and 3rd chests, only 2nd chest is active.
+					</div>
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/configswitcher/4b.jpg" target="_blank">
+							<img src="tutorials/configswitcher/4b.jpg" class="tutorial-img" />
+						</a>
+						<br />Items removed from 2nd chest, 3rd chest activates instead.
+					</div>
+				</div>
+
+			</p>
+		</div>
+	</div>
+</div>
