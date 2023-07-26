@@ -76,8 +76,9 @@
 			<h4>Step 5</h4>
 			<p>Configure the filters on your storage buses.</p>
 			<ul>
-				<li>They need to be configured to only accept fluid packets and everything except fluid packets, respectively.</li>
-				<li>To do this, search for <strong>'packet'</strong> in NEI, and you will find an <em>'invalid fluid packet'</em> item. Drag this into the storage buses, then add a fuzzy card and an inverter card as the images to the right show.</li>
+				<li>The storage buses pointing at packet decoders need to be configured to only accept fluid packets.</li>
+				<li>To do this, search for <strong>'packet'</strong> in NEI, and you will find an <em>'invalid fluid packet'</em> item. Drag this into the storage buses, then add a fuzzy card as the image to the right shows.</li>
+				<li>The storage buses which will be pointing at input buses do not need any configuration other than decreasing priority.</li>
 			</ul>
 		</div>
 		<div class="noshrink">
@@ -85,11 +86,6 @@
 				<img src="tutorials/assline/8.jpg" class="tutorial-img tutorial-img-medium" />
 			</a>
 			<br />Storage bus pointing at packet decoder
-			<hr />
-			<a href="tutorials/assline/7.jpg" target="_blank">
-				<img src="tutorials/assline/7.jpg" class="tutorial-img tutorial-img-medium" />
-			</a>
-			<br />Storage bus pointing at input buses
 		</div>
 	</div>
 	<hr />
