@@ -227,7 +227,7 @@ onVersionChanged(function(version) {
 		$("#gt-overclock-faster",card).val(values[0]);
 		$("#gt-overclock-eureduction",card).val(values[1]);
 		$("#gt-overclock-parallels",card).val(values[2]);
-		$("#gt-overclock-parallels-fixed",card).attr("checked",values[3] == "1");
+		$("#gt-overclock-parallels-fixed",card).prop("checked",values[3] == "1");
 		doCalc();
 	});
 
@@ -654,7 +654,7 @@ onVersionChanged(function(version) {
 			time_bonus.val(jsonObj.time_bonus);
 			energy_bonus.val(jsonObj.energy_bonus);
 			parallels.val(jsonObj.parallels_per_tier);
-			$("#gt-overclock-parallels-fixed",card).attr("checked", jsonObj.parallels_per_tier_fixed);
+			$("#gt-overclock-parallels-fixed",card).prop("checked", jsonObj.parallels_per_tier_fixed);
 
 			batch_mode = jsonObj.batch_mode;
 			$("#gt-overclock-batch",card).attr("checked",batch_mode);
