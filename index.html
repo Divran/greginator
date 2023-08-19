@@ -486,7 +486,8 @@
 											<input type="number" value="1" id="gt-overclock-input" class="form-control">
 										</div>
 										<div class="form-group col-lg-4 col-md-6">
-											<label for="gt-overclock-wanted">Want X/sec:</label> <span style="float:right;"><input type="checkbox" id="gt-overclock-wanted-flip"> <label for="gt-overclock-wanted-flip"> 1/X sec</label></span>
+											<label for="gt-overclock-wanted">Want X/sec:</label> 
+											<span style="float:right;"><input type="checkbox" id="gt-overclock-wanted-flip"> <label for="gt-overclock-wanted-flip"> 1/X sec</label></span>
 											<input type="number" value="" id="gt-overclock-wanted" class="form-control">
 										</div>
 									</div>
@@ -515,9 +516,11 @@
 											<option value="250,100,4">[Extruder] Industrial Extrusion Machine (S: 250%, E: 100%, P: 4)</option>
 											<option value="250,80,2">[Multiple] Large Processing Factory (S: 250%, E: 80%, P: 2)</option>
 											<option value="200,100,2">[Assembler] Large Scale Auto-Assembler v1.01 (S: 200%, E: 100%, P: 2)</option>
+											<option value="100,100,128,1">[Assembler] Precise Assembler with MK3 casings (S: 100%, E: 100%, P: 128)</option>
 											<option value="500,75,16">[Packager] Amazon Warehousing Depot. (S: 500%, E: 75%, P: 16)</option>
 											<option value="200,75,4">[Cutter] Cutting Factory (S: 200%, E: 75%, P: 4)</option>
 											<option value="120,90,8">[Fluid Heater] Thermic Heating Device (S: 120%, E: 90%, P: 8)</option>
+											<option value="120,90,8,1">[EBF] Volcanus (S: 120%, E: 90%, P: 8)</option>
 										</select>
 									</div>
 									<div class="row">
@@ -530,7 +533,9 @@
 											<input type="number" value="" id="gt-overclock-eureduction" class="form-control">
 										</div>
 										<div class="form-group col-lg-4 col-md-6">
-											<label for="gt-overclock-parallels">Nr of parallels per tier<br><br></label>
+											<label for="gt-overclock-parallels">Nr of parallels per tier</label>
+											<span style="float:right;"><input type="checkbox" id="gt-overclock-parallels-fixed" value="1"> <label for="gt-overclock-parallels-fixed"> Fixed amount</label></span>
+											<br><br>
 											<input type="number" value="" id="gt-overclock-parallels" class="form-control">
 										</div>
 									</div>

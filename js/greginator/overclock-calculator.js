@@ -193,6 +193,7 @@ onVersionChanged(function(version) {
 	var time_bonus = $("#gt-overclock-faster",card);
 	var energy_bonus = $("#gt-overclock-eureduction",card);
 	var parallels = $("#gt-overclock-parallels",card);
+	var parallels_fixed = $("#gt-overclock-parallels-fixed",card);
 
 	function getTier(voltage) {
 		if (voltage <= 8) {return 1;}
@@ -221,11 +222,12 @@ onVersionChanged(function(version) {
 		},500);
 	});
 
-	$("#gt-overclock-gtppmachine").change(function() {
+	$("#gt-overclock-gtppmachine",card).change(function() {
 		var values = $(this).val().split(",");
-		$("#gt-overclock-faster").val(values[0]);
-		$("#gt-overclock-eureduction").val(values[1]);
-		$("#gt-overclock-parallels").val(values[2]);
+		$("#gt-overclock-faster",card).val(values[0]);
+		$("#gt-overclock-eureduction",card).val(values[1]);
+		$("#gt-overclock-parallels",card).val(values[2]);
+		$("#gt-overclock-parallels-fixed",card).attr("checked",values[3] == "1");
 		doCalc();
 	});
 
@@ -464,11 +466,12 @@ onVersionChanged(function(version) {
 		var time_bonus_int = parseInt(time_bonus.val());
 		var energy_bonus_int = parseInt(energy_bonus.val());
 		var parallels_int = parseInt(parallels.val());
+		var parallels_fixed = $("#gt-overclock-parallels-fixed",card).is(":checked");
 		if (!isNaN(time_bonus_int) && !isNaN(energy_bonus_int) && !isNaN(parallels_int)) {
 			// Source:
 			// https://github.com/GTNewHorizons/GTplusplus/blob/b5c2946f55ee5e44a341f545ce7565203803d74a/src/main/java/gtPlusPlus/xmod/gregtech/api/metatileentity/implementations/base/GregtechMeta_MultiBlockBase.java#L1023
 
-			var parallels_temp = Math.max(1,parallels_int * target_tier);
+			var parallels_temp = parallels_fixed ? parallels_int : Math.max(1,parallels_int * target_tier);
 
 			time = original_time;
 			energy = original_energy;
@@ -539,10 +542,11 @@ onVersionChanged(function(version) {
 			input: parseFloat(input_elem.val()),
 			wanted: parseFloat(wanted_elem.val()),
 			wanted_1OX: wanted_check.is(":checked"),
-			gtpp_machine: $("#gt-overclock-gtppmachine").val(),
+			gtpp_machine: $("#gt-overclock-gtppmachine",card).val(),
 			time_bonus: time_bonus_int,
 			energy_bonus: energy_bonus_int,
 			parallels_per_tier: parallels_int,
+			parallels_per_tier_fixed: parallels_fixed,
 			batch_mode: batch_mode,
 			downtier_uev: uev_simulate
 		};
@@ -650,6 +654,7 @@ onVersionChanged(function(version) {
 			time_bonus.val(jsonObj.time_bonus);
 			energy_bonus.val(jsonObj.energy_bonus);
 			parallels.val(jsonObj.parallels_per_tier);
+			$("#gt-overclock-parallels-fixed",card).attr("checked", jsonObj.parallels_per_tier_fixed);
 
 			batch_mode = jsonObj.batch_mode;
 			$("#gt-overclock-batch",card).attr("checked",batch_mode);
