@@ -366,7 +366,7 @@ onVersionChanged(function(version) {
 				overclocks = _target_tier - _tier;
 				speed = Math.pow(SPEED_PER_TIER,overclocks);
 				energy = _energy * Math.pow(ENERGY_PER_TIER, overclocks);
-				parallel = _parallel;
+				parallel = _parallel == 0 ? 1 : _parallel;
 				totalEnergy = (energy * _amps) * parallel;
 				time = _time / speed;
 			}
