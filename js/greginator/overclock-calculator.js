@@ -34,6 +34,7 @@ onVersionChanged(function(version) {
 	var wanted_elem = $("#gt-overclock-wanted",card);
 	var wanted_check = $("#gt-overclock-wanted-flip",card);
 	var batch_mode = $("#gt-overclock-batch").is(":checked");
+	var new_batch_mode = $("#gt-overclock-newbatch").is(":checked");
 	var uev_simulate = $("#gt-overclock-uev-simulate").is(":checked");
 	var settings_input = $(".settings-input", card);
 
@@ -168,6 +169,10 @@ onVersionChanged(function(version) {
 
 	$("#gt-overclock-batch").change(() => {
 		batch_mode = $("#gt-overclock-batch").is(":checked");
+		doCalc();
+	});
+	$("#gt-overclock-newbatch").change(() => {
+		new_batch_mode = $("#gt-overclock-newbatch").is(":checked");
 		doCalc();
 	});
 	$("#gt-overclock-uev-simulate").change(() => {
@@ -351,116 +356,164 @@ onVersionChanged(function(version) {
 			SPEED_PER_TIER = 4;
 		}
 
-		function calcOC(_target_tier, _tier, _energy, _time) {
-			var overclocks = _target_tier - _tier;
-			var speed = Math.pow(SPEED_PER_TIER,overclocks);
-			var time = _time / speed;
+		function calcOC(_target_tier, _tier, _energy, _time, _parallel, _amps, isPA) {
+			var overclocks, speed, energy, totalEnergy, time, parallel;
 
-			var paTime = time;
-			var paAmount = PA_amount;
-			var paOverclocks = overclocks;
-			var paSpeed = speed;
+			var maxParallelBeforeBatchMode = _parallel > 0 ? _parallel : 1;
+			var maxParallel = maxParallelBeforeBatchMode;
 
-			if (uev_simulate && _target_tier > 9) {
-				paAmount *= 4;
-				paOverclocks = (_target_tier-1) - _tier;
-				paSpeed = Math.pow(SPEED_PER_TIER, paOverclocks);
-				paTime = _time / paSpeed;
+			if (_parallel == 0 || isPA) {
+				overclocks = _target_tier - _tier;
+				speed = Math.pow(SPEED_PER_TIER,overclocks);
+				energy = _energy * Math.pow(ENERGY_PER_TIER, overclocks);
+				parallel = _parallel;
+				totalEnergy = (energy * _amps) * parallel;
+				time = _time / speed;
 			}
 
-			var paEnergy = _energy * Math.pow(ENERGY_PER_TIER, paOverclocks);
+			if (_parallel > 0) {
+				if (!isPA) {
+					parallel = 1;
+					overclocks = 0;
+					speed = 1;
+					energy = _energy * _amps;
+					totalEnergy = energy;
+					time = _time;
 
-			if (batch_mode) {
-				paTime *= 128;
-				paAmount *= 128;
+					// parallels
+					var targetVoltage = getVoltageOfTier(_target_tier);
+					while(parallel < maxParallel && totalEnergy < (targetVoltage - energy)) {
+						parallel++;
+						totalEnergy += energy;
+					}
+					// overclocks
+					targetVoltage = getVoltageOfTier(target_tier - 1);
+					while (totalEnergy < targetVoltage) {
+						totalEnergy *= ENERGY_PER_TIER;
+						speed += SPEED_PER_TIER;
+						overclocks++;
+					}
+					time /= speed;
+				}
+
+				if (batch_mode) {
+					if (new_batch_mode) {
+						if (time < 1) {
+							maxParallel = Math.floor(maxParallel / time);
+						}
+						// static variables taken from gtnh source code
+						var MAX_BATCH_MODE_TICK_TIME = 128;
+						var batchModifier = 128;
+						// end of static variables taken from gtnh source code source
+
+						maxParallel *= batchModifier;
+
+						if (time < MAX_BATCH_MODE_TICK_TIME) {
+							var batchMultiplierMax = MAX_BATCH_MODE_TICK_TIME / time;
+							var extraParallels = Math.floor(
+								Math.min(
+									parallel * Math.min(batchMultiplierMax - 1, batchModifier),
+									maxParallel - parallel
+								)
+							);
+							
+							var durationMultiplier = 1 + extraParallels / parallel;
+							parallel += extraParallels;
+							time = time * durationMultiplier;
+						}
+
+					} else {
+						// OLD batch mode
+						time = Math.floor(time < 1 ? 1 : time);
+
+						time *= 128;
+						parallel *= 128;
+					}
+				}
 			}
+
 
 			return {
 				overclocks: overclocks,
-				energy: _energy * Math.pow(ENERGY_PER_TIER,overclocks),
-				time: Math.max(1,Math.floor(time)),
-
-				paOverclocks: paOverclocks,
-				paTime: Math.max(1,Math.floor(paTime)),
-				paEnergy: paEnergy,
-				paAmount: paAmount,
+				energy: energy,
+				totalEnergy: totalEnergy,
+				time: Math.floor(time < 1 ? 1 : time),
+				speed: speed,
+				parallel: parallel,
 				oneticking: Math.floor(time) <= 1
-			};
+			}
 		}
 
-		var tmp = calcOC(target_tier, tier, original_energy, original_time);
-		var overclocks = tmp.overclocks; 
-		var energy = tmp.energy; 
-		var time = tmp.time;
+		function calcMachine(machineName, target_tier, tier, original_energy, original_time, parallels, amps, wanted, isPA) {
+			var result = calcOC(target_tier, tier, original_energy, original_time, parallels, amps, isPA);
 
-		var output_per_sec = output/(time/20);
-		var input_per_sec = input/(time/20);
+			var overclocks = result.overclocks;
+			//var energy = result.energy;
+			var totalEnergy = result.totalEnergy;
+			var time = result.time;
+			var parallel = result.parallel;
 
+			var output_per_sec = output/(time/20)*parallel;
+			var input_per_sec = input/(time/20)*parallel;
 
-		var wanted_singles = 1;
-		var wanted_arrays = 1;
+			if (wanted > -1) {
+				wanted = wanted/output_per_sec;
+			}
+
+			results_list.push([
+				machineName,
+				overclocks,
+				(totalEnergy).toLocaleString() + " eu/t",
+				parallel,
+				`${output*parallel} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec).toLocaleString()}/s`,
+				`${round3(input_per_sec).toLocaleString()}/s`,
+				wanted > -1 ? " <small class='text-muted d-inline-block'>(" + round3(wanted) + ")</small>" : ""
+			]);
+
+			return result;
+		}
+
+		var wanted_num = -1;
 		if (!isNaN(wanted)) {
 			$("#gt-overclock-wanted-th").show();
 			if (wanted_check.is(":checked")) {
-				wanted = 1/wanted;
+				wanted_num = 1/wanted;
 			}
-
-			wanted_singles = wanted/output_per_sec;
-			wanted_arrays = wanted_singles < PA_amount ? 0 : Math.ceil(wanted_singles/PA_amount);
 		} else {
 			$("#gt-overclock-wanted-th").hide();
 		}
 
-		results_list.push([
-			"Singleblock",
-			overclocks,
-			(energy * amps).toLocaleString() + " eu/t",
-			1,
-			`${output} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec).toLocaleString()}/s`,
-			`${round3(input_per_sec).toLocaleString()}/s`,
-			Math.ceil(wanted_singles) + ((Math.ceil(wanted_singles) != wanted_singles) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_singles) + ")</small>" : "")
-		]);
+		// SINGLEBLOCK
+		var singleResult = calcMachine("Singleblock",target_tier, tier, original_energy, original_time, 0, amps, wanted_num, false);
 
-		if (tmp.oneticking) {
+		if (singleResult.oneticking) {
 			$("#gt-overclock-info").append("<span class='text-muted mb-2'>1-ticking detected! Enable batch mode!</span>");
 		}
 
-		results_list.push([
-		 	`${PA_amount}x ${getNameFromTier(target_tier)} PA`,
-			tmp.paOverclocks,
-			round3(energy*amps*PA_amount).toLocaleString() + " eu/t",
-			(tmp.paAmount).toLocaleString(),
-			`${(output*tmp.paAmount).toLocaleString()} per ${(tmp.paTime >= 20 ? round3(tmp.paTime/20) + " sec" : tmp.paTime + " ticks")}, ${round3((output/(tmp.paTime/20))*tmp.paAmount).toLocaleString()}/s`,
-			`${round3((input/(tmp.paTime/20))*tmp.paAmount).toLocaleString()}/s`,
-			Math.ceil(wanted_arrays) + ((Math.ceil(wanted_arrays) != wanted_arrays) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_arrays) + ")</small>" : "")
-		]);
+		var paParallel = PA_amount;
+		var paTier = target_tier;
+		if (uev_simulate && paTier > 9) {
+			paParallel *= 4;
+			paTier -= 1;
+		}
+		// PA max tier
+		var paResult = calcMachine(`${PA_amount}x ${getNameFromTier(target_tier)} PA`, paTier, tier, original_energy, original_time, paParallel, amps, wanted_num, true);
 
-		// check how many can fit in PA
+		// check what tier can fit in PA
 		if (target_tier > tier + 1) {
 			var prev_tier_current = target_tier;
-			var energy_prev_tier = energy;
-			while((energy_prev_tier*amps*PA_amount) > getVoltageOfTier(target_tier) && prev_tier_current > tier) {
+			var energy_prev_tier = paResult.totalEnergy;
+			var trgVoltage = getVoltageOfTier(target_tier);
+			while((energy_prev_tier) > trgVoltage && prev_tier_current > tier) {
 				prev_tier_current--;
 				energy_prev_tier = energy_prev_tier/ENERGY_PER_TIER;
 			}
 
-			if ((energy_prev_tier*amps*PA_amount) <= getVoltageOfTier(target_tier)) {
-				var tmp2 = calcOC(prev_tier_current, tier, original_energy, original_time);
-
-				var wanted_arrays2 = wanted/(((input/(tmp2.paTime/20))*tmp2.paAmount));
-
-				results_list.push([
-					`${PA_amount}x ${getNameFromTier(prev_tier_current)} PA`,
-					""+tmp2.paOverclocks.toLocaleString(),
-					round3(energy_prev_tier*amps*PA_amount).toLocaleString() + " eu/t",
-					(tmp2.paAmount).toLocaleString(),
-					`${(output*tmp2.paAmount).toLocaleString()} per ${(tmp2.paTime >= 20 ? round3(tmp2.paTime/20) + " sec" : tmp2.paTime + " ticks")}, ${round3((output/(tmp2.paTime/20))*tmp2.paAmount).toLocaleString()}/s`,
-					`${round3((input/(tmp2.paTime/20))*tmp2.paAmount).toLocaleString()}/s`,
-					Math.ceil(wanted_arrays2) + ((Math.ceil(wanted_arrays2) != wanted_arrays2) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_arrays2) + ")</small>": "")
-				]);
+			if ((energy_prev_tier) <= trgVoltage) {
+				calcMachine(`${PA_amount}x ${getNameFromTier(prev_tier_current)} PA`, prev_tier_current, tier, original_energy, original_time, PA_amount, amps, wanted_num, true);
 			}
 		}
-
+		
 		// GT++
 		var gtplusplus = "";
 		var time_bonus_int = parseInt(time_bonus.val());
@@ -476,57 +529,15 @@ onVersionChanged(function(version) {
 			time = original_time;
 			energy = original_energy;
 
-			if (energy_bonus_int != 0) {energy *= energy_bonus_int / 100;}
-
-			var totalEnergy = energy*amps;
-			var parallelRecipes = 1;
-			while(parallelRecipes < parallels_temp && totalEnergy < (target - energy)) {
-				parallelRecipes++;
-				totalEnergy += energy;
+			if (energy_bonus_int != 0) {
+				energy *= energy_bonus_int / 100;
 			}
-
-			var time_bonus_temp = time_bonus_int;
-			if (!isNaN(time_bonus_temp) && time_bonus_temp != 0) {
-				time_bonus_temp = Math.max(-99,time_bonus_temp);
-				var timeFactor = 100 / (100 + time_bonus_temp);
+			if (!isNaN(time_bonus_int) && time_bonus_int != 0) {
+				time_bonus_int = Math.max(-99,time_bonus_int);
+				var timeFactor = 100 / (100 + time_bonus_int);
 				time = Math.floor(time * timeFactor);
 			}
-
-
-			totalEnergy = Math.ceil(totalEnergy);
-			var overclocks = 0;
-			var speed = 0;
-            while (totalEnergy < getVoltageOfTier(target_tier - 1)) {
-            	totalEnergy *= ENERGY_PER_TIER;
-            	//speed += SPEED_PER_TIER;
-            	time = Math.floor(time / SPEED_PER_TIER);
-            	overclocks++;
-            }
-
-			time = Math.max(1,time);
-
-			var output_per_sec = (output*parallelRecipes)/(time/20);
-			var input_per_sec = (input*parallelRecipes)/(time/20);
-
-			var wanted_gtpp = 1;
-			if (!isNaN(wanted)) {
-				wanted_gtpp = wanted/output_per_sec;
-			}
-
-			if (batch_mode) {
-				parallelRecipes *= 128;
-				time *= 128;
-			}
-
-			results_list.push([
-				getNameFromTier(target_tier) + " GT++",
-				""+overclocks,
-				round3(totalEnergy).toLocaleString() + " eu/t",
-				parallelRecipes.toLocaleString(),
-				`${(output*parallelRecipes).toLocaleString()} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec).toLocaleString()}/s`,
-				`${round3(input_per_sec).toLocaleString()}/s`,
-				Math.ceil(wanted_gtpp) + ((Math.ceil(wanted_gtpp) != wanted_gtpp) ? " <small class='text-muted d-inline-block'>(" + round3(wanted_gtpp) + ")</small>" : "")
-			]);
+			calcMachine(getNameFromTier(target_tier) + " GT++", target_tier, tier, energy, time, parallels_temp, amps, wanted_num, false);
 		} else if (time_bonus.val() != "" || energy_bonus.val() != "" || parallels.val() != "") {
 			results_list.push(["Unable to calculate GT++, please fill in all GT++ related fields"]);
 		}
@@ -548,6 +559,7 @@ onVersionChanged(function(version) {
 			parallels_per_tier: parallels_int,
 			parallels_per_tier_fixed: parallels_fixed,
 			batch_mode: batch_mode,
+			new_batch_mode: new_batch_mode,
 			downtier_uev: uev_simulate
 		};
 		settings_input.val(JSON.stringify(json));
@@ -657,7 +669,9 @@ onVersionChanged(function(version) {
 			$("#gt-overclock-parallels-fixed",card).prop("checked", jsonObj.parallels_per_tier_fixed);
 
 			batch_mode = jsonObj.batch_mode;
+			new_batch_mode = jsonObj.new_batch_mode;
 			$("#gt-overclock-batch",card).attr("checked",batch_mode);
+			$("#gt-overclock-newbatch",card).attr("checked",new_batch_mode);
 			uev_simulate = jsonObj.downtier_uev;
 			$("#gt-overclock-uev-simulate",card).attr("checked",uev_simulate);
 

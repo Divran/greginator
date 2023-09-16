@@ -546,9 +546,18 @@
 							<div class="card-header"><center>Results</center></div>
 							<div class="card-body mb-0 pb-0">
 								<small>Note: All processing array calculations assume they always contain the max number of machines (16 for infitech, 64 for gtnh).</small>
-								<div>
-									<input type='checkbox' id='gt-overclock-batch' value='1' checked />
-									<label class='mb-0 ml-2' for='gt-overclock-batch'>Batch mode</label>
+
+								<div class="row">
+									<div class="col">
+										<input type='checkbox' id='gt-overclock-batch' value='1' checked />
+										<label class='mb-0 ml-2' for='gt-overclock-batch'>Enable batch mode</label>
+									</div>
+									<div class="col">
+										<div>
+											<input type='checkbox' id='gt-overclock-newbatch' value='1' checked />
+											<label class='mb-0 ml-2' for='gt-overclock-newbatch'>Use new 2.3.7+ batch mode</label>
+										</div>
+									</div>
 								</div>
 								<div>
 									<input type='checkbox' id='gt-overclock-uev-simulate' value='1' checked />
