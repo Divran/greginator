@@ -345,7 +345,7 @@ onVersionChanged(function(version) {
 			original_time = original_time * 20;
 		}
 
-		// perfect oc
+		// perfect oc?
 		var ENERGY_PER_TIER = 4;
 		var SPEED_PER_TIER = 2;
 		if (poc == "semi") {
@@ -367,7 +367,7 @@ onVersionChanged(function(version) {
 				speed = Math.pow(SPEED_PER_TIER,overclocks);
 				energy = _energy * Math.pow(ENERGY_PER_TIER, overclocks);
 				parallel = _parallel == 0 ? 1 : _parallel;
-				totalEnergy = (energy * _amps) * parallel;
+				totalEnergy = energy * _amps * parallel;
 				time = _time / speed;
 			}
 
@@ -375,7 +375,6 @@ onVersionChanged(function(version) {
 				if (!isPA) {
 					parallel = 1;
 					overclocks = 0;
-					speed = 1;
 					energy = _energy * _amps;
 					totalEnergy = energy;
 					time = _time;
@@ -390,9 +389,9 @@ onVersionChanged(function(version) {
 					targetVoltage = getVoltageOfTier(target_tier - 1);
 					while (totalEnergy < targetVoltage) {
 						totalEnergy *= ENERGY_PER_TIER;
-						speed += SPEED_PER_TIER;
 						overclocks++;
 					}
+					speed = Math.pow(SPEED_PER_TIER,overclocks);
 					time /= speed;
 				}
 
@@ -530,14 +529,20 @@ onVersionChanged(function(version) {
 			energy = original_energy;
 
 			if (energy_bonus_int != 0) {
-				energy *= energy_bonus_int / 100;
+				energy *= (energy_bonus_int / 100);
 			}
 			if (!isNaN(time_bonus_int) && time_bonus_int != 0) {
-				time_bonus_int = Math.max(-99,time_bonus_int);
-				var timeFactor = 100 / (100 + time_bonus_int);
-				time = Math.floor(time * timeFactor);
+				time *= (100 / (100 + Math.max(-99,time_bonus_int)));
 			}
-			calcMachine(getNameFromTier(target_tier) + " GT++", target_tier, tier, energy, time, parallels_temp, amps, wanted_num, false);
+
+			tier = getTier(energy);
+
+			calcMachine(
+				getNameFromTier(target_tier) + " GT++", 
+				target_tier, tier, energy, time, 
+				parallels_temp, amps, wanted_num, 
+				false
+			);
 		} else if (time_bonus.val() != "" || energy_bonus.val() != "" || parallels.val() != "") {
 			results_list.push(["Unable to calculate GT++, please fill in all GT++ related fields"]);
 		}
