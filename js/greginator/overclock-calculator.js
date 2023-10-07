@@ -255,6 +255,7 @@ onVersionChanged(function(version) {
 			// open custom
 			$(".voltage-buttons[data-id='" + id + "'] input[value='custom']",card).click();
 			cust.val(newVolt);
+			doVoltAmpCalc();
 			doCalc();
 		} else {
 			var tier = getTier(newVolt);
