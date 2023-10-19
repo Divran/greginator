@@ -460,6 +460,14 @@ onVersionChanged(function(version) {
 				wanted = wanted/output_per_sec;
 			}
 
+			var wanted_str = "";
+			if (wanted > -1) {
+				wanted_str += Math.ceil(wanted)+"";
+				if (wanted_str != round3(wanted)) {
+					wanted_str += " <small class='text-muted d-inline-block'>(" + round3(wanted) + ")</small>"
+				}
+			}
+
 			results_list.push([
 				machineName,
 				overclocks,
@@ -467,7 +475,7 @@ onVersionChanged(function(version) {
 				parallel,
 				`${output*parallel} per ${(time >= 20 ? round3(time/20) + " sec" : time + " ticks")}, ${round3(output_per_sec).toLocaleString()}/s`,
 				`${round3(input_per_sec).toLocaleString()}/s`,
-				wanted > -1 ? " <small class='text-muted d-inline-block'>(" + round3(wanted) + ")</small>" : ""
+				wanted_str
 			]);
 
 			return result;
@@ -478,6 +486,8 @@ onVersionChanged(function(version) {
 			$("#gt-overclock-wanted-th").show();
 			if (wanted_check.is(":checked")) {
 				wanted_num = 1/wanted;
+			} else {
+				wanted_num = wanted;
 			}
 		} else {
 			$("#gt-overclock-wanted-th").hide();
