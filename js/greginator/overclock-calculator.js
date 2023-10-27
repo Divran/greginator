@@ -139,6 +139,28 @@ onVersionChanged(function(version) {
 		$("#laser-hatch-sizes").append(lasers);
 	})();
 
+	// LSC capacitor sizes
+	(function() {
+		var capacitors = [
+			{label:"UHV (1e10)", eut: 1e10},
+			{label:"UEV (1e12)", eut: 1e12},
+			{label:"UIV (1e14)", eut: 1e14},
+			{label:"UMV (1e16)", eut: 1e16},
+		];
+		for(let i=0;i<capacitors.length;i++) {
+			let row = capacitors[i];
+			capacitors[i] = $("<div class='btn btn-light btn-sm'>").text(row.label).click(function() {
+				navigator.clipboard.writeText(row.eut);
+				var that = $(this);
+				that.removeClass("btn-light").addClass("btn-success");
+				setTimeout(() => {
+					that.addClass("btn-light").removeClass("btn-success");
+				},1000);
+			});
+		}
+		$("#lsc-capacitor-sizes").append(capacitors);
+	})();
+
 	// end of voltage/amp calc
 
 	function applyOCTargetButtons(btns, onChange) {
