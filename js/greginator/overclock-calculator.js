@@ -382,8 +382,8 @@ onVersionChanged(function(version) {
 		function calcOC(_target_tier, _tier, _energy, _time, _parallel, _amps, isPA) {
 			var overclocks, speed, energy, totalEnergy, time, parallel;
 
-			var maxParallelBeforeBatchMode = _parallel > 0 ? _parallel : 1;
-			var maxParallel = maxParallelBeforeBatchMode;
+			var originalMaxParallel = _parallel > 0 ? _parallel : 1;
+			var maxParallel = originalMaxParallel;
 
 			if (_parallel == 0 || isPA) {
 				overclocks = _target_tier - _tier;
@@ -418,11 +418,36 @@ onVersionChanged(function(version) {
 					time /= speed;
 				}
 
+				// begin sub onetick math
+				if (time < 1) {
+					maxParallel = Math.floor(maxParallel / time);
+
+					// copy pasted and translated from calculateEUtConsumptionUnderOneTick in overclockcalculator.java
+					/*
+					// THIS DOESN'T WORK
+					// And then after this how do you calculate the parallel? this only supposedly gives you the new energy cost (except it doesn't because it doesn't work)
+					// but it doesn't tell you how much additional parallel it gets
+
+					console.log("EUT",totalEnergy, "parallel", maxParallel, "originalMaxParallel", originalMaxParallel);
+					var parallelMultiplierFromOverclocks = maxParallel / originalMaxParallel;
+					console.log("paralellMultiplierFromOverclocks",parallelMultiplierFromOverclocks);
+					var amountOfParallelOverclocks = Math.log(parallelMultiplierFromOverclocks) / Math.log(SPEED_PER_TIER);
+					console.log("amountOfParallelOverclocks",amountOfParallelOverclocks);
+					var newTotalEnergy = Math.ceil(
+						_energy * Math.pow(ENERGY_PER_TIER, amountOfParallelOverclocks) *
+						Math.pow(ENERGY_PER_TIER, overclocks - amountOfParallelOverclocks) *
+						originalMaxParallel
+					)
+					console.log("NEW EUT",newTotalEnergy);
+					totalEnergy = newTotalEnergy;
+					*/
+				}
+				// end sub onetick math
+
 				if (batch_mode) {
 					if (new_batch_mode) {
-						if (time < 1) {
-							maxParallel = Math.floor(maxParallel / time);
-						}
+						// begin new batch mode math
+						
 						// static variables taken from gtnh source code
 						var MAX_BATCH_MODE_TICK_TIME = 128;
 						var batchModifier = 128;
@@ -443,6 +468,7 @@ onVersionChanged(function(version) {
 							parallel += extraParallels;
 							time = time * durationMultiplier;
 						}
+						// end new batch mode math
 
 					} else {
 						// OLD batch mode
