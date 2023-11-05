@@ -380,6 +380,7 @@ onVersionChanged(function(version) {
 		}
 
 		function calcOC(_target_tier, _tier, _energy, _time, _parallel, _amps, machineType) {
+			//console.log("------- machineType", machineType);
 			var overclocks, speed, energy, totalEnergy, time, parallel;
 
 			var originalMaxParallel = _parallel > 0 ? _parallel : 1;
@@ -408,10 +409,16 @@ onVersionChanged(function(version) {
 					totalEnergy = 0;
 					time = _time;
 
+					// calculate needed overclocks to hit 1 tick
+					// SOURCE: calculateAmountOfNeededOverclocks function in GT_OverclockCalculator.java
+					var overclocksToOneTick = Math.min(
+						overclocks,
+						Math.ceil(Math.log(_time) / Math.log(SPEED_PER_TIER))
+					);
+
 					// calculate tickTimeAfterOC
 					// SOURCE: calculateDurationUnderOneTick function in GT_OverclockHelper.java
 					var tickTimeAfterOC = time / Math.pow(SPEED_PER_TIER, overclocks);
-					time = Math.max(1,Math.floor(tickTimeAfterOC));
 
 					if (tickTimeAfterOC < 1) {
 						maxParallel = Math.floor(maxParallel / tickTimeAfterOC);
@@ -427,11 +434,20 @@ onVersionChanged(function(version) {
 
 					// increment parallel
 					// SOURCE: determineParallel function in GT_ParallelHelper.java
-					var targetVoltage = getVoltageOfTier(_target_tier) * (machineType == "pa" ? originalMaxParallel : 1);
-					var currentEnergy = 0
-					while(parallel < maxParallelBeforeBatchMode && currentEnergy < (targetVoltage-energy)) {
-						parallel++;
-						currentEnergy += energy;
+					if (machineType == "pa") {
+						parallel = originalMaxParallel;
+						totalEnergy = energy * parallel * Math.pow(ENERGY_PER_TIER, overclocks);
+						overclocks = overclocksToOneTick;
+						time = time / Math.pow(SPEED_PER_TIER, overclocks);
+					} else {
+						var targetVoltage = getVoltageOfTier(_target_tier);
+						while(parallel < maxParallelBeforeBatchMode && totalEnergy < (targetVoltage-energy)) {
+							parallel++;
+							totalEnergy += energy;
+						}
+						overclocks = _target_tier - getTier(totalEnergy);
+						totalEnergy = totalEnergy * Math.pow(ENERGY_PER_TIER, overclocks);
+						time = time / Math.pow(SPEED_PER_TIER, overclocks);
 					}
 
 					// calculate eutUseAfterOC
@@ -446,16 +462,7 @@ onVersionChanged(function(version) {
 						)
 
 						totalEnergy = eutUseAfterOC;
-					} else {
-						totalEnergy = currentEnergy;
 					}
-
-					// calculate needed overclocks to hit 1 tick
-					// SOURCE: calculateAmountOfNeededOverclocks function in GT_OverclockCalculator.java
-					overclocks = Math.min(
-						overclocks,
-						Math.ceil(Math.log(_time) / Math.log(SPEED_PER_TIER))
-					);
 
 					// new batch mode math
 					// SOURCE: determineParallel function in GT_ParallelHelper.java
