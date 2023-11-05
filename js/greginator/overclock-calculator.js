@@ -427,7 +427,7 @@ onVersionChanged(function(version) {
 
 					// increment parallel
 					// SOURCE: determineParallel function in GT_ParallelHelper.java
-					var targetVoltage = getVoltageOfTier(_target_tier);
+					var targetVoltage = getVoltageOfTier(_target_tier) * (machineType == "pa" ? originalMaxParallel : 1);
 					var currentEnergy = 0
 					while(parallel < maxParallelBeforeBatchMode && currentEnergy < (targetVoltage-energy)) {
 						parallel++;
@@ -436,14 +436,19 @@ onVersionChanged(function(version) {
 
 					// calculate eutUseAfterOC
 					// SOURCE: calculateEUtConsumptionUnderOneTick function in GT_OverclockCalculator.java
-					var parallelMultiplierFromOverclocks = parallel / originalMaxParallel;
-					var amountOfParallelOverclocks = Math.log(parallelMultiplierFromOverclocks) / Math.log(SPEED_PER_TIER);
-					var eutUseAfterOC = Math.ceil(
-						energy * Math.pow(ENERGY_PER_TIER, amountOfParallelOverclocks) *
-						Math.pow(ENERGY_PER_TIER, overclocks - amountOfParallelOverclocks) *
-						originalMaxParallel
-					)
-					totalEnergy = eutUseAfterOC;
+			        if (parallel > originalMaxParallel) {
+						var parallelMultiplierFromOverclocks = parallel / originalMaxParallel;
+						var amountOfParallelOverclocks = Math.log(parallelMultiplierFromOverclocks) / Math.log(SPEED_PER_TIER);
+						var eutUseAfterOC = Math.ceil(
+							energy * Math.pow(ENERGY_PER_TIER, amountOfParallelOverclocks) *
+							Math.pow(ENERGY_PER_TIER, overclocks - amountOfParallelOverclocks) *
+							originalMaxParallel
+						)
+
+						totalEnergy = eutUseAfterOC;
+					} else {
+						totalEnergy = currentEnergy;
+					}
 
 					// calculate needed overclocks to hit 1 tick
 					// SOURCE: calculateAmountOfNeededOverclocks function in GT_OverclockCalculator.java
@@ -520,6 +525,9 @@ onVersionChanged(function(version) {
 		}
 
 		function calcMachine(machineName, target_tier, tier, original_energy, original_time, parallels, amps, wanted, machineType) {
+			if (target_tier < tier) {
+				return;
+			}
 			var result = calcOC(target_tier, tier, original_energy, original_time, parallels, amps, machineType);
 
 			var overclocks = result.overclocks;
@@ -569,23 +577,25 @@ onVersionChanged(function(version) {
 		}
 
 		// SINGLEBLOCK
-		var singleResult = calcMachine("Singleblock",target_tier, tier, original_energy, original_time, 0, amps, wanted_num, "single");
+		var sbTier = Math.min(12,target_tier);
+		var singleResult = calcMachine(getNameFromTier(sbTier) + " Singleblock",sbTier, tier, original_energy, original_time, 0, amps, wanted_num, "single");
 
 		if (singleResult.oneticking) {
 			$("#gt-overclock-info").append("<span class='text-muted mb-2'>1-ticking detected! Enable batch mode!</span>");
 		}
 
 		var paParallel = PA_amount;
-		var paTier = target_tier;
+		var paTier = Math.min(13,target_tier);
 		if (uev_simulate && paTier > 9) {
 			paParallel *= 4;
 			paTier -= 1;
 		}
+		paTier = Math.min(12, paTier);
 		// PA max tier
-		var paResult = calcMachine(`${PA_amount}x ${getNameFromTier(target_tier)} PA`, paTier, tier, original_energy, original_time, paParallel, amps, wanted_num, "pa");
+		var paResult = calcMachine(`${PA_amount}x ${getNameFromTier(paTier)} PA`, paTier, tier, original_energy, original_time, paParallel, amps, wanted_num, "pa");
 
 		// check what tier can fit in PA
-		if (target_tier > tier + 1) {
+		if (target_tier > tier + 1 && target_tier < 13) {
 			var prev_tier_current = target_tier;
 			var energy_prev_tier = paResult.totalEnergy;
 			var trgVoltage = getVoltageOfTier(target_tier);
