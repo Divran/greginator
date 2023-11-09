@@ -592,14 +592,14 @@ onVersionChanged(function(version) {
 		}
 
 		var paParallel = PA_amount;
-		var paTier = Math.min(13,target_tier);
+		var paTier = Math.min(12,target_tier);
+		var paTierName = getNameFromTier(paTier);
 		if (uev_simulate && paTier > 9) {
 			paParallel *= 4;
 			paTier -= 1;
 		}
-		paTier = Math.min(12, paTier);
 		// PA max tier
-		var paResult = calcMachine(`${PA_amount}x ${getNameFromTier(paTier)} PA`, paTier, tier, original_energy, original_time, paParallel, amps, wanted_num, "pa");
+		var paResult = calcMachine(`${PA_amount}x ${paTierName} PA`, paTier, tier, original_energy, original_time, paParallel, amps, wanted_num, "pa");
 
 		// check what tier can fit in PA
 		if (target_tier > tier + 1 && target_tier < 13) {
