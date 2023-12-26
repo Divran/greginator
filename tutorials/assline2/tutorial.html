@@ -1,0 +1,148 @@
+<div class="tutorial-page">
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<p>As you may have seen, this tutorial relies on the new advanced blocking card. The Dual Interface P2P tunnel also helps a lot for mid- to lategame.</p>
+			<p>This setup is in no way limited to the assembly line. It can be used on any machine. More examples at the end.</p>
+
+			<h4>Step 1</h4>
+			<p>Build the ME cable skeleton.</p>
+			<p>This requires an ME controller to have enough channels. I also recommend using alternating colors of cables so they don't connect to each other.</p>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline2/1.jpg" target="_blank">
+				<img src="tutorials/assline2/1.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="noshrink">
+			<a href="tutorials/assline2/2.jpg" target="_blank">
+				<img src="tutorials/assline2/2.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 2</h4>
+			<p>
+				Add storage busses.
+			</p>
+			<h4>Step 3</h4>
+			<p>Configure the storage buses to have decreasing priority.</p>
+			<ul>
+				<li>The storage bus pointing at the first input bus (bottom of the picture in these examples) must have the highest priority, with priorities decreasing from there.</li>
+				<li>The fluid storage buses must also have decreasing priority.</li>
+				<li>This step is essentially unchanged from the old assembly line setup - for more details including images you can go take a look at the older tutorial.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 4</h4>
+			<p>Place input buses and input hatches, as well as an ME output bus (or normal output bus plus an interface) at the back.</p>
+		</div>
+		<div class="noshrink">
+			<a href="tutorials/assline2/3.jpg" target="_blank">
+				<img src="tutorials/assline2/3.jpg" class="tutorial-img" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="">
+			<a href="tutorials/assline2/4.jpg" target="_blank">
+				<img src="tutorials/assline2/4.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 5</h4>
+			<p>Place a dual interface where your future encoded patterns will be placed.</p>
+			<p>Point the dual interface at another dual interface which is placed in the assembly line's subnet.</p>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 6</h4>
+			<p>Enable blocking mode with the advanced blocking card.</p>
+			<ul>
+				<li>To do this, first enable blocking mode in the interface which you will later place your encoded patterns (see image 'A' below).</li>
+				<li>Next, place an advanced blocking card in the <strong>receiving</strong> interface (see image 'B' below).</li>
+				<li><div class="alert alert-info">This is the most important part of the setup, as it allows the <em>blocking mode</em> setting to work in your interface, which is required to be able to encode more than one recipe in a single assembly line.</div></li>
+			</ul>
+
+			<div class="card card-body m-1 p-1 d-inline-block">
+				<a href="tutorials/assline2/5.jpg" target="_blank">
+					<img src="tutorials/assline2/5.jpg" class="tutorial-img tutorial-img-small" />
+				</a>
+				<br />Image A
+				<br /><small class="d-inline-block" style="width:200px; word-break:break-word;">Enable blocking mode.</small>
+			</div>
+			<div class="card card-body m-1 p-1 d-inline-block">
+				<a href="tutorials/assline2/6.jpg" target="_blank">
+					<img src="tutorials/assline2/6.jpg" class="tutorial-img tutorial-img-small" />
+				</a>
+				<br />Image B
+				<br /><small class="d-inline-block" style="width:200px; word-break:break-word;">Put an advanced blocking card here.</small>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div class="">
+			<a href="tutorials/assline2/7.jpg" target="_blank">
+				<img src="tutorials/assline2/7.jpg" class="tutorial-img" />
+			</a>
+		</div>
+		<div style="flex-grow:1">
+			<h4>Step 7</h4>
+			<p>Later on, once you have either
+				<ul><li>Used up all 36 recipe slots in the dual interface, or</li><li>Need to build more than one assembly line to increase speed</li></ul>
+				you should swap out the dual interface which is holding your recipes for a dual interface p2p. This will allow you to scale the setup up infinitely.
+			</p>
+			<p>Be sure to enable blocking mode and use the adv blocking card correctly on all of the p2ps you add.</p>
+
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Other examples</h4>
+			<p>Here are some screenshots of other examples in our base where we are using the same concept for other machines that aren't assembly lines. The setup works fine there, too.</p>
+			<div class="row">
+				<div class="col-12 col-md">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/assline2/8.jpg" target="_blank">
+							<img src="tutorials/assline2/8.jpg" class="tutorial-img" />
+						</a>
+						<br />Quad EBF setup
+					</div>
+				</div>
+				<div class="col-12 col-md">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/assline2/9.jpg" target="_blank">
+							<img src="tutorials/assline2/9.jpg" class="tutorial-img" />
+						</a>
+						<br />MCR setup
+					</div>
+				</div>
+				<div class="col-12 col-md">
+					<div class="card card-body m-1 p-1 d-inline-block">
+						<a href="tutorials/assline2/10.jpg" target="_blank">
+							<img src="tutorials/assline2/10.jpg" class="tutorial-img" />
+						</a>
+						<br />Circuit assembly lines
+						<br /><small class="d-inline-block" style="width:200px; word-break:break-word;">In our setup, solder and indalloy is delivered via fluid export bus, but encoding it in the recipe also works fine</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
