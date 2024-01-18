@@ -1,0 +1,112 @@
+<div class="tutorial-page">
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<p>
+				This circuit switcher method was invented by Sampsa (<a href="https://discord.com/channels/181078474394566657/1144053760033824870">link to sampsa's original tutorial thread</a>), and for most situations it's faster and better than the other circuit switcher method described in the other tutorial. It has two drawbacks:
+				<ul><li>It's more difficult to handle fluid-only recipes.</li><li>It doesn't work as well with recipes that aren't single-item recipes, because if the storage cell fills up, half of a recipe will overflow into the next storage cell, which jams the setup. You can mostly fix this by enabling blocking mode and multiplying the recipe several hundred times. Blocking mode might not work with non-circuit non-consumed items (such as extruder molds or lenses) in some versions of GTNH.</li></ul>
+				In these two cases, the other circuit switcher method might be preferred.
+			</p>
+		</div>
+	</div>
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 1</h4>
+			<p>
+				<ul>
+					<li>Build the ME chest line or tower and interfaces where you will place encoded patterns (see the image to the right).</li>
+					<li>The recipes are placed in the interfaces attached to the red cable.</li>
+					<li>All interfaces are normal interfaces, not dual interfaces. This is to make fluids get inserted in packet form.</li>
+				</ul>
+			</p>
+			<p>
+				Optionally enable blocking mode and multiply the recipes to help fix the issues mentioned previously. If all recipes are single-item recipes, for example bender C1 and most engraver recipes, blocking mode isn't needed.
+			</p>
+		</div>
+		<div class="">
+			<a href="tutorials/configswitcher_enderio/1.jpg" target="_blank">
+				<img src="tutorials/configswitcher_enderio/1.jpg" class="tutorial-img" style="max-height:300px;" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 2</h4>
+
+			<p>
+				Place a storage cell in the ME chests and then place a circuit (or other non-consumed item) in the storage cell.
+				<a href="tutorials/configswitcher_enderio/2.jpg" class="mt-1 d-block" target="_blank">
+					<img src="tutorials/configswitcher_enderio/2.jpg" class="tutorial-img" style="max-height:100px;" />
+				</a>
+			</p>
+
+			<h4>Step 3</h4>
+
+			<p>
+				Place an enderio conduit on the front side of the ME chest (the side with the black square on it) and configure it as the image shows. 
+				<br/> Grab the storage cell from inside the ME chest with the non-consumed item still inside and use that to set the config.
+				<a href="tutorials/configswitcher_enderio/3.jpg" class="mt-1 d-block" target="_blank">
+					<img src="tutorials/configswitcher_enderio/3.jpg" class="tutorial-img" style="max-height:100px;" />
+				</a>
+			</p>
+
+			<h4>Step 4</h4>
+
+			<p>
+				Repeat this for all ME chests in your tower/line
+				<a href="tutorials/configswitcher_enderio/4.jpg" class="mt-1 d-block" target="_blank">
+					<img src="tutorials/configswitcher_enderio/4.jpg" class="tutorial-img" style="max-height:100px;" />
+				</a>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="tutorial-page">
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div>
+			<h4>Step 5</h4>
+			<p>
+				<ul>
+					<li>Place an ME chest and an advanced stocking bus on your machines as shown in the image to the right.</li>
+					<li>Connect the enderio conduit with the front side of the ME chest and configure it as shown.</li>
+				</ul>
+			</p>
+
+
+			<p>
+				Optionally, if your recipes have both fluids and items, you can use a setup like the one shown here:
+				<a href="tutorials/configswitcher_enderio/6.jpg" class="my-1 d-block" target="_blank">
+					<img src="tutorials/configswitcher_enderio/6.jpg" class="tutorial-img" style="max-height:100px;" />
+				</a>
+				Note that this will not work for fluid-only recipes, which requires a slightly more complex setup.<br/>
+				All I'll say here about that is that the easiest way to do that is to place a fluid detector cover on the input hatch and use that to tell the enderio conduit to pull the cell out once the fluid is gone.
+			</p>
+		</div>
+		<div class="">
+			<a href="tutorials/configswitcher_enderio/5.jpg" target="_blank">
+				<img src="tutorials/configswitcher_enderio/5.jpg" class="tutorial-img" style="max-height:300px;" />
+			</a>
+		</div>
+	</div>
+	<hr />
+	<div class="d-flex w-100 justify-content-between">
+		<div style="flex-grow:1">
+			<h4>Step 6</h4>
+			<p>
+				You are now done.<br/><br/>
+
+				To scale up the setup, you have two main methods. Either connect the enderio conduit to more than one group of machines like this:
+				<a href="tutorials/configswitcher_enderio/7.jpg" class="my-1 d-block" target="_blank">
+					<img src="tutorials/configswitcher_enderio/7.jpg" class="tutorial-img" style="max-height:100px;" />
+				</a>
+				Or, you can build a tower of machines, then place one advanced stocking bus every 2 blocks all along the tower like so:
+				<a href="tutorials/configswitcher_enderio/8.jpg" class="my-1 d-block" target="_blank">
+					<img src="tutorials/configswitcher_enderio/8.jpg" class="tutorial-img" style="max-height:100px;" />
+				</a>
+				The reason you want two ME chests at the bottom like this is because it allows one ME chest to be processed while the other is being swapped out, reducing downtime.<br/> 
+				I find that the second method is more useful and more powerful. Technically you can also combine them.
+			</p>
+		</div>
+	</div>
+</div>
