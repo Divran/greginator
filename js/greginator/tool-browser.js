@@ -11,6 +11,9 @@ onVersionChanged(function(version) {
 			'<p>Note: Sword damage is equal to "mining tier + 5".</p>'+
 			'<p>Tip: Use your browser\'s search box to search (win: CTRL+F / mac: CMD+F)</p>'
 		);
+	} else if (version == "gtnh") {
+		card.hide(); // disabled for gtnh due to being super out of date
+		return;
 	} else {
 		$("#gt-tool-browser-disclaimer").html(
 			'<p>Note: Only lists base stats. Each tool type still has the same stats relative '+
